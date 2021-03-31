@@ -6,10 +6,22 @@
 		<description>Recent content on osadalakmal.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-gb</language>
-		<lastBuildDate>Sun, 28 Mar 2021 20:08:50 +0530</lastBuildDate>
+		<lastBuildDate>Mon, 29 Mar 2021 12:33:51 +0530</lastBuildDate>
 		
 		<atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>Codestar - A new way to get started on AWS Projects</title>
+			<link>https://osadalakmal.github.io/post/cloud9/</link>
+			<pubDate>Mon, 29 Mar 2021 12:33:51 +0530</pubDate>
+			
+			<guid>https://osadalakmal.github.io/post/cloud9/</guid>
+			<description>
+				
+				Cloud9 - A cloud based IDE for your code I first heard of cloud9 before it was acquired by AWS in 2016. In those days it...
+				
+			</description>
+		</item>
 		<item>
 			<title>Codestar - A new way to get started on AWS Projects</title>
 			<link>https://osadalakmal.github.io/post/codestar/</link>
