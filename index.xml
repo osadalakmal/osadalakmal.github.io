@@ -47,6 +47,18 @@
 			</description>
 		</item>
 		<item>
+			<title>Not your grandmas&#39; docker - Part 1</title>
+			<link>https://osadalakmal.github.io/post/buildahintro/</link>
+			<pubDate>Sun, 28 Mar 2021 20:08:50 +0530</pubDate>
+			
+			<guid>https://osadalakmal.github.io/post/buildahintro/</guid>
+			<description>
+				
+				Not your grandmas&#39; docker - Part 1 Most of us got introduced to containers with docker. In fact it seems that docker for...
+				
+			</description>
+		</item>
+		<item>
 			<title>Cost Of Allocation in High Performance Systems</title>
 			<link>https://osadalakmal.github.io/post/allocationcost/</link>
 			<pubDate>Fri, 05 Feb 2021 08:08:50 +0530</pubDate>
