@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Cloud9 - A cloud based IDE for your code I first heard of cloud9 before it was acquired by AWS in 2016. In those days it was a novelty. But the good sort - the sort of thing you think of and say &amp;ldquo;Man, if only I had that sort of flexibility&amp;rdquo;. This was before Google docs was a widespread thing and collaborating on a cloud IDE that existed independently of your computer was unheard of.'><title>Cloud9 - A cloud based IDE for your code</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/cloud9/cloud9/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Cloud9 - A cloud based IDE for your code'>
+<meta property='og:description' content='Cloud9 - A cloud based IDE for your code I first heard of cloud9 before it was acquired by AWS in 2016. In those days it was a novelty. But the good sort - the sort of thing you think of and say &amp;ldquo;Man, if only I had that sort of flexibility&amp;rdquo;. This was before Google docs was a widespread thing and collaborating on a cloud IDE that existed independently of your computer was unheard of.'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/cloud9/cloud9/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2021-03-29T12:33:51&#43;05:30'/><meta property='article:modified_time' content='2021-03-29T12:33:51&#43;05:30'/>
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Cloud9 - A cloud based IDE for your code">
+<meta name="twitter:description" content="Cloud9 - A cloud based IDE for your code I first heard of cloud9 before it was acquired by AWS in 2016. In those days it was a novelty. But the good sort - the sort of thing you think of and say &amp;ldquo;Man, if only I had that sort of flexibility&amp;rdquo;. This was before Google docs was a widespread thing and collaborating on a cloud IDE that existed independently of your computer was unheard of.">
+    <link rel="shortcut icon" href="true" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-42954847-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page 
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        on-phone--column compact
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile_hu88ed474c8894717a3b33c8f204d14033_66344_300x0_resize_q75_box.jpg" width="300"
+                            height="298" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        <h1 class="site-name"><a href="https://osadalakmal.github.io">Curiously Recurring Thoughts in Programming</a></h1>
+        <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/posts/' >
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about' >
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/tags' >
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/categories' >
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/posts/cloud9/cloud9/">Cloud9 - A cloud based IDE for your code</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 29, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h2 id="cloud9---a-cloud-based-ide-for-your-code">Cloud9 - A cloud based IDE for your code</h2>
+<p>I first heard of cloud9 before it was acquired by AWS in 2016. In those days it was a novelty. But the good sort - the sort of thing you think of and say &ldquo;Man, if only I had that sort of flexibility&rdquo;. This was before Google docs was a widespread thing and collaborating on a cloud IDE that existed independently of your computer was unheard of. Everytime I wanted to send some code snippet to a coworker and they needed more context, I would think to myself, there has to be a better way to do this.</p>
+<p>Cloud9 was originally founded in 2010 and created the open source product. This was then acquired by Amazon and turned in to their own offering of a cloud IDE running on EC2.</p>
+<h3 id="provisioning-a-developer-environment">Provisioning a developer environment</h3>
+<p>The IDE itself is actually free. What you pay for is the environment that it runs on. Lets see how to provision one of these. Go to cloud9 on the management console and start spinning up an environment and you are presented with the initial screen.<br>
+<figure 
+	>
+	<a href="/img/cloud9-1.png" >
+		<img src="/img/cloud9-1.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>After that you get to choose the environment that you run the cloud9 IDE on. I am of course choosing a t2.micro so that I can use the free tier for it.<br>
+<figure 
+	>
+	<a href="/img/cloud9-2.png" >
+		<img src="/img/cloud9-2.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>Finally you get to review and approve the request.<br>
+<figure 
+	>
+	<a href="/img/cloud9-3.png" >
+		<img src="/img/cloud9-3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+</aside>
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

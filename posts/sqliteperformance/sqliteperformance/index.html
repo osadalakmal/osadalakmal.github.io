@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SQLite is an embedded SQL Library. This means that It is a single library that you link against and now your application has access to a full blown SQL server within the process itself. It does not need a separate tool to access the database. The database is a single file stored on Disk. It also comes with a binary that can read and manipulate databases
+When to use SQLite The advise straight from its creator is to use it to replace flat files.'><title>SQLite for High Throughput Applications</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='SQLite for High Throughput Applications'>
+<meta property='og:description' content='SQLite is an embedded SQL Library. This means that It is a single library that you link against and now your application has access to a full blown SQL server within the process itself. It does not need a separate tool to access the database. The database is a single file stored on Disk. It also comes with a binary that can read and manipulate databases
+When to use SQLite The advise straight from its creator is to use it to replace flat files.'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2021-01-30T15:27:50&#43;05:30'/><meta property='article:modified_time' content='2021-01-30T15:27:50&#43;05:30'/>
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="SQLite for High Throughput Applications">
+<meta name="twitter:description" content="SQLite is an embedded SQL Library. This means that It is a single library that you link against and now your application has access to a full blown SQL server within the process itself. It does not need a separate tool to access the database. The database is a single file stored on Disk. It also comes with a binary that can read and manipulate databases
+When to use SQLite The advise straight from its creator is to use it to replace flat files.">
+    <link rel="shortcut icon" href="true" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-42954847-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page 
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        on-phone--column compact
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile_hu88ed474c8894717a3b33c8f204d14033_66344_300x0_resize_q75_box.jpg" width="300"
+                            height="298" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        <h1 class="site-name"><a href="https://osadalakmal.github.io">Curiously Recurring Thoughts in Programming</a></h1>
+        <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/posts/' >
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about' >
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/tags' >
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/categories' >
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/posts/sqliteperformance/sqliteperformance/">SQLite for High Throughput Applications</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 30, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>SQLite is an embedded SQL Library. This means that It is a single library that you link against and now your application has access to a full blown SQL server within the process itself. It does not need a separate tool to access the database. The database is a single file stored on Disk. It also comes with a binary that can read and manipulate databases</p>
+<h3 id="when-to-use-sqlite">When to use SQLite</h3>
+<p>The advise straight from its creator is to use it to replace flat files. This is specially true if you are writing strucutred data that consist of a set of repeated fields. Usually these can be written in any of the human readable formats - XML, JSON, YAML or good old CSV. So what are the advantages of using a sqlite database instead of one of the above?</p>
+<p>The file operations handling is already done for you. Creation, appending, traversing etc are all taken care of. You are just operating on the level of records.</p>
+<p>The record structure is enforced for you</p>
+<p>The database can be exported anywhere and worked with on any platform</p>
+<p>Querying becomes as easy as a SQL query. Any developer worth the title should be able to get at the database and do an initial analysis in just a few minutes. There are excellent Uis to help with this as well</p>
+<p>Interop with other tools is very easy. Generating XML, CSV from any table is just one command line away. Sending data to plotting tools is also one command line away.</p>
+<p>Tips for writing SQLite files in high throughput applications</p>
+<ol>
+<li>
+<p>Always wrap your inserts in transactions. And batch your inserts together. You may have to adjust how many you batch together depending on your RPO requirements. But in general this allows the database to batch things up to save time on individual inserts</p>
+</li>
+<li>
+<p>Use prepared statements. Since you will be inserting the same record structure again and again, there is no point in running your SQL text through the planner again and again. Use a single prepared statement.</p>
+</li>
+<li>
+<p>Dont allocate memory for new records. Use transient variable binding so that we dont allocate and deallocate memory for every single insert statement.</p>
+</li>
+<li>
+<p>Set journal to be in memory. Usually the journal gets written to the disk. If you want to save time on the disk writes you can always force the journal to be in memory</p>
+</li>
+<li>
+<p>Stop the synchronous writes to disk. SQLite will usually fsync after writing to make sure that the data will actually get flushed to the disk controller. We can let the OS determine when it is optimum to flush the data and return without the fsync to save time</p>
+</li>
+<li>
+<p>Page/Cache size. These settings are linked together. Page size determines how much data the process can hold in memory before the OS forces the dirty pages to be flushed to the disk</p>
+</li>
+</ol>
+<h3 id="the-code">The Code</h3>
+<p>The full source code for this example can be found in <a class="link" href="https://github.com/osadalakmal/sqlite-performance"  target="_blank" rel="noopener"
+    >https://github.com/osadalakmal/sqlite-performance</a></p>
+<p>The main code is as follows</p>
+<script src="http://gist-it.appspot.com/http://github.com/osadalakmal/sqlite-performance/blob/main/test.cpp"></script>
+<h3 id="results">Results</h3>
+<p>The results can be seen here running on my laptop</p>
+<p><figure 
+	>
+	<a href="/img/sqlite-performance.png" >
+		<img src="/img/sqlite-performance.png"
+			
+			
+			
+			loading="lazy"
+			alt="sqlite-performance">
+	</a>
+	
+	<figcaption>sqlite-performance</figcaption>
+	
+</figure></p>
+<p>as you can see starting from a baseline of using just prepared queries we keep adding the options mentioned above. By far the biggest impact seems to be from stopping syncrhonous write to disk for db file.</p>
+<h3 id="alternatives-to-sqlite">Alternatives to SQLite</h3>
+<p>There are several reasons that SQLite might not suit your workload.</p>
+<ol>
+<li>
+<p>Your data structure might be more suited for KV store. If all you are storing is one opaque value for a given key, a KV store makes definite sense.</p>
+</li>
+<li>
+<p>You might need even more throughput than all the above steps can provide</p>
+</li>
+<li>
+<p>You will need to adjust write amplification/read amplification etc parameters to make sure you fit within the disk budgets.</p>
+</li>
+</ol>
+<p>If this sounds like you, a LSM tree based store will be more suited for you. There are several to choose from. Most of them inspired or forked from the original – LevelDB. Examples are MDB, Tokyo cabinet, RocksDB.</p>
+<p>These are based fundamentally on a different set of requirements than SQLite. SQLite was born as a  replacement for SQL Clients that needed to retain SQL interface without the servers being present. LSM Tree based KV stores were written to managed very high sustained rates of writes</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+</aside>
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

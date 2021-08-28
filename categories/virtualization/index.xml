@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>virtualization on Curiously Recurring Thoughts in Programming</title>
-		<link>https://osadalakmal.github.io/categories/virtualization/</link>
-		<description>Recent content in virtualization on osadalakmal.github.io</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-gb</language>
-		<lastBuildDate>Sat, 14 Aug 2021 14:00:50 +0530</lastBuildDate>
-		
-		<atom:link href="https://osadalakmal.github.io/categories/virtualization/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Not your grandmas&#39; docker - Part 1</title>
-			<link>https://osadalakmal.github.io/post/buildahintro/</link>
-			<pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
-			
-			<guid>https://osadalakmal.github.io/post/buildahintro/</guid>
-			<description>
-				
-				
-				
-			</description>
-		</item>
-		
-	</channel>
+  <channel>
+    <title>virtualization on Curiously Recurring Thoughts in Programming</title>
+    <link>https://osadalakmal.github.io/categories/virtualization/</link>
+    <description>Recent content in virtualization on Curiously Recurring Thoughts in Programming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 26 Aug 2021 10:00:50 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Not your grandmas&#39; docker - Part 2</title>
+      <link>https://osadalakmal.github.io/posts/container-part2/</link>
+      <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
+      <description>Containers   Components of the container ecosystem  Container Engines Container Host Registry Server Container Orchestration Container Runtime      Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
+Components of the container ecosystem  Container Ecosystem 
+\
+Container Engines A container engine will run a container given the user input to do so.</description>
+    </item>
+    
+    <item>
+      <title>Not your grandmas&#39; docker - Part 1</title>
+      <link>https://osadalakmal.github.io/posts/container-intro/</link>
+      <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
+      <description>Containers   Operating System Level Virtualization  chroot Solaris Zones and Containers Systemd nspawn LXC/LXD   Enter docker Why not docker? What buildah is    Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers.</description>
+    </item>
+    
+  </channel>
 </rss>

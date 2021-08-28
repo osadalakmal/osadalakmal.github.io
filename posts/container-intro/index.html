@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative'><title>Not your grandmas&#39; docker - Part 1</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/container-intro/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Not your grandmas&#39; docker - Part 1'>
+<meta property='og:description' content='Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/container-intro/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='docker' /><meta property='article:tag' content='virtualization' /><meta property='article:tag' content='buildah' /><meta property='article:published_time' content='2021-08-14T14:00:50&#43;05:30'/><meta property='article:modified_time' content='2021-08-14T14:00:50&#43;05:30'/><meta property='og:image' content='https://osadalakmal.github.io/img/container-arial.jpg' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Not your grandmas&#39; docker - Part 1">
+<meta name="twitter:description" content="Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osadalakmal.github.io/img/container-arial.jpg' />
+    <link rel="shortcut icon" href="true" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-42954847-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://osadalakmal.github.io" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/container-intro/">
+                
+                    <img src="/img/container-arial.jpg" loading="lazy" alt="Featured image of post Not your grandmas&#39; docker - Part 1" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/virtualization/" >
+                virtualization
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/container-intro/">Not your grandmas&#39; docker - Part 1</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 14, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+
+
+<figure>
+    
+        <img src="https://osadalakmal.github.io/posts/container-intro/featured-image.jpg"/> <figcaption>
+                
+                    <h4>Containers</h4>
+                
+                
+            </figcaption></figure>
+
+<div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#operating-system-level-virtualization">Operating System Level Virtualization</a>
+      <ul>
+        <li><a href="#chroot">chroot</a></li>
+        <li><a href="#solaris-zones-and-containers">Solaris Zones and Containers</a></li>
+        <li><a href="#systemd-nspawn">Systemd nspawn</a></li>
+        <li><a href="#lxclxd">LXC/LXD</a></li>
+      </ul>
+    </li>
+    <li><a href="#enter-docker">Enter docker</a></li>
+    <li><a href="#why-not-docker">Why not docker?</a></li>
+    <li><a href="#what-buildah-is">What buildah is</a></li>
+  </ul>
+</nav>
+  </div>
+  
+<p>Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</p>
+<h2 id="operating-system-level-virtualization">Operating System Level Virtualization</h2>
+<p><figure 
+	>
+	<a href="/img/OS-level-virt.png" >
+		<img src="/img/OS-level-virt.png"
+			
+			
+			
+			loading="lazy"
+			alt="OS Level Virtualization">
+	</a>
+	
+	<figcaption>OS Level Virtualization</figcaption>
+	
+</figure><br>
+<br>
+Above is a screenshot of the wikipedia page for OS Level Virtualization Technologies. And notice that there are several technologies now close to 20 years old. So virtualization at OS level is by no means a new concept. Lets take a look at some of them</p>
+<h3 id="chroot">chroot</h3>
+<p><br>
+This is perhaps the most simple form of a container. It basically changes the root directory to a different directory as specified by the root user. The idea being that the user in the chroot cannot then escape our of that chroot directory in to the real root dir. And for this reason we usually refer to it as a chroot jail.</p>
+<p>There are no other privilege checking or access checking enabled. A privilege user can still create special nodes and run commands from with in the chroot. Therefore it is not really suitable as a way to prevent unwanted access from privileged users. Now since the programs usually expect a standard set of directories and files within the root dir, there are tools like <a class="link" href="https://olivier.sessink.nl/jailkit/"  target="_blank" rel="noopener"
+    >jailkit</a> that simplify this procedure</p>
+<p>What can this be used for? Well mostly I have seen it being used for testing and builds. Lets look at each use case</p>
+<p><figure 
+	>
+	<a href="https://kroki.io/blockdiag/svg/eNqFj8EKwkAMRO9-RVjPglAFoSiUQsGbCJ7EQ7oNVRp3JZt6Ef9daYUqXfCYYfJmpmRvm-qCNTwmACYXQiWwZ_FeDcw2YA7uhrYBRSmRude2Luj7gJ34WvDai_vWgVL4vOWemax2CgiFljUAugoC3qm3VMQ0hKWR_KP17AXWYKZFnhXJypzSyajRl2s5z5Js0blGHeOwoXUc82dHHPq7LE5-vgDwtXP4" >
+		<img src="https://kroki.io/blockdiag/svg/eNqFj8EKwkAMRO9-RVjPglAFoSiUQsGbCJ7EQ7oNVRp3JZt6Ef9daYUqXfCYYfJmpmRvm-qCNTwmACYXQiWwZ_FeDcw2YA7uhrYBRSmRude2Luj7gJ34WvDai_vWgVL4vOWemax2CgiFljUAugoC3qm3VMQ0hKWR_KP17AXWYKZFnhXJypzSyajRl2s5z5Js0blGHeOwoXUc82dHHPq7LE5-vgDwtXP4"
+			
+			
+			
+			loading="lazy"
+			alt="Block Diagram for Testing with chroot">
+	</a>
+	
+	<figcaption>Block Diagram for Testing with chroot</figcaption>
+	
+</figure></p>
+<p>For testing, you can think of a chroot as a poor mans container. Once you create a chroot and you have a program that primarily depends on the file system to store data, you can fool it to think it is on a fresh system. And once the program is terminated you can throw away the whole chroot and start again.</p>
+<p><figure 
+	>
+	<a href="https://kroki.io/blockdiag/svg/eNqFj0ELgkAUhO_-imE7B4EFgRSY4DmCTtHhub5UXFxZd7tE_71MIaONjm_mY95MprSs84oK3AJAJIbJMmRptLYC8y3EsWlJ1rBkMlJq0A6uwc5VKh_O_ROggpH1EshYvpC03Wi6rkQ7Elb3dtXb6Nhc2QxQzorffyNPlZPUShtsIGZpEqfhWpyj4KvchFot4jBevqhJXX_MzwH-vL-T_F8-R_qz7w_V0Hug" >
+		<img src="https://kroki.io/blockdiag/svg/eNqFj0ELgkAUhO_-imE7B4EFgRSY4DmCTtHhub5UXFxZd7tE_71MIaONjm_mY95MprSs84oK3AJAJIbJMmRptLYC8y3EsWlJ1rBkMlJq0A6uwc5VKh_O_ROggpH1EshYvpC03Wi6rkQ7Elb3dtXb6Nhc2QxQzorffyNPlZPUShtsIGZpEqfhWpyj4KvchFot4jBevqhJXX_MzwH-vL-T_F8-R_qz7w_V0Hug"
+			
+			
+			
+			loading="lazy"
+			alt="Block Diagram for Building with chroot">
+	</a>
+	
+	<figcaption>Block Diagram for Building with chroot</figcaption>
+	
+</figure></p>
+<p>For builds, chroots are wonderful because you control every aspect of the whole system from a storage point of view and that is all that is needed for builds. They don&rsquo;t need remote data storage services for the most part and even if you need to push artifacts to a separate remote storage service that can be achieved by creating a suitable package from the output of the build process itself. Usually you will have a pre-packaged chroot that you store in a tarball containing all the build tools and the fundamental parts of whatever *nix system you are running on. Then after you have done the build you usually package up your build artefacts in to whatever suitable format is (wheels for python, crates for rust, RPM/deb for C etc) and push it to an artefact server. This keeps the builds reproducible as long as the</p>
+<ol>
+<li>chroot tarball is the same</li>
+<li>the source is the same</li>
+<li>the build process is the same</li>
+</ol>
+<p>This means that you can reproduce older builds on demand assuming you keep the chroot tarballs around for long enough.</p>
+<h3 id="solaris-zones-and-containers">Solaris Zones and Containers</h3>
+<p><br>
+These are probably the best known implementation of OS level virtualization outside of linux. Although FreeBSD jails are quite well known too. I have no experience regarding those though so I will stick with Zones.</p>
+<p>A Solaris Container is the combination of system resource controls and the boundary separation provided by zones. Zones are completely separate server instances within a single physical server. In fact these are usually used to provide isolated test servers for the developers since almost no one is going to need a maxed out SPARC-T5-8 to test their application. Sys admins can reduce cost and provide most of the same protections of separate machines on a single machine by using zones.</p>
+<h3 id="systemd-nspawn">Systemd nspawn</h3>
+<p><br>
+<figure 
+	>
+	<a href="/img/systemd-meme.png" >
+		<img src="/img/systemd-meme.png"
+			
+			
+			
+			loading="lazy"
+			alt="Meme about Systemd">
+	</a>
+	
+	<figcaption>Meme about Systemd</figcaption>
+	
+</figure></p>
+<p>By now you should not be surprised to learn that there is an implementation of a container technology inside systemd. Everything but the kitchen sink remember?</p>
+<p><figure 
+	>
+	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Systemd_components.svg/440px-Systemd_components.svg.png" >
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Systemd_components.svg/440px-Systemd_components.svg.png"
+			
+			
+			
+			loading="lazy"
+			alt="Systemd Architecture">
+	</a>
+	
+	<figcaption>Systemd Architecture</figcaption>
+	
+</figure></p>
+<p>This is implemented on top of cgroups and is supposed to help users with containing processes easily in systemd. It is better in security terms than a chroot since it has process level security features as well. In that way it is similar to lxd or lxd. You can find more information <a class="link" href="https://wiki.archlinux.org/title/systemd-nspawn"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<h3 id="lxclxd">LXC/LXD</h3>
+<p><figure 
+	>
+	<a href="/img/lxc-architecture.jpg" >
+		<img src="/img/lxc-architecture.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="LXC Architecture">
+	</a>
+	
+	<figcaption>LXC Architecture</figcaption>
+	
+</figure></p>
+<p>LXC allows running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.</p>
+<p>It combines cgroups functionality that allows limitation and prioritization of resources (CPU, memory, block I/O, network, etc.) and namespace isolation functionality that allows complete isolation of an application&rsquo;s view of the operating environment, including process trees, networking and mounted file systems.</p>
+<p>Previously LXC only supported privilege containers though starting with the LXC 1.0 release, it is possible to run containers as regular users on the host using &ldquo;unprivileged containers&rdquo;.</p>
+<p><figure 
+	>
+	<a href="/img/lxd-architecture.jpg" >
+		<img src="/img/lxd-architecture.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="LXD Architecture">
+	</a>
+	
+	<figcaption>LXD Architecture</figcaption>
+	
+</figure></p>
+<p>LXD is a system container manager. It is basically an alternative implementation of LXC rather than something completely different. Just that it is being pushed by canonical instead of Red Hat (Oops I mean IBM!).</p>
+<h2 id="enter-docker">Enter docker</h2>
+<p>The problem with all these OS level virtualization technology was the audience. In fact it wasn&rsquo;t even a problem but a feature. They were all aimed at system administrators, developer tooling producers and similar folks who provided services <em>to the developers</em> To be the next big thing apparently you needed to target the developers who needed a dumbed down front end to the whole thing so they could focus on the more interesting things - the business logic.</p>
+<p>Docker was created to mostly take existing virtualization technology and simplify it to the point your average developer could operate it without even understanding what was going on under the hood. Like all good tools it allowed people to make use of the technology without worrying too much about how and why of it.</p>
+<p>It reduced the setup of the container environment to a simple enough DSL that solved 99% of the problems of the average developer. It reduced the number of concepts the developers had to hold in their heads to a well defined few. And it made the management of the containers and their run time behavior a breeze by introducing a single well defined command line interface.</p>
+<p>This meant that for the better part of the last decade docker was known as the defacto container management system and rightly so.</p>
+<h2 id="why-not-docker">Why not docker?</h2>
+<p>Even though the user facing parts of the docker eco system was well thought out and intuitive, the backend and the ergonomics were anything but. If you have ever had the (mis?)fortune of having to work with dockerfiles for anything more than simple Hello World projects, you will know how hard it is to produce good ones that make sensible trade offs and produce acceptable image sizes.</p>
+<ol>
+<li>
+<p>The builds tend to be too blown up. Image layers are unnecessarily large if you don&rsquo;t take absolute care. See <a class="link" href="https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size"  target="_blank" rel="noopener"
+    >here</a> for an example.</p>
+</li>
+<li>
+<p>It is very easy to make mistakes. Build time dependent images, have side effects etc. See <a class="link" href="https://codefresh.io/containers/docker-anti-patterns/"  target="_blank" rel="noopener"
+    >here</a> for an example</p>
+</li>
+<li>
+<p>The multi stage builds are cumbersome to work with</p>
+</li>
+<li>
+<p>The syntax leaves things to be desired. Mostly you will end up working with shell statements but it is not a shell script. So none of your usual tools will help you (think shellcheck etc)</p>
+</li>
+<li>
+<p>If you don&rsquo;t have root/Administrator access you cannot use docker. (Not completely correct - see <a class="link" href="https://docs.docker.com/engine/security/rootless/"  target="_blank" rel="noopener"
+    >here</a>. But for the most part no one will try this)</p>
+</li>
+</ol>
+<p>These are just a few but you get the idea. And this is where buildah comes in</p>
+<h2 id="what-buildah-is">What buildah is</h2>
+<p>Buildah take the docker approach of building container images and managing them and first breaks it down in to components. Specifically there are three main components.</p>
+<ol>
+<li><a class="link" href="https://buildah.io/"  target="_blank" rel="noopener"
+    >buildah</a> -<br>
+This tool allows us to build container images.</li>
+<li><a class="link" href="https://podman.io"  target="_blank" rel="noopener"
+    >podman</a> -<br>
+This allows us to manage runtime instances of the containers.</li>
+<li><a class="link" href="https://github.com/containers/skopeo"  target="_blank" rel="noopener"
+    >skopeo</a><br>
+This allows us to work with container registries</li>
+</ol>
+<p>So it essentialy decomposes the work done by the single docker command. How is this better? Well it allows the unix concept of one tool that does one thing best to work.</p>
+<p>Thats it for this post. Next post will discuss OCI vs docker and what different components of a container runtime is and how they come together to run a container.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/docker/">docker</a>
+        
+            <a href="/tags/virtualization/">virtualization</a>
+        
+            <a href="/tags/buildah/">buildah</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+</aside>
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#operating-system-level-virtualization">Operating System Level Virtualization</a>
+      <ul>
+        <li><a href="#chroot">chroot</a></li>
+        <li><a href="#solaris-zones-and-containers">Solaris Zones and Containers</a></li>
+        <li><a href="#systemd-nspawn">Systemd nspawn</a></li>
+        <li><a href="#lxclxd">LXC/LXD</a></li>
+      </ul>
+    </li>
+    <li><a href="#enter-docker">Enter docker</a></li>
+    <li><a href="#why-not-docker">Why not docker?</a></li>
+    <li><a href="#what-buildah-is">What buildah is</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

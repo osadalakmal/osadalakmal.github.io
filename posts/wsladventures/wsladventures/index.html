@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.'><title>Adventures in WSL Land</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/wsladventures/wsladventures/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Adventures in WSL Land'>
+<meta property='og:description' content='Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/wsladventures/wsladventures/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2021-06-16T12:00:05&#43;05:30'/><meta property='article:modified_time' content='2021-06-16T12:00:05&#43;05:30'/>
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Adventures in WSL Land">
+<meta name="twitter:description" content="Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.">
+    <link rel="shortcut icon" href="true" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-42954847-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page 
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        on-phone--column compact
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile_hu88ed474c8894717a3b33c8f204d14033_66344_300x0_resize_q75_box.jpg" width="300"
+                            height="298" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        <h1 class="site-name"><a href="https://osadalakmal.github.io">Curiously Recurring Thoughts in Programming</a></h1>
+        <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/posts/' >
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about' >
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/tags' >
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/categories' >
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/posts/wsladventures/wsladventures/">Adventures in WSL Land</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 16, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="adventures-in-wsl-land">Adventures in WSL Land</h1>
+<p>Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.</p>
+<h2 id="getting-to-a-good-starting-place">Getting to a good starting place</h2>
+<p>The first point of order was getting windows updated so that we could at least try on a new way of developing on this laptop. To this end I started by forcing a windows update. And curiously this failed. Turns out the reason was a McAfee program that was installed on the laptop for some security work. Turns out it was incompatible with the windows update. After that was resolved I was off to the races. But a good thing to keep in mind is always check if you are running the latest version of the OS and unless there is a very good reason not to do so, always upgrade it to the latest version.</p>
+<h2 id="virtualization-platforms">Virtualization platforms</h2>
+<p>Next up was selecting a virtualization platform to be used. In the past I had almost always reached for virtual box. VMWare was prohibitively costly and nowhere near as intuitive. But sadly Virtualbox seems to be neglected more and more under the stewardship of Oracle and there are no signs of things improving anytime soon. I am guessing Larry doesn&rsquo;t really see a point in free things unless it is Oracle getting those free things. So I was pretty happy to find that windows now includes a native virtualization platform called Hyper-V.</p>
+<h2 id="hyper-v---still-rough-around-the-edges">Hyper-V - Still Rough Around the edges</h2>
+<p>The management of the VMs is done via a GUI called Hyper-V Manager (This is microsoft remember?). It looks something like below <figure 
+	>
+	<a href="/img/Microsoft-Hyper-V-manager.jpg" >
+		<img src="/img/Microsoft-Hyper-V-manager.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="Hyper-V Manager">
+	</a>
+	
+	<figcaption>Hyper-V Manager</figcaption>
+	
+</figure>. There is a list of VMs in the middle and the operations that can be carried on the VMs tucked away on the right in a separate pane. It looks like a reverse version of virtual box GUI. The looks are deceptive though and not all the crucial functionality is available through the GUI. The majority of the GUI seems to be just a nice overlay over command line tooling that is best accessed through the Powershell command line. A good case in point is the networking part of the virtualization infrastructure. The networking part of the configuration is hidden behind the &ldquo;Virtual Switch Manager&rdquo;. But that is actually best accessed through the command line as described <a class="link" href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/setup-nat-network"  target="_blank" rel="noopener"
+    >here</a>. And there are strange limitations and errors that can pop up. One is that there can only be one NAT internal type switch and if you somehow manage to create two, the system seems to go in to this undefined state where no virtualization features will work including docker with HyperV backend. You would have to install a patch, prey a couple of times to the god of small bugs of virtualization (Thanks Terry!) and restart the machine a couple of times. And hopefully it will resolve itself.</p>
+<p>Next time we will go in to details about the networking and how to make sense of the options as someone coming from virtualbox/Linux land.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+</aside>
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

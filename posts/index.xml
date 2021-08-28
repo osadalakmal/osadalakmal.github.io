@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Curiously Recurring Thoughts in Programming</title>
+    <link>https://osadalakmal.github.io/posts/</link>
+    <description>Recent content in Posts on Curiously Recurring Thoughts in Programming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 26 Aug 2021 10:00:50 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Not your grandmas&#39; docker - Part 2</title>
+      <link>https://osadalakmal.github.io/posts/container-part2/</link>
+      <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
+      <description>Containers   Components of the container ecosystem  Container Engines Container Host Registry Server Container Orchestration Container Runtime      Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
+Components of the container ecosystem  Container Ecosystem 
+\
+Container Engines A container engine will run a container given the user input to do so.</description>
+    </item>
+    
+    <item>
+      <title>Not your grandmas&#39; docker - Part 1</title>
+      <link>https://osadalakmal.github.io/posts/container-intro/</link>
+      <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
+      <description>Containers   Operating System Level Virtualization  chroot Solaris Zones and Containers Systemd nspawn LXC/LXD   Enter docker Why not docker? What buildah is    Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers.</description>
+    </item>
+    
+    <item>
+      <title>Adventures in WSL Land</title>
+      <link>https://osadalakmal.github.io/posts/wsladventures/wsladventures/</link>
+      <pubDate>Wed, 16 Jun 2021 12:00:05 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/wsladventures/wsladventures/</guid>
+      <description>Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.</description>
+    </item>
+    
+    <item>
+      <title>Cloud9 - A cloud based IDE for your code</title>
+      <link>https://osadalakmal.github.io/posts/cloud9/cloud9/</link>
+      <pubDate>Mon, 29 Mar 2021 12:33:51 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/cloud9/cloud9/</guid>
+      <description>Cloud9 - A cloud based IDE for your code I first heard of cloud9 before it was acquired by AWS in 2016. In those days it was a novelty. But the good sort - the sort of thing you think of and say &amp;ldquo;Man, if only I had that sort of flexibility&amp;rdquo;. This was before Google docs was a widespread thing and collaborating on a cloud IDE that existed independently of your computer was unheard of.</description>
+    </item>
+    
+    <item>
+      <title>Codestar - A new way to get started on AWS Projects</title>
+      <link>https://osadalakmal.github.io/posts/codestar/codestar/</link>
+      <pubDate>Sun, 28 Mar 2021 20:08:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/codestar/codestar/</guid>
+      <description>Codestar - A new approach to development on AWS Codestar is a relatively new approach to creating new application that run on AWS infrastructure. The interesting thing about this seems to be that it gives newbie developers like myself to get bootstrapped and go from zero to hundred in a relatively short time period.
+ InitialScreen 
+This is the initial screen shown when you first try to create a codestar project.</description>
+    </item>
+    
+    <item>
+      <title>Cost Of Allocation in High Performance Systems</title>
+      <link>https://osadalakmal.github.io/posts/allocationcost/allocationcost/</link>
+      <pubDate>Fri, 05 Feb 2021 08:08:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/allocationcost/allocationcost/</guid>
+      <description>Impact of unproductive work In high performance systems we try to make sure we do as little unproductive work as we possible. As Andrei Alexdrascu points out in one of his presentations on the subject, the fastest bit of code is the code that does not run. So it is essential that we try to avoid as much unproductive work as possible.
+When we say unproductive work it usually seems we are talking about unwanted calculations, operations, file access and db access.</description>
+    </item>
+    
+    <item>
+      <title>SQLite for High Throughput Applications</title>
+      <link>https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/</link>
+      <pubDate>Sat, 30 Jan 2021 15:27:50 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/</guid>
+      <description>SQLite is an embedded SQL Library. This means that It is a single library that you link against and now your application has access to a full blown SQL server within the process itself. It does not need a separate tool to access the database. The database is a single file stored on Disk. It also comes with a binary that can read and manipulate databases
+When to use SQLite The advise straight from its creator is to use it to replace flat files.</description>
+    </item>
+    
+  </channel>
+</rss>
