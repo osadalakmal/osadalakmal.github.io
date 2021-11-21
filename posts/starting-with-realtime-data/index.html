@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='We discuss how to get started with real time data processing'><title>Starting With Realtime Data</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/starting-with-realtime-data/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Starting With Realtime Data'>
+<meta property='og:description' content='We discuss how to get started with real time data processing'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/starting-with-realtime-data/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='realtime' /><meta property='article:tag' content='kafka' /><meta property='article:tag' content='STOMP' /><meta property='article:published_time' content='2021-11-20T20:15:01&#43;05:30'/><meta property='article:modified_time' content='2021-11-20T20:15:01&#43;05:30'/><meta property='og:image' content='https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.jpg' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Starting With Realtime Data">
+<meta name="twitter:description" content="We discuss how to get started with real time data processing"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.jpg' />
+    <link rel="shortcut icon" href="true" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-42954847-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://osadalakmal.github.io" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/starting-with-realtime-data/">
+                <img src="/posts/starting-with-realtime-data/realtime-splash_hu957b1156cd6545e64f4a903ae42187fe_647318_800x0_resize_q75_box.jpg"
+                        srcset="/posts/starting-with-realtime-data/realtime-splash_hu957b1156cd6545e64f4a903ae42187fe_647318_800x0_resize_q75_box.jpg 800w, /posts/starting-with-realtime-data/realtime-splash_hu957b1156cd6545e64f4a903ae42187fe_647318_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="601" 
+                        loading="lazy"
+                        alt="Featured image of post Starting With Realtime Data" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data/" >
+                data
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/starting-with-realtime-data/">Starting With Realtime Data</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        We discuss how to get started with real time data processing
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 20, 2021</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p>(or why realtime data is elusive in most organizations)</p>
+</blockquote>
+<div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-data-and-data">Data, Data and Data</a></li>
+    <li><a href="#how-to-break-out-of-the-cycle">How to break out of the cycle</a></li>
+    <li><a href="#national-rail-to-the-rescue">National Rail to the Rescue</a></li>
+    <li><a href="#stomp-protocol--which-i-didnt-know-was-a-thing-">STOMP Protocol ( which I didn&rsquo;t know was a thing )</a></li>
+    <li><a href="#re-learning-java-in-a-pinch">Re-learning Java in a pinch</a></li>
+    <li><a href="#note-about-the-java-solution-and-how-it-works">Note about the Java solution and how it works</a></li>
+    <li><a href="#on-to-writing-to-kafka">On to writing to Kafka</a></li>
+    <li><a href="#what-next">What Next?</a></li>
+  </ul>
+</nav>
+  </div>
+  
+<h2 id="data-data-and-data">Data, Data and Data</h2>
+
+
+
+<figure>
+    
+        <img src="https://osadalakmal.github.io/posts/starting-with-realtime-data/hand-out-of-water.jpg"/> <figcaption>
+                
+                    <h4>Drowning in Data but Thirsting for Insights</h4>
+                
+                
+            </figcaption></figure>
+
+<p>These days the mantra is always data, data and more data. No organization can apparently get enough of data. And more and more of that data is coming in realtime in streaming systems.</p>
+<p>The ubiquity of kafka is proof that these days the real time delivery of data is the norm rather than the exception. But most of the time the processing of this data is being relegated to the usual suspects in the data lake.</p>
+<p>Due to the fact that most of the competency in the Data Engineering team usually lies with the batch processing side, they usually consider the real time processing as one of several different things</p>
+<ol>
+<li>Too expensive</li>
+<li>Too hard</li>
+<li>Has no real use case</li>
+</ol>
+<p>Now this is not to suggest that these are necessarily untrue - it is harder to process, and probably expensive to do so as well. And half the time the product owners and/or business users have absolutely zero imagination and cannot come up with a decent real time use case even if their lives depended on it.</p>
+<p>But the fact remains that once the stars do align, when there is a good use case we end up being unable to execute because we dont really have a lot of experience with the real time streaming systems.</p>
+<h2 id="how-to-break-out-of-the-cycle">How to break out of the cycle</h2>
+<p>As with any other use case or technology that is unfamiliar - you need to break out of the vicious cycle that allows this learned helplessness to persist. I have alluded to this in an earlier post of mine where I discuss conscious learning.</p>
+<p>The first thing to do is acquire some practice. The problem with this is that streaming data is really hard to come by in the wild. There are enough big data sets that can be used for pet projects now. Sources like <a class="link" href="https://github.com/awesomedata/awesome-public-datasets"  target="_blank" rel="noopener"
+    >awesome public datasets</a> allow us to do pet projects on batch processing side of the things really easily.</p>
+<p>But when it comes to real time streaming data, the story is much more different. Since distributing such data requires significant server power, there aren&rsquo;t servers out in the open internet that will let you subscribe to kafka feeds. So we need to look for alternatives. The easiest way would be to down load a time series data file source in a program that will write that data to a kafka stream. If required it can even modify the timestamps to match.</p>
+<p>The other way would be to find a real time data source that is actually publicly available and use that. There aren&rsquo;t that many of them around and they ones that are there are not kafka streams. The protocols for distribution of real time data in these cases tend to be much more varied. There are</p>
+<ol>
+<li>MQTT - Message Queue Telemetry Protocol is a lightweight pub sub network protocol popular in IOT</li>
+<li>STOMP - Simple Text Oriented Message Protocol is one that works over web sockets and works with message oriented middleware such as MQ systems</li>
+<li>AMQP - Advanced Message Queuing Protocol was created for unifying the middleware layer</li>
+</ol>
+<p>The one source of actual useful realtime information I could find was national rail in the UK. The Transport for London was also supposed to host several real time streaming data feeds but I could not find any information on this.</p>
+<h2 id="national-rail-to-the-rescue">National Rail to the Rescue</h2>
+
+
+
+<figure>
+    
+        <img src="https://osadalakmal.github.io/posts/starting-with-realtime-data/national-rail-realtime.jpg"/> <figcaption>
+                
+                    <h4>An Unlikely Rescuer</h4>
+                
+                
+            </figcaption></figure>
+
+<p>The national rail provides a set of open data feeds and files for anyone who creates a developer account. There are several sets of data in there. The full data can be found at the <a class="link" href="https://wiki.openraildata.com/index.php?title=Darwin:Push_Port"  target="_blank" rel="noopener"
+    >wiki</a>. You can sign up for the developer account at <a class="link" href="https://opendata.nationalrail.co.uk/"  target="_blank" rel="noopener"
+    >open data portal</a></p>
+<p>The feed is in STOMP format and the serialization format is XML. And it is compressed using gzip. So we will have to read the data in STOMP protocol format, unzip it and then convert to a more modern format that most of the tools understand such as json and then write it to kafka to be processed further.</p>
+<p>Let&rsquo;s go through each of these concerns and figure out how we are tackling each one</p>
+<h2 id="stomp-protocol--which-i-didnt-know-was-a-thing-">STOMP Protocol ( which I didn&rsquo;t know was a thing )</h2>
+<p>Before this project I had never heard of the STOMP format. But reading up on it, it seems quite a small, easy to understand spec that you can read <a class="link" href="https://stomp.github.io/"  target="_blank" rel="noopener"
+    >here</a>. Since it is quite easy to understand and implement, I was expecting the clients to work quite smoothly. Specially since there seemed to have been such a small amount of churn in the protocol specification itself.</p>
+<p>But it turned out that the python library was having issues. Right after connecting, the client gets disconnected. The strange thing is the command line client seems to work just fine. I had assumed that my code was having issues and I did not understand something about the library I was using - <a class="link" href="https://github.com/jasonrbriggs/stomp.py"  target="_blank" rel="noopener"
+    >stomp.py</a>. But it turned out that even the <a class="link" href="https://github.com/openraildata/stomp-client-python"  target="_blank" rel="noopener"
+    >official client</a> did not work either.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
+❯ pipenv shell
+Launching subshell in virtual environment...
+❯  . /home/osada/.local/share/virtualenvs/tfltest-7b5b1zAz/bin/activate
+❯ cd stomp-client-python
+❯ ./opendata-nationalrail-client.py
+Connecting to darwin-dist-44ae45.nationalrail.co.uk
+Disconnected waiting 5 seconds before exiting
+^CTraceback (most recent call last):
+  File &#34;/home/osada/progs/tfltest/stomp-client-python/./opendata-nationalrail-client.py&#34;, line 108, in &lt;module&gt;
+    time.sleep(1)
+KeyboardInterrupt
+
+</code></pre></div><p>So that was a dead end because I didn&rsquo;t really have the temerity to debug this right then. Rummaging around in that openraildata org in github, the next repo was a java client. I have not done any Java development in years but I decided to give it a go since that seemed the quickest way to get things going.</p>
+<h2 id="re-learning-java-in-a-pinch">Re-learning Java in a pinch</h2>
+<p>The first thing to do was setup the developer environment. Since I had not done so before, I install the JDK. Since I wasn&rsquo;t sure which version to go with I installed both java 11 version and java 17 versions. I decided to give java 17 version a try. Since I am on arch (well, technically manjaro) I have to use the following command to update the alternatives where alternative is the term used on Ubuntu side.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
+❯ sudo archlinux-java status
+Available Java environments:
+java-11-openjdk (default)
+java-17-openjdk
+❯ sudo archlinux-java set java-17-openjdk
+❯ java --version
+openjdk 17.0.1 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12)
+OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
+
+</code></pre></div><p>Ok, now on to actually building and running the official client. Replace the username and password with what was assigned to you when you signed up. And build and run.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
+    ❯ mvn spring-boot:run
+    [INFO] Scanning for projects...
+    [INFO] 
+    [INFO] ------------&lt; com.openraildata:openwire-camel-client-java &gt;-------------
+    [INFO] Building openwire-camel-client-java 1.2
+    [INFO] --------------------------------[ jar ]---------------------------------
+    ....
+    2021-11-21 21:38:52.480 ERROR 17340 --- [           main] c.s.x.b.v2.runtime.reflect.opt.Injector  : null
+
+    java.security.PrivilegedActionException: null
+   at java.base/java.security.AccessController.doPrivileged(AccessController.java:573) ~[na:na]
+   at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.&lt;clinit&gt;(Injector.java:197) ~[jaxb-impl-2.3.0.jar:2.3.0]
+</code></pre></div><p>Well, that was unexpected. Turns out that newer Java versions don&rsquo;t like some optimization used in JAXB core libraries. According to this <a class="link" href="https://stackoverflow.com/questions/50237516/proper-fix-for-java-10-complaining-about-illegal-reflection-access-by-jaxb-impl"  target="_blank" rel="noopener"
+    >Stackoverflow</a> answer it seems that using any version of JAXB above 2.3.0 should do the trick but after several attempts at changing dependencies and other futile attempts, I just gave up and switched to Java 11. And that seems to work fine with just a warning. Homework for later!</p>
+<p>Switching to Java 11 made everything work and finally we were getting some data from the feed, Success!</p>
+<h2 id="note-about-the-java-solution-and-how-it-works">Note about the Java solution and how it works</h2>
+<p>Taking a step back and actually reading through the source code for the Java Client showed me that the code is unusually succinct, specially compared to my memories of bloated hunks of code that I remember being the standard enterprise Java fare. Turns out it was due to mostly the library that they were using Camel. Camel itself probably deserves a blog post of it&rsquo;s own but for the moment let&rsquo;s quickly dive in to what it is because boy its interesting.</p>
+<p>This library traces it&rsquo;s roots back to <a class="link" href="https://www.enterpriseintegrationpatterns.com/"  target="_blank" rel="noopener"
+    >Enterprise Integration Patterns book</a> by Gregor Hohpe and Bobby Woolf. That book comes about after the GoF book gets published about the design patterns in OO programming. Now the very second design patterns are mentioned the functional purists amongst you will scoff at the mere mortals who are forced to use Java because <em>we don&rsquo;t need design patterns</em>. But the reality is that patterns transcend individual languages and are a quite useful tool to save people time and effort when developing enterprise application. The honest truth is that Enterprise programmers have to manage with fewer resources than their Web 2.0 brethren, the same sort of expectations. And patterns that can be easily recognized, applied and shared are life savers since it makes the job easier for architects that have to come up with the blueprints and programmers that have to implement them.</p>
+<p>The book defined a set of 65 common integration patterns and the <a class="link" href="https://camel.apache.org/"  target="_blank" rel="noopener"
+    >Camel library</a> implements those patterns. It also has support for numerous data formats and endpoints via a unified URI system. This makes it extremely easy to integrate different data sources and sinks. Best thing about this is that the library core is very lightweight and the rest of the functionality uses a plugin architecture. This was a surprise finding and I am somewhat dissapointed to find that no golang library fills the same niche.</p>
+<h2 id="on-to-writing-to-kafka">On to writing to Kafka</h2>
+<p>Now the only thing left to do was writing to Kafka. To accomplish only a very few changes needed to be done. Configuring the connection to Kafka is simple enough. Add the dependencies to pom.xml</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">
+<span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.camel<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>camel-kafka<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${camel.version}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+
+</code></pre></div><p>And configure routing for route builder so the STOMP messages gets processed and sent to kafka</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">
+<span class="n">String</span> <span class="n">topicName</span> <span class="o">=</span> <span class="s">&#34;stomp&#34;</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">kafkaServer</span> <span class="o">=</span> <span class="s">&#34;kafka&#34;</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">toKafka</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">().</span><span class="na">append</span><span class="o">(</span><span class="n">kafkaServer</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;:&#34;</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">topicName</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;?&#34;</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;brokers=localhost:9092&#34;</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
+
+<span class="n">from</span><span class="o">(</span><span class="s">&#34;activemq:topic:&#34;</span> <span class="o">+</span> <span class="n">feedTopic</span> <span class="o">+</span> <span class="s">&#34;?durableSubscriptionName=&#34;</span> <span class="o">+</span> <span class="n">username</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">unmarshal</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">gzip</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">darwinMessageHandler</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="n">toKafka</span><span class="o">);</span>
+
+</code></pre></div><p>All that is left is for the XML to be converted to JSON because that&rsquo;s the only language hip enough for 2021. For that I ended up using jackson instead of a simpler alternative like <a class="link" href="https://github.com/stleary/JSON-java"  target="_blank" rel="noopener"
+    >JSON Java</a> because of the namespaced XML found in the feed.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Exchange</span> <span class="n">exchange</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+
+        <span class="n">String</span> <span class="n">messageBody</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="na">getIn</span><span class="o">().</span><span class="na">getBody</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+        <span class="n">XmlMapper</span> <span class="n">xmlMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XmlMapper</span><span class="o">();</span>
+        <span class="n">JsonNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">xmlMapper</span><span class="o">.</span><span class="na">readTree</span><span class="o">(</span><span class="n">messageBody</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+
+        <span class="n">ObjectMapper</span> <span class="n">jsonMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="o">();</span>
+        <span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="n">jsonMapper</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
+        <span class="n">exchange</span><span class="o">.</span><span class="na">getMessage</span><span class="o">().</span><span class="na">setBody</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+    <span class="o">}</span>
+
+</code></pre></div><p>And done! Now we just run a kafka process along with the associated zookeeper instance, create the topic called &ldquo;stomp&rdquo; and viola!</p>
+<h2 id="what-next">What Next?</h2>
+<p>So you have a system that writes some set of JSON messages in to a kafka topic, what next? Well the next steps can be anything you want to learn and experiment with really. For me I am hoping to use this to toy with two pet projects.</p>
+<ol>
+<li>I want to learn flink including it&rsquo;s CEP engine.</li>
+<li>I want to take <a class="link" href="https://materialize.com/"  target="_blank" rel="noopener"
+    >materialize</a> for a spin</li>
+</ol>
+<p>expect more writings on those topic based on this setup in the coming weeks.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/realtime/">realtime</a>
+        
+            <a href="/tags/kafka/">kafka</a>
+        
+            <a href="/tags/stomp/">STOMP</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+</aside>
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-data-and-data">Data, Data and Data</a></li>
+    <li><a href="#how-to-break-out-of-the-cycle">How to break out of the cycle</a></li>
+    <li><a href="#national-rail-to-the-rescue">National Rail to the Rescue</a></li>
+    <li><a href="#stomp-protocol--which-i-didnt-know-was-a-thing-">STOMP Protocol ( which I didn&rsquo;t know was a thing )</a></li>
+    <li><a href="#re-learning-java-in-a-pinch">Re-learning Java in a pinch</a></li>
+    <li><a href="#note-about-the-java-solution-and-how-it-works">Note about the Java solution and how it works</a></li>
+    <li><a href="#on-to-writing-to-kafka">On to writing to Kafka</a></li>
+    <li><a href="#what-next">What Next?</a></li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

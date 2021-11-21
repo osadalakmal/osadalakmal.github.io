@@ -6,7 +6,16 @@
         <description>Recent content on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Thu, 14 Oct 2021 15:36:00 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Nov 2021 20:15:01 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Starting With Realtime Data</title>
+        <link>https://osadalakmal.github.io/posts/starting-with-realtime-data/</link>
+        <pubDate>Sat, 20 Nov 2021 20:15:01 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/starting-with-realtime-data/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.jpg" alt="Featured image of post Starting With Realtime Data" /&gt;(or why realtime data is elusive in most organizations)
+  Data, Data and Data How to break out of the cycle National Rail to the Rescue STOMP Protocol ( which I didn&amp;rsquo;t know was a thing ) Re-learning Java in a pinch Note about the Java solution and how it works On to writing to Kafka What Next?    Data, Data and Data   Drowning in Data but Thirsting for Insights  These days the mantra is always data, data and more data.</description>
+        </item>
+        <item>
         <title>Learning In Engineering Organizations</title>
         <link>https://osadalakmal.github.io/posts/learninginorganizations/</link>
         <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
