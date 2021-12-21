@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cpp on Curiously Recurring Thoughts in Programming</title>
+    <link>https://osadalakmal.github.io/tags/cpp/</link>
+    <description>Recent content in cpp on Curiously Recurring Thoughts in Programming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 19 Dec 2021 22:16:45 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyperscan C&#43;&#43; Wrapper</title>
+      <link>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</link>
+      <pubDate>Sun, 19 Dec 2021 22:16:45 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
+      <description>(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)
+  Being a C library in a C++ World Why C is still being used C is nice but C++ is nicer Implementing a C++ Wrapper for Hyperscan Takeaways    Being a C library in a C++ World This weekend I was looking at a regex library written by intel called hyperscan. I had needed to use a regex library that was performant and easy to use.</description>
+    </item>
+    
+  </channel>
+</rss>

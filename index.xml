@@ -6,7 +6,16 @@
         <description>Recent content on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sat, 20 Nov 2021 20:15:01 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Dec 2021 22:16:45 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hyperscan C&#43;&#43; Wrapper</title>
+        <link>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</link>
+        <pubDate>Sun, 19 Dec 2021 22:16:45 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)
+  Being a C library in a C++ World Why C is still being used C is nice but C++ is nicer Implementing a C++ Wrapper for Hyperscan Takeaways    Being a C library in a C++ World This weekend I was looking at a regex library written by intel called hyperscan. I had needed to use a regex library that was performant and easy to use.</description>
+        </item>
+        <item>
         <title>Starting With Realtime Data</title>
         <link>https://osadalakmal.github.io/posts/starting-with-realtime-data/</link>
         <pubDate>Sat, 20 Nov 2021 20:15:01 +0530</pubDate>
