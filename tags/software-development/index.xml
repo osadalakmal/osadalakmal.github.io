@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software-development on Curiously Recurring Thoughts in Programming</title>
+    <link>https://osadalakmal.github.io/tags/software-development/</link>
+    <description>Recent content in software-development on Curiously Recurring Thoughts in Programming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 06 Feb 2022 21:57:42 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agile : The Snake Oil for Cobra Bites</title>
+      <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
+      <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
+      <description>How the rebellion got subverted
+  The agile manifesto - The Rebellion that was not The call is coming from inside the house Return to roots Why is it so easy to fail? How to undo this? Understanding the what, why and how Cutting out the fluff Understand but do not measure Use the tools provided in whatever flavour of Agile you chose To be continued    The agile manifesto - The Rebellion that was not</description>
+    </item>
+    
+  </channel>
+</rss>

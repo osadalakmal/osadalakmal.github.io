@@ -6,7 +6,17 @@
     <description>Recent content in programming on Curiously Recurring Thoughts in Programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 19 Dec 2021 22:16:45 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Feb 2022 21:57:42 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agile : The Snake Oil for Cobra Bites</title>
+      <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
+      <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
+      <description>How the rebellion got subverted
+  The agile manifesto - The Rebellion that was not The call is coming from inside the house Return to roots Why is it so easy to fail? How to undo this? Understanding the what, why and how Cutting out the fluff Understand but do not measure Use the tools provided in whatever flavour of Agile you chose To be continued    The agile manifesto - The Rebellion that was not</description>
+    </item>
+    
     <item>
       <title>Hyperscan C&#43;&#43; Wrapper</title>
       <link>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</link>
