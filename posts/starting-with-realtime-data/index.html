@@ -209,48 +209,46 @@ if (!doNotTrack) {
 <p>But it turned out that the python library was having issues. Right after connecting, the client gets disconnected. The strange thing is the command line client seems to work just fine. I had assumed that my code was having issues and I did not understand something about the library I was using - <a class="link" href="https://github.com/jasonrbriggs/stomp.py"  target="_blank" rel="noopener"
     >stomp.py</a>. But it turned out that even the <a class="link" href="https://github.com/openraildata/stomp-client-python"  target="_blank" rel="noopener"
     >official client</a> did not work either.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
-❯ pipenv shell
-Launching subshell in virtual environment...
-❯  . /home/osada/.local/share/virtualenvs/tfltest-7b5b1zAz/bin/activate
-❯ cd stomp-client-python
-❯ ./opendata-nationalrail-client.py
-Connecting to darwin-dist-44ae45.nationalrail.co.uk
-Disconnected waiting 5 seconds before exiting
-^CTraceback (most recent call last):
-  File &#34;/home/osada/progs/tfltest/stomp-client-python/./opendata-nationalrail-client.py&#34;, line 108, in &lt;module&gt;
-    time.sleep(1)
-KeyboardInterrupt
-
-</code></pre></div><p>So that was a dead end because I didn&rsquo;t really have the temerity to debug this right then. Rummaging around in that openraildata org in github, the next repo was a java client. I have not done any Java development in years but I decided to give it a go since that seemed the quickest way to get things going.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">❯ pipenv shell
+</span></span><span class="line"><span class="cl">Launching subshell in virtual environment...
+</span></span><span class="line"><span class="cl">❯  . /home/osada/.local/share/virtualenvs/tfltest-7b5b1zAz/bin/activate
+</span></span><span class="line"><span class="cl">❯ cd stomp-client-python
+</span></span><span class="line"><span class="cl">❯ ./opendata-nationalrail-client.py
+</span></span><span class="line"><span class="cl">Connecting to darwin-dist-44ae45.nationalrail.co.uk
+</span></span><span class="line"><span class="cl">Disconnected waiting 5 seconds before exiting
+</span></span><span class="line"><span class="cl">^CTraceback (most recent call last):
+</span></span><span class="line"><span class="cl">  File &#34;/home/osada/progs/tfltest/stomp-client-python/./opendata-nationalrail-client.py&#34;, line 108, in &lt;module&gt;
+</span></span><span class="line"><span class="cl">    time.sleep(1)
+</span></span><span class="line"><span class="cl">KeyboardInterrupt
+</span></span></code></pre></div><p>So that was a dead end because I didn&rsquo;t really have the temerity to debug this right then. Rummaging around in that openraildata org in github, the next repo was a java client. I have not done any Java development in years but I decided to give it a go since that seemed the quickest way to get things going.</p>
 <h2 id="re-learning-java-in-a-pinch">Re-learning Java in a pinch</h2>
 <p>The first thing to do was setup the developer environment. Since I had not done so before, I install the JDK. Since I wasn&rsquo;t sure which version to go with I installed both java 11 version and java 17 versions. I decided to give java 17 version a try. Since I am on arch (well, technically manjaro) I have to use the following command to update the alternatives where alternative is the term used on Ubuntu side.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
-❯ sudo archlinux-java status
-Available Java environments:
-java-11-openjdk (default)
-java-17-openjdk
-❯ sudo archlinux-java set java-17-openjdk
-❯ java --version
-openjdk 17.0.1 2021-10-19
-OpenJDK Runtime Environment (build 17.0.1+12)
-OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
-
-</code></pre></div><p>Ok, now on to actually building and running the official client. Replace the username and password with what was assigned to you when you signed up. And build and run.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
-    ❯ mvn spring-boot:run
-    [INFO] Scanning for projects...
-    [INFO] 
-    [INFO] ------------&lt; com.openraildata:openwire-camel-client-java &gt;-------------
-    [INFO] Building openwire-camel-client-java 1.2
-    [INFO] --------------------------------[ jar ]---------------------------------
-    ....
-    2021-11-21 21:38:52.480 ERROR 17340 --- [           main] c.s.x.b.v2.runtime.reflect.opt.Injector  : null
-
-    java.security.PrivilegedActionException: null
-   at java.base/java.security.AccessController.doPrivileged(AccessController.java:573) ~[na:na]
-   at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.&lt;clinit&gt;(Injector.java:197) ~[jaxb-impl-2.3.0.jar:2.3.0]
-</code></pre></div><p>Well, that was unexpected. Turns out that newer Java versions don&rsquo;t like some optimization used in JAXB core libraries. According to this <a class="link" href="https://stackoverflow.com/questions/50237516/proper-fix-for-java-10-complaining-about-illegal-reflection-access-by-jaxb-impl"  target="_blank" rel="noopener"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">❯ sudo archlinux-java status
+</span></span><span class="line"><span class="cl">Available Java environments:
+</span></span><span class="line"><span class="cl">java-11-openjdk (default)
+</span></span><span class="line"><span class="cl">java-17-openjdk
+</span></span><span class="line"><span class="cl">❯ sudo archlinux-java set java-17-openjdk
+</span></span><span class="line"><span class="cl">❯ java --version
+</span></span><span class="line"><span class="cl">openjdk 17.0.1 2021-10-19
+</span></span><span class="line"><span class="cl">OpenJDK Runtime Environment (build 17.0.1+12)
+</span></span><span class="line"><span class="cl">OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
+</span></span></code></pre></div><p>Ok, now on to actually building and running the official client. Replace the username and password with what was assigned to you when you signed up. And build and run.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ❯ mvn spring-boot:run
+</span></span><span class="line"><span class="cl">    [INFO] Scanning for projects...
+</span></span><span class="line"><span class="cl">    [INFO] 
+</span></span><span class="line"><span class="cl">    [INFO] ------------&lt; com.openraildata:openwire-camel-client-java &gt;-------------
+</span></span><span class="line"><span class="cl">    [INFO] Building openwire-camel-client-java 1.2
+</span></span><span class="line"><span class="cl">    [INFO] --------------------------------[ jar ]---------------------------------
+</span></span><span class="line"><span class="cl">    ....
+</span></span><span class="line"><span class="cl">    2021-11-21 21:38:52.480 ERROR 17340 --- [           main] c.s.x.b.v2.runtime.reflect.opt.Injector  : null
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    java.security.PrivilegedActionException: null
+</span></span><span class="line"><span class="cl">   at java.base/java.security.AccessController.doPrivileged(AccessController.java:573) ~[na:na]
+</span></span><span class="line"><span class="cl">   at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.&lt;clinit&gt;(Injector.java:197) ~[jaxb-impl-2.3.0.jar:2.3.0]
+</span></span></code></pre></div><p>Well, that was unexpected. Turns out that newer Java versions don&rsquo;t like some optimization used in JAXB core libraries. According to this <a class="link" href="https://stackoverflow.com/questions/50237516/proper-fix-for-java-10-complaining-about-illegal-reflection-access-by-jaxb-impl"  target="_blank" rel="noopener"
     >Stackoverflow</a> answer it seems that using any version of JAXB above 2.3.0 should do the trick but after several attempts at changing dependencies and other futile attempts, I just gave up and switched to Java 11. And that seems to work fine with just a warning. Homework for later!</p>
 <p>Switching to Java 11 made everything work and finally we were getting some data from the feed, Success!</p>
 <h2 id="note-about-the-java-solution-and-how-it-works">Note about the Java solution and how it works</h2>
@@ -261,42 +259,39 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
     >Camel library</a> implements those patterns. It also has support for numerous data formats and endpoints via a unified URI system. This makes it extremely easy to integrate different data sources and sinks. Best thing about this is that the library core is very lightweight and the rest of the functionality uses a plugin architecture. This was a surprise finding and I am somewhat dissapointed to find that no golang library fills the same niche.</p>
 <h2 id="on-to-writing-to-kafka">On to writing to Kafka</h2>
 <p>Now the only thing left to do was writing to Kafka. To accomplish only a very few changes needed to be done. Configuring the connection to Kafka is simple enough. Add the dependencies to pom.xml</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml">
-<span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>org.apache.camel<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>camel-kafka<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>${camel.version}<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-
-</code></pre></div><p>And configure routing for route builder so the STOMP messages gets processed and sent to kafka</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">
-<span class="n">String</span> <span class="n">topicName</span> <span class="o">=</span> <span class="s">&#34;stomp&#34;</span><span class="o">;</span>
-<span class="n">String</span> <span class="n">kafkaServer</span> <span class="o">=</span> <span class="s">&#34;kafka&#34;</span><span class="o">;</span>
-<span class="n">String</span> <span class="n">toKafka</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">().</span><span class="na">append</span><span class="o">(</span><span class="n">kafkaServer</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;:&#34;</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">topicName</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;?&#34;</span><span class="o">)</span>
-                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;brokers=localhost:9092&#34;</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
-
-<span class="n">from</span><span class="o">(</span><span class="s">&#34;activemq:topic:&#34;</span> <span class="o">+</span> <span class="n">feedTopic</span> <span class="o">+</span> <span class="s">&#34;?durableSubscriptionName=&#34;</span> <span class="o">+</span> <span class="n">username</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">unmarshal</span><span class="o">()</span>
-        <span class="o">.</span><span class="na">gzip</span><span class="o">()</span>
-        <span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">darwinMessageHandler</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="n">toKafka</span><span class="o">);</span>
-
-</code></pre></div><p>All that is left is for the XML to be converted to JSON because that&rsquo;s the only language hip enough for 2021. For that I ended up using jackson instead of a simpler alternative like <a class="link" href="https://github.com/stleary/JSON-java"  target="_blank" rel="noopener"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>org.apache.camel<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;artifactId&gt;</span>camel-kafka<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;version&gt;</span>${camel.version}<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>And configure routing for route builder so the STOMP messages gets processed and sent to kafka</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">topicName</span> <span class="o">=</span> <span class="s">&#34;stomp&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">kafkaServer</span> <span class="o">=</span> <span class="s">&#34;kafka&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">toKafka</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">().</span><span class="na">append</span><span class="o">(</span><span class="n">kafkaServer</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;:&#34;</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">topicName</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;?&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;brokers=localhost:9092&#34;</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">from</span><span class="o">(</span><span class="s">&#34;activemq:topic:&#34;</span> <span class="o">+</span> <span class="n">feedTopic</span> <span class="o">+</span> <span class="s">&#34;?durableSubscriptionName=&#34;</span> <span class="o">+</span> <span class="n">username</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="na">unmarshal</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="na">gzip</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">darwinMessageHandler</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="n">toKafka</span><span class="o">);</span>
+</span></span></code></pre></div><p>All that is left is for the XML to be converted to JSON because that&rsquo;s the only language hip enough for 2021. For that I ended up using jackson instead of a simpler alternative like <a class="link" href="https://github.com/stleary/JSON-java"  target="_blank" rel="noopener"
     >JSON Java</a> because of the namespaced XML found in the feed.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Exchange</span> <span class="n">exchange</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-
-        <span class="n">String</span> <span class="n">messageBody</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="na">getIn</span><span class="o">().</span><span class="na">getBody</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-        <span class="n">XmlMapper</span> <span class="n">xmlMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XmlMapper</span><span class="o">();</span>
-        <span class="n">JsonNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">xmlMapper</span><span class="o">.</span><span class="na">readTree</span><span class="o">(</span><span class="n">messageBody</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
-
-        <span class="n">ObjectMapper</span> <span class="n">jsonMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="o">();</span>
-        <span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="n">jsonMapper</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
-        <span class="n">exchange</span><span class="o">.</span><span class="na">getMessage</span><span class="o">().</span><span class="na">setBody</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
-    <span class="o">}</span>
-
-</code></pre></div><p>And done! Now we just run a kafka process along with the associated zookeeper instance, create the topic called &ldquo;stomp&rdquo; and viola!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@Override</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">process</span><span class="o">(</span><span class="n">Exchange</span> <span class="n">exchange</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">messageBody</span> <span class="o">=</span> <span class="n">exchange</span><span class="o">.</span><span class="na">getIn</span><span class="o">().</span><span class="na">getBody</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">XmlMapper</span> <span class="n">xmlMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">XmlMapper</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">JsonNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">xmlMapper</span><span class="o">.</span><span class="na">readTree</span><span class="o">(</span><span class="n">messageBody</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">ObjectMapper</span> <span class="n">jsonMapper</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ObjectMapper</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="n">jsonMapper</span><span class="o">.</span><span class="na">writeValueAsString</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exchange</span><span class="o">.</span><span class="na">getMessage</span><span class="o">().</span><span class="na">setBody</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span></code></pre></div><p>And done! Now we just run a kafka process along with the associated zookeeper instance, create the topic called &ldquo;stomp&rdquo; and viola!</p>
 <h2 id="what-next">What Next?</h2>
 <p>So you have a system that writes some set of JSON messages in to a kafka topic, what next? Well the next steps can be anything you want to learn and experiment with really. For me I am hoping to use this to toy with two pet projects.</p>
 <ol>

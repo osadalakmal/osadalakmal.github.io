@@ -176,118 +176,117 @@ if (!doNotTrack) {
 <p>Another nice thing about C++ is it&rsquo;s capability to hide unwanted complexity. And make sure the code moves only within the parameters set by the library. Enum classes and other features introduced in C++11 is the main driver for this functionality.</p>
 <h2 id="implementing-a-c-wrapper-for-hyperscan">Implementing a C++ Wrapper for Hyperscan</h2>
 <p>With all that in mind, let&rsquo;s get down to business of creating the wrapper. Lets start with the header file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">HyperScanDatabase</span> <span class="p">{</span>
-<span class="k">public</span><span class="o">:</span>
-    <span class="k">typedef</span> <span class="n">match_event_handler</span> <span class="n">EventHandler</span><span class="p">;</span>
-    <span class="k">enum</span> <span class="k">class</span> <span class="nc">ScanMode</span> <span class="p">{</span>
-        <span class="n">BLOCK</span><span class="p">,</span>
-        <span class="n">STREAM</span>
-    <span class="p">};</span>
-    <span class="n">HyperScanDatabase</span><span class="p">(</span><span class="n">ScanMode</span> <span class="n">scanMode</span><span class="p">);</span>
-    <span class="k">virtual</span> <span class="o">~</span><span class="n">HyperScanDatabase</span><span class="p">();</span>
-    <span class="kt">int</span> <span class="nf">addPattern</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">pattern</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
-    <span class="kt">int</span> <span class="nf">scan</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">dataSize</span><span class="p">,</span> <span class="n">EventHandler</span><span class="p">);</span>
-<span class="k">private</span><span class="o">:</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span> <span class="n">m_patterns</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">m_flags</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">m_ids</span><span class="p">;</span>
-    <span class="kt">bool</span> <span class="n">m_compiled</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-    <span class="n">ScanMode</span> <span class="n">m_scanMode</span><span class="p">;</span>
-    <span class="n">hs_database_t</span><span class="o">*</span> <span class="n">m_database</span><span class="p">;</span>
-    <span class="n">hs_scratch_t</span><span class="o">*</span> <span class="n">m_scratch</span><span class="p">;</span>
-<span class="p">};</span>
-</code></pre></div><p>The first thing to note is I am converting the configuration options and parameter types to C++ equivalents. This can be as simple as changing integer flags to enum classes and up lifting function pointers in to C++ typedefs. Or they can be more elaborate ones where we cover up return codes with an exception hierarchy, change C data structures to C++ STL ones and so on. The important thing is that you keep the interface of the wrapper within the C++ realms and remove the &ldquo;C&rdquo; ness of the interface.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">HyperScanDatabase</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">typedef</span> <span class="n">match_event_handler</span> <span class="n">EventHandler</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">enum</span> <span class="k">class</span> <span class="nc">ScanMode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">BLOCK</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">STREAM</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HyperScanDatabase</span><span class="p">(</span><span class="n">ScanMode</span> <span class="n">scanMode</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">virtual</span> <span class="o">~</span><span class="n">HyperScanDatabase</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">addPattern</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">pattern</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">scan</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">dataSize</span><span class="p">,</span> <span class="n">EventHandler</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span> <span class="n">m_patterns</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">m_flags</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">m_ids</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">m_compiled</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ScanMode</span> <span class="n">m_scanMode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hs_database_t</span><span class="o">*</span> <span class="n">m_database</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hs_scratch_t</span><span class="o">*</span> <span class="n">m_scratch</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>The first thing to note is I am converting the configuration options and parameter types to C++ equivalents. This can be as simple as changing integer flags to enum classes and up lifting function pointers in to C++ typedefs. Or they can be more elaborate ones where we cover up return codes with an exception hierarchy, change C data structures to C++ STL ones and so on. The important thing is that you keep the interface of the wrapper within the C++ realms and remove the &ldquo;C&rdquo; ness of the interface.</p>
 <p>Then note that the internal data structures are all C++ ones, even when ultimately they will be passed to the C code. <code>m_patterns</code> for example is a vector of char pointers. In C world this would become a two dimensional dynamically allocated array of char pointers. But in C++ world, it is a vector of char pointers. The difference being that memory management is far easier on the vector. Note that I couldn&rsquo;t use a vector of vectors because there is no guarantee in C++ about contiguousness of nested vectors.</p>
 <p>A virtual destructor because we are holding resources that need to be freed and a state variable for holding internal state is also present.</p>
 <p>The methods themselves are very simple. The construction of the object only requires you to know if you are processing a stream or block of characters. Then a single method for adding a pattern for matching which returns a unique id for the pattern. Then a method scanning the data and calling the event handler for each match.</p>
 <p>Switching over to the implementation it looks like following</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;hs_wrapper.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
-</span><span class="cp"></span>
-<span class="k">namespace</span> 
-<span class="p">{</span>
-
-    <span class="kt">bool</span>
-    <span class="nf">compile</span><span class="p">(</span><span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">ScanMode</span> <span class="n">scanMode</span><span class="p">,</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span> <span class="n">patterns</span><span class="p">,</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">flags</span><span class="p">,</span>
-            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">ids</span><span class="p">,</span>
-            <span class="n">hs_database</span><span class="o">**</span> <span class="n">database</span><span class="p">,</span>
-            <span class="n">hs_scratch</span><span class="o">**</span> <span class="n">scratch</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="n">hs_compile_error_t</span><span class="o">*</span> <span class="n">compileError</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">hs_compile_multi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">patterns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                           <span class="o">&amp;</span><span class="n">flags</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                           <span class="o">&amp;</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                           <span class="n">patterns</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span>
-                           <span class="p">(</span><span class="n">scanMode</span> <span class="o">==</span> <span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">ScanMode</span><span class="o">::</span><span class="n">STREAM</span>
-                              <span class="o">?</span> <span class="nl">HS_MODE_STREAM</span>
-                              <span class="p">:</span> <span class="n">HS_MODE_BLOCK</span><span class="p">),</span>
-                           <span class="k">nullptr</span><span class="p">,</span>
-                           <span class="n">database</span><span class="p">,</span>
-                           <span class="o">&amp;</span><span class="n">compileError</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span><span class="p">(</span>
-          <span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;ERROR: Unable to compile patterns: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">compileError</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
-        <span class="n">hs_free_compile_error</span><span class="p">(</span><span class="n">compileError</span><span class="p">);</span>
-        <span class="n">hs_free_database</span><span class="p">(</span><span class="o">*</span><span class="n">database</span><span class="p">);</span>
-        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">hs_alloc_scratch</span><span class="p">(</span><span class="o">*</span><span class="n">database</span><span class="p">,</span> <span class="n">scratch</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;ERROR: Unable to allocate scratch space. Exiting.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-        <span class="n">hs_free_database</span><span class="p">(</span><span class="o">*</span><span class="n">database</span><span class="p">);</span>
-        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="c1">// anonymous namespace
-</span><span class="c1"></span>
-<span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">HyperScanDatabase</span><span class="p">(</span><span class="n">ScanMode</span> <span class="n">scanMode</span><span class="p">)</span>
-  <span class="o">:</span> <span class="n">m_scanMode</span><span class="p">(</span><span class="n">scanMode</span><span class="p">)</span>
-  <span class="p">,</span> <span class="n">m_database</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
-  <span class="p">,</span> <span class="n">m_scratch</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">m_ids</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="n">HyperScanDatabase</span><span class="o">::~</span><span class="n">HyperScanDatabase</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">m_database</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">hs_free_database</span><span class="p">(</span><span class="n">m_database</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">m_scratch</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">hs_free_scratch</span><span class="p">(</span><span class="n">m_scratch</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">pattern</span> <span class="p">:</span> <span class="n">m_patterns</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">delete</span><span class="p">[]</span> <span class="n">pattern</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">int</span>
-<span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">addPattern</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">pattern</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="kt">char</span><span class="o">*</span> <span class="n">d_pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-  <span class="n">strncpy</span><span class="p">(</span><span class="n">d_pattern</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-  <span class="n">m_patterns</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">d_pattern</span><span class="p">);</span>
-  <span class="n">m_flags</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">flags</span><span class="p">);</span>
-  <span class="n">m_ids</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">m_ids</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">++</span><span class="p">);</span>
-  <span class="k">return</span> <span class="n">m_patterns</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span>
-<span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">scan</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">data1</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">dataSize</span><span class="p">,</span> <span class="n">EventHandler</span> <span class="n">eventHandler</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">HS_SUCCESS</span><span class="p">;</span>
-  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">m_compiled</span><span class="p">)</span> <span class="n">compile</span><span class="p">(</span><span class="n">m_scanMode</span><span class="p">,</span> <span class="n">m_patterns</span><span class="p">,</span> <span class="n">m_flags</span><span class="p">,</span> <span class="n">m_ids</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m_database</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m_scratch</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">rc</span> <span class="o">=</span> <span class="n">hs_scan</span><span class="p">(</span>
-         <span class="n">m_database</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">dataSize</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m_scratch</span><span class="p">,</span> <span class="n">eventHandler</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">))</span> <span class="o">!=</span>
-      <span class="n">HS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">fprintf</span><span class="p">(</span>
-      <span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;ERROR: Unable to scan input buffer. rc = %d. Exiting.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">rc</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
-<span class="p">}</span>
-
-</code></pre></div><p>All the usual suspects really. Try to follow the best practices. Everything from <a class="link" href="https://www.oreilly.com/library/view/effective-modern-c/9781491908419/"  target="_blank" rel="noopener"
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;hs_wrapper.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">compile</span><span class="p">(</span><span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">ScanMode</span> <span class="n">scanMode</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span> <span class="n">patterns</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">flags</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">ids</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">hs_database</span><span class="o">**</span> <span class="n">database</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">hs_scratch</span><span class="o">**</span> <span class="n">scratch</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">hs_compile_error_t</span><span class="o">*</span> <span class="n">compileError</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">hs_compile_multi</span><span class="p">(</span><span class="o">&amp;</span><span class="n">patterns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                           <span class="o">&amp;</span><span class="n">flags</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                           <span class="o">&amp;</span><span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">patterns</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                           <span class="p">(</span><span class="n">scanMode</span> <span class="o">==</span> <span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">ScanMode</span><span class="o">::</span><span class="n">STREAM</span>
+</span></span><span class="line"><span class="cl">                              <span class="o">?</span> <span class="nl">HS_MODE_STREAM</span>
+</span></span><span class="line"><span class="cl">                              <span class="p">:</span> <span class="n">HS_MODE_BLOCK</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                           <span class="k">nullptr</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">database</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="o">&amp;</span><span class="n">compileError</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fprintf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;ERROR: Unable to compile patterns: %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">compileError</span><span class="o">-&gt;</span><span class="n">message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hs_free_compile_error</span><span class="p">(</span><span class="n">compileError</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hs_free_database</span><span class="p">(</span><span class="o">*</span><span class="n">database</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">hs_alloc_scratch</span><span class="p">(</span><span class="o">*</span><span class="n">database</span><span class="p">,</span> <span class="n">scratch</span><span class="p">)</span> <span class="o">!=</span> <span class="n">HS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;ERROR: Unable to allocate scratch space. Exiting.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hs_free_database</span><span class="p">(</span><span class="o">*</span><span class="n">database</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="c1">// anonymous namespace
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">HyperScanDatabase</span><span class="p">(</span><span class="n">ScanMode</span> <span class="n">scanMode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="o">:</span> <span class="n">m_scanMode</span><span class="p">(</span><span class="n">scanMode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span> <span class="n">m_database</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">,</span> <span class="n">m_scratch</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">m_ids</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">HyperScanDatabase</span><span class="o">::~</span><span class="n">HyperScanDatabase</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">m_database</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hs_free_database</span><span class="p">(</span><span class="n">m_database</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">m_scratch</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hs_free_scratch</span><span class="p">(</span><span class="n">m_scratch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">pattern</span> <span class="p">:</span> <span class="n">m_patterns</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">delete</span><span class="p">[]</span> <span class="n">pattern</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">addPattern</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">pattern</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">char</span><span class="o">*</span> <span class="n">d_pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="n">strncpy</span><span class="p">(</span><span class="n">d_pattern</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">m_patterns</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">d_pattern</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">m_flags</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">flags</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">m_ids</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">m_ids</span><span class="p">.</span><span class="n">back</span><span class="p">()</span><span class="o">++</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">m_patterns</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span>
+</span></span><span class="line"><span class="cl"><span class="n">HyperScanDatabase</span><span class="o">::</span><span class="n">scan</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">data1</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">dataSize</span><span class="p">,</span> <span class="n">EventHandler</span> <span class="n">eventHandler</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">HS_SUCCESS</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">m_compiled</span><span class="p">)</span> <span class="n">compile</span><span class="p">(</span><span class="n">m_scanMode</span><span class="p">,</span> <span class="n">m_patterns</span><span class="p">,</span> <span class="n">m_flags</span><span class="p">,</span> <span class="n">m_ids</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m_database</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">m_scratch</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">((</span><span class="n">rc</span> <span class="o">=</span> <span class="n">hs_scan</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">         <span class="n">m_database</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">dataSize</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m_scratch</span><span class="p">,</span> <span class="n">eventHandler</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">))</span> <span class="o">!=</span>
+</span></span><span class="line"><span class="cl">      <span class="n">HS_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fprintf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;ERROR: Unable to scan input buffer. rc = %d. Exiting.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">rc</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">rc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>All the usual suspects really. Try to follow the best practices. Everything from <a class="link" href="https://www.oreilly.com/library/view/effective-modern-c/9781491908419/"  target="_blank" rel="noopener"
     >Effective Modern C++11</a> to <a class="link" href="https://herbsutter.com/gotw/"  target="_blank" rel="noopener"
     >Guru of the week</a>. But in particular pay attention to the fact we hid the implementation of the compile function from the header in an anonymous namespace. This is something that I have seen almost all the C++ newbies, specially ones that started out with Java make. Those functions do not need to be part of the header file. Even if you make it private, it ends up polluting the namespace and needing recompiles of all the translation units including this header for no real gain. And no, you do not have to test that. The whole point of TDD is to test the unit - i.e. the interface you defined in the header. The public interface of the class can and should be tested and the <code>compile</code> function will get tested while you do that. You don&rsquo;t need to write a specific test for that function.</p>
 <p>Also note that we delegate resource management to the constructor and destructor as much as possible. The user of the class should not have to worry about freeing the resources. Obviously resource holding classes should not ideally be value semantic classes, so copying etc should be prevented. So in hindsight I should have used something like <a class="link" href="https://en.cppreference.com/w/cpp/language/rule_of_three"  target="_blank" rel="noopener"
