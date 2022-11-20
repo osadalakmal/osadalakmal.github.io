@@ -6,14 +6,22 @@
         <description>Recent content on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Mon, 09 May 2022 00:35:34 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Getting lost in weeds of Podman</title>
+        <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
+        <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;What are rootless containers My use case for rootless containers But I don&amp;rsquo;t have docker Adding finishing touches The preamble becomes the main act Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks.</description>
+        </item>
+        <item>
         <title>Avoiding burnout in software domain</title>
         <link>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</link>
         <pubDate>Mon, 09 May 2022 00:35:34 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/young-woman-eyes-closed-hand-on-forehead-768.jpg" alt="Featured image of post Avoiding burnout in software domain" /&gt;How to avoid the dangers of the trade
-  What is burnout? Why does it happen? It won&amp;rsquo;t happen to me How to avoid it  Prioritize self-care Shift your perspective Reduce exposure to job stressors Seek out connections   Mental health and software industry    What is burnout?   You know the drill. It starts with a couple spillovers from your usual sprints. It snowballs in to a stream of issues and before you know it, you are at risk of missing a major deadline.</description>
+What is burnout? Why does it happen? It won&amp;rsquo;t happen to me How to avoid it Prioritize self-care Shift your perspective Reduce exposure to job stressors Seek out connections Mental health and software industry What is burnout? You know the drill. It starts with a couple spillovers from your usual sprints. It snowballs in to a stream of issues and before you know it, you are at risk of missing a major deadline.</description>
         </item>
         <item>
         <title>Agile : The Snake Oil for Cobra Bites</title>
@@ -22,7 +30,7 @@
         
         <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.jpeg" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;How the rebellion got subverted
-  The agile manifesto - The Rebellion that was not The call is coming from inside the house Return to roots Why is it so easy to fail? How to undo this? Understanding the what, why and how Cutting out the fluff Understand but do not measure Use the tools provided in whatever flavour of Agile you chose To be continued    The agile manifesto - The Rebellion that was not</description>
+The agile manifesto - The Rebellion that was not The call is coming from inside the house Return to roots Why is it so easy to fail? How to undo this? Understanding the what, why and how Cutting out the fluff Understand but do not measure Use the tools provided in whatever flavour of Agile you chose To be continued The agile manifesto - The Rebellion that was not The first time I heard the word agile manifesto was back in 2009.</description>
         </item>
         <item>
         <title>Hyperscan C&#43;&#43; Wrapper</title>
@@ -31,7 +39,7 @@
         
         <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)
-  Being a C library in a C++ World Why C is still being used C is nice but C++ is nicer Implementing a C++ Wrapper for Hyperscan Takeaways    Being a C library in a C++ World This weekend I was looking at a regex library written by intel called hyperscan. I had needed to use a regex library that was performant and easy to use.</description>
+Being a C library in a C++ World Why C is still being used C is nice but C++ is nicer Implementing a C++ Wrapper for Hyperscan Takeaways Being a C library in a C++ World This weekend I was looking at a regex library written by intel called hyperscan. I had needed to use a regex library that was performant and easy to use.</description>
         </item>
         <item>
         <title>Starting With Realtime Data</title>
@@ -40,7 +48,7 @@
         
         <guid>https://osadalakmal.github.io/posts/starting-with-realtime-data/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.jpg" alt="Featured image of post Starting With Realtime Data" /&gt;(or why realtime data is elusive in most organizations)
-  Data, Data and Data How to break out of the cycle National Rail to the Rescue STOMP Protocol ( which I didn&amp;rsquo;t know was a thing ) Re-learning Java in a pinch Note about the Java solution and how it works On to writing to Kafka What Next?    Data, Data and Data   Drowning in Data but Thirsting for Insights  These days the mantra is always data, data and more data.</description>
+Data, Data and Data How to break out of the cycle National Rail to the Rescue STOMP Protocol ( which I didn&amp;rsquo;t know was a thing ) Re-learning Java in a pinch Note about the Java solution and how it works On to writing to Kafka What Next? Data, Data and Data Drowning in Data but Thirsting for Insights These days the mantra is always data, data and more data.</description>
         </item>
         <item>
         <title>Learning In Engineering Organizations</title>
@@ -48,7 +56,7 @@
         <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/learninginorganizations/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;Learning In Software Engineering Organizations   The Learning Organization: A Lit Review by giulia.forsythe licensed under CC BY 2.0   Learning in Organizations Why Learning Matters for Organizations What is different about engineering organizations How to learn in Big Organizations  Corporate Knowledge Systems. Index, tag and disseminate Automate with APIs Chat your way to knowledge Newsletters and Blogs      Learning in Organizations In almost all organizations that I have been part of since I graduated there have come a time when we had to teach something to the whole team.</description>
+        <description>&lt;img src="https://osadalakmal.github.io/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;Learning In Software Engineering Organizations The Learning Organization: A Lit Review by giulia.forsythe licensed under CC BY 2.0 Learning in Organizations Why Learning Matters for Organizations What is different about engineering organizations How to learn in Big Organizations Corporate Knowledge Systems. Index, tag and disseminate Automate with APIs Chat your way to knowledge Newsletters and Blogs Learning in Organizations In almost all organizations that I have been part of since I graduated there have come a time when we had to teach something to the whole team.</description>
         </item>
         <item>
         <title>Not your grandmas&#39; docker - Part 2</title>
@@ -56,9 +64,8 @@
         <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;Components of the container ecosystem  Container Engines Container Host Registry Server Container Orchestration Container Runtime      Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
-Components of the container ecosystem  Container Ecosystem 
-Container Engines A container engine will run a container given the user input to do so.</description>
+        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;Components of the container ecosystem Container Engines Container Host Registry Server Container Orchestration Container Runtime Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
+Components of the container ecosystem Container Ecosystem Container Engines A container engine will run a container given the user input to do so. You can customize it&amp;rsquo;s behavior through several parameters.</description>
         </item>
         <item>
         <title>Not your grandmas&#39; docker - Part 1</title>
@@ -66,7 +73,7 @@ Container Engines A container engine will run a container given the user input t
         <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;Operating System Level Virtualization  chroot Solaris Zones and Containers Systemd nspawn LXC/LXD   Enter docker Why not docker? What buildah is    Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</description>
+        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;Operating System Level Virtualization chroot Solaris Zones and Containers Systemd nspawn LXC/LXD Enter docker Why not docker? What buildah is Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</description>
         </item>
         <item>
         <title>Adventures in WSL Land</title>
@@ -91,8 +98,7 @@ Container Engines A container engine will run a container given the user input t
         
         <guid>https://osadalakmal.github.io/posts/codestar/codestar/</guid>
         <description>Codestar - A new approach to development on AWS Codestar is a relatively new approach to creating new application that run on AWS infrastructure. The interesting thing about this seems to be that it gives newbie developers like myself to get bootstrapped and go from zero to hundred in a relatively short time period.
- InitialScreen 
-This is the initial screen shown when you first try to create a codestar project.</description>
+InitialScreen This is the initial screen shown when you first try to create a codestar project. There are several options to choose from but it is mostly elastic beanstalk and lambda focused.</description>
         </item>
         <item>
         <title>Cost Of Allocation in High Performance Systems</title>

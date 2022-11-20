@@ -6,16 +6,24 @@
     <description>Recent content in docker on Curiously Recurring Thoughts in Programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 26 Aug 2021 10:00:50 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting lost in weeds of Podman</title>
+      <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
+      <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
+      <description>What are rootless containers My use case for rootless containers But I don&amp;rsquo;t have docker Adding finishing touches The preamble becomes the main act Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks.</description>
+    </item>
+    
     <item>
       <title>Not your grandmas&#39; docker - Part 2</title>
       <link>https://osadalakmal.github.io/posts/container-part2/</link>
       <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
       
       <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
-      <description>Components of the container ecosystem  Container Engines Container Host Registry Server Container Orchestration Container Runtime      Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
-Components of the container ecosystem  Container Ecosystem 
-Container Engines A container engine will run a container given the user input to do so.</description>
+      <description>Components of the container ecosystem Container Engines Container Host Registry Server Container Orchestration Container Runtime Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
+Components of the container ecosystem Container Ecosystem Container Engines A container engine will run a container given the user input to do so. You can customize it&amp;rsquo;s behavior through several parameters.</description>
     </item>
     
     <item>
@@ -24,7 +32,7 @@ Container Engines A container engine will run a container given the user input t
       <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
       
       <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
-      <description>Operating System Level Virtualization  chroot Solaris Zones and Containers Systemd nspawn LXC/LXD   Enter docker Why not docker? What buildah is    Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</description>
+      <description>Operating System Level Virtualization chroot Solaris Zones and Containers Systemd nspawn LXC/LXD Enter docker Why not docker? What buildah is Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</description>
     </item>
     
   </channel>

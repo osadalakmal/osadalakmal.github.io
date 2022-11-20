@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers'><title>Getting lost in weeds of Podman</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Getting lost in weeds of Podman'>
+<meta property='og:description' content='Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='docker' /><meta property='article:tag' content='virtualization' /><meta property='article:tag' content='podman' /><meta property='article:published_time' content='2022-11-07T15:31:29&#43;05:30'/><meta property='article:modified_time' content='2022-11-07T15:31:29&#43;05:30'/><meta property='og:image' content='https://osadalakmal.github.io/img/podman-logo-full-vert.png' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Getting lost in weeds of Podman">
+<meta name="twitter:description" content="Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osadalakmal.github.io/img/podman-logo-full-vert.png' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-42954847-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://osadalakmal.github.io" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/getting-lost-in-weeds-of-podman/">
+                
+                    <img src="/img/podman-logo-full-vert.png" loading="lazy" alt="Featured image of post Getting lost in weeds of Podman" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/virtualization/" >
+                virtualization
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/getting-lost-in-weeds-of-podman/">Getting lost in weeds of Podman</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 07, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-rootless-containers">What are rootless containers</a>
+      <ul>
+        <li><a href="#my-use-case-for-rootless-containers">My use case for rootless containers</a></li>
+        <li><a href="#but-i-dont-have-docker">But I don&rsquo;t have docker</a></li>
+        <li><a href="#adding-finishing-touches">Adding finishing touches</a></li>
+        <li><a href="#the-preamble-becomes-the-main-act">The preamble becomes the main act</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+  
+<p>Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks. It also has better integration with other tools in anything-but-docker space including buildah and skopeo</p>
+<h2 id="what-are-rootless-containers">What are rootless containers</h2>
+<p><figure 
+	>
+	<a href="/img/rootless-containers.png" >
+		<img src="/img/rootless-containers.png"
+			
+			
+			
+			loading="lazy"
+			alt="How Rootless Containers Work">
+	</a>
+	
+	<figcaption>How Rootless Containers Work</figcaption>
+	
+</figure><br>
+<br>
+A big selling point of using podman is that you will be able to run rootless containers. This means that the full virtualized container runs as the non-root user that you are logged in as usually. This is important in various aspects. One is that on shared servers where you just don&rsquo;t get to have root, you can still get containers running. Also even on a machine where it is possible to become root for running docker containers, it is good in security point of view to be running as a non-privileged user.</p>
+<p>At a more technical level the issue is bugs that enable malicious code to breakout of the virtualization env on to the host. And if it is able to exploit such a bug the attacker suddenly has root access to the host system. Now there are ways to mitigate those risks such as</p>
+<ol>
+<li>Specifying the USER for each of the Docker CMDs</li>
+<li>Specifying the USER for the docker RUN command on the command line</li>
+<li>Using a supervisor framework such as <a class="link" href="https://github.com/just-containers/s6-overlay"  target="_blank" rel="noopener"
+    >s6</a> or <a class="link" href="https://gdevillele.github.io/engine/admin/using_supervisord/"  target="_blank" rel="noopener"
+    >supervisord</a></li>
+</ol>
+<p>But again, these are mitigating measures and not a solution to the underlying issue of running containers as the root user. rootless containers address the root cause by allowing you to run containers as a non privileged user. This means that even if there were to be a breakout, the attacker still would need a privilege escalation bug on the host env to be effective at attacking the host system</p>
+<h3 id="my-use-case-for-rootless-containers">My use case for rootless containers</h3>
+<p><br>
+A friend had asked me for advice on best practices in FTPing files around. Now the best advice that I can give is not to FTP files around in 2022 anymore and there are much better data transfer mechanisms out there. But if you had to do it, there are ways to take most of the pain out of it such as using checksums and delta encoding and so on. While I was thinking of writing a blog post on those practices, I needed to write some test code. To test out this code, I needed a FTP server. Now I would rather not put any server on my primary workstation that need not be there and this meant I had to do this inside a docker container.</p>
+<h3 id="but-i-dont-have-docker">But I don&rsquo;t have docker</h3>
+<p>I had tried to switch to podman sometime back but it was mostly limited to pulling images directly off docker/quay and using them. I had not gotten around to building images with podman or buildah much. But this time I had lucked out and the most commonly used FTP image seemed to lack support for running as a rootless container binding to ports higher than 1024 for the listening port. If you did not know about this - unprivileged users on linux cannot bind to ports lower than 1024 usually as explained <a class="link" href="https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html"  target="_blank" rel="noopener"
+    >here</a>. There are ways around this for example by using <a class="link" href="https://en.wikipedia.org/wiki/Authbind"  target="_blank" rel="noopener"
+    >authbind</a> to achieve this via a setuid helper executable or using POSIX <a class="link" href="https://man7.org/linux/man-pages/man7/capabilities.7.html"  target="_blank" rel="noopener"
+    >capabilities system</a></p>
+<p>But each of those workarounds come with their own pitfalls, vulnarabilities and risks. Therefore the better way would be to use a non-root user and use a non-standard port. But docker does not usually run in non-root mode. So I switched to podman and I cloned the repo that I had chosen - <a class="link" href="https://github.com/fauria/docker-vsftpd"  target="_blank" rel="noopener"
+    >docker-vsftpd</a> to <a class="link" href="https://github.com/osadalakmal/podman-vsftpd"  target="_blank" rel="noopener"
+    >here</a> and started from there. It was a simple change to add the new port. And add the change to the README. The full pull request is <a class="link" href="https://github.com/fauria/docker-vsftpd/pull/76"  target="_blank" rel="noopener"
+    >here</a></p>
+<h3 id="adding-finishing-touches">Adding finishing touches</h3>
+<p>I am a bit of a perfectionist and once I had started work on this repo I had to add a couple of finishing touches. The first was an automated build process. I had used github workflows and actions to achieve this. Here is the code for that</p>
+
+
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build and Push Image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="l">push,workflow_dispatch ]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build and push image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l">MainCI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-20.04</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build Image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">build-image</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">redhat-actions/buildah-build@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">vsftpd</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">latest ${{ github.sha }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">containerfiles</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">          </span><span class="w">          </span><span class="l">./Dockerfile</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Podman Login action (https://github.com/redhat-actions/podman-login) also be used to log in,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># in which case &#39;username&#39; and &#39;password&#39; can be omitted.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Push To docker.io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">push-to-docker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">redhat-actions/push-to-registry@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">${{ steps.build-image.outputs.image }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">${{ steps.build-image.outputs.tags }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="l">docker.io/osadal</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l">osadal</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.REGISTRY_PASSWORD }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Print image url</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">echo &#34;Image pushed to ${{ steps.push-to-docker.outputs.registry-paths }}&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Things to note here are the build image action. Note that we are using buildah action to build the image and not docker. This means we keep the pipeline clear of docker even though we will still use docker.io to distribute the image.</p>
+<p>Then note the secret mechanism. Github workflows manage secrets injection through envrionment variables as most other CI/CD pipelines do. The actual secret is input at the github settings level. Then it gets injected in to the CI/CD envrionment and is available for use by any action given access to it through the YAML code.</p>
+<p>The next to do thing in my list is adding shellcheck support to the CI/CD pipeline. That will be left for another day. But for now I have cleared the shellcheck comments manually. The pull request is <a class="link" href="https://github.com/osadalakmal/podman-vsftpd/pull/1/files#diff-fc8d3c534affdef352ee2e218f1bf36e45b9991b2b0e0b9f4b844eea147643c5"  target="_blank" rel="noopener"
+    >here</a>. This mostly involves</p>
+<ol>
+<li>
+<p>Breaking down assignment and export in to two lines. This is a good idea because otherwise they do not individually fail. So you can get a case where the generation of the variable fails but you still won&rsquo;t know because the export worked and the return code was zero</p>
+</li>
+<li>
+<p>Convert backtick escaped sheel command output capturing to &ldquo;$()&rdquo; syntax. This is much better and less error prone. This deserves it&rsquo;s own blog post so I will only point to <a class="link" href="https://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_06_03"  target="_blank" rel="noopener"
+    >POSIX spec</a> for now.</p>
+</li>
+<li>
+<p>Quotin variable usage. You never know when spaces in values will trip you up otherwise.</p>
+</li>
+</ol>
+<h3 id="the-preamble-becomes-the-main-act">The preamble becomes the main act</h3>
+<p>So there you have it. We set out to write about good FTP system practices instead wrote a blog post about how to use podman and shellcheck. The next one I promise will be on topic!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/docker/">docker</a>
+        
+            <a href="/tags/virtualization/">virtualization</a>
+        
+            <a href="/tags/podman/">podman</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+</aside>
+     
+     
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-rootless-containers">What are rootless containers</a>
+      <ul>
+        <li><a href="#my-use-case-for-rootless-containers">My use case for rootless containers</a></li>
+        <li><a href="#but-i-dont-have-docker">But I don&rsquo;t have docker</a></li>
+        <li><a href="#adding-finishing-touches">Adding finishing touches</a></li>
+        <li><a href="#the-preamble-becomes-the-main-act">The preamble becomes the main act</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

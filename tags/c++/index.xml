@@ -14,7 +14,7 @@
       
       <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
       <description>(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)
-  Being a C library in a C++ World Why C is still being used C is nice but C++ is nicer Implementing a C++ Wrapper for Hyperscan Takeaways    Being a C library in a C++ World This weekend I was looking at a regex library written by intel called hyperscan. I had needed to use a regex library that was performant and easy to use.</description>
+Being a C library in a C++ World Why C is still being used C is nice but C++ is nicer Implementing a C++ Wrapper for Hyperscan Takeaways Being a C library in a C++ World This weekend I was looking at a regex library written by intel called hyperscan. I had needed to use a regex library that was performant and easy to use.</description>
     </item>
     
   </channel>

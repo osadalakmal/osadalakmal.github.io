@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>podman on Curiously Recurring Thoughts in Programming</title>
+    <link>https://osadalakmal.github.io/tags/podman/</link>
+    <description>Recent content in podman on Curiously Recurring Thoughts in Programming</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/podman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting lost in weeds of Podman</title>
+      <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
+      <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
+      
+      <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
+      <description>What are rootless containers My use case for rootless containers But I don&amp;rsquo;t have docker Adding finishing touches The preamble becomes the main act Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks.</description>
+    </item>
+    
+  </channel>
+</rss>
