@@ -12,7 +12,7 @@
         <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;What are rootless containers My use case for rootless containers But I don&amp;rsquo;t have docker Adding finishing touches The preamble becomes the main act Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks.</description>
+        <description>&lt;img src="https://osadalakmal.github.io/img/podman-vs-docker.jpeg" alt="Featured image of post Getting lost in weeds of Podman" /&gt;Podman Logo What are rootless containers My use case for rootless containers But I don&amp;rsquo;t have docker Adding finishing touches The preamble becomes the main act Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks.</description>
         </item>
         <item>
         <title>Avoiding burnout in software domain</title>
