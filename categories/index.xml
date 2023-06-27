@@ -6,7 +6,15 @@
         <description>Recent content in Categories on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 Jun 2023 18:36:00 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>communication</title>
+        <link>https://osadalakmal.github.io/categories/communication/</link>
+        <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/categories/communication/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>virtualization</title>
         <link>https://osadalakmal.github.io/categories/virtualization/</link>
         <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
@@ -36,14 +44,6 @@
         <pubDate>Sat, 20 Nov 2021 20:15:01 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/categories/data/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>communication</title>
-        <link>https://osadalakmal.github.io/categories/communication/</link>
-        <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
-        
-        <guid>https://osadalakmal.github.io/categories/communication/</guid>
         <description></description>
         </item>
         <item>
