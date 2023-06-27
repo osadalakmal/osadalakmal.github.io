@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Discussion about learning in an software engineering organization. We go over why learning matters, how to do it in large organizations and what tools you can use to do it effectively'><title>Learning In Engineering Organizations</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Discussion about learning in an software engineering organization. We go over why learning matters, how to do it in large organizations and what tools you can use to do it effectively'>
+<title>Learning In Engineering Organizations</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/learninginorganizations/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Learning In Engineering Organizations'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Learning In Engineering Organizations'>
 <meta property='og:description' content='Discussion about learning in an software engineering organization. We go over why learning matters, how to do it in large organizations and what tools you can use to do it effectively'>
 <meta property='og:url' content='https://osadalakmal.github.io/posts/learninginorganizations/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
@@ -30,12 +31,14 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
         })();
     </script><script>
     (function() {
@@ -52,26 +55,117 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://osadalakmal.github.io" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
 </svg>
 
 
 
-                <span>Back</span>
-            </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
         </div>
+    </ol>
+</aside>
+
     
-<main class="main full-width">
+
+            <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -94,16 +188,21 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/posts/learninginorganizations/">Learning In Engineering Organizations</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/learninginorganizations/">Learning In Engineering Organizations</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Discussion about learning in an software engineering organization. We go over why learning matters, how to do it in large organizations and what tools you can use to do it effectively
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        Discussion about learning in an software engineering organization. We go over why learning matters, how to do it in large organizations and what tools you can use to do it effectively
-    </h3>
     
-
+    
     
     <footer class="article-time">
         
@@ -122,12 +221,31 @@ if (!doNotTrack) {
         
 
         
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
     </footer>
     
+
+    
 </div>
+
 </header>
 
     <section class="article-content">
+    
+    
     <h1 id="learning-in-software-engineering-organizations">Learning In Software Engineering Organizations</h1>
 
 
@@ -176,18 +294,14 @@ if (!doNotTrack) {
     >many things that inhibit chances for learning at large oraganizations</a>. So you have to be aware of these limitations and then overcome them in order for you to be successful. There are reasons to do with management and incentives but they again deserve their own blog post.</p>
 <p>Lets talk about tooling for learning. The good thing about larger organizations is that they have cash to burn. There are boxes to be ticked and systems to be put in place - no one will bat an eyelid when you ask for a chat app or a documentation server. Here are some of the tooling you can leverage to make it easier for employees to learn.</p>
 <h3 id="corporate-knowledge-systems">Corporate Knowledge Systems.</h3>
-<p><figure 
-	>
-	<a href="/img/kms-infographic.png" >
-		<img src="/img/kms-infographic.png"
-			
-			
-			
-			loading="lazy"
-			>
-	</a>
+<p><img src="/img/kms-infographic.png"
 	
-</figure></p>
+	
+	
+	loading="lazy"
+	
+	
+></p>
 <p>Most of the time employees are going to be looking for information on common problems and they will just turn to google/stackoverflow/quora. But there will be some cases where there is no publicly available information on the particular problem. This may be due to legacy systems that are not publicly known or due to particular tech stacks used within the company. Whatever the reason, the chances are the bigger the organization, the higher the probability of someone else in the company of having faced the same situation. And having the good, modern, efficient knowledge sharing system is crucial to leveraging this knowledge. This is how you avoid those moments of &ldquo;Oh, wow. We already fixed that. Should have asked first!&rdquo;. There are a plethora of products in the market these days for knowledge sharing systems so it helps to do some research beforehand to understand your organizations requirements and how to fulfill them. The good news is there are a lot of material on how to select these systems as well such as <a class="link" href="https://www2.deloitte.com/us/en/insights/focus/technology-and-the-future-of-work/organizational-knowledge-management.html"  target="_blank" rel="noopener"
     >this article by deloitte</a>.</p>
 <h3 id="index-tag-and-disseminate">Index, tag and disseminate</h3>
@@ -225,10 +339,109 @@ if (!doNotTrack) {
     
 </article>
 
-    <aside class="related-contents--wrapper">
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/nemawashi-power-of-consensus/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/nemawashi-power-of-consensus/nemawashi-main.f500d686fde02ca9089b190046b7e85d_hu6a1cea82171c36270929d04339884bfa_61689_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Nemawashi - Power of building concensus"
+                        
+                        data-hash="md5-9QDWhv3gLKkImxkARrfoXQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemawashi - Power of building concensus</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/about/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">About Me</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/container-part2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/container-arial.jpg" loading="lazy" data-key="" data-hash="/img/container-arial.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Not your grandmas&#39; docker - Part 2</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/container-intro/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/container-arial.jpg" loading="lazy" data-key="" data-hash="/img/container-arial.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Not your grandmas&#39; docker - Part 1</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/wsladventures/wsladventures/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Adventures in WSL Land</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
 </aside>
+
      
-     
+    
         
     
 
@@ -236,12 +449,12 @@ if (!doNotTrack) {
     <section class="copyright">
         &copy; 
         
-        2022 Curiously Recurring Thoughts in Programming
+        2023 Curiously Recurring Thoughts in Programming
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -310,64 +523,25 @@ if (!doNotTrack) {
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#learning-in-organizations">Learning in Organizations</a></li>
-    <li><a href="#why-learning-matters-for-organizations">Why Learning Matters for Organizations</a></li>
-    <li><a href="#what-is-different-about-engineering-organizations">What is different about engineering organizations</a></li>
-    <li><a href="#how-to-learn-in-big-organizations">How to learn in Big Organizations</a>
-      <ul>
-        <li><a href="#corporate-knowledge-systems">Corporate Knowledge Systems.</a></li>
-        <li><a href="#index-tag-and-disseminate">Index, tag and disseminate</a></li>
-        <li><a href="#automate-with-apis">Automate with APIs</a></li>
-        <li><a href="#chat-your-way-to-knowledge">Chat your way to knowledge</a></li>
-        <li><a href="#newsletters-and-blogs">Newsletters and Blogs</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-                </div>
-            </section>
-        </aside>
-    
-
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

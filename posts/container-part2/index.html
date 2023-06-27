@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='We discuss container tooling beyond docker. Runtime engines, container build, deployment and registry tooling'><title>Not your grandmas&#39; docker - Part 2</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='We discuss container tooling beyond docker. Runtime engines, container build, deployment and registry tooling'>
+<title>Not your grandmas&#39; docker - Part 2</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/container-part2/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Not your grandmas&#39; docker - Part 2'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Not your grandmas&#39; docker - Part 2'>
 <meta property='og:description' content='We discuss container tooling beyond docker. Runtime engines, container build, deployment and registry tooling'>
 <meta property='og:url' content='https://osadalakmal.github.io/posts/container-part2/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
@@ -30,12 +31,14 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
         })();
     </script><script>
     (function() {
@@ -52,26 +55,117 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://osadalakmal.github.io" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
 </svg>
 
 
 
-                <span>Back</span>
-            </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
         </div>
+    </ol>
+</aside>
+
     
-<main class="main full-width">
+
+            <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -94,16 +188,21 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/posts/container-part2/">Not your grandmas&#39; docker - Part 2</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/container-part2/">Not your grandmas&#39; docker - Part 2</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            We discuss container tooling beyond docker. Runtime engines, container build, deployment and registry tooling
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        We discuss container tooling beyond docker. Runtime engines, container build, deployment and registry tooling
-    </h3>
     
-
+    
     
     <footer class="article-time">
         
@@ -122,12 +221,31 @@ if (!doNotTrack) {
         
 
         
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
     </footer>
     
+
+    
 </div>
+
 </header>
 
     <section class="article-content">
+    
+    
     <div class="toc">
     <nav id="TableOfContents">
   <ul>
@@ -146,20 +264,16 @@ if (!doNotTrack) {
   
 <p>Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.</p>
 <h2 id="components-of-the-container-ecosystem">Components of the container ecosystem</h2>
-<p><figure 
-	>
-	<a href="/img/DockerEcosystem.png" >
-		<img src="/img/DockerEcosystem.png"
-			
-			
-			
-			loading="lazy"
-			alt="Container Ecosystem">
-	</a>
+<p><img src="/img/DockerEcosystem.png"
 	
-	<figcaption>Container Ecosystem</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="Container Ecosystem"
+	
+	
+></p>
 <h3 id="container-engines">Container Engines</h3>
 <p>A container engine will run a container given the user input to do so. You can customize it&rsquo;s behavior through several parameters. Note that it does not necessarily need to know where images are on remote servers and how to get them. In fact it even does not actually run them by itself, usually thats delegated to the container runtime. More on that later. And there are of course proprietary implementations of container engines at various cloud providers.</p>
 <p>The basic responsibilities of this layer include</p>
@@ -290,10 +404,92 @@ if (!doNotTrack) {
     
 </article>
 
-    <aside class="related-contents--wrapper">
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/container-intro/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/container-arial.jpg" loading="lazy" data-key="" data-hash="/img/container-arial.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Not your grandmas&#39; docker - Part 1</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/wsladventures/wsladventures/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Adventures in WSL Land</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/cloud9/cloud9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cloud9 - A cloud based IDE for your code</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/codestar/codestar/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Codestar - A new way to get started on AWS Projects</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/allocationcost/allocationcost/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cost Of Allocation in High Performance Systems</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
 </aside>
+
      
-     
+    
         
     
 
@@ -301,12 +497,12 @@ if (!doNotTrack) {
     <section class="copyright">
         &copy; 
         
-        2022 Curiously Recurring Thoughts in Programming
+        2023 Curiously Recurring Thoughts in Programming
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -375,61 +571,25 @@ if (!doNotTrack) {
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#components-of-the-container-ecosystem">Components of the container ecosystem</a>
-      <ul>
-        <li><a href="#container-engines">Container Engines</a></li>
-        <li><a href="#container-host">Container Host</a></li>
-        <li><a href="#registry-server">Registry Server</a></li>
-        <li><a href="#container-orchestration">Container Orchestration</a></li>
-        <li><a href="#container-runtime">Container Runtime</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-                </div>
-            </section>
-        </aside>
-    
-
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

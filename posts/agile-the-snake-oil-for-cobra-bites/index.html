@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='A critique of agile practices in software development'><title>Agile : The Snake Oil for Cobra Bites</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='A critique of agile practices in software development'>
+<title>Agile : The Snake Oil for Cobra Bites</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Agile : The Snake Oil for Cobra Bites'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Agile : The Snake Oil for Cobra Bites'>
 <meta property='og:description' content='A critique of agile practices in software development'>
 <meta property='og:url' content='https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
@@ -30,12 +31,14 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
         })();
     </script><script>
     (function() {
@@ -52,26 +55,117 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://osadalakmal.github.io" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
 </svg>
 
 
 
-                <span>Back</span>
-            </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
         </div>
+    </ol>
+</aside>
+
     
-<main class="main full-width">
+
+            <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -98,16 +192,21 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/posts/agile-the-snake-oil-for-cobra-bites/">Agile : The Snake Oil for Cobra Bites</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/agile-the-snake-oil-for-cobra-bites/">Agile : The Snake Oil for Cobra Bites</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            A critique of agile practices in software development
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        A critique of agile practices in software development
-    </h3>
     
-
+    
     
     <footer class="article-time">
         
@@ -126,12 +225,31 @@ if (!doNotTrack) {
         
 
         
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    12 minute read
+                </time>
+            </div>
+        
     </footer>
     
+
+    
 </div>
+
 </header>
 
     <section class="article-content">
+    
+    
     <blockquote>
 <p>How the rebellion got subverted</p>
 </blockquote>
@@ -153,23 +271,18 @@ if (!doNotTrack) {
   </div>
   
 <h2 id="the-agile-manifesto---the-rebellion-that-was-not">The agile manifesto - The Rebellion that was not</h2>
-<p><figure 
+<p><img src="/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg"
+	width="610"
+	height="500"
+	srcset="/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_480x0_resize_q75_box.jpeg 480w, /posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_1024x0_resize_q75_box.jpeg 1024w"
+	loading="lazy"
+	
 	
 		class="gallery-image" 
-		style="
-			flex-grow: 122; 
-			flex-basis: 292px"
-	>
-	<a href="/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg" data-size="610x500">
-		<img src="/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg"
-			width="610"
-			height="500"
-			srcset="/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_480x0_resize_q75_box.jpeg 480w, /posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_1024x0_resize_q75_box.jpeg 1024w"
-			loading="lazy"
-			>
-	</a>
+		data-flex-grow="122"
+		data-flex-basis="292px"
 	
-</figure></p>
+></p>
 <p>The first time I heard the word agile manifesto was back in 2009. I had just graduated with a degree in Electronic and Telecommunication the previous year. As a wet behind the years novice in the industry I had decided that the best possible career move for me would be to act as a sponge and learn as much as possible from every one I had met online and offline both. This was when Git and Hg was just starting to make inroads in to general developers mind space. It was an exciting time - Android has just been released and our minds were buzzing with the possibilities of smartphones.</p>
 <p>Those days, the startup I had been working on was a scrappy outfit trying to stay afloat doing whatever was possible and not take any VC money. Our founder had some<br>
 runway left but we had to be nimble on our feet and attack every opportunity with zeal if we were going to make it. And one of the things I had been concerned with was how to respond to the changes in priority that arise due to the fast changing nature of the projects and the goals of the company. We had been working steadily towards a product of our own so we could actually have a reliable product to bank on. But it was still in MVP stage and we had whole host of other projects going on so we could pay the bills.</p>
@@ -177,23 +290,18 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 <p>I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &ldquo;enterprise&rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement <a class="link" href="https://prince2.wiki/"  target="_blank" rel="noopener"
     >PRINCE2</a> which was as heavy as they came.</p>
 <h2 id="the-call-is-coming-from-inside-the-house">The call is coming from inside the house</h2>
-<p><figure 
+<p><img src="/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg"
+	width="1000"
+	height="645"
+	srcset="/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_480x0_resize_q75_box.jpg 480w, /posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_1024x0_resize_q75_box.jpg 1024w"
+	loading="lazy"
+	
 	
 		class="gallery-image" 
-		style="
-			flex-grow: 155; 
-			flex-basis: 372px"
-	>
-	<a href="/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg" data-size="1000x645">
-		<img src="/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg"
-			width="1000"
-			height="645"
-			srcset="/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_480x0_resize_q75_box.jpg 480w, /posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_1024x0_resize_q75_box.jpg 1024w"
-			loading="lazy"
-			>
-	</a>
+		data-flex-grow="155"
+		data-flex-basis="372px"
 	
-</figure></p>
+></p>
 <p>I encounter agile again somewhere around 2013 when I switch teams within my Org to a mobile application focused team. In addition to using the latest and greatest in technologies in development, this team also was leading the pack in development processes. It was trying to be a thought leader in all these practices that were in with the crowd in those days. The implementation there was quite a stock one. Each team had a scope clearly defined they were responsible for. And the team sizes were just within the limits of what is possible for a normal scrum framework without resorting to SAFe and what not.</p>
 <p>The only problem was that there was no real enforcement of continuous improvement. Daily standups of some teams would drag on for 45 minutes and most grooming and planning sessions (which were combined) would consist of - &ldquo;well you obviously know how to get this done right? Just get the changes to services X, Y and Z done by friday&rdquo;. The defining feature of this team was how much deep domain and technical knowledge was still intact. Most of the people there had been there for several years and had written 95% of the stuff that was in production at the time. And the 5% that wasn&rsquo;t written by then had been modified by them to suit the rest of the system. So there was no real planning or grooming needed. Everyone knew who would work on a given piece of work and that person could tell you exactly how long that change would take. So it worked very very well until it didn&rsquo;t - When us noobs got there. Suddenly there was an influx of people who didn&rsquo;t know the system as well as incumbents and we started having all sorts of issues.</p>
 <p>When I left that team and headed to my next team, I encountered the best version of agile that I have seen to date. The key was that, the new team was never afraid to change all the rules so that they could make things more efficient. Planning pokers were tried for a few months and found to be ineffective so we got rid of them. Retro&rsquo;s were too long so we shortened them. The standups were too virtual when done over video every day so we had one always-physical day of standup. And when everything was said and done, we had a very well tuned process and we loved it.</p>
@@ -202,23 +310,18 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 <p>The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.</p>
 <p>SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&gt; Program -&gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.</p>
 <h2 id="why-is-it-so-easy-to-fail">Why is it so easy to fail?</h2>
-<p><figure 
+<p><img src="/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg"
+	width="500"
+	height="867"
+	srcset="/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_480x0_resize_q75_box.jpeg 480w, /posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_1024x0_resize_q75_box.jpeg 1024w"
+	loading="lazy"
+	
 	
 		class="gallery-image" 
-		style="
-			flex-grow: 57; 
-			flex-basis: 138px"
-	>
-	<a href="/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg" data-size="500x867">
-		<img src="/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg"
-			width="500"
-			height="867"
-			srcset="/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_480x0_resize_q75_box.jpeg 480w, /posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_1024x0_resize_q75_box.jpeg 1024w"
-			loading="lazy"
-			>
-	</a>
+		data-flex-grow="57"
+		data-flex-basis="138px"
 	
-</figure></p>
+></p>
 <p>And my story of agile implementations is no unique in any way. All over the software development firms, the ground truth is that almost all agile implementations have become liabilities that have slowed down deliveries, hampered team plans and frustrated good developers who are being held back by red tape they view and wholly useless. So why don&rsquo;t companies just &ldquo;do the right thing®&rdquo; and let the teams be fully agile? Why is it all too easy to fail.</p>
 <p>I posit that the reason is the same reason most change management processes fail is the same reason that implementations of agile fail - humans resist change. More the change seems alien to us, the more we resist them. And agile practices, true agile practices are as alien as it gets compared to traditional waterfall practices. And I understand the temptation to seek assurance of waterfall method. waterfall eases the minds of management and it allows business analysts and PMs involved to take as much uncertainty out of the equation as possible. So what ends up happening is that on the very projects that it is supposed to help, the uncertain and hard to plan projects.</p>
 <h2 id="how-to-undo-this">How to undo this?</h2>
@@ -236,23 +339,18 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 </ol>
 <h2 id="understanding-the-what-why-and-how">Understanding the what, why and how</h2>
 <p>We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.</p>
-<p><figure 
+<p><img src="/posts/agile-the-snake-oil-for-cobra-bites/postit-note.png"
+	width="265"
+	height="131"
+	srcset="/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_480x0_resize_box_3.png 480w, /posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
 	
 		class="gallery-image" 
-		style="
-			flex-grow: 202; 
-			flex-basis: 485px"
-	>
-	<a href="/posts/agile-the-snake-oil-for-cobra-bites/postit-note.png" data-size="265x131">
-		<img src="/posts/agile-the-snake-oil-for-cobra-bites/postit-note.png"
-			width="265"
-			height="131"
-			srcset="/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_480x0_resize_box_3.png 480w, /posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_1024x0_resize_box_3.png 1024w"
-			loading="lazy"
-			>
-	</a>
+		data-flex-grow="202"
+		data-flex-basis="485px"
 	
-</figure></p>
+></p>
 <p>Always make sure you lead with this one. Be sure to compare and contrast with business as usual situation and other competing methodologies. That way everyone will have enough context to know why you are implementing things the way you are.And in the end give them a sense of where you want to end up. And explain that you are not quite there yet. Explain that this is a journey and not a one day task. Your teams wont be fully agile overnight. There will still be hiccups along the way and you will adjust a lot of things, but let them know why it is important and how they can know when they are there. Things will be running smoothly, there will be less admin overhead, the team will settle in to a nice delivery rhythm. Give them enough of an understanding on how to tell when they are doing it right</p>
 <h2 id="cutting-out-the-fluff">Cutting out the fluff</h2>
 <p>No methodology is perfect. Fredrick brooks was right all those years ago. There is no silver bullet.You have to implement things yourself, evaluate and tweak things yourself.Whatever the methodology you chose - make sure to start from only the most essential parts of the methodology. Anything that is strictly mandatory, cut out.And then run a couple of weeks on that platform and see how you like it, talk to the team, review with stakeholders and add or change things accordingly. Remember that communication does not automatically increase just because you add more meetings. In the same manner remember that lack of meetings does not mean that team is not synced up. Every team develops it&rsquo;s own communication mechanism, try to guide them towards wel established escalation patterns but wait to see how the team responds first before pushing things through</p>
@@ -292,10 +390,125 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
     
 </article>
 
-    <aside class="related-contents--wrapper">
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/hyperscan-cpp-wrapper/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.6f9e33030afd3302f286efe1ad7db539_hu3efa0aa52005a824d69e6ac906892b60_414522_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hyperscan C&#43;&#43; Wrapper"
+                        
+                        data-hash="md5-b54zAwr9MwLyhu/hrX21OQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hyperscan C&#43;&#43; Wrapper</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/starting-with-realtime-data/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/starting-with-realtime-data/realtime-splash.940bf567649bd924c8f9fac03dce929b_hu957b1156cd6545e64f4a903ae42187fe_647318_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Starting With Realtime Data"
+                        
+                        data-hash="md5-lAv1Z2Sb2STI&#43;frAPc6Smw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Starting With Realtime Data</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/learninginorganizations/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/learning-in-orgs.jpg" loading="lazy" data-key="" data-hash="/img/learning-in-orgs.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Learning In Engineering Organizations</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/nemawashi-power-of-consensus/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/nemawashi-power-of-consensus/nemawashi-main.f500d686fde02ca9089b190046b7e85d_hu6a1cea82171c36270929d04339884bfa_61689_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Nemawashi - Power of building concensus"
+                        
+                        data-hash="md5-9QDWhv3gLKkImxkARrfoXQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nemawashi - Power of building concensus</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/about/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">About Me</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
 </aside>
+
      
-     
+    
         
     
 
@@ -303,12 +516,12 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
     <section class="copyright">
         &copy; 
         
-        2022 Curiously Recurring Thoughts in Programming
+        2023 Curiously Recurring Thoughts in Programming
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -377,62 +590,25 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#the-agile-manifesto---the-rebellion-that-was-not">The agile manifesto - The Rebellion that was not</a></li>
-    <li><a href="#the-call-is-coming-from-inside-the-house">The call is coming from inside the house</a></li>
-    <li><a href="#return-to-roots">Return to roots</a></li>
-    <li><a href="#why-is-it-so-easy-to-fail">Why is it so easy to fail?</a></li>
-    <li><a href="#how-to-undo-this">How to undo this?</a></li>
-    <li><a href="#understanding-the-what-why-and-how">Understanding the what, why and how</a></li>
-    <li><a href="#cutting-out-the-fluff">Cutting out the fluff</a></li>
-    <li><a href="#understand-but-do-not-measure">Understand but do not measure</a></li>
-    <li><a href="#use-the-tools-provided-in-whatever-flavour-of-agile-you-chose">Use the tools provided in whatever flavour of Agile you chose</a></li>
-    <li><a href="#to-be-continued">To be continued</a></li>
-  </ul>
-</nav>
-                </div>
-            </section>
-        </aside>
-    
-
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

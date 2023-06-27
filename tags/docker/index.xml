@@ -1,39 +1,491 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>docker on Curiously Recurring Thoughts in Programming</title>
-    <link>https://osadalakmal.github.io/tags/docker/</link>
-    <description>Recent content in docker on Curiously Recurring Thoughts in Programming</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Getting lost in weeds of Podman</title>
-      <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
-      <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
-      
-      <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
-      <description>Podman Logo What are rootless containers My use case for rootless containers But I don&amp;rsquo;t have docker Adding finishing touches The preamble becomes the main act Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks.</description>
-    </item>
-    
-    <item>
-      <title>Not your grandmas&#39; docker - Part 2</title>
-      <link>https://osadalakmal.github.io/posts/container-part2/</link>
-      <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
-      
-      <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
-      <description>Components of the container ecosystem Container Engines Container Host Registry Server Container Orchestration Container Runtime Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.
-Components of the container ecosystem Container Ecosystem Container Engines A container engine will run a container given the user input to do so. You can customize it&amp;rsquo;s behavior through several parameters.</description>
-    </item>
-    
-    <item>
-      <title>Not your grandmas&#39; docker - Part 1</title>
-      <link>https://osadalakmal.github.io/posts/container-intro/</link>
-      <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
-      
-      <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
-      <description>Operating System Level Virtualization chroot Solaris Zones and Containers Systemd nspawn LXC/LXD Enter docker Why not docker? What buildah is Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>docker on Curiously Recurring Thoughts in Programming</title>
+        <link>https://osadalakmal.github.io/tags/docker/</link>
+        <description>Recent content in docker on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Getting lost in weeds of Podman</title>
+        <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
+        <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#what-are-rootless-containers&#34;&gt;What are rootless containers&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#my-use-case-for-rootless-containers&#34;&gt;My use case for rootless containers&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#but-i-dont-have-docker&#34;&gt;But I don&amp;rsquo;t have docker&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#adding-finishing-touches&#34;&gt;Adding finishing touches&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-preamble-becomes-the-main-act&#34;&gt;The preamble becomes the main act&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;p&gt;Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks. It also has better integration with other tools in anything-but-docker space including buildah and skopeo&lt;/p&gt;
+&lt;h2 id=&#34;what-are-rootless-containers&#34;&gt;What are rootless containers&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/rootless-containers.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;How Rootless Containers Work&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;br&gt;
+A big selling point of using podman is that you will be able to run rootless containers. This means that the full virtualized container runs as the non-root user that you are logged in as usually. This is important in various aspects. One is that on shared servers where you just don&amp;rsquo;t get to have root, you can still get containers running. Also even on a machine where it is possible to become root for running docker containers, it is good in security point of view to be running as a non-privileged user.&lt;/p&gt;
+&lt;p&gt;At a more technical level the issue is bugs that enable malicious code to breakout of the virtualization env on to the host. And if it is able to exploit such a bug the attacker suddenly has root access to the host system. Now there are ways to mitigate those risks such as&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Specifying the USER for each of the Docker CMDs&lt;/li&gt;
+&lt;li&gt;Specifying the USER for the docker RUN command on the command line&lt;/li&gt;
+&lt;li&gt;Using a supervisor framework such as &lt;a class=&#34;link&#34; href=&#34;https://github.com/just-containers/s6-overlay&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;s6&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://gdevillele.github.io/engine/admin/using_supervisord/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;supervisord&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;But again, these are mitigating measures and not a solution to the underlying issue of running containers as the root user. rootless containers address the root cause by allowing you to run containers as a non privileged user. This means that even if there were to be a breakout, the attacker still would need a privilege escalation bug on the host env to be effective at attacking the host system&lt;/p&gt;
+&lt;h3 id=&#34;my-use-case-for-rootless-containers&#34;&gt;My use case for rootless containers&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;
+A friend had asked me for advice on best practices in FTPing files around. Now the best advice that I can give is not to FTP files around in 2022 anymore and there are much better data transfer mechanisms out there. But if you had to do it, there are ways to take most of the pain out of it such as using checksums and delta encoding and so on. While I was thinking of writing a blog post on those practices, I needed to write some test code. To test out this code, I needed a FTP server. Now I would rather not put any server on my primary workstation that need not be there and this meant I had to do this inside a docker container.&lt;/p&gt;
+&lt;h3 id=&#34;but-i-dont-have-docker&#34;&gt;But I don&amp;rsquo;t have docker&lt;/h3&gt;
+&lt;p&gt;I had tried to switch to podman sometime back but it was mostly limited to pulling images directly off docker/quay and using them. I had not gotten around to building images with podman or buildah much. But this time I had lucked out and the most commonly used FTP image seemed to lack support for running as a rootless container binding to ports higher than 1024 for the listening port. If you did not know about this - unprivileged users on linux cannot bind to ports lower than 1024 usually as explained &lt;a class=&#34;link&#34; href=&#34;https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;. There are ways around this for example by using &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Authbind&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;authbind&lt;/a&gt; to achieve this via a setuid helper executable or using POSIX &lt;a class=&#34;link&#34; href=&#34;https://man7.org/linux/man-pages/man7/capabilities.7.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;capabilities system&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But each of those workarounds come with their own pitfalls, vulnarabilities and risks. Therefore the better way would be to use a non-root user and use a non-standard port. But docker does not usually run in non-root mode. So I switched to podman and I cloned the repo that I had chosen - &lt;a class=&#34;link&#34; href=&#34;https://github.com/fauria/docker-vsftpd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker-vsftpd&lt;/a&gt; to &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/podman-vsftpd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; and started from there. It was a simple change to add the new port. And add the change to the README. The full pull request is &lt;a class=&#34;link&#34; href=&#34;https://github.com/fauria/docker-vsftpd/pull/76&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;adding-finishing-touches&#34;&gt;Adding finishing touches&lt;/h3&gt;
+&lt;p&gt;I am a bit of a perfectionist and once I had started work on this repo I had to add a couple of finishing touches. The first was an automated build process. I had used github workflows and actions to achieve this. Here is the code for that&lt;/p&gt;
+
+
+
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build and Push Image&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;push,workflow_dispatch ]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build and push image&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;MainCI&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-20.04&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Shellcheck&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Shellcheck&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ludeeus/action-shellcheck@master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build Image&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;build-image&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;redhat-actions/buildah-build@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;vsftpd&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;latest ${{ github.sha }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;containerfiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;          ./Dockerfile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Podman Login action (https://github.com/redhat-actions/podman-login) also be used to log in,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# in which case &amp;#39;username&amp;#39; and &amp;#39;password&amp;#39; can be omitted.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Push To docker.io&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;push-to-docker&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;redhat-actions/push-to-registry@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ steps.build-image.outputs.image }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ steps.build-image.outputs.tags }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;registry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;docker.io/osadal&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;osadal&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.REGISTRY_PASSWORD }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Print image url&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;echo &amp;#34;Image pushed to ${{ steps.push-to-docker.outputs.registry-paths }}&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Things to note here are the build image action. Note that we are using buildah action to build the image and not docker. This means we keep the pipeline clear of docker even though we will still use docker.io to distribute the image.&lt;/p&gt;
+&lt;p&gt;Then note the secret mechanism. Github workflows manage secrets injection through envrionment variables as most other CI/CD pipelines do. The actual secret is input at the github settings level. Then it gets injected in to the CI/CD envrionment and is available for use by any action given access to it through the YAML code.&lt;/p&gt;
+&lt;p&gt;The next to do thing in my list is adding shellcheck support to the CI/CD pipeline. That will be left for another day. But for now I have cleared the shellcheck comments manually. The pull request is &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/podman-vsftpd/pull/1/files#diff-fc8d3c534affdef352ee2e218f1bf36e45b9991b2b0e0b9f4b844eea147643c5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;. This mostly involves&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Breaking down assignment and export in to two lines. This is a good idea because otherwise they do not individually fail. So you can get a case where the generation of the variable fails but you still won&amp;rsquo;t know because the export worked and the return code was zero&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Convert backtick escaped sheel command output capturing to &amp;ldquo;$()&amp;rdquo; syntax. This is much better and less error prone. This deserves it&amp;rsquo;s own blog post so I will only point to &lt;a class=&#34;link&#34; href=&#34;https://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_06_03&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;POSIX spec&lt;/a&gt; for now.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Quotin variable usage. You never know when spaces in values will trip you up otherwise.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-preamble-becomes-the-main-act&#34;&gt;The preamble becomes the main act&lt;/h3&gt;
+&lt;p&gt;So there you have it. We set out to write about good FTP system practices instead wrote a blog post about how to use podman and shellcheck. The next one I promise will be on topic!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Not your grandmas&#39; docker - Part 2</title>
+        <link>https://osadalakmal.github.io/posts/container-part2/</link>
+        <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#container-engines&#34;&gt;Container Engines&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#container-host&#34;&gt;Container Host&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#registry-server&#34;&gt;Registry Server&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#container-orchestration&#34;&gt;Container Orchestration&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#container-runtime&#34;&gt;Container Runtime&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;p&gt;Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.&lt;/p&gt;
+&lt;h2 id=&#34;components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/DockerEcosystem.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Container Ecosystem&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;container-engines&#34;&gt;Container Engines&lt;/h3&gt;
+&lt;p&gt;A container engine will run a container given the user input to do so. You can customize it&amp;rsquo;s behavior through several parameters. Note that it does not necessarily need to know where images are on remote servers and how to get them. In fact it even does not actually run them by itself, usually thats delegated to the container runtime. More on that later. And there are of course proprietary implementations of container engines at various cloud providers.&lt;/p&gt;
+&lt;p&gt;The basic responsibilities of this layer include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using various input to determine runtime behavior of the container (network, storage, etc)&lt;/li&gt;
+&lt;li&gt;Decompressing and expanding the container image on disk using a Graph Driver&lt;/li&gt;
+&lt;li&gt;Preparing a container mount point, typically on COW (copy on write) storage&lt;/li&gt;
+&lt;li&gt;Creating a config.json file with metadata to be passed to the container runtime&lt;/li&gt;
+&lt;li&gt;Invoking the Container Runtime&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Options for this component include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.docker.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rkt/rkt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RKT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cri-o.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CRI-O&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linuxcontainers.org/lxd/introduction/#LXD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LXD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;container-host&#34;&gt;Container Host&lt;/h3&gt;
+&lt;p&gt;The container host is the system that runs the containers. This could be your local machine running an *nix OS, a VM on the same or a VM/baremetal machine on public/private cloud. Once a container image is pulled from a Registry Server to the local container host, it is said to be in the local cache.&lt;/p&gt;
+&lt;h3 id=&#34;registry-server&#34;&gt;Registry Server&lt;/h3&gt;
+&lt;p&gt;A registry server is essentially a server that is used to store and server docker images from. These are just URIs usually connected to over HTTPS. you would usually use REST API to interact with them.&lt;/p&gt;
+&lt;p&gt;When a container runtime finds that a container image cannot be found in the local cache, it &lt;em&gt;can&lt;/em&gt; invoke a tool to fetch the container image (aka repository) from the registry server. The most well known registry server is docker.io but there are several public alternatives as well as implementations that can be hosted privately for more customization and security. There are also registries that can be reached publicly but only hosts private container images/repositories. Note that these should handled very carefully due to supply chain attacks. It is very important that you think out the consequences of what registries you enable and the security around that.&lt;/p&gt;
+&lt;h4 id=&#34;public-container-registries&#34;&gt;Public container registries&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docker.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DockerHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://quay.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CoreOS Quay&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;public-reachable---private-repository-registries&#34;&gt;Public reachable - private repository registries&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/ecr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Elastic Container Registry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/container-registry/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Container Registry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://azure.microsoft.com/en-us/services/container-registry/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Azure Container Registry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;self-hosted-registries&#34;&gt;Self hosted registries&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/datacenter/dtr/2.4/guides/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker Trusted Registry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vmware/harbor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Harbor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jfrog.com/confluence/display/RTF/Getting&amp;#43;Started&amp;#43;with&amp;#43;Artifactory&amp;#43;as&amp;#43;a&amp;#43;Docker&amp;#43;Registry&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JFrog Artifactory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;container-orchestration&#34;&gt;Container Orchestration&lt;/h3&gt;
+&lt;p&gt;Container usage usually starts with a single developer using a docker image to test out his software and making sure it is working as intended. But once multiple teams and multiple applications get involved, you run in to more facets to consider such as shared networking, storage, monitoring and a whole host of others. This is basically the difference between &amp;ldquo;run on my machine&amp;rdquo; vs &amp;ldquo;should run on production&amp;rdquo;. Shipping these applications to production and running these there involves a lot more scaffolding than just running a single container on a developers machine.&lt;/p&gt;
+&lt;h4 id=&#34;responsibilities-of-the-container-orchestration-system&#34;&gt;Responsibilities of the Container Orchestration System&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Scheduling and running container workloads on top of a resource provisioning system&lt;/li&gt;
+&lt;li&gt;Providing networking layer for containers to inter-communicate&lt;/li&gt;
+&lt;li&gt;Providing network traffic control&lt;/li&gt;
+&lt;li&gt;Service Discovery (optional)&lt;/li&gt;
+&lt;li&gt;Providing a standardized system definition file (helm charts, k8s yaml, docker compose etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;container-orchestration-systems&#34;&gt;Container Orchestration Systems&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mesosphere.github.io/marathon/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mesos + marathon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/swarm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker Swarm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;container-runtime&#34;&gt;Container Runtime&lt;/h3&gt;
+&lt;p&gt;A container runtime actually runs the container image that is on disk essentially converting the on-disk container image to a running process set. The Open Containers Initiative (OCI) Runtime Standard reference implementation  is runc. This is the most widely used container runtime, but there are others OCI compliant runtimes. There are various types of them as well. Some are native runtimes that run the container directly on the host. Some are sandboxed runtimes that run either on a kernel proxy layer or a unikernel. And the latest addition to this space is the standardized interface into kubernetes container runtime - Container Runtime Interface. Kubernetes started with docker runtime as the only option for this and as time went by they started to migrate away from the docker dependency. As they did, they introduced CRI as a way to democratizing/virtualizing the runtime tooling. Now there are multiple conforming implementations&lt;/p&gt;
+&lt;h4 id=&#34;responsibilities-of-the-container-runtime&#34;&gt;Responsibilities of the container runtime&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up the container image fs view at the mount point given&lt;/li&gt;
+&lt;li&gt;Using the config json to customize the container runtime parameters&lt;/li&gt;
+&lt;li&gt;Starting the containerized process using clone or similar syscall&lt;/li&gt;
+&lt;li&gt;Setting the isolation and security constructs such as cgroups,  namespace and SELinux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;container-runtime-systems&#34;&gt;Container Runtime Systems&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Container Initiative (OCI) Runtimes
+&lt;ul&gt;
+&lt;li&gt;Native Runtimes
+&lt;ul&gt;
+&lt;li&gt;runC&lt;/li&gt;
+&lt;li&gt;Railcar&lt;/li&gt;
+&lt;li&gt;Crun&lt;/li&gt;
+&lt;li&gt;rkt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sandboxed and Virtualized Runtimes
+&lt;ul&gt;
+&lt;li&gt;gviso&lt;/li&gt;
+&lt;li&gt;runV&lt;/li&gt;
+&lt;li&gt;kata-containers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container Runtime Interface
+&lt;ul&gt;
+&lt;li&gt;containerd&lt;/li&gt;
+&lt;li&gt;cri-o&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Not your grandmas&#39; docker - Part 1</title>
+        <link>https://osadalakmal.github.io/posts/container-intro/</link>
+        <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#chroot&#34;&gt;chroot&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#solaris-zones-and-containers&#34;&gt;Solaris Zones and Containers&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#systemd-nspawn&#34;&gt;Systemd nspawn&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#lxclxd&#34;&gt;LXC/LXD&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#enter-docker&#34;&gt;Enter docker&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#why-not-docker&#34;&gt;Why not docker?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#what-buildah-is&#34;&gt;What buildah is&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;p&gt;Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.&lt;/p&gt;
+&lt;h2 id=&#34;operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/OS-level-virt.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OS Level Virtualization&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;br&gt;
+Above is a screenshot of the wikipedia page for OS Level Virtualization Technologies. And notice that there are several technologies now close to 20 years old. So virtualization at OS level is by no means a new concept. Lets take a look at some of them&lt;/p&gt;
+&lt;h3 id=&#34;chroot&#34;&gt;chroot&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;
+This is perhaps the most simple form of a container. It basically changes the root directory to a different directory as specified by the root user. The idea being that the user in the chroot cannot then escape our of that chroot directory in to the real root dir. And for this reason we usually refer to it as a chroot jail.&lt;/p&gt;
+&lt;p&gt;There are no other privilege checking or access checking enabled. A privilege user can still create special nodes and run commands from with in the chroot. Therefore it is not really suitable as a way to prevent unwanted access from privileged users. Now since the programs usually expect a standard set of directories and files within the root dir, there are tools like &lt;a class=&#34;link&#34; href=&#34;https://olivier.sessink.nl/jailkit/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;jailkit&lt;/a&gt; that simplify this procedure&lt;/p&gt;
+&lt;p&gt;What can this be used for? Well mostly I have seen it being used for testing and builds. Lets look at each use case&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kroki.io/blockdiag/svg/eNqFj8EKwkAMRO9-RVjPglAFoSiUQsGbCJ7EQ7oNVRp3JZt6Ef9daYUqXfCYYfJmpmRvm-qCNTwmACYXQiWwZ_FeDcw2YA7uhrYBRSmRude2Luj7gJ34WvDai_vWgVL4vOWemax2CgiFljUAugoC3qm3VMQ0hKWR_KP17AXWYKZFnhXJypzSyajRl2s5z5Js0blGHeOwoXUc82dHHPq7LE5-vgDwtXP4&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Block Diagram for Testing with chroot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;For testing, you can think of a chroot as a poor mans container. Once you create a chroot and you have a program that primarily depends on the file system to store data, you can fool it to think it is on a fresh system. And once the program is terminated you can throw away the whole chroot and start again.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kroki.io/blockdiag/svg/eNqFj0ELgkAUhO_-imE7B4EFgRSY4DmCTtHhub5UXFxZd7tE_71MIaONjm_mY95MprSs84oK3AJAJIbJMmRptLYC8y3EsWlJ1rBkMlJq0A6uwc5VKh_O_ROggpH1EshYvpC03Wi6rkQ7Elb3dtXb6Nhc2QxQzorffyNPlZPUShtsIGZpEqfhWpyj4KvchFot4jBevqhJXX_MzwH-vL-T_F8-R_qz7w_V0Hug&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Block Diagram for Building with chroot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;For builds, chroots are wonderful because you control every aspect of the whole system from a storage point of view and that is all that is needed for builds. They don&amp;rsquo;t need remote data storage services for the most part and even if you need to push artifacts to a separate remote storage service that can be achieved by creating a suitable package from the output of the build process itself. Usually you will have a pre-packaged chroot that you store in a tarball containing all the build tools and the fundamental parts of whatever *nix system you are running on. Then after you have done the build you usually package up your build artefacts in to whatever suitable format is (wheels for python, crates for rust, RPM/deb for C etc) and push it to an artefact server. This keeps the builds reproducible as long as the&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;chroot tarball is the same&lt;/li&gt;
+&lt;li&gt;the source is the same&lt;/li&gt;
+&lt;li&gt;the build process is the same&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This means that you can reproduce older builds on demand assuming you keep the chroot tarballs around for long enough.&lt;/p&gt;
+&lt;h3 id=&#34;solaris-zones-and-containers&#34;&gt;Solaris Zones and Containers&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;
+These are probably the best known implementation of OS level virtualization outside of linux. Although FreeBSD jails are quite well known too. I have no experience regarding those though so I will stick with Zones.&lt;/p&gt;
+&lt;p&gt;A Solaris Container is the combination of system resource controls and the boundary separation provided by zones. Zones are completely separate server instances within a single physical server. In fact these are usually used to provide isolated test servers for the developers since almost no one is going to need a maxed out SPARC-T5-8 to test their application. Sys admins can reduce cost and provide most of the same protections of separate machines on a single machine by using zones.&lt;/p&gt;
+&lt;h3 id=&#34;systemd-nspawn&#34;&gt;Systemd nspawn&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;img src=&#34;https://osadalakmal.github.io/img/systemd-meme.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Meme about Systemd&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;By now you should not be surprised to learn that there is an implementation of a container technology inside systemd. Everything but the kitchen sink remember?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Systemd_components.svg/440px-Systemd_components.svg.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Systemd Architecture&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This is implemented on top of cgroups and is supposed to help users with containing processes easily in systemd. It is better in security terms than a chroot since it has process level security features as well. In that way it is similar to lxd or lxd. You can find more information &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/systemd-nspawn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;lxclxd&#34;&gt;LXC/LXD&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxc-architecture.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LXC Architecture&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;LXC allows running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.&lt;/p&gt;
+&lt;p&gt;It combines cgroups functionality that allows limitation and prioritization of resources (CPU, memory, block I/O, network, etc.) and namespace isolation functionality that allows complete isolation of an application&amp;rsquo;s view of the operating environment, including process trees, networking and mounted file systems.&lt;/p&gt;
+&lt;p&gt;Previously LXC only supported privilege containers though starting with the LXC 1.0 release, it is possible to run containers as regular users on the host using &amp;ldquo;unprivileged containers&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxd-architecture.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LXD Architecture&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;LXD is a system container manager. It is basically an alternative implementation of LXC rather than something completely different. Just that it is being pushed by canonical instead of Red Hat (Oops I mean IBM!).&lt;/p&gt;
+&lt;h2 id=&#34;enter-docker&#34;&gt;Enter docker&lt;/h2&gt;
+&lt;p&gt;The problem with all these OS level virtualization technology was the audience. In fact it wasn&amp;rsquo;t even a problem but a feature. They were all aimed at system administrators, developer tooling producers and similar folks who provided services &lt;em&gt;to the developers&lt;/em&gt; To be the next big thing apparently you needed to target the developers who needed a dumbed down front end to the whole thing so they could focus on the more interesting things - the business logic.&lt;/p&gt;
+&lt;p&gt;Docker was created to mostly take existing virtualization technology and simplify it to the point your average developer could operate it without even understanding what was going on under the hood. Like all good tools it allowed people to make use of the technology without worrying too much about how and why of it.&lt;/p&gt;
+&lt;p&gt;It reduced the setup of the container environment to a simple enough DSL that solved 99% of the problems of the average developer. It reduced the number of concepts the developers had to hold in their heads to a well defined few. And it made the management of the containers and their run time behavior a breeze by introducing a single well defined command line interface.&lt;/p&gt;
+&lt;p&gt;This meant that for the better part of the last decade docker was known as the defacto container management system and rightly so.&lt;/p&gt;
+&lt;h2 id=&#34;why-not-docker&#34;&gt;Why not docker?&lt;/h2&gt;
+&lt;p&gt;Even though the user facing parts of the docker eco system was well thought out and intuitive, the backend and the ergonomics were anything but. If you have ever had the (mis?)fortune of having to work with dockerfiles for anything more than simple Hello World projects, you will know how hard it is to produce good ones that make sensible trade offs and produce acceptable image sizes.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The builds tend to be too blown up. Image layers are unnecessarily large if you don&amp;rsquo;t take absolute care. See &lt;a class=&#34;link&#34; href=&#34;https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; for an example.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It is very easy to make mistakes. Build time dependent images, have side effects etc. See &lt;a class=&#34;link&#34; href=&#34;https://codefresh.io/containers/docker-anti-patterns/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; for an example&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The multi stage builds are cumbersome to work with&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The syntax leaves things to be desired. Mostly you will end up working with shell statements but it is not a shell script. So none of your usual tools will help you (think shellcheck etc)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you don&amp;rsquo;t have root/Administrator access you cannot use docker. (Not completely correct - see &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/security/rootless/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;. But for the most part no one will try this)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are just a few but you get the idea. And this is where buildah comes in&lt;/p&gt;
+&lt;h2 id=&#34;what-buildah-is&#34;&gt;What buildah is&lt;/h2&gt;
+&lt;p&gt;Buildah take the docker approach of building container images and managing them and first breaks it down in to components. Specifically there are three main components.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://buildah.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;buildah&lt;/a&gt; -&lt;br&gt;
+This tool allows us to build container images.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://podman.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;podman&lt;/a&gt; -&lt;br&gt;
+This allows us to manage runtime instances of the containers.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/containers/skopeo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;skopeo&lt;/a&gt;&lt;br&gt;
+This allows us to work with container registries&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So it essentialy decomposes the work done by the single docker command. How is this better? Well it allows the unix concept of one tool that does one thing best to work.&lt;/p&gt;
+&lt;p&gt;Thats it for this post. Next post will discuss OCI vs docker and what different components of a container runtime is and how they come together to run a container.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

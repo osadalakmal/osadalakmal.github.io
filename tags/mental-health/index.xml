@@ -1,21 +1,136 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>mental-health on Curiously Recurring Thoughts in Programming</title>
-    <link>https://osadalakmal.github.io/tags/mental-health/</link>
-    <description>Recent content in mental-health on Curiously Recurring Thoughts in Programming</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Mon, 09 May 2022 00:35:34 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/mental-health/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Avoiding burnout in software domain</title>
-      <link>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</link>
-      <pubDate>Mon, 09 May 2022 00:35:34 +0530</pubDate>
-      
-      <guid>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</guid>
-      <description>How to avoid the dangers of the trade
-What is burnout? Why does it happen? It won&amp;rsquo;t happen to me How to avoid it Prioritize self-care Shift your perspective Reduce exposure to job stressors Seek out connections Mental health and software industry What is burnout? You know the drill. It starts with a couple spillovers from your usual sprints. It snowballs in to a stream of issues and before you know it, you are at risk of missing a major deadline.</description>
-    </item>
+    <channel>
+        <title>mental-health on Curiously Recurring Thoughts in Programming</title>
+        <link>https://osadalakmal.github.io/tags/mental-health/</link>
+        <description>Recent content in mental-health on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Mon, 09 May 2022 00:35:34 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/mental-health/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Avoiding burnout in software domain</title>
+        <link>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</link>
+        <pubDate>Mon, 09 May 2022 00:35:34 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/young-woman-eyes-closed-hand-on-forehead-768.jpg" alt="Featured image of post Avoiding burnout in software domain" /&gt;&lt;blockquote&gt;
+&lt;p&gt;How to avoid the dangers of the trade&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#what-is-burnout&#34;&gt;What is burnout?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#why-does-it-happen&#34;&gt;Why does it happen?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#it-wont-happen-to-me&#34;&gt;It won&amp;rsquo;t happen to me&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#how-to-avoid-it&#34;&gt;How to avoid it&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#prioritize-self-care&#34;&gt;Prioritize self-care&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#shift-your-perspective&#34;&gt;Shift your perspective&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#reduce-exposure-to-job-stressors&#34;&gt;Reduce exposure to job stressors&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#seek-out-connections&#34;&gt;Seek out connections&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#mental-health-and-software-industry&#34;&gt;Mental health and software industry&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;h2 id=&#34;what-is-burnout&#34;&gt;What is burnout?&lt;/h2&gt;
+
+
+
+&lt;figure&gt;
     
-  </channel>
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/burnout-head-down.jpg&#34; alt=&#34;Burnout Profile&#34; width=&#34;60%&#34;/&gt; &lt;/figure&gt;
+
+&lt;p&gt;You know the drill. It starts with a couple spillovers from your usual sprints. It snowballs in to a stream of issues and before you know it, you are at risk of missing a major deadline. You walk in to release planning meetings and your stomach falls out from underneath you. Your head feels tight and there is a ringing in your ears. Sleep doesn&amp;rsquo;t come easy and when it does, it feels like cheating. After all you could be making progress on that one critical issue that you know will hold up the next sprint and will end up wasting the whole team&amp;rsquo;s time.&lt;/p&gt;
+&lt;p&gt;If any of the above sounds familiar then you have walked close to the burnout zone and you may even have fallen in. To be very clear we are not talking about crunch time - that time in every projects end time frame when everyone customaraly runs around like headless chickens trying to figure out where they are supposed to be. That is a cyclical thing and more importantly they finish off once you ship. Little bit of breathing space and you are off to the races again.&lt;/p&gt;
+&lt;p&gt;Burnout happens when there is no breathing space and no release valve. Work just builds up and up in to a crescendo that never lets off. Interestingly it is no longer classified as a medical condition and is classified as an occupational phenomenon &lt;a class=&#34;link&#34; href=&#34;https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;according to WHO&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;why-does-it-happen&#34;&gt;Why does it happen?&lt;/h2&gt;
+&lt;p&gt;It happens due to a variety of reasons. Mayo Clinic &lt;a class=&#34;link&#34; href=&#34;https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/burnout/art-20046642&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lists several&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Lack of control.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;An inability to influence decisions that affect your job — such as your schedule, assignments or workload — could lead to job burnout. So could a lack of the resources you need to do your work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Unclear job expectations.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re unclear about the degree of authority you have or what your supervisor or others expect from you, you&amp;rsquo;re not likely to feel comfortable at work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dysfunctional workplace dynamics.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Perhaps you work with an office bully, or you feel undermined by colleagues or your boss micromanages your work. This can contribute to job stress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Extremes of activity.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When a job is monotonous or chaotic, you need constant energy to remain focused — which can lead to fatigue and job burnout.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Lack of social support.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you feel isolated at work and in your personal life, you might feel more stressed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Work-life imbalance.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If your work takes up so much of your time and effort that you don&amp;rsquo;t have the energy to spend time with your family and friends, you might burn out quickly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Fairness.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Think about whether you believe that you receive fair and equitable treatment. If you feel like you do not get treated as the others it will lead to more stress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that these all come down to issues in the workplace. This is why it makes sense to classify it as such. There is nothing wrong with you and everything wrong with the workplace. Understand that you can&amp;rsquo;t change unilaterally. You need the support of your organization to resolve this and they need to be onboard with whatever plan you make.&lt;/p&gt;
+&lt;h2 id=&#34;it-wont-happen-to-me&#34;&gt;It won&amp;rsquo;t happen to me&lt;/h2&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/Top-7-Tips-to-Prevent-Burnout-as-a-Remote-Software-Developer--1024x683.jpg&#34;/&gt; &lt;/figure&gt;
+
+&lt;p&gt;Most of us like to think that it won&amp;rsquo;t happen to us. We like to believe we are singular, unbreakable and quite resilient. Specially when we are young, we tend to think that we can just keep going on and on and it will be ok. But know that none of us are infallible. We will all break down sometime and it is quite ok. It is ok to seek help and it is ok to accept help.&lt;/p&gt;
+&lt;p&gt;Whether you recognize the warning signs of impending burnout or you’re already past the breaking point, trying to push through the exhaustion and continuing as you have been will only cause further emotional and physical damage. Now is the time to pause and change direction by learning how you can help yourself overcome burnout and feel healthy and positive again.&lt;/p&gt;
+&lt;p&gt;Dealing with burnout requires the “Three R” approach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Recognize. Watch for the warning signs of burnout.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reverse. Undo the damage by seeking support and managing stress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Resilience. Build your resilience to stress by taking care of your physical and emotional health.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-avoid-it&#34;&gt;How to avoid it&lt;/h2&gt;
+
+
+
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/tips-to-avoid-burnout.jpg&#34;/&gt; &lt;/figure&gt;
+
+&lt;p&gt;There are several guides online on how to avoid burnout, including the graphic above. But I chose to follow a set of points set forth by a Harvard Business Review article as follows.&lt;/p&gt;
+&lt;h3 id=&#34;prioritize-self-care&#34;&gt;Prioritize self-care&lt;/h3&gt;
+&lt;p&gt;It’s essential to replenish your physical and emotional energy, along with your capacity to focus. Get your body moving and mostly your mind will follow too. There are many activities that will allow you to shift your focus away from work, meditating, mindfulness and yoga comes to mind mostly. Even a simple walk outside, feeling the soft sunshine of an evening makes a world of difference when you are stuck in a rut trying to make sense of what is happening to you.&lt;/p&gt;
+&lt;h3 id=&#34;shift-your-perspective&#34;&gt;Shift your perspective&lt;/h3&gt;
+&lt;p&gt;Tinted glasses tend to colour your perspective. Sometimes you have to take a step back evaluate the situation. Remind yourself what is important to you and why those things are important to you. When you start out in a job, you have very idallyic expectations of the working environment. Everyone is nice to you and cuts you some slack because you are the newbie. But as time goes by the deadlines loom, things need to be delivered and the once friendly faces now bring panic. Remember in those cases why you are in the job or the industry to begin with. Most of us programmers are extremely competitive and will never settle for the second best. We will do everything in our ability to exceed expectations. And it is these expectations that will end up being the death of us if we are not careful.&lt;/p&gt;
+&lt;p&gt;It is ok to remind yourself that beating expectations is not all there is to life. You need to understand where you originally derived pleasure from in this industry. Almost all of us are hackers in our heart of hearts, we are tinkerers. Remember that, remember that the rat race is just an industry trying to impose restrictions on our innovative minds so we can be aligned to some business interests. This is find in normal course of business, after all we should be providing some economic value or else there would be no point to what we do. But once in a while remember that there are other goals in life and it is perfectly ok to go after them.&lt;/p&gt;
+&lt;h3 id=&#34;reduce-exposure-to-job-stressors&#34;&gt;Reduce exposure to job stressors&lt;/h3&gt;
+&lt;p&gt;You’ll also need to target high-value activities and relationships that still trigger unhealthy stress. This involves resetting the expectations of colleagues, clients, and even family members for what and how much you’re willing to take on, as well as ground rules for working together. You may get pushback. But doubters must know that you’re making these changes to improve your long-term productivity and protect your health.&lt;/p&gt;
+&lt;p&gt;Know that it is ok to say no and you always have more control over your environment than you think you do. You can negotiate what projects you work on and who you work with. You can control how that work happens. Always remember to actively negotiate these aspects and not just smile and bear things as they get dished out to you.&lt;/p&gt;
+&lt;h3 id=&#34;seek-out-connections&#34;&gt;Seek out connections&lt;/h3&gt;
+&lt;p&gt;The best antidote to burnout, particularly when it’s driven by cynicism and inefficacy, is seeking out rich interpersonal interactions and continual personal and professional development. Find coaches and mentors who can help you identify and activate positive relationships and learning opportunities. Volunteering to advise others is another particularly effective way of breaking out of a negative cycle.&lt;/p&gt;
+&lt;p&gt;Given the influence of situational factors on burnout, it’s likely that others in your organization are suffering too. If you band together to offer mutual support, identify problems, and brainstorm and advocate for solutions, you will all increase your sense of control and connection.&lt;/p&gt;
+&lt;h2 id=&#34;mental-health-and-software-industry&#34;&gt;Mental health and software industry&lt;/h2&gt;
+&lt;p&gt;Our industry does not exactly have a great track record in &lt;a class=&#34;link&#34; href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4439723/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fighting mental health issues in it&amp;rsquo;s workers&lt;/a&gt;. We tend to view our workers as &lt;em&gt;Rock Stars&lt;/em&gt; and &lt;em&gt;Gurus&lt;/em&gt;. They are beyond mere human and some sort of special species that do not have normal emotional and physical connections. This self image story that we tell ourselves keeps exacerbating the mental health issues in general and burnout in particular.&lt;/p&gt;
+&lt;p&gt;We need to accept the fact that software developers are all too human and they have emotional needs as well. There is life outside work and prioritizing that, achieving a good work life balance is critical for a good work output. The sooner we recognize that a developer&amp;rsquo;s life outside the job impacts the job a lot more than we give credit for, the sooner we will get to a place where a holistic approach to work life balance is possible.&lt;/p&gt;
+&lt;p&gt;And remember, we are a tribe, a family. We need to look after each other. Learn to recognize the oncoming signs of burnout in your friends and colleagues. There are numerous guides out there on what signs of burnout are like &lt;a class=&#34;link&#34; href=&#34;https://www.healthline.com/health/tips-for-identifying-and-preventing-burnout&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this one&lt;/a&gt; Then learn to help them get through and if possible avoid the burnout. Again there are various resources like &lt;a class=&#34;link&#34; href=&#34;https://www.bustle.com/p/how-to-help-a-friend-address-their-burnout-in-a-supportive-way-17897842&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this one&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

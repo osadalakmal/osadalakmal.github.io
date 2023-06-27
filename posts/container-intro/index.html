@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative'><title>Not your grandmas&#39; docker - Part 1</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative'>
+<title>Not your grandmas&#39; docker - Part 1</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/container-intro/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Not your grandmas&#39; docker - Part 1'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Not your grandmas&#39; docker - Part 1'>
 <meta property='og:description' content='Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative'>
 <meta property='og:url' content='https://osadalakmal.github.io/posts/container-intro/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
@@ -30,12 +31,14 @@ if (!doNotTrack) {
 </script>
     </head>
     <body class="
-    article-page has-toc
-">
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
         })();
     </script><script>
     (function() {
@@ -52,26 +55,117 @@ if (!doNotTrack) {
         }
     })();
 </script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://osadalakmal.github.io" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
 </svg>
 
 
 
-                <span>Back</span>
-            </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
         </div>
+    </ol>
+</aside>
+
     
-<main class="main full-width">
+
+            <main class="main full-width">
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
@@ -94,16 +188,21 @@ if (!doNotTrack) {
     </header>
     
 
-    <h2 class="article-title">
-        <a href="/posts/container-intro/">Not your grandmas&#39; docker - Part 1</a>
-    </h2>
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/container-intro/">Not your grandmas&#39; docker - Part 1</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative
+        </h3>
+        
+    </div>
 
     
-    <h3 class="article-subtitle">
-        Introduction to containers. We discuss the background of containers, what docker is and why we need an alternative
-    </h3>
     
-
+    
     
     <footer class="article-time">
         
@@ -122,12 +221,31 @@ if (!doNotTrack) {
         
 
         
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
     </footer>
     
+
+    
 </div>
+
 </header>
 
     <section class="article-content">
+    
+    
     <div class="toc">
     <nav id="TableOfContents">
   <ul>
@@ -148,20 +266,16 @@ if (!doNotTrack) {
   
 <p>Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.</p>
 <h2 id="operating-system-level-virtualization">Operating System Level Virtualization</h2>
-<p><figure 
-	>
-	<a href="/img/OS-level-virt.png" >
-		<img src="/img/OS-level-virt.png"
-			
-			
-			
-			loading="lazy"
-			alt="OS Level Virtualization">
-	</a>
+<p><img src="/img/OS-level-virt.png"
 	
-	<figcaption>OS Level Virtualization</figcaption>
 	
-</figure><br>
+	
+	loading="lazy"
+	
+		alt="OS Level Virtualization"
+	
+	
+><br>
 <br>
 Above is a screenshot of the wikipedia page for OS Level Virtualization Technologies. And notice that there are several technologies now close to 20 years old. So virtualization at OS level is by no means a new concept. Lets take a look at some of them</p>
 <h3 id="chroot">chroot</h3>
@@ -170,35 +284,27 @@ This is perhaps the most simple form of a container. It basically changes the ro
 <p>There are no other privilege checking or access checking enabled. A privilege user can still create special nodes and run commands from with in the chroot. Therefore it is not really suitable as a way to prevent unwanted access from privileged users. Now since the programs usually expect a standard set of directories and files within the root dir, there are tools like <a class="link" href="https://olivier.sessink.nl/jailkit/"  target="_blank" rel="noopener"
     >jailkit</a> that simplify this procedure</p>
 <p>What can this be used for? Well mostly I have seen it being used for testing and builds. Lets look at each use case</p>
-<p><figure 
-	>
-	<a href="https://kroki.io/blockdiag/svg/eNqFj8EKwkAMRO9-RVjPglAFoSiUQsGbCJ7EQ7oNVRp3JZt6Ef9daYUqXfCYYfJmpmRvm-qCNTwmACYXQiWwZ_FeDcw2YA7uhrYBRSmRude2Luj7gJ34WvDai_vWgVL4vOWemax2CgiFljUAugoC3qm3VMQ0hKWR_KP17AXWYKZFnhXJypzSyajRl2s5z5Js0blGHeOwoXUc82dHHPq7LE5-vgDwtXP4" >
-		<img src="https://kroki.io/blockdiag/svg/eNqFj8EKwkAMRO9-RVjPglAFoSiUQsGbCJ7EQ7oNVRp3JZt6Ef9daYUqXfCYYfJmpmRvm-qCNTwmACYXQiWwZ_FeDcw2YA7uhrYBRSmRude2Luj7gJ34WvDai_vWgVL4vOWemax2CgiFljUAugoC3qm3VMQ0hKWR_KP17AXWYKZFnhXJypzSyajRl2s5z5Js0blGHeOwoXUc82dHHPq7LE5-vgDwtXP4"
-			
-			
-			
-			loading="lazy"
-			alt="Block Diagram for Testing with chroot">
-	</a>
+<p><img src="https://kroki.io/blockdiag/svg/eNqFj8EKwkAMRO9-RVjPglAFoSiUQsGbCJ7EQ7oNVRp3JZt6Ef9daYUqXfCYYfJmpmRvm-qCNTwmACYXQiWwZ_FeDcw2YA7uhrYBRSmRude2Luj7gJ34WvDai_vWgVL4vOWemax2CgiFljUAugoC3qm3VMQ0hKWR_KP17AXWYKZFnhXJypzSyajRl2s5z5Js0blGHeOwoXUc82dHHPq7LE5-vgDwtXP4"
 	
-	<figcaption>Block Diagram for Testing with chroot</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="Block Diagram for Testing with chroot"
+	
+	
+></p>
 <p>For testing, you can think of a chroot as a poor mans container. Once you create a chroot and you have a program that primarily depends on the file system to store data, you can fool it to think it is on a fresh system. And once the program is terminated you can throw away the whole chroot and start again.</p>
-<p><figure 
-	>
-	<a href="https://kroki.io/blockdiag/svg/eNqFj0ELgkAUhO_-imE7B4EFgRSY4DmCTtHhub5UXFxZd7tE_71MIaONjm_mY95MprSs84oK3AJAJIbJMmRptLYC8y3EsWlJ1rBkMlJq0A6uwc5VKh_O_ROggpH1EshYvpC03Wi6rkQ7Elb3dtXb6Nhc2QxQzorffyNPlZPUShtsIGZpEqfhWpyj4KvchFot4jBevqhJXX_MzwH-vL-T_F8-R_qz7w_V0Hug" >
-		<img src="https://kroki.io/blockdiag/svg/eNqFj0ELgkAUhO_-imE7B4EFgRSY4DmCTtHhub5UXFxZd7tE_71MIaONjm_mY95MprSs84oK3AJAJIbJMmRptLYC8y3EsWlJ1rBkMlJq0A6uwc5VKh_O_ROggpH1EshYvpC03Wi6rkQ7Elb3dtXb6Nhc2QxQzorffyNPlZPUShtsIGZpEqfhWpyj4KvchFot4jBevqhJXX_MzwH-vL-T_F8-R_qz7w_V0Hug"
-			
-			
-			
-			loading="lazy"
-			alt="Block Diagram for Building with chroot">
-	</a>
+<p><img src="https://kroki.io/blockdiag/svg/eNqFj0ELgkAUhO_-imE7B4EFgRSY4DmCTtHhub5UXFxZd7tE_71MIaONjm_mY95MprSs84oK3AJAJIbJMmRptLYC8y3EsWlJ1rBkMlJq0A6uwc5VKh_O_ROggpH1EshYvpC03Wi6rkQ7Elb3dtXb6Nhc2QxQzorffyNPlZPUShtsIGZpEqfhWpyj4KvchFot4jBevqhJXX_MzwH-vL-T_F8-R_qz7w_V0Hug"
 	
-	<figcaption>Block Diagram for Building with chroot</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="Block Diagram for Building with chroot"
+	
+	
+></p>
 <p>For builds, chroots are wonderful because you control every aspect of the whole system from a storage point of view and that is all that is needed for builds. They don&rsquo;t need remote data storage services for the most part and even if you need to push artifacts to a separate remote storage service that can be achieved by creating a suitable package from the output of the build process itself. Usually you will have a pre-packaged chroot that you store in a tarball containing all the build tools and the fundamental parts of whatever *nix system you are running on. Then after you have done the build you usually package up your build artefacts in to whatever suitable format is (wheels for python, crates for rust, RPM/deb for C etc) and push it to an artefact server. This keeps the builds reproducible as long as the</p>
 <ol>
 <li>chroot tarball is the same</li>
@@ -212,69 +318,53 @@ These are probably the best known implementation of OS level virtualization outs
 <p>A Solaris Container is the combination of system resource controls and the boundary separation provided by zones. Zones are completely separate server instances within a single physical server. In fact these are usually used to provide isolated test servers for the developers since almost no one is going to need a maxed out SPARC-T5-8 to test their application. Sys admins can reduce cost and provide most of the same protections of separate machines on a single machine by using zones.</p>
 <h3 id="systemd-nspawn">Systemd nspawn</h3>
 <p><br>
-<figure 
-	>
-	<a href="/img/systemd-meme.png" >
-		<img src="/img/systemd-meme.png"
-			
-			
-			
-			loading="lazy"
-			alt="Meme about Systemd">
-	</a>
+<img src="/img/systemd-meme.png"
 	
-	<figcaption>Meme about Systemd</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="Meme about Systemd"
+	
+	
+></p>
 <p>By now you should not be surprised to learn that there is an implementation of a container technology inside systemd. Everything but the kitchen sink remember?</p>
-<p><figure 
-	>
-	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Systemd_components.svg/440px-Systemd_components.svg.png" >
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Systemd_components.svg/440px-Systemd_components.svg.png"
-			
-			
-			
-			loading="lazy"
-			alt="Systemd Architecture">
-	</a>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Systemd_components.svg/440px-Systemd_components.svg.png"
 	
-	<figcaption>Systemd Architecture</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="Systemd Architecture"
+	
+	
+></p>
 <p>This is implemented on top of cgroups and is supposed to help users with containing processes easily in systemd. It is better in security terms than a chroot since it has process level security features as well. In that way it is similar to lxd or lxd. You can find more information <a class="link" href="https://wiki.archlinux.org/title/systemd-nspawn"  target="_blank" rel="noopener"
     >here</a>.</p>
 <h3 id="lxclxd">LXC/LXD</h3>
-<p><figure 
-	>
-	<a href="/img/lxc-architecture.jpg" >
-		<img src="/img/lxc-architecture.jpg"
-			
-			
-			
-			loading="lazy"
-			alt="LXC Architecture">
-	</a>
+<p><img src="/img/lxc-architecture.jpg"
 	
-	<figcaption>LXC Architecture</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="LXC Architecture"
+	
+	
+></p>
 <p>LXC allows running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.</p>
 <p>It combines cgroups functionality that allows limitation and prioritization of resources (CPU, memory, block I/O, network, etc.) and namespace isolation functionality that allows complete isolation of an application&rsquo;s view of the operating environment, including process trees, networking and mounted file systems.</p>
 <p>Previously LXC only supported privilege containers though starting with the LXC 1.0 release, it is possible to run containers as regular users on the host using &ldquo;unprivileged containers&rdquo;.</p>
-<p><figure 
-	>
-	<a href="/img/lxd-architecture.jpg" >
-		<img src="/img/lxd-architecture.jpg"
-			
-			
-			
-			loading="lazy"
-			alt="LXD Architecture">
-	</a>
+<p><img src="/img/lxd-architecture.jpg"
 	
-	<figcaption>LXD Architecture</figcaption>
 	
-</figure></p>
+	
+	loading="lazy"
+	
+		alt="LXD Architecture"
+	
+	
+></p>
 <p>LXD is a system container manager. It is basically an alternative implementation of LXC rather than something completely different. Just that it is being pushed by canonical instead of Red Hat (Oops I mean IBM!).</p>
 <h2 id="enter-docker">Enter docker</h2>
 <p>The problem with all these OS level virtualization technology was the audience. In fact it wasn&rsquo;t even a problem but a feature. They were all aimed at system administrators, developer tooling producers and similar folks who provided services <em>to the developers</em> To be the next big thing apparently you needed to target the developers who needed a dumbed down front end to the whole thing so they could focus on the more interesting things - the business logic.</p>
@@ -342,10 +432,86 @@ This allows us to work with container registries</li>
     
 </article>
 
-    <aside class="related-contents--wrapper">
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/wsladventures/wsladventures/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Adventures in WSL Land</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/cloud9/cloud9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cloud9 - A cloud based IDE for your code</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/codestar/codestar/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Codestar - A new way to get started on AWS Projects</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/allocationcost/allocationcost/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Cost Of Allocation in High Performance Systems</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/sqliteperformance/sqliteperformance/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SQLite for High Throughput Applications</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
 </aside>
+
      
-     
+    
         
     
 
@@ -353,12 +519,12 @@ This allows us to work with container registries</li>
     <section class="copyright">
         &copy; 
         
-        2022 Curiously Recurring Thoughts in Programming
+        2023 Curiously Recurring Thoughts in Programming
     </section>
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -427,63 +593,25 @@ This allows us to work with container registries</li>
 
 </div><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><script 
                 src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
+                defer
                 >
             </script><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
             ><link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
 
             </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#operating-system-level-virtualization">Operating System Level Virtualization</a>
-      <ul>
-        <li><a href="#chroot">chroot</a></li>
-        <li><a href="#solaris-zones-and-containers">Solaris Zones and Containers</a></li>
-        <li><a href="#systemd-nspawn">Systemd nspawn</a></li>
-        <li><a href="#lxclxd">LXC/LXD</a></li>
-      </ul>
-    </li>
-    <li><a href="#enter-docker">Enter docker</a></li>
-    <li><a href="#why-not-docker">Why not docker?</a></li>
-    <li><a href="#what-buildah-is">What buildah is</a></li>
-  </ul>
-</nav>
-                </div>
-            </section>
-        </aside>
-    
-
         </div>
         <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
                 >
             </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>

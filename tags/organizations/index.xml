@@ -1,20 +1,174 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>organizations on Curiously Recurring Thoughts in Programming</title>
-    <link>https://osadalakmal.github.io/tags/organizations/</link>
-    <description>Recent content in organizations on Curiously Recurring Thoughts in Programming</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Thu, 14 Oct 2021 15:36:00 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/organizations/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Learning In Engineering Organizations</title>
-      <link>https://osadalakmal.github.io/posts/learninginorganizations/</link>
-      <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
-      
-      <guid>https://osadalakmal.github.io/posts/learninginorganizations/</guid>
-      <description>Learning In Software Engineering Organizations The Learning Organization: A Lit Review by giulia.forsythe licensed under CC BY 2.0 Learning in Organizations Why Learning Matters for Organizations What is different about engineering organizations How to learn in Big Organizations Corporate Knowledge Systems. Index, tag and disseminate Automate with APIs Chat your way to knowledge Newsletters and Blogs Learning in Organizations In almost all organizations that I have been part of since I graduated there have come a time when we had to teach something to the whole team.</description>
-    </item>
+    <channel>
+        <title>organizations on Curiously Recurring Thoughts in Programming</title>
+        <link>https://osadalakmal.github.io/tags/organizations/</link>
+        <description>Recent content in organizations on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Thu, 14 Oct 2021 15:36:00 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/organizations/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Learning In Engineering Organizations</title>
+        <link>https://osadalakmal.github.io/posts/learninginorganizations/</link>
+        <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/learninginorganizations/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;&lt;h1 id=&#34;learning-in-software-engineering-organizations&#34;&gt;Learning In Software Engineering Organizations&lt;/h1&gt;
+
+
+
+&lt;figure&gt;
     
-  </channel>
+        
+            &lt;img src=&#34;https://live.staticflickr.com/1815/42907807575_553abc078d_b.jpg&#34;/&gt; &lt;figcaption&gt;
+                
+                    &lt;h4&gt;The Learning Organization: A Lit Review by giulia.forsythe licensed under CC BY 2.0&lt;/h4&gt;
+                
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#learning-in-organizations&#34;&gt;Learning in Organizations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#why-learning-matters-for-organizations&#34;&gt;Why Learning Matters for Organizations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#what-is-different-about-engineering-organizations&#34;&gt;What is different about engineering organizations&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#how-to-learn-in-big-organizations&#34;&gt;How to learn in Big Organizations&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#corporate-knowledge-systems&#34;&gt;Corporate Knowledge Systems.&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#index-tag-and-disseminate&#34;&gt;Index, tag and disseminate&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#automate-with-apis&#34;&gt;Automate with APIs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#chat-your-way-to-knowledge&#34;&gt;Chat your way to knowledge&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#newsletters-and-blogs&#34;&gt;Newsletters and Blogs&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;h2 id=&#34;learning-in-organizations&#34;&gt;Learning in Organizations&lt;/h2&gt;
+&lt;p&gt;In almost all organizations that I have been part of since I graduated there have come a time when we had to teach something to the whole team. This may have been my own team, a team I managed or a team I interacted with. But something I have seen most of the time is the inability or the disinclination to do the learning in a structured way. Most teams would not, given the chance jump at the opportunity to make sure they make the best of the situation. In my opinion this is one of the worst mistakes leaders and teams make in their journey.&lt;/p&gt;
+&lt;p&gt;Learning something in the workplace is an interesting experience. The workplace is not exactly the school, university, or an opportunity for earning continuing professional development points. Most of the time our activities are arranged so that we all work towards the company mission and the goals. Now learning something new doesn’t directly impact the bottom line but that doesn&amp;rsquo;t need to be the sole goal here. Learning pays dividends later down the road so its effects are felt with a delay which makes evaluating the effectiveness of such activities an interesting experience. However, if we are to have a efficient and impactful learning experience we should definitely measure its effectiveness. After all we do know that the best kind of organizations are the ones that are &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2020/02/10-steps-to-creating-a-data-driven-culture&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;data driven&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;why-learning-matters-for-organizations&#34;&gt;Why Learning Matters for Organizations&lt;/h2&gt;
+&lt;p&gt;Learning as a specific need may not be critical for some roles within an organization. Manual labor tasks that are repetitive doesn’t exactly need a curriculum of material to be dispensed every month. But most of the modern organizational personal do need to keep up with the pace of technology, economy, state of industry and various other forces that the organization interacts with. And if they are to understand and make use of those interactions to benefit the company, they need to be up to speed on all of these things. That’s where organizational learning come in to play.&lt;/p&gt;
+&lt;p&gt;Most of the time the easy way out is to just hire the talent or knowledge you lack. But this can be a very costly affair. Multiple anecdotes have shown me that hiring specific talent can be a very time consuming and costly endeavor. So, in most cases it might be easier to just build that knowledge in house.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-different-about-engineering-organizations&#34;&gt;What is different about engineering organizations&lt;/h2&gt;
+&lt;p&gt;Engineering organizations differ from the rest of the organizations due to the sheer velocity with which things move. Software engineering and related fields get updated at a break neck speed. What was considered state of the art just a year ago may now be considered so legacy that it may even be hard to hire people for. And all these creativity and speed comes at a cost. It is extremely hard to keep track of new technology, processes and disciplines without having an explicit system in place capable of making sure your employees can easily learn about the things that enable them to do their jobs better. Engineering profession thrives on having the best information at hand to solve the questions that we face in our day to day work. So it is essential we be able to keep learning new things and more importantly learn the correct things.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-learn-in-big-organizations&#34;&gt;How to learn in Big Organizations&lt;/h2&gt;
+&lt;p&gt;I have worked at larger organizations for the most part of my career. And there are multitudes of benefits for working in such companies. But there are also&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://learn.filtered.com/thoughts/learning-at-big-companies&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;many things that inhibit chances for learning at large oraganizations&lt;/a&gt;. So you have to be aware of these limitations and then overcome them in order for you to be successful. There are reasons to do with management and incentives but they again deserve their own blog post.&lt;/p&gt;
+&lt;p&gt;Lets talk about tooling for learning. The good thing about larger organizations is that they have cash to burn. There are boxes to be ticked and systems to be put in place - no one will bat an eyelid when you ask for a chat app or a documentation server. Here are some of the tooling you can leverage to make it easier for employees to learn.&lt;/p&gt;
+&lt;h3 id=&#34;corporate-knowledge-systems&#34;&gt;Corporate Knowledge Systems.&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/kms-infographic.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Most of the time employees are going to be looking for information on common problems and they will just turn to google/stackoverflow/quora. But there will be some cases where there is no publicly available information on the particular problem. This may be due to legacy systems that are not publicly known or due to particular tech stacks used within the company. Whatever the reason, the chances are the bigger the organization, the higher the probability of someone else in the company of having faced the same situation. And having the good, modern, efficient knowledge sharing system is crucial to leveraging this knowledge. This is how you avoid those moments of &amp;ldquo;Oh, wow. We already fixed that. Should have asked first!&amp;rdquo;. There are a plethora of products in the market these days for knowledge sharing systems so it helps to do some research beforehand to understand your organizations requirements and how to fulfill them. The good news is there are a lot of material on how to select these systems as well such as &lt;a class=&#34;link&#34; href=&#34;https://www2.deloitte.com/us/en/insights/focus/technology-and-the-future-of-work/organizational-knowledge-management.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this article by deloitte&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;index-tag-and-disseminate&#34;&gt;Index, tag and disseminate&lt;/h3&gt;
+&lt;p&gt;Use technology to index and automatically tag content. With today’s deep learning ML models and NLP processing, this has never been easier. Then use the knowledge system platforms you have built to share this content with the wider audiences. An example might be how one development team overcomes a certain issue with a legacy system the company is using - maybe your companies’ legacy relational DB can’t add read replicas without huge costs and a team figured out how to get around this using CDC feeds. Now an intelligent knowledge sharing system will tag these with replication, relational and CDC tags and the next time another team is looking for a relational DB replication solution that result will automatically come up.&lt;/p&gt;
+&lt;h3 id=&#34;automate-with-apis&#34;&gt;Automate with APIs&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mulesoft.com/resources/api/what-is-an-api-economy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;API Economy&lt;/a&gt; is here to stay. Everything should be an API in today&amp;rsquo;s company culture. And that is a good thing. It being transparency to environments and allows us to leverage the API for automation and integration. There are a number of tools any development/engineering team will use in their day-to-day life - an issue tracker (Jira/Trello), a chat program (Slack/Teams), a code repo (github/gitlab). Each of these products expose an API interface to the outside world. This is how you make sure tools work together to capture information and knowledge that would otherwise be lost. Certain channels/chat rooms can be created to allow people to share knowledge and ask questions. These can in turn be digested by an indexer and made searchable. Make it easier to search and find things. You can even use tools such &lt;a class=&#34;link&#34; href=&#34;https://zapier.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zapier&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://powerautomate.microsoft.com/en-us/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Power Automate&lt;/a&gt; to make things work together. These can be the glue you need. For example you can create a poll in TEAMs chat to get feedback and this is much more effective than a separate email sending a link to a survey. These results can then we summarized by a tool such as power automate and you can thank the participants via the same tool.&lt;/p&gt;
+&lt;h3 id=&#34;chat-your-way-to-knowledge&#34;&gt;Chat your way to knowledge&lt;/h3&gt;
+&lt;p&gt;Realtime chat tooling is now everywhere. And as ubiquitous as they are we are definitely not using them to the full potential. As seen above we can definitely add more features on top of them. Even before that, allowing them to work alongside or closer to actual content we work with is a very effective way to leverage these tools. &lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/microsoft-teams/group-chat-software&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Teams&lt;/a&gt; is a leader in this space. Many applications can be embedded in the chat program itself and it is very easy to switch from editing a file collaboratively to chatting about it to another stakeholder and back. This is a topic deserving its own post so expect one in the near future.&lt;/p&gt;
+&lt;h3 id=&#34;newsletters-and-blogs&#34;&gt;Newsletters and Blogs&lt;/h3&gt;
+&lt;p&gt;Have an organizational newsletter and blog set. You will be surprised at how effective this will be. RSS never really stopped working - blogs are still surprisingly effective in communicating structured technical knowledge. They also let influencers and power sharers naturally access a platform that lets them reach a wider audience. This is very effective as this is ground up content so will be useful information for folks on the ground, in the trenches.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Nemawashi - Power of building concensus</title>
+        <link>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</link>
+        <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.jpg" alt="Featured image of post Nemawashi - Power of building concensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-concensus&#34;&gt;Nemawashi - Power of building concensus&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
+&lt;p&gt;In Japanese culture, there is a term that encapsulates this process beautifully - &amp;ldquo;nemawashi.&amp;rdquo; Nemawashi refers to the practice of laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. It is a fundamental concept that plays a significant role in achieving harmony and collaboration within organizations.&lt;/p&gt;
+&lt;p&gt;In this blog post, we will delve into the concept of nemawashi and explore its practical implications for building consensus before meetings. We will discuss the cultural significance of nemawashi in Japan and its relevance in a broader context. Furthermore, we will outline effective strategies that can help you incorporate nemawashi techniques to foster collaboration, engagement, and successful decision-making.&lt;/p&gt;
+&lt;p&gt;Here we try to understand the art of building consensus and discover how nemawashi can transform your meetings into more fruitful and harmonious experiences. Let&amp;rsquo;s explore the power of nemawashi and its impact on achieving alignment within your team.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-nemawashi&#34;&gt;Understanding Nemawashi&lt;/h2&gt;
+&lt;p&gt;Nemawashi, rooted in Japanese culture, holds valuable lessons for building consensus before meetings. By embracing this practice, teams can set the stage for productive discussions and decision-making. Let&amp;rsquo;s explore the meaning and significance of nemawashi, along with some practical examples.&lt;/p&gt;
+&lt;p&gt;At its core, nemawashi involves laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. This process allows individuals to voice their opinions, address concerns, and find common ground, leading to smoother decision-making and improved outcomes.&lt;/p&gt;
+&lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process&lt;/h3&gt;
+&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
+&lt;p&gt;Teams engage in cross-functional meetings, where representatives from various departments share their perspectives, concerns, and ideas. This process allows for a comprehensive understanding of the issue at hand and helps identify potential obstacles or risks. By incorporating nemawashi, Toyota ensures that decisions are made collaboratively, taking into account the viewpoints of all relevant stakeholders.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.jpg&#34;
+	width=&#34;1552&#34;
+	height=&#34;1331&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu11a3de8459562c4cb03febabc41d0cf0_434165_480x0_resize_q75_box.jpg 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu11a3de8459562c4cb03febabc41d0cf0_434165_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;116&#34;
+		data-flex-basis=&#34;279px&#34;
+	
+&gt;&lt;br&gt;
+Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota-makes-decisions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read more about Toyota&amp;rsquo;s decision-making process here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;example-2-us-government-and-legislative-process&#34;&gt;Example 2: U.S. Government and Legislative Process&lt;/h3&gt;
+&lt;p&gt;While nemawashi is rooted in Japanese culture, similar principles of consensus-building can be observed in the U.S. government&amp;rsquo;s legislative process. Before bills are brought to the floor for a vote, extensive negotiations, discussions, and consensus-building efforts take place.&lt;/p&gt;
+&lt;p&gt;In the U.S. Congress, lawmakers engage in committee meetings, hearings, and informal conversations to gather input from various stakeholders. This process allows representatives to address concerns, incorporate amendments, and build consensus among different factions. Through these deliberations, consensus is sought to increase the chances of a bill&amp;rsquo;s successful passage.&lt;/p&gt;
+&lt;p&gt;An example of how the U.S. legislative process and consensus-building are depicted is the television show &amp;ldquo;The West Wing.&amp;rdquo; The show portrays the inner workings of the White House and provides insights into the intricate process of developing and passing legislation. It showcases the efforts of policymakers to build consensus, negotiate, and seek agreement among different parties to advance their policy agendas.&lt;/p&gt;
+&lt;p&gt;While &amp;ldquo;The West Wing&amp;rdquo; is a fictional representation, it offers viewers a glimpse into the complexities and nuances of consensus-building in the U.S. political landscape.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
+	width=&#34;2000&#34;
+	height=&#34;1333&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu7f659bf49c1069d142f8c4719745a8b6_398516_480x0_resize_q75_h2_box_2.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu7f659bf49c1069d142f8c4719745a8b6_398516_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;br&gt;
+Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/790948548/the-west-wing-podcast-a-reminder-of-when-consensus-seemed-possible&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Explore more about &amp;ldquo;The West Wing&amp;rdquo; and its depiction of the U.S. legislative process here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By highlighting this example, we can observe that nemawashi-inspired practices and consensus-building efforts exist beyond cultural boundaries. Consensus-building is a universal concept that plays a crucial role in effective decision-making across diverse settings.&lt;/p&gt;
+&lt;h2 id=&#34;strategies-for-building-consensus&#34;&gt;Strategies for Building Consensus&lt;/h2&gt;
+&lt;p&gt;Building consensus before a meeting requires careful planning, effective communication, and fostering a collaborative environment. By employing the following strategies, you can create a foundation for productive discussions and decision-making:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Preparing for the Meeting - Thorough preparation is essential for successful consensus-building. Consider the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Gather Information: Seek input from stakeholders and team members before the meeting. Collect diverse perspectives and insights to gain a comprehensive understanding of the topic at hand.&lt;/li&gt;
+&lt;li&gt;Address Concerns: Take the time to identify and address any potential concerns or objections that participants may have. Addressing these early on can help mitigate resistance and pave the way for consensus.&lt;/li&gt;
+&lt;li&gt;One-on-One Meetings: Engage in individual discussions with key stakeholders to understand their viewpoints and gather feedback. This personal touch allows for open and honest conversations, fostering a sense of inclusion and trust.&lt;/li&gt;
+&lt;li&gt;Invite Contributions: Show respect for stakeholders by genuinely considering their perspectives and inviting their contributions. Recognize that they may bring valuable insights and solutions to the table. This approach promotes collaboration and a sense of ownership among participants.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Effective Communication Techniques - Clear and open communication is vital for building consensus. Consider these techniques:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Active Listening: Practice attentive and empathetic listening. Encourage participants to express their thoughts, concerns, and ideas, and ensure that everyone feels heard and respected.&lt;/li&gt;
+&lt;li&gt;Facilitate Constructive Discussions: Create an inclusive environment where diverse perspectives are encouraged. Set ground rules for respectful dialogue and constructive debate. Guide the conversation towards finding common ground and shared goals.&lt;/li&gt;
+&lt;li&gt;Visual Aids and Examples: Utilize visual aids, data, and real-life examples to illustrate your points and foster a shared understanding. Visual representations can bridge gaps in perception and facilitate consensus-building.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Building Trust and Collaboration - Trust and collaboration are key elements of consensus-building. Consider the following approaches:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Encourage Collaboration: Foster a culture of collaboration by promoting teamwork and emphasizing collective goals. Encourage participants to work together, share ideas, and find mutually beneficial solutions.&lt;/li&gt;
+&lt;li&gt;Transparency and Accountability: Promote transparency in decision-making processes. Clearly communicate the rationale behind decisions and ensure accountability for actions. This builds trust and confidence among team members.&lt;/li&gt;
+&lt;li&gt;Inclusive Decision-Making: Involve all relevant stakeholders in the decision-making process. Seek diverse perspectives and involve those who may be affected by the outcome. This inclusive approach increases ownership and commitment to the decisions made.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By incorporating these strategies into your consensus-building efforts, you can lay a solid foundation for successful meetings. Remember to appear open to problem discussions rather than solely focusing on solutions and demonstrate respect for stakeholders by inviting their contributions. Consensus-building requires active engagement and continuous effort to create an environment where diverse voices are valued.&lt;/p&gt;
+&lt;p&gt;Next up we should discuss the effective ways of communication in order to execute above strategies. And discuss why trust is pramount to executing these strategies. Expect that in the next installment of this blog post.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

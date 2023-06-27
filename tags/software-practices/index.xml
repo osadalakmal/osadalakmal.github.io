@@ -1,21 +1,132 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>software-practices on Curiously Recurring Thoughts in Programming</title>
-    <link>https://osadalakmal.github.io/tags/software-practices/</link>
-    <description>Recent content in software-practices on Curiously Recurring Thoughts in Programming</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Sun, 06 Feb 2022 21:57:42 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/software-practices/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Agile : The Snake Oil for Cobra Bites</title>
-      <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
-      <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
-      
-      <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
-      <description>How the rebellion got subverted
-The agile manifesto - The Rebellion that was not The call is coming from inside the house Return to roots Why is it so easy to fail? How to undo this? Understanding the what, why and how Cutting out the fluff Understand but do not measure Use the tools provided in whatever flavour of Agile you chose To be continued The agile manifesto - The Rebellion that was not The first time I heard the word agile manifesto was back in 2009.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>software-practices on Curiously Recurring Thoughts in Programming</title>
+        <link>https://osadalakmal.github.io/tags/software-practices/</link>
+        <description>Recent content in software-practices on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Sun, 06 Feb 2022 21:57:42 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/software-practices/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Agile : The Snake Oil for Cobra Bites</title>
+        <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
+        <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.jpeg" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
+&lt;p&gt;How the rebellion got subverted&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#return-to-roots&#34;&gt;Return to roots&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#how-to-undo-this&#34;&gt;How to undo this?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#cutting-out-the-fluff&#34;&gt;Cutting out the fluff&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#understand-but-do-not-measure&#34;&gt;Understand but do not measure&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#use-the-tools-provided-in-whatever-flavour-of-agile-you-chose&#34;&gt;Use the tools provided in whatever flavour of Agile you chose&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#to-be-continued&#34;&gt;To be continued&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg&#34;
+	width=&#34;610&#34;
+	height=&#34;500&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_480x0_resize_q75_box.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_1024x0_resize_q75_box.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;292px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The first time I heard the word agile manifesto was back in 2009. I had just graduated with a degree in Electronic and Telecommunication the previous year. As a wet behind the years novice in the industry I had decided that the best possible career move for me would be to act as a sponge and learn as much as possible from every one I had met online and offline both. This was when Git and Hg was just starting to make inroads in to general developers mind space. It was an exciting time - Android has just been released and our minds were buzzing with the possibilities of smartphones.&lt;/p&gt;
+&lt;p&gt;Those days, the startup I had been working on was a scrappy outfit trying to stay afloat doing whatever was possible and not take any VC money. Our founder had some&lt;br&gt;
+runway left but we had to be nimble on our feet and attack every opportunity with zeal if we were going to make it. And one of the things I had been concerned with was how to respond to the changes in priority that arise due to the fast changing nature of the projects and the goals of the company. We had been working steadily towards a product of our own so we could actually have a reliable product to bank on. But it was still in MVP stage and we had whole host of other projects going on so we could pay the bills.&lt;/p&gt;
+&lt;p&gt;Now the interesting thing was these were mostly very short term engagements. There were not multi year projects with team upon teams of developers involved in it. There were no business analysts writing user stories. No QA teams doing user acceptance testing and so on. It was just a few developers mostly working with one or two QA folks who kept these projects afloat. But we didn&amp;rsquo;t have a single methodology for how these projects should be run resulting in a lot of confusion for all the parties involved.&lt;/p&gt;
+&lt;p&gt;I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &amp;ldquo;enterprise&amp;rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement &lt;a class=&#34;link&#34; href=&#34;https://prince2.wiki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PRINCE2&lt;/a&gt; which was as heavy as they came.&lt;/p&gt;
+&lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg&#34;
+	width=&#34;1000&#34;
+	height=&#34;645&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_480x0_resize_q75_box.jpg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;372px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I encounter agile again somewhere around 2013 when I switch teams within my Org to a mobile application focused team. In addition to using the latest and greatest in technologies in development, this team also was leading the pack in development processes. It was trying to be a thought leader in all these practices that were in with the crowd in those days. The implementation there was quite a stock one. Each team had a scope clearly defined they were responsible for. And the team sizes were just within the limits of what is possible for a normal scrum framework without resorting to SAFe and what not.&lt;/p&gt;
+&lt;p&gt;The only problem was that there was no real enforcement of continuous improvement. Daily standups of some teams would drag on for 45 minutes and most grooming and planning sessions (which were combined) would consist of - &amp;ldquo;well you obviously know how to get this done right? Just get the changes to services X, Y and Z done by friday&amp;rdquo;. The defining feature of this team was how much deep domain and technical knowledge was still intact. Most of the people there had been there for several years and had written 95% of the stuff that was in production at the time. And the 5% that wasn&amp;rsquo;t written by then had been modified by them to suit the rest of the system. So there was no real planning or grooming needed. Everyone knew who would work on a given piece of work and that person could tell you exactly how long that change would take. So it worked very very well until it didn&amp;rsquo;t - When us noobs got there. Suddenly there was an influx of people who didn&amp;rsquo;t know the system as well as incumbents and we started having all sorts of issues.&lt;/p&gt;
+&lt;p&gt;When I left that team and headed to my next team, I encountered the best version of agile that I have seen to date. The key was that, the new team was never afraid to change all the rules so that they could make things more efficient. Planning pokers were tried for a few months and found to be ineffective so we got rid of them. Retro&amp;rsquo;s were too long so we shortened them. The standups were too virtual when done over video every day so we had one always-physical day of standup. And when everything was said and done, we had a very well tuned process and we loved it.&lt;/p&gt;
+&lt;h2 id=&#34;return-to-roots&#34;&gt;Return to roots&lt;/h2&gt;
+&lt;p&gt;I had returned from UK back to Sri Lanka and started working for a company based here, when I ran in to the full fledged Scaled Agile Frameowrk for Enterprises. Quite a mouthful right? And in short that will be SAFE. This is an enterprisy version of Agile practices. Now people like to make a distinction between the small &amp;ldquo;a&amp;rdquo; agile and big &amp;ldquo;A&amp;rdquo; Agile. This is most definitely of the latter kind. The team formation calls for various very distinctive and numerous roles and as with any enterprisy product, it comes with a lot of unwanted features, baggage and caveats.&lt;/p&gt;
+&lt;p&gt;The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.&lt;/p&gt;
+&lt;p&gt;SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&amp;gt; Program -&amp;gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.&lt;/p&gt;
+&lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg&#34;
+	width=&#34;500&#34;
+	height=&#34;867&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_480x0_resize_q75_box.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_1024x0_resize_q75_box.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;57&#34;
+		data-flex-basis=&#34;138px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And my story of agile implementations is no unique in any way. All over the software development firms, the ground truth is that almost all agile implementations have become liabilities that have slowed down deliveries, hampered team plans and frustrated good developers who are being held back by red tape they view and wholly useless. So why don&amp;rsquo;t companies just &amp;ldquo;do the right thing®&amp;rdquo; and let the teams be fully agile? Why is it all too easy to fail.&lt;/p&gt;
+&lt;p&gt;I posit that the reason is the same reason most change management processes fail is the same reason that implementations of agile fail - humans resist change. More the change seems alien to us, the more we resist them. And agile practices, true agile practices are as alien as it gets compared to traditional waterfall practices. And I understand the temptation to seek assurance of waterfall method. waterfall eases the minds of management and it allows business analysts and PMs involved to take as much uncertainty out of the equation as possible. So what ends up happening is that on the very projects that it is supposed to help, the uncertain and hard to plan projects.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-undo-this&#34;&gt;How to undo this?&lt;/h2&gt;
+&lt;p&gt;I think the key is to build rapport and support before it ever comes to decision time. There is a reason Ali was winning fights before ever setting foot in the ring. The reason that most agile implementations are not trusted is that they seem to add little value while adding a whole lot of work to the development teams and in general to everyone involved. The key to reversing this is to make sure that&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Everyone involved understands why are doing the things that we are doing. Why does agile matter, what is it going to get us? And how will we know when agile is implemented right?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The fluff built around the agile methodologies are scrapped off during implementation. Strip every single methodology down to the bare bones. And then add in the bits you need as you go along&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Understand what you are trying to measure. And do not, in the name of everything you love - ever measure that thing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how&lt;/h2&gt;
+&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note.png&#34;
+	width=&#34;265&#34;
+	height=&#34;131&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_480x0_resize_box_3.png 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Always make sure you lead with this one. Be sure to compare and contrast with business as usual situation and other competing methodologies. That way everyone will have enough context to know why you are implementing things the way you are.And in the end give them a sense of where you want to end up. And explain that you are not quite there yet. Explain that this is a journey and not a one day task. Your teams wont be fully agile overnight. There will still be hiccups along the way and you will adjust a lot of things, but let them know why it is important and how they can know when they are there. Things will be running smoothly, there will be less admin overhead, the team will settle in to a nice delivery rhythm. Give them enough of an understanding on how to tell when they are doing it right&lt;/p&gt;
+&lt;h2 id=&#34;cutting-out-the-fluff&#34;&gt;Cutting out the fluff&lt;/h2&gt;
+&lt;p&gt;No methodology is perfect. Fredrick brooks was right all those years ago. There is no silver bullet.You have to implement things yourself, evaluate and tweak things yourself.Whatever the methodology you chose - make sure to start from only the most essential parts of the methodology. Anything that is strictly mandatory, cut out.And then run a couple of weeks on that platform and see how you like it, talk to the team, review with stakeholders and add or change things accordingly. Remember that communication does not automatically increase just because you add more meetings. In the same manner remember that lack of meetings does not mean that team is not synced up. Every team develops it&amp;rsquo;s own communication mechanism, try to guide them towards wel established escalation patterns but wait to see how the team responds first before pushing things through&lt;/p&gt;
+&lt;h2 id=&#34;understand-but-do-not-measure&#34;&gt;Understand but do not measure&lt;/h2&gt;
+&lt;p&gt;Well even if you measure, please stop using that as a KPI.First understand how agile will improve your existing delivery platform - will it reduce cycle time? Will it lead to less bug leakage? Will it lead to better automation? Seek to understand exactly what agile will give your teams. And then try and see if it is actually being improved upon as you envisioned. But do not, ever, set those numbers as a KPI or an objective. Once you do they cease to be good measures and people will just start gaming the numbers. What was once a good measure that just reflected how your team behaves now becomes a statistic made up by a bunch of engineers who are well versed in numbers and how to make them up.&lt;/p&gt;
+&lt;h2 id=&#34;use-the-tools-provided-in-whatever-flavour-of-agile-you-chose&#34;&gt;Use the tools provided in whatever flavour of Agile you chose&lt;/h2&gt;
+&lt;p&gt;Each practice of Agile comes with it&amp;rsquo;s own set of processes or lack thereof regarding how to change the processes and procedures. And if by any chance your chosen flavour of agile insists on a one size fits all model with no space for nuance, then please dump that as soon as possible because nothing in this world every got achieved by treating things as black and white. And in software, we all live in the grey.&lt;/p&gt;
+&lt;p&gt;Use retrospectives, scrum of scrums, code reviews and whatever else you can in order to refine the agile processes you have. Get regular feedback from the teams. You don&amp;rsquo;t even have to stick to the feedback gathering methods dictated in your chosen flavour. If you see anything out of place, investigate, determine if you need to handle or fix it and then act accordingly. No process should be set in stone and there is always a chance to improve things.&lt;/p&gt;
+&lt;p&gt;The goal shouldn&amp;rsquo;t be to find fault with the existing processes however. Whenever you treat retro&amp;rsquo;s or other tooling as a way to find existing &lt;em&gt;issues&lt;/em&gt;, people will get overly defensive and try to obfuscate and hide as many things as possible, and that is a sure fire way to sabotaging your own performance.&lt;/p&gt;
+&lt;p&gt;The goal is always to make sure we can improve things from where we are so phrase the questions around that mind set. Instead of saying &amp;ldquo;Team morale was bad due to too many dependencies being unfulfilled, what can we do better?&amp;rdquo;, ask &amp;ldquo;How do we get ahead of as many dependencies as we can and highlight the ones we do not get to?&amp;rdquo;&lt;/p&gt;
+&lt;h2 id=&#34;to-be-continued&#34;&gt;To be continued&lt;/h2&gt;
+&lt;p&gt;This is a very interesting topic that is very close to my heart so there is a ton more I have to say on this topic. Expect to see a few more followup posts on this particular topic in the next few weeks.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
