@@ -6,7 +6,107 @@
         <description>Recent content on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Mon, 10 Jul 2023 14:30:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 29 Aug 2023 00:51:19 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Empathy and Respect in Software Engineering Teams: Actions for a Team Lead</title>
+        <link>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</link>
+        <pubDate>Tue, 29 Aug 2023 00:51:19 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/empathy-banner.jpg" alt="Featured image of post Empathy and Respect in Software Engineering Teams: Actions for a Team Lead" /&gt;&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#putting-empathy-and-respect-in-to-context-in-software-engineering-teams&#34;&gt;Putting Empathy and Respect in to context in Software Engineering Teams&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-role-of-a-team-lead&#34;&gt;The Role of a Team Lead&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#case-studies-in-empathy-and-respect-in-software-engineering&#34;&gt;Case Studies in Empathy and Respect in Software Engineering&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the world of software engineering, where we mostly think about systems and platforms, where success is measured in SLOs and RPSs there are two things that are crucial to the teams that actually build these software systems: empathy and respect. These two qualities might not be lines of code or algorithms, but they are the heartbeat of cohesive and innovative software engineering teams. This is why it is important for software engineering managers and team leads to be aware of them even though they are not hard technical matters.&lt;/p&gt;
+&lt;p&gt;Empathy is the ability to step into another person&amp;rsquo;s shoes and understand their feelings, thoughts, and experiences. It&amp;rsquo;s a nod to the fact that each one of us brings a unique perspective, and by understanding that perspective, we unlock the potential for deeper connections and more meaningful collaborations. Empathy acknowledges that behind every line of code is a coder – someone with aspirations, ideas, and the occasional cup of coffee.&lt;/p&gt;
+&lt;p&gt;Respect, on the other hand, is the recognition that every individual, regardless of their role or level of expertise, carries inherent value. It&amp;rsquo;s the understanding that differing opinions aren&amp;rsquo;t roadblocks but rather pathways to better solutions. Respect acknowledges that the act of listening can sometimes be as powerful as typing out a thousand lines of code.&lt;/p&gt;
+&lt;p&gt;While empathy is about understanding, respect is about honoring. When these two qualities intertwine, they create a synergy that fuels teams with trust, collaboration, and innovation. Empathy opens the door for open conversations, while respect ensures that those conversations are met with genuine consideration. And fostering good communication is at the centre of building high performance teams&lt;/p&gt;
+&lt;h2 id=&#34;putting-empathy-and-respect-in-to-context-in-software-engineering-teams&#34;&gt;Putting Empathy and Respect in to context in Software Engineering Teams&lt;/h2&gt;
+&lt;p&gt;But what does that have to do with what we do in our day to day work in our engineering teams? The above descriptions seem quite theoretical and abstract. How can we actually put these in to practice in our day to day work. Let&amp;rsquo;s take a few examples&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Story Refinement:&lt;/p&gt;
+&lt;p&gt;Empathy: Understanding the end user&amp;rsquo;s perspective is at the core of story refinement. By putting yourself in the user&amp;rsquo;s shoes, you can ensure that the software you&amp;rsquo;re building meets their needs effectively. This goes twice for backend engineers such as my own team. We like to think that we have less user experience concerns because our clients are not direct customer but other development teams. In truth this is even more important because if we do not design a good, developer friendly, usable API, we will be putting other developers in to unnecessary hardships.&lt;br&gt;
+Respect: Respect for diverse viewpoints during story refinement allows for a well-rounded understanding of the problem. Every perspective contributes to a more comprehensive solution. Understand that product owners, UX designers, Data Engineers and various other teams will come at a problem from their own viewpoints. They each bring their own ideas to the table and make sure to consider them all in equal weight so as not to dismiss any ideas out of hand.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Coding:&lt;/p&gt;
+&lt;p&gt;Empathy: While coding, empathy is about considering future maintainers. Writing clean, organized code makes it easier for your teammates to understand and collaborate. Remember the old quip - &lt;a class=&#34;link&#34; href=&#34;http://c2.com/cgi/wiki?CodeForTheMaintainer=&amp;amp;ref=blog.codinghorror.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.&amp;rdquo;&lt;/a&gt;.&lt;br&gt;
+Respect: Respect for coding standards and conventions maintains consistency across the codebase, making it accessible to everyone who interacts with it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Code Reviews:&lt;/p&gt;
+&lt;p&gt;Empathy: During code reviews, empathy involves understanding that mistakes happen. Providing feedback in a constructive and considerate manner promotes a positive learning environment. Make sure to let the team members know that the comments are about making their skills better and making the product better.&lt;br&gt;
+Respect: Respectful code reviews acknowledge the effort that went into the code and offer suggestions for improvement without undermining the coder&amp;rsquo;s skills. Understand that the you should make an equal effort to make sure they get good feedback. Make sure they feel good about them when they have done a good job as well. Too often people only offer criticism and while that is important, you should let them know when they have done a good job.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build and Release:&lt;/p&gt;
+&lt;p&gt;Empathy: In the build and release process, empathy means considering the impact of your changes on other team members and downstream processes. More often than not, when doing releases, we are more concerned about getting the application out and hitting our deadlines. But good practice calls for coordination and advance notification. If you have operations teams - let them know in advance, make a summary of changes and distribute it. If you have folks who are on call in the team, include them in the communications. And most importantly for backend teams (again like my own team!), let the downstream clients know and give them a chance to verify the changes, preferably with you standing by to help if required.&lt;br&gt;
+Respect: Respect for the release process and schedule ensures that the efforts of all team members are aligned, minimizing disruptions. Make the necessary changes to allow for other team&amp;rsquo;s practices and conventions. If you need to change things, talk to the other teams, most of the time they will be willing to budge or compromise.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Empathy and respect aren&amp;rsquo;t limited to a single activity; they infuse every aspect of software engineering. By understanding each other&amp;rsquo;s roles, appreciating diverse viewpoints, and valuing the collective efforts, software engineers can create a harmonious ecosystem where innovation flourishes and collaboration thrives. So, as you embark on your coding journey, remember that behind every line of code is a world of empathy and respect.&lt;/p&gt;
+&lt;h2 id=&#34;the-role-of-a-team-lead&#34;&gt;The Role of a Team Lead&lt;/h2&gt;
+&lt;p&gt;As a software engineering team lead, you&amp;rsquo;re not just responsible for managing code; you&amp;rsquo;re entrusted with cultivating an environment where empathy and respect flourish. Your role goes beyond technical guidance, encompassing the creation of a team culture that prioritizes these foundational values. Here&amp;rsquo;s how you can play a pivotal role in fostering a culture centered around empathy and respect:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Lead by Example:&lt;br&gt;
+Demonstrate empathetic and respectful behavior in all your interactions. Your actions set the tone for the entire team. If you do not show empathy and respect in practice, your team will not either.&lt;/li&gt;
+&lt;li&gt;Encourage Open Communication:&lt;br&gt;
+Promote transparent and open communication channels, encouraging team members to share their perspectives and insights freely. There can be no empathy if people are not openly communicating how they feel. Your team should be able to communicate the need for improved software quality, improved processes and better software engineering culture without feeling like they are personally targeting anyone. Equip them to communicate these ideas properly, and as it says above, lead by example.&lt;/li&gt;
+&lt;li&gt;Address Imposter Syndrome:&lt;br&gt;
+Provide resources and guidance to help team members navigate imposter syndrome. Offer a support system to bolster confidence and self-assurance. This is crucial in practice I have found. Engineers from more diverse and varied backgrounds often feel like they do not belong and are not worth the position and role they find themselves in. I, myself have gone through this early in my career. As a software team lead it is your responsibility to identify this, and make sure they know their worth and capability. Tell them that having a self respect for their own capability is the first step towards making the team better by using their skills. If they do not feel empowered and compelled to make the team better using their skills, it is game over already.&lt;/li&gt;
+&lt;li&gt;Embrace Diversity:&lt;br&gt;
+Recognize the significance of diverse viewpoints. Embrace the unique qualities that each team member brings to the table. If your team does not have diverse opinions, take corrective action. Hire for diversity, offer coaching, reward contrary and diverse viewpoints - because homogeneous thinking never improved any team.&lt;/li&gt;
+&lt;li&gt;Navigate Conflicts with Empathy:&lt;br&gt;
+Address conflicts with empathy and fairness, ensuring that all voices are heard and understood during resolution. As a team leader, the onus will be on you to solve most of the team internal conflicts as well and external conflicts with other teams. Always understand, where they come from and remind yourself that whatever the problem at hand is, all of you are on the same team and have the same goal - make the product better.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Your role as a team lead extends far beyond the technical realm. By nurturing a culture steeped in empathy and respect, you lay the foundation for a cohesive, innovative, and high performance software engineering team.&lt;/p&gt;
+&lt;h2 id=&#34;case-studies-in-empathy-and-respect-in-software-engineering&#34;&gt;Case Studies in Empathy and Respect in Software Engineering&lt;/h2&gt;
+&lt;p&gt;This kind of emphasis is getting quite frequent in software engineering field these days. Take spotify for an example. They have released a developer portal generating tool called backstage and on the &lt;a class=&#34;link&#34; href=&#34;https://engineering.atspotify.com/2022/12/shipping-spotifys-culture-5-plugins-and-4-principles-for-supercharging-developer-experience-at-scale/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog post announcing the tool&lt;/a&gt;, they list four principles that they want the users of that tool to follows. They themselves follow the principles as well&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 4. Our fellow developers are our customers, so build with empathy
+&amp;gt; 
+&amp;gt; Developers deserve as great an experience as our listeners and creators do. 
+&amp;gt; Ensure that the tools in the Spotify platform are the right tools for the job — and listen and adapt when they aren’t. 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And clever says something similar about their engineering culture as well. Here is a &lt;a class=&#34;link&#34; href=&#34;https://engineering.clever.com/2017/09/06/defining-clevers-engineering-culture/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog post&lt;/a&gt; explaining how they value empathy. To quote the interesting bits&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; Code with Empathy
+
+&amp;gt; We develop software with our customers and our fellow engineers in mind. To gain empathy for our customers, we embed product managers within engineering teams so they may work closely together. We also encourage engineers to participate in product specifications, user testing, and school visits. We choose to write code that is readable over code that is clever or terse, to help our colleagues and future selves read and update the code. We value simplicity as a key ingredient in  software architecture and implementation, as simple systems are easier to maintain, debug, and operate.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And this is again repeated in various places from &lt;a class=&#34;link&#34; href=&#34;https://www.infoq.com/presentations/empathy-software-development/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;infoq&lt;/a&gt; to &lt;a class=&#34;link&#34; href=&#34;https://thenewstack.io/empathy-secret-sauce-good-software-development/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;newstack&lt;/a&gt;. But the common theme is the same. Empathy is a key ingredient in a high performing software engineering team.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Remember Empathy is not just a feeling. It is a core part of what makes good teams perform better. It is the thing that keeps the members together and work as a team. What makes the whole greater than the sum of it&amp;rsquo;s parts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Respect Enhances Empathy: When you respect someone, you are more likely to listen actively and engage with an open mind. This can lead to a deeper understanding of their feelings and viewpoints, fostering empathy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Empathy Deepens Respect: Empathy allows you to see things from another person&amp;rsquo;s perspective, which can lead to a greater appreciation for their uniqueness and the challenges they might be facing. This, in turn, strengthens the respect you have for them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Both Support Positive Relationships: Building relationships based on both respect and empathy creates an environment of trust, understanding, and support. It promotes effective communication and reduces misunderstandings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Both Counter Conflict: In conflicts or disagreements, both respect and empathy can play essential roles in defusing tension. Showing respect even during disagreements and trying to understand the other person&amp;rsquo;s perspective can prevent conflicts from escalating.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In summary, respect and empathy are interconnected values that contribute to healthier and more compassionate interactions. Practicing both in your relationships can lead to better communication, reduced misunderstandings, and a more harmonious environment overall.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories</title>
         <link>https://osadalakmal.github.io/posts/small-user-stories/</link>
         <pubDate>Mon, 10 Jul 2023 14:30:00 +0000</pubDate>
