@@ -6,7 +6,100 @@
         <description>Recent content in Posts on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Tue, 29 Aug 2023 00:51:19 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 03 Sep 2023 10:51:19 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Broken Window Theory in Software Teams</title>
+        <link>https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/</link>
+        <pubDate>Sun, 03 Sep 2023 10:51:19 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/broken-windows.jpg" alt="Featured image of post Broken Window Theory in Software Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#broken-window-theory---origins&#34;&gt;Broken Window Theory - Origins&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#key-concepts&#34;&gt;Key Concepts&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#practical-application&#34;&gt;Practical Application&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#impact-and-controversies&#34;&gt;Impact and Controversies:&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#software-engineering-as-a-social-endeavour&#34;&gt;Software Engineering as a Social Endeavour&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#so-what-exactly-is-a-broken-window-in-a-software-engineering-team-then&#34;&gt;So what exactly is a broken window in a Software Engineering Team then?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#why-you-should-care-as-a-software-engineering-manager&#34;&gt;Why you should care as a Software Engineering Manager?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;h2 id=&#34;broken-window-theory---origins&#34;&gt;Broken Window Theory - Origins&lt;/h2&gt;
+&lt;p&gt;The Broken Windows Theory emerged in the early 1980s as a response to the rising concerns about crime and urban decay in American cities. James Q. Wilson, a prominent social scientist, and George L. Kelling, a criminologist, co-authored an article titled &amp;ldquo;Broken Windows: The Police and Neighborhood Safety,&amp;rdquo; which was published in the Atlantic Monthly in 1982.&lt;/p&gt;
+&lt;h3 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Visible Signs of Disorder: Wilson and Kelling proposed that visible signs of disorder in neighborhoods, such as broken windows, graffiti, or litter, create an environment that fosters crime. They argued that when one broken window in a building goes unrepaired, it sends a signal that no one cares about the area, leading to more windows breaking and an overall sense of neglect.&lt;/li&gt;
+&lt;li&gt;Quality-of-Life Policing: The authors advocated for a shift in policing strategies from solely focusing on serious crimes to addressing low-level offenses and maintaining order in communities. They emphasized that addressing minor infractions and maintaining a sense of order would prevent the emergence of more serious criminal behavior.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;practical-application&#34;&gt;Practical Application&lt;/h3&gt;
+&lt;p&gt;The practical application of the Broken Windows Theory led to significant changes in law enforcement and community policing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Community Policing: Police departments began adopting community policing strategies, which involved officers engaging with the community, building relationships, and addressing quality-of-life issues. This approach aimed to create a sense of partnership between law enforcement and residents.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Crime Mapping and Data Analysis: Law enforcement agencies started using data analysis and crime mapping to identify areas with high levels of disorder and crime. This allowed them to allocate resources more effectively and target specific problem areas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Community Engagement: Beyond law enforcement, the Broken Windows Theory inspired community organizations and local governments to take an active role in neighborhood revitalization. Cleanup initiatives, graffiti removal programs, and neighborhood watch groups aimed to address visible signs of disorder.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note that there were other practices that took inspiration from this theory ( such as zero tolerance policies ). I do not discuss them as I do not believe they resulted in a net positive for the society. If anything blanket policies like that has a disproportionate impact on the minorities and exacerbates problems. Therefore we will discuss what we believe are the policies that actually made a difference here.&lt;/p&gt;
+&lt;h3 id=&#34;impact-and-controversies&#34;&gt;Impact and Controversies:&lt;/h3&gt;
+&lt;p&gt;While there were clear benefits where this theory was applied, the practical application of the Broken Windows Theory has been both praised and criticized. While some attribute reductions in crime rates to its implementation, others argue that it can lead to over-policing and the criminalization of minor offenses, disproportionately affecting marginalized communities. Additionally, the theory&amp;rsquo;s effectiveness in addressing serious crime remains a subject of debate. Having said all of that we can all agree I think that intuitively this idea holds water.&lt;/p&gt;
+&lt;h2 id=&#34;software-engineering-as-a-social-endeavour&#34;&gt;Software Engineering as a Social Endeavour&lt;/h2&gt;
+&lt;p&gt;What does all of this sociological theories have to do with software engineering you say? Well, unruliness have the same effect on software engineering systems. Think of it this way, if your technical estate is a street, then missing unit tests, no consistent styling, and other little things that may correspond to a broken window. And these indicate to your team that you no longer really care about these things. This means the team values, however you may have promoted them before, no longer really applies and are no longer important to the team&amp;rsquo;s management.&lt;/p&gt;
+&lt;p&gt;Signaling within a team refers to the deliberate actions and behaviors of leaders that convey their intentions, values, and expectations to team members. These signals are pivotal in influencing team dynamics and guiding individual behavior. Leaders employ both explicit and implicit forms of communication. Explicitly, leaders use clear verbal communication to articulate their objectives, mission, and guidelines. Implicitly, their actions and decisions send strong signals. For example, a leader who consistently exhibits dedication and punctuality sets a precedent for the team. Leadership signals extend to decision-making. Choices regarding resource allocation or project priorities convey the leader&amp;rsquo;s priorities and strategic direction, directly affecting team perceptions.&lt;/p&gt;
+&lt;p&gt;When the signalling within the team indicates implicitly by the way of no resource allocation to addressing &lt;em&gt;&amp;ldquo;broken windows&amp;rdquo;&lt;/em&gt; or explicitly by dictating that &lt;em&gt;&amp;ldquo;broken windows&amp;rdquo;&lt;/em&gt; are too unimportant to address, the leadership seems to communicate that these are not pivotal to the engineering standards of a team. That in turn leads the team to read in between the lines and doubt where exactly then is the proverbial line in the sand? How much can they let the engineering standards lax before the leadership holds them to account?&lt;/p&gt;
+&lt;h2 id=&#34;so-what-exactly-is-a-broken-window-in-a-software-engineering-team-then&#34;&gt;So what exactly is a broken window in a Software Engineering Team then?&lt;/h2&gt;
+&lt;p&gt;And this is the most important point - you need to communicate the expectation to the team. Lack of standard for the one Rust program within the full Java based technical estate does not constitute a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;. Consistency in communication and expectation setting matters a lot here. If your team&amp;rsquo;s primary language is C# and you do not have a style guide for it, then there is potential for trouble. If people apply different rules in different contexts leading to inconsistency and you do not intervene, then it becomes a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;. There is no hard and fast rule here I think. Use your judgement for the most part but simple few criteria should help you out for the most part&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Does the issue in question apply broadly across your technical estate? If so it probably is significant enough&lt;/li&gt;
+&lt;li&gt;Had you previously communicated that the issue in hand is important enough to have a team-wide consensus?&lt;/li&gt;
+&lt;li&gt;Is the excellence or following the best practice in the aspect in question a priority for your wider organization? If so, yes it probably will be a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;why-you-should-care-as-a-software-engineering-manager&#34;&gt;Why you should care as a Software Engineering Manager?&lt;/h2&gt;
+&lt;p&gt;There are lots of reasons I can list but the following would probably be the top of the list&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Cultural Significance: Just as the Broken Window Theory suggests that neglecting visible signs of disorder can create a culture of apathy, allowing cosmetic issues to persist in a codebase or development process can set a precedent for a lack of attention to detail. Over time, this can erode the team&amp;rsquo;s commitment to engineering excellence and high standards.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Attention to Detail: Software engineering thrives on precision and meticulous attention to detail. Addressing cosmetic issues demonstrates a commitment to getting the small things right. It sends a message that the team values craftsmanship and is dedicated to delivering high-quality software.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Preventing Technical Debt: Cosmetic issues, if left unaddressed, can accumulate and contribute to technical debt. Technical debt refers to the cost of fixing issues and improving code quality that accrues over time when shortcuts are taken or issues are ignored. By tackling visible but cosmetic issues early, teams can prevent the accumulation of technical debt and maintain a codebase that is easier to maintain and extend.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Code Quality and Maintainability: Cosmetic issues, such as inconsistent formatting or poor documentation, can make code less readable and maintainable. This can slow down development and increase the likelihood of introducing bugs during future changes. By addressing these issues, teams ensure that the codebase remains clean, comprehensible, and easier to work with.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enhancing Collaboration: Clear and well-maintained code fosters effective collaboration among team members. When everyone can easily understand and work with the code, it reduces the risk of misunderstandings and conflicts. It also allows for smoother code reviews and knowledge sharing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Professionalism and Customer Perception: Software engineering is a professional discipline, and professionalism extends to the quality of the work produced. Visible cosmetic issues can detract from the professional image of the team and the organization as a whole. Additionally, customers and end-users often judge software quality by its visible aspects, such as user interface design and consistency.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Continuous Improvement: Addressing cosmetic issues is an integral part of a culture of continuous improvement. Teams that are committed to excellence understand that improvement starts with the small details. By consistently addressing these details, teams set themselves up for a cycle of improvement that extends to all aspects of their work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As you can see I may have stolen some talking points from the agile manifesto there. This is not an oversight - I truly do believe in agile teams it is very important that we keep up the engineering excellence lest we lose sight of the trees for the forest and sacrifice technical excellence for business value.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Addressing visible but cosmetic issues is not merely about aesthetics; it&amp;rsquo;s about maintaining a culture of engineering excellence, professionalism, and continuous improvement within a software engineering team. By valuing and addressing these issues, teams can prevent the deterioration of code quality, foster collaboration, and ultimately deliver software that meets high standards and exceeds customer expectations.&lt;/p&gt;
+&lt;p&gt;Note :&lt;br&gt;
+
+
+Photo by &lt;a href=&#34;https://unsplash.com/@christopherphigh?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Christopher Paul High&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/photos/Iv7x6fmJ8Og?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Empathy and Respect in Software Engineering Teams: Actions for a Team Lead</title>
         <link>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</link>
         <pubDate>Tue, 29 Aug 2023 00:51:19 +0100</pubDate>
