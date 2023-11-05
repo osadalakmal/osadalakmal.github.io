@@ -6,7 +6,117 @@
         <description>Recent content in engineering-leadership on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 08 Oct 2023 10:51:19 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/engineering-leadership/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 31 Oct 2023 21:18:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/engineering-leadership/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Lies, Damn Lies and Engineering Metrics</title>
+        <link>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</link>
+        <pubDate>Tue, 31 Oct 2023 21:18:00 +0000</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.jpg" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:&lt;/h2&gt;
+&lt;p&gt;In the world of engineering, metrics are critical for evaluating performance and progress. But relying on subjective views and opinions can lead to flawed assessments. To determine the effectiveness of engineering practices, we need unbiased and objective metrics. The choice of metrics depends on an organization&amp;rsquo;s specific goals. Metrics should be automated, transparent, and integrated into the culture. Avoid using easily gamed or individual-level metrics. The post also explores DORA and SPACE metrics and emphasizes that there is no one-size-fits-all solution in engineering metrics.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-we-know-were-good&#34;&gt;How Do We Know We&amp;rsquo;re Good?&lt;/h2&gt;
+&lt;p&gt;In engineering, a discipline underpinned by the scientific method, it seems we should always seek validation of our progress using scientific methods. However, in many engineering teams I&amp;rsquo;ve encountered, there is a propensity to rely on phrases like &amp;ldquo;I feel like,&amp;rdquo; &amp;ldquo;I think,&amp;rdquo; and &amp;ldquo;My point of view is.&amp;rdquo; Such subjective views, unconscious biases, and preconceived opinions can skew measurements.&lt;/p&gt;
+&lt;p&gt;Presuming that the goal of an engineering management structure is to enable the formation and maintenance of high-performance teams, we need to ask how we will recognize a high-performing team. Some aspects can be measured manually, such as team health and team happiness, through surveys and one-on-one meetings. However, the measurement of the effectiveness of engineering practices requires unbiased and objective metrics. These metrics are the only way we can truly know if our engineering practices are achieving the goals we set out to accomplish.&lt;/p&gt;
+&lt;p&gt;Now, whenever metrics are mentioned people tend to get skeptical and usually with good cause. After all as the title alludes to statistics and metrics have been used to dubious effect since they were invented. You may have heard any number of horror stories regarding the misuse of these. However it does not have to be that bad necessarily. Used with prudence these can provide a huge benefit to any software engineering team. That prudence is what I am setting out to put in to words in this blog post.&lt;/p&gt;
+&lt;h2 id=&#34;do-we-agree-on-what-blue-is&#34;&gt;Do We Agree on What &amp;ldquo;Blue&amp;rdquo; Is?&lt;/h2&gt;
+&lt;p&gt;A meme that originated on Reddit comes to mind. It featured a dress found in a charity or second-hand shop. What made it notable was the debate surrounding its color. The poster thought it was blue, but a significant number of replies argued it was gold. This seemingly simple question, &amp;ldquo;Do we all agree on what blue is?&amp;rdquo; led to a divisive dispute. It may seem strange that a seemingly straightforward matter could be so divisive. After all, defining &amp;ldquo;blue&amp;rdquo; isn&amp;rsquo;t a complex concept; even a preschooler could define it confidently.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://en.wikipedia.org/wiki/The_dress&#34;&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.jpg&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+                
+                    &lt;h4&gt;The controversial dress in question&lt;/h4&gt;
+                
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This story illustrates how challenging it is to reach a consensus, even on straightforward matters, within a group. Now, imagine trying to measure things like software engineering team or organizational performance and achieve a consensus within your entire organization on whether engineering is doing a good job or not. Let&amp;rsquo;s heed the lesson of the blue/gold dress people!&lt;/p&gt;
+&lt;h2 id=&#34;what-do-we-want-to-measure-anyway&#34;&gt;What Do We Want to Measure, Anyway?&lt;/h2&gt;
+&lt;p&gt;Before defining the exact metrics, let&amp;rsquo;s consider what qualities of teams we want to measure. While this question seems straightforward, it&amp;rsquo;s fraught with perils for those attempting to answer it. The most important thing to understand is that this is likely to vary from one organization to another. Like many of the best answers, the answer to this question is &amp;ldquo;it depends.&amp;rdquo; The main point to keep in mind is to consider the needs of your business. Unless you&amp;rsquo;re working on a hobby project, any organization, whether it&amp;rsquo;s a business or not, will have goals. Your software engineering team does not operate in isolation but supports the organization&amp;rsquo;s goals.&lt;/p&gt;
+&lt;p&gt;For example, if you&amp;rsquo;re working in a charity organization helping vulnerable women in the community, your goals for your systems might include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ease of use and accessibility&lt;/li&gt;
+&lt;li&gt;Security and confidentiality&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are top priorities because you serve vulnerable individuals who need help promptly, securely, and without unnecessary effort. Security is paramount because their personal data is stored in the systems, and lives may be at stake. Availability is crucial because helping people is not an optional service; it&amp;rsquo;s a critical service.&lt;/p&gt;
+&lt;p&gt;However, if you&amp;rsquo;re working for an e-commerce startup in private beta, your goals might be different:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Team velocity&lt;/li&gt;
+&lt;li&gt;Bug leakage&lt;/li&gt;
+&lt;li&gt;Website performance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Your priorities are to ship features quickly and make them fast at any cost. Your company&amp;rsquo;s survival depends on emerging from stealth mode as swiftly as possible.&lt;/p&gt;
+&lt;h2 id=&#34;from-objectives-to-metrics&#34;&gt;From Objectives to Metrics&lt;/h2&gt;
+&lt;p&gt;In the business world, you&amp;rsquo;ve probably heard of OKRs (Objectives and Key Results). OKRs function similarly. You identify the areas you want your development team to focus on and select representative metrics that signify your work in those areas. Selecting these metrics is as much an art as a science. There are numerous courses available, from LinkedIn Learning and Coursera to Udemy and elsewhere. However, I can offer a couple of pointers specific to the software world.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Do Not Select Metrics Directly Correlated with Development Actions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This should be obvious given all the horror stories circulating in the community regarding metrics such as lines of code or bugs closed. Elon Musk famously touted lines of code committed as a measure of developer productivity and was roundly ridiculed for it, quite rightly. &lt;a class=&#34;link&#34; href=&#34;https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Here&lt;/a&gt; is an essay where another developer talks about a colleague who was the least productive under this metric. The problem here is selecting a simple one-to-one correlation metric, which will contain all the noise and gaming that can occur in the real world.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Do Not Select Individual-Level Metrics&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Select metrics that you can collectively hold a team responsible for. After all, your goal is to build high-performing teams, not high-performing individuals. There will always be individuals, like in the essay above, who may not directly work on something, but without them, the team would fall far short of the metrics being measured. This would be unfair to those individuals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Do Not Choose Targets and Metrics&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This departs from the central idea in key results. For key results in OKRs, they are clearly targets to be achieved. However, the problem with targets in the engineering domain is that any metric that becomes a target will end up being gamed. This most famously happens with unit testing coverage metrics. There have been numerous cases of people writing nonsensical &amp;ldquo;unit tests&amp;rdquo; that do not test anything but call all the functions they can fit in so that the coverage target can be gamed. The only effect of this is to increase the amount of code you have to change every time you modify an interface. So, please do not do this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-gets-measured-gets-done&#34;&gt;What Gets Measured Gets Done&lt;/h2&gt;
+&lt;p&gt;To measure the chosen metrics, you&amp;rsquo;ll need to put automated facilities in place. Unless the input is human-dependent, it should always be automated. These metrics should:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Be simple to calculate&lt;/li&gt;
+&lt;li&gt;Be always available&lt;/li&gt;
+&lt;li&gt;Be transparent&lt;/li&gt;
+&lt;li&gt;Be easily verifiable&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The rationale behind these requirements should be self-evident by now. Without these qualities, you cannot create a pervasive metric-driven culture.&lt;/p&gt;
+&lt;h3 id=&#34;people-need-to-know-the-metrics&#34;&gt;People Need to Know the Metrics&lt;/h3&gt;
+&lt;p&gt;This information should be easily accessible. It should be included in as many documents as possible, from onboarding documentation for newcomers to the main page of your chosen Wiki or documentation site, be it Confluence, SharePoint, or Asana. There should be no doubt in anyone&amp;rsquo;s mind regarding where to find the metrics.&lt;/p&gt;
+&lt;h3 id=&#34;people-need-to-talk-in-terms-of-metrics&#34;&gt;People Need to Talk in Terms of Metrics&lt;/h3&gt;
+&lt;p&gt;Ensure that team members, managers, and even senior leaders speak the language of the metrics. They should bring up metrics whenever discussions about team performance arise. Make sure to incorporate metrics into the conversation if someone uses softer language that doesn&amp;rsquo;t explicitly reference relevant metrics. For example:&lt;/p&gt;
+&lt;p&gt;Senior Manager: &amp;ldquo;I&amp;rsquo;ve seen that the backend team for the app has done a marvelous job in managing the infrastructure and keeping the app available.&amp;rdquo;&lt;br&gt;
+You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go to my wonderful team who worked diligently to maintain our availability metric at 99.995%, exceeding the target availability of 99.99%. Great work, team!&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t correct people but add this as a clarification or elaboration. This is crucial because you want people to ultimately think in terms of the language of the metrics. You want them to think not &amp;ldquo;What will happen if we improve our app&amp;rsquo;s performance?&amp;rdquo; but &amp;ldquo;What will happen if we improve the response time for the main app to an average of 150ms from 200ms.&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;the-measurements-have-to-be-transparent-public-and-in-your-face&#34;&gt;The measurements have to be transparent, public and IN YOUR FACE&lt;/h3&gt;
+&lt;p&gt;The more pervasive the metric is, the stronger it get&amp;rsquo;s ingrained to peoples minds. I worked in one organization where there was only one metric that mattered. And that metric was everywhere. It was on any number of TV screens scattered across the office. It was on the login screen some days. All big meetings started with that number and the causes of that. The bonus was directly linked to that. There was no ambiguity in where the number came from, what value it had at any given point.&lt;/p&gt;
+&lt;p&gt;Same applies to engineering metrics have a single live dashboard where the metric gets displayed and updated in real time. And make sure it is prominently visible in whatever work environment you have. Obviously this will change according if your organization is office based, hybrid or remote only. Whatever the format, make sure that this information is easily accessible.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;p&gt;This is something I have put together in the past in some of the organizations I have worked with. This mostly emphasizes devops, delivery, and performance metrics. The nature of the business was a mobile application serving a large amount of data. The team was starting to get around to doing their own devops, so this was a big part of the spotlight. Also, we were under tight deadlines to deliver the project, so delivery metrics were crucial. The performance was the biggest ask from the product team, so we added a metric for that as well.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Objectives&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Excel at implementing devops practices within the team&lt;/li&gt;
+&lt;li&gt;Delivering the project under the agreed deadlines&lt;/li&gt;
+&lt;li&gt;Maintain the response times for the app under 300ms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Metrics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lead time for change&lt;/li&gt;
+&lt;li&gt;Deployment frequency&lt;/li&gt;
+&lt;li&gt;Bug leakage&lt;/li&gt;
+&lt;li&gt;Team delivery velocity&lt;/li&gt;
+&lt;li&gt;Mean response time on the homepage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We got the sign-off from the project team and then the management for the metrics and created a dashboard containing real-time tracking for the above metrics. The team knew where they stood as well as management and the business.&lt;/p&gt;
+&lt;h2 id=&#34;what-about-dora-or-space&#34;&gt;What About DORA or SPACE?&lt;/h2&gt;
+&lt;p&gt;A final note about &lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DORA&lt;/a&gt; (DevOps Research and Assessment) and SPACE. DORA metrics represent Deployment Frequency (DF), Lead Time for Changes (LT), Time to Restore Service (TRS), and Change Failure Rate (CFR). DORA metrics are widely used to assess the performance of DevOps and Continuous Delivery practices. First of all, the team you are in may not even practice DevOps. And even if you do, you may not want those DORA metrics to be a component of the full team&amp;rsquo;s metric set. You can and should probably use DORA metrics for evaluating your DevOps team&amp;rsquo;s performance if you have such a team. But that does not mean the full organization should be measured on it or that it should form the full criteria upon which you measure the performance of the team.&lt;/p&gt;
+&lt;p&gt;SPACE is an emerging framework aimed at evaluating the competencies within software development teams. It stands for Satisfaction &amp;amp; Well-Being, Performance, Activity, Collaboration &amp;amp; Communication, and Efficiency &amp;amp; Flow. SPACE is designed to optimize the team&amp;rsquo;s capabilities and well-being. It looks beyond technical processes to include &amp;lsquo;soft&amp;rsquo; factors like team morale, communication, and overall well-being. Again, it is a good measure if your goal is to create an environment where your teams thrive, innovate, and grow. But it may not directly correspond to business requirements.&lt;/p&gt;
+&lt;p&gt;The conclusion in both cases is the same as what Fred Brooks said in his seminal work, &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/The_Mythical_Man-Month&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;The Mythical Man-Month&amp;rdquo;&lt;/a&gt;, there is no silver bullet. There is no one solution that will work in all situations for all teams. Choose the right tool for the job and ignore the current hype.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Stakeholder Management and Alliance Forming</title>
         <link>https://osadalakmal.github.io/posts/stakeholders-and-alliances/</link>
         <pubDate>Sun, 08 Oct 2023 10:51:19 +0100</pubDate>
@@ -15,13 +125,13 @@
         <description>&lt;img src="https://osadalakmal.github.io/posts/stakeholders-and-alliances/working-together.jpg" alt="Featured image of post Stakeholder Management and Alliance Forming" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs, and new tricks&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs and new tricks&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#stakeholder-management&#34;&gt;Stakeholder management&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#what-to-keep-in-mind&#34;&gt;What to keep in mind&lt;/a&gt;
       &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#understand-what-motivates-people-understand-what-is-important-to-them&#34;&gt;Understand what motivates people. Understand what is important to them.&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#use-this-knowledge-to-make-sure-their-goals-are-aligned-or-at-least-point-in-the-same-direction-as-you&#34;&gt;Use this knowledge to make sure their goals are aligned, or at least point in the same direction as you.&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#in-the-long-run-if-your-goals-are-not-aligned-the-best-thing-to-do-is-remove-the-need-for-coordination&#34;&gt;In the long run, if your goals are not aligned, the best thing to do is remove the need for coordination.&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#understand-what-motivates-people-understand-what-is-important-to-them&#34;&gt;Understand what motivates people. Understand what is important to them&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#use-this-knowledge-to-make-sure-their-goals-are-alignd-or-at-least-point-in-the-same-direction-as-you&#34;&gt;Use this knowledge to make sure their goals are alignd or at least point in the same direction as you&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#in-the-long-run-if-your-goals-are-not-aligned-the-best-thing-to-do-is-remove-the-need-to-coordination&#34;&gt;In the long run if your goals are not aligned, the best thing to do is remove the need to coordination.&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#alliances&#34;&gt;Alliances&lt;/a&gt;&lt;/li&gt;
@@ -32,24 +142,24 @@
   &lt;/div&gt;
   
 &lt;h1 id=&#34;stakeholders-and-alliances&#34;&gt;Stakeholders and Alliances&lt;/h1&gt;
-&lt;h2 id=&#34;on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs, and new tricks&lt;/h2&gt;
-&lt;p&gt;It was a couple of years ago, and I had just embarked on a new role as a Solution Architect and Engineering Manager for a significant program. My responsibilities included overseeing the development of mobile apps and data analytics software. Before officially taking the reins, I faced a pivotal interview with a CXO level senior leader. This role came with hefty responsibilities, including overseeing our technical portfolio, customer-facing software, IT systems, and backend LOB software. It marked a significant transition from my previous roles – from managing single projects to overseeing an entire program.&lt;/p&gt;
+&lt;h2 id=&#34;on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs and new tricks&lt;/h2&gt;
+&lt;p&gt;It was a couple of years back and I had just embarked on a new role as a Solution Architect and Engineering Manager for a significant program. My responsibilities included overseeing the development of mobile apps and data analytics software. Before officially taking the reins, I faced a pivotal interview with a CXO level senior leader. This role came with hefty responsibilities, overseeing our technical portfolio, including customer-facing software, IT systems, and backend LOB software. It marked a significant transition from my previous roles – from managing single projects to overseeing an entire program.&lt;/p&gt;
 &lt;p&gt;Expecting a grueling interview, most questions turned out to be quite straightforward. However, one question caught me off guard. The senior leader asked, &amp;ldquo;Who are your allies in this endeavor?&amp;rdquo; I listed our senior team members: a project manager, business manager, product manager, and operations manager. But that wasn&amp;rsquo;t what the question was about. The senior leader stressed the importance of identifying major stakeholders who had a lot of influence in the stakeholder quadrant—those who played a central role in supporting IT operations.&lt;/p&gt;
-&lt;p&gt;It dawned on me that the real challenge lay not with my project team but with the team responsible for supporting IT operations. The senior leader&amp;rsquo;s message was crystal clear: form an alliance, collaborate closely in the short term, and figure out a way to permanently resolve this bottleneck. This was the missing piece of the puzzle.&lt;/p&gt;
+&lt;p&gt;It dawned on me that the real challenge lay not with my project team, but with the team responsible for supporting IT operations. The senior leader&amp;rsquo;s message was crystal clear: form an alliance, collaborate closely in the short term, and figure out a way to permanently resolve this bottleneck. This was the missing piece of the puzzle.&lt;/p&gt;
 &lt;p&gt;For a brief moment, I felt out of my depth and vulnerable. I was familiar with programming and systems, but this was entirely new territory. Can an old dog learn new tricks?&lt;/p&gt;
 &lt;h2 id=&#34;stakeholder-management&#34;&gt;Stakeholder management&lt;/h2&gt;
-&lt;p&gt;This led me to go on a whirlwind tour of the subject of stakeholder management. After a few LinkedIn courses and HBR articles later, I started to realize the importance of what the senior leader who interviewed me said. I was so focused on how my team and I were going to deliver the product that I had lost sight of how important it was for the rest of the organization to deliver the product.&lt;/p&gt;
-&lt;p&gt;This is true in any organization, but especially true in larger organizations. There are several departments that specialize in one thing. Which means that to get anything done in such a company, you need a few of those organizational units to work together. You may call them departments, divisions, etc., but whatever the name, the central theme is that in order to do anything useful, you have to get them together and work with each other.&lt;/p&gt;
-&lt;p&gt;Even in a small organization, it is quite likely you will be involved with many functions other than just software development. Everyone, from business analysts to delivery managers, is crucial to developing a software product. In order to make sure the software product gets made according to the project plan, we need to make sure that all of these people are on the same page about where the project is currently, where you want to get to, and how you will get there. And this requires explicit communication and active stakeholder management.&lt;/p&gt;
+&lt;p&gt;This led me to go on a whirlwind tour of the subject of stakeholder management. After a few linkedin courses and HBR articles later, I had started to realize the importance of the senior leader who interviewed me said. I was very focused on how my team and I were going to deliver the product that I had lost sight of how important the rest of the organization was to deliver the product.&lt;/p&gt;
+&lt;p&gt;This is true in any organization but specially true in larger organizations. There are several departments that specialize in one thing. Which means that to get anything done in such a company you need a few of those organizational units to work together. You may call them departments, divisions etc but whatever the name is the central theme is that in order to do anything useful you have to get them together and work with each other.&lt;/p&gt;
+&lt;p&gt;Even in a small organization it is quite likely you will be involved with many functions other than just software development. Everyone from business analysts to delivery management is crucial to developing a software product. In order to make sure the software product gets made according to the project plan then, we need to make sure that all of these people are on the same page about where the project is currently, where you want to get to and how you will get there. And this requires explicit communication and active stakeholder management&lt;/p&gt;
 &lt;h2 id=&#34;what-to-keep-in-mind&#34;&gt;What to keep in mind&lt;/h2&gt;
-&lt;p&gt;Now, I am not going to tell you what stakeholder management is or how to do it. You can learn from any number of online or offline resources. What I am going to tell you is what you have to keep in mind practically when doing this.&lt;/p&gt;
-&lt;h3 id=&#34;understand-what-motivates-people-understand-what-is-important-to-them&#34;&gt;Understand what motivates people. Understand what is important to them.&lt;/h3&gt;
-&lt;p&gt;This is the most important thing of all. And the textbooks will usually skip this because it may not be acceptable in a corporate environment to admit that not all parts of an organization will work towards the same goal. But the simple truth is that they do not.&lt;/p&gt;
-&lt;p&gt;Maybe one team lacks the required resources, so maybe their focus is on reducing the workload as much as possible, so they will have some hope of maintaining a work-life balance. Maybe one team is led by someone who is looking for a promotion next year, so they are focused on catching all the low-hanging fruit they can get their hands on. The motivations differ, but the pattern stays the same. Understand the motivation, and you understand how to get them to do what you want.&lt;/p&gt;
-&lt;h3 id=&#34;use-this-knowledge-to-make-sure-their-goals-are-aligned-or-at-least-point-in-the-same-direction-as-you&#34;&gt;Use this knowledge to make sure their goals are aligned, or at least point in the same direction as you.&lt;/h3&gt;
-&lt;p&gt;This does not necessarily have to mean that you convince them that your goals are the best, so they should adopt them. This involves creating an incentive structure that ultimately helps your team achieve their goals by providing the necessary support. This might mean making sure they get easier work from you or that you work extra hard to make sure you get the news of all of the great work that they are doing to senior management.&lt;/p&gt;
-&lt;p&gt;For example, you are working with a cyber security team that has a mandate to make sure that all the systems in the enterprise are characterized according to the level of risk a penetration would pose. You can make sure you always pre-label your systems to make their job easier. You can help them convince other teams of the value of this and evangelize this work. You can create small tools that may help this work. All of this is to make sure that they understand that their goals and yours are aligned.&lt;/p&gt;
-&lt;h3 id=&#34;in-the-long-run-if-your-goals-are-not-aligned-the-best-thing-to-do-is-remove-the-need-for-coordination&#34;&gt;In the long run, if your goals are not aligned, the best thing to do is remove the need for coordination.&lt;/h3&gt;
+&lt;p&gt;Now I am not going to tell you what stakeholder management is or how to do it. That you can learn from any number of online or offline resources. What I am going to tell you is what you have to keep in mind practically when doing this.&lt;/p&gt;
+&lt;h3 id=&#34;understand-what-motivates-people-understand-what-is-important-to-them&#34;&gt;Understand what motivates people. Understand what is important to them&lt;/h3&gt;
+&lt;p&gt;This is the most important thing of all. And the textbooks will usually skip this because it may not be acceptable in a corporate environment to admit that not all parts of an oraganization will work towards the same goal. But the simple truth is that they do not.&lt;/p&gt;
+&lt;p&gt;Maybe one team lacks the required resources so maybe their focus is on reducing the workload as much as possible so they will have some hope of maintaining a work life balance. Maybe one team is led by someone who is looking for a promotion next year so they are focused on catching all the low hanging fruit they can get their hands on. The motivations differ but the pattern stays the same. Understand the motivation and you understand how to get them to do what you want.&lt;/p&gt;
+&lt;h3 id=&#34;use-this-knowledge-to-make-sure-their-goals-are-alignd-or-at-least-point-in-the-same-direction-as-you&#34;&gt;Use this knowledge to make sure their goals are alignd or at least point in the same direction as you&lt;/h3&gt;
+&lt;p&gt;This does not necessarily have to mean that you convince them your goals are the best so they should adopt them. This involves creating an incentive structure that ultimately helps your team achieve their goals by providing the necessary support. This might mean making sure they get easier work from you or you work extra hard to make sure you get the news of all of the &lt;em&gt;great work&lt;/em&gt; that they are doing to senior management.&lt;/p&gt;
+&lt;p&gt;For example you are working with a cyber security team that has a mandate for making sure that all the systems in the enerprise gets characterized according to the risk level a penetraton would pose. You can make sure you always pre-label your systems to make their job easier. You can help them convince other teams the value of this and evangelize this work. You can create small tools that may help this work. All of this is to make sure that they understand that their goals and yours are aligned.&lt;/p&gt;
+&lt;h3 id=&#34;in-the-long-run-if-your-goals-are-not-aligned-the-best-thing-to-do-is-remove-the-need-to-coordination&#34;&gt;In the long run if your goals are not aligned, the best thing to do is remove the need to coordination.&lt;/h3&gt;
 
 
 
@@ -62,32 +172,42 @@
                 
             &lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;The above steps are good as long as there is no long-term misalignment between your goals and theirs. But when there are, this means that you will be expending more energy trying to get people to do their own jobs than you are expending energy to do your own job. This is not a healthy place to be.&lt;/p&gt;
-&lt;p&gt;This is when you should stop trying to build alliances and just try to move your dependency off that particular team. This can take the form of outsourcing things done by this particular team currently. This can also mean that you get a new team assigned to you. Perhaps an option is to bring that function into your team and stop depending on an external team. Whatever form this action takes, the end result must be the same. Your dependency on the external team is removed or reduced so that stakeholder management stops being the obstacle that it has been.&lt;/p&gt;
-&lt;p&gt;I have had to do the same when it turned out an IT support team within our organization was incapable of being responsive as much as we wanted them to be. They were responsible for infrastructure provisioning, and even though they were on the public cloud, provisioning a simple 2-tier app stack took weeks. The reason was that they were not the company&amp;rsquo;s main product line and thus featured very few features in their own KPIs. So we were never a priority for them. Once we outsourced it, we were always the priority since we were paying the bill.&lt;/p&gt;
+&lt;p&gt;The above steps are good as long as there is no long term misalignment between your goals and theirs. But when there are, this means that you will be expending more energy trying to get people to do their own jobs than you are expending energy to do your own job. This is &lt;strong&gt;not a heathy place&lt;/strong&gt; to be.&lt;/p&gt;
+&lt;p&gt;This is when you should stop trying to build alliances and just try to move your dependency off that particuar team. This can take the form of outsourcing things done by this particular team currently. This can also mean that you get a new team allocated to you. Perhaps an option is to bring that function in to your team and stop depending on an external team. Whatever form this action takes, the end result must be the same. Your dependency on the external team is removed or reduced so that stakeholder management stops being the obstacle that it has been.&lt;/p&gt;
+&lt;p&gt;I have had to do the same when it turned out an IT support team within our organization was incapable of being responsive as much as we wanted them to be. They were responsible for infrastructure provisioning and even though they were on public cloud, provisioning a simple 2 tier app stack took weeks. The reason was were were not the companies main product line and thus features very less in their own KPIs. So we were never a priority for them. Once we outsourced it, we were always the priority since we were paying the bill.&lt;/p&gt;
 &lt;h2 id=&#34;alliances&#34;&gt;Alliances&lt;/h2&gt;
-&lt;p&gt;Once you have the basic stakeholder management practices in place, it is important to form strategic alliances. These may be explicit or implicit; it does not really matter. What matters is that you and the other team leader have a common understanding of where you want your mutual organizations to end up and what each of you is doing in order to achieve that. This kind of partnership allows you to move fast and take decisions that otherwise would require you to go through numerous catch-ups and sign-off meetings. When you have formed an alliance, you have an implicit trust put in place that allows you to take a decision almost unilaterally and have your allies interpret it in the best light possible rather than assume the worst.&lt;/p&gt;
-&lt;p&gt;This is the most important outcome you want. If you get stuck in the quagmire of committee-based decision-making or need to run to your common superior every time you need to take a decision, you will not be going anywhere in a hurry. If you are to move fast, you need this essential to be in place.&lt;br&gt;
-And there is one very important side effect of this: now you have a rant, buddy. Day not going well—rant to your ally. The latest strategic plan stuck in committee—rant to your ally. You can do this safely with the knowledge that, as long as you both agree on the goals of your organization, you can complain about not achieving your goals to each other. Considering how lonely team leadership and management positions can be, this can be a lifeline!&lt;/p&gt;
+&lt;p&gt;Once you have the basic stakeholder management practices in place, it is important to form strategic alliances. These maybe explicit or implicit, it does not really matter. What matters is that you and the other team lead have a common understanding of where you want your mutual organizations to end up in and what each of you are doing in order to achieve that. This kind of partnership allows you to move fast and take decisions that otherwise will have to go through numerous catch ups and sign off meetings. When you have formed an alliance you have an implicit trust put in place that allows you to take a decision almost unilaterally and have your allies interpret this in the best light possible rather than assume worst.&lt;/p&gt;
+&lt;p&gt;This is the most important outcome you want. If you get stuck in the quagmire of committee based decision making or you need to run to your common superior every time you need to take a decision, you will not be going anywhere in a hurry. If you are to move fast, you need this essential to be in place.&lt;/p&gt;
+&lt;p&gt;And there is one very important side effect of this - now you have a rant buddy. Day not going well - rant to your ally. Latest strategic plan stuck in committee - rant to your ally. You can do this safely in the knowledge that as long as you both agree on the goals of your organization, you can complain about not achieving your goals to each other. Considering how lonely team leaderships and management positions can be, this can be a lifeline!&lt;/p&gt;
 &lt;h2 id=&#34;actionable-steps&#34;&gt;Actionable Steps&lt;/h2&gt;
 &lt;p&gt;To effectively implement stakeholder management and alliance building, consider the following steps:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Identify Stakeholders&lt;/strong&gt;: Understand, identify, and list down the key stakeholders who matter to your team.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Define Their Goals&lt;/strong&gt;: List the goals and objectives of these stakeholders to gain a better understanding of their priorities.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Initiate Communication&lt;/strong&gt;: Schedule an initial catch-up meeting with stakeholders to ensure alignment and confirm their goals. Ask open-ended questions like, &amp;ldquo;Is this still a priority for your team? How can we assist in achieving it?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Communicate Internally&lt;/strong&gt;: Share the updated stakeholder goals and details with other senior team members to ensure everyone is on the same page.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Strategic Planning&lt;/strong&gt;: Determine your future actions using an appropriate stakeholder management model or framework.&lt;br&gt;
-By following these steps, you&amp;rsquo;ll be well-prepared to navigate the complex world of stakeholder management and build effective alliances for your organization&amp;rsquo;s success.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Identify Stakeholders&lt;/strong&gt;: Understand, identify, and list down the key stakeholders who matter to your team.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Define Their Goals&lt;/strong&gt;: List the goals and objectives of these stakeholders to gain a better understanding of their priorities.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Initiate Communication&lt;/strong&gt;: Schedule an initial catch-up meeting with stakeholders to ensure alignment and confirm their goals. Ask open-ended questions like, &amp;ldquo;Is this still a priority for your team? How can we assist in achieving it?&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Communicate Internally&lt;/strong&gt;: Share the updated stakeholder goals and details with other senior team members to ensure everyone is on the same page.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Strategic Planning&lt;/strong&gt;: Determine your future actions using an appropriate stakeholder management model or framework.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;By following these steps, you&amp;rsquo;ll be well-prepared to navigate the complex world of stakeholder management and build effective alliances for your organization&amp;rsquo;s success.&lt;/p&gt;
 &lt;h2 id=&#34;last-thoughts&#34;&gt;Last thoughts&lt;/h2&gt;
-&lt;p&gt;Stakeholder management is a complex and intricate subject. There are all kinds of academic theories of how this is supposed to work, from &lt;a class=&#34;link&#34; href=&#34;https://www.researchgate.net/publication/220920774_A_Better_Fit_-_Characterising_the_Stakeholders&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Stakeholder management is a complex and intricate subjects. There are all kinds of academic theories of how this is supposed to work - from &lt;a class=&#34;link&#34; href=&#34;https://www.researchgate.net/publication/220920774_A_Better_Fit_-_Characterising_the_Stakeholders&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;onion diagrams&lt;/a&gt; to &lt;a class=&#34;link&#34; href=&#34;https://www.pmi.org/learning/library/stakeholder-analysis-pivotal-practice-projects-8905&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;quadrant based analysis&lt;/a&gt;. It does not really matter which model you use to start with as long as&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;You understand the need for stakeholder management and alliance building.&lt;/li&gt;
-&lt;li&gt;You do not hold dogmatically to one model.&lt;/li&gt;
+&lt;li&gt;you understand the need to stakeholder management and alliance building&lt;/li&gt;
+&lt;li&gt;you do not hold dogmatically on to one model&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Once you have the above two traits, you are set to navigate this complex subject space and put what you have learned to use.&lt;/p&gt;
+&lt;p&gt;Once you have above two traits, you are set to navigate this complex subject space and put what you have learned to use.&lt;/p&gt;
 </description>
         </item>
         <item>
