@@ -6,7 +6,15 @@
         <description>Recent content in Categories on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Tue, 31 Oct 2023 21:18:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Nov 2023 15:03:08 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>software-architecture</title>
+        <link>https://osadalakmal.github.io/categories/software-architecture/</link>
+        <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
+        
+        <guid>https://osadalakmal.github.io/categories/software-architecture/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>engineering-leadership</title>
         <link>https://osadalakmal.github.io/categories/engineering-leadership/</link>
         <pubDate>Tue, 31 Oct 2023 21:18:00 +0000</pubDate>

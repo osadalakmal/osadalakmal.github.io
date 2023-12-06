@@ -7,7 +7,7 @@ When we say unproductive work it usually seems we are talking about unwanted cal
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/allocationcost/allocationcost/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Cost Of Allocation in High Performance Systems'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Cost Of Allocation in High Performance Systems'>
 <meta property='og:description' content='Impact of unproductive work In high performance systems we try to make sure we do as little unproductive work as we possible. As Andrei Alexdrascu points out in one of his presentations on the subject, the fastest bit of code is the code that does not run. So it is essential that we try to avoid as much unproductive work as possible.
 When we say unproductive work it usually seems we are talking about unwanted calculations, operations, file access and db access.'>
 <meta property='og:url' content='https://osadalakmal.github.io/posts/allocationcost/allocationcost/'>
@@ -250,7 +250,7 @@ if (!doNotTrack) {
 </ol>
 <h2 id="in-practise">In practise</h2>
 <p>We will use the following code sample to simulate the effect of malloc causing thread contention.</p>
-<script type="application/javascript" src="https://gist.github.com/osadalakmal/e0a3bd5c8f9d27c2de20163fde1c4af9.js"></script>
+<script src="https://gist.github.com/osadalakmal/e0a3bd5c8f9d27c2de20163fde1c4af9.js"></script>
 
 <p>This allows us to benchmark the completion time for two threads when they are allocating memory vs when they are not. The following is the result when running on my machine</p>
 <p><img src="/img/perf-with-system-malloc.png"
@@ -333,7 +333,7 @@ if (!doNotTrack) {
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
