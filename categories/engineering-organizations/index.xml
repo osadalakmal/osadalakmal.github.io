@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Engineering-Organizations on Curiously Recurring Thoughts in Programming</title>
+        <link>http://localhost:1313/categories/engineering-organizations/</link>
+        <description>Recent content in Engineering-Organizations on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Thu, 25 Jul 2024 03:58:57 +0100</lastBuildDate><atom:link href="http://localhost:1313/categories/engineering-organizations/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>What Determines You Engineering Organizations Culture</title>
+        <link>http://localhost:1313/posts/what-does-your-engineering-team-value/</link>
+        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
+        
+        <guid>http://localhost:1313/posts/what-does-your-engineering-team-value/</guid>
+        <description>&lt;img src="http://localhost:1313/posts/what-does-your-engineering-team-value/this-is-engineering.jpg" alt="Featured image of post What Determines You Engineering Organizations Culture" /&gt;&lt;div class=&#34;toc&#34;&gt;
+    &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#all-happy-families&#34;&gt;All Happy Families&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-overall-engineering-orgs-reporting-structure&#34;&gt;The overall engineering org&amp;rsquo;s reporting structure&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#everyone-reports-to-engineering&#34;&gt;Everyone reports to engineering&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#everyone-reports-to-delivery&#34;&gt;Everyone reports to Delivery&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#everyone-reports-to-the-core-business&#34;&gt;Everyone reports to the core business&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#what-gets-valued-in-the-engineering-organization&#34;&gt;What gets valued in the engineering organization&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#amount-or-impact-of-product-features-the-team-developed&#34;&gt;Amount or Impact of product features the team developed&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-depth-of-knowledge-and-experience-in-the-product&#34;&gt;The depth of knowledge and experience in the product&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#engineering-prowess-and-innovativeness&#34;&gt;Engineering prowess and innovativeness&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#final-thoughts&#34;&gt;Final thoughts&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+  &lt;/div&gt;
+  
+&lt;h1 id=&#34;what-determines-you-engineering-organizations-culture&#34;&gt;What Determines You Engineering Organizations Culture&lt;/h1&gt;
+&lt;div style=&#34;border: 1px solid #ccc; background-color: #f9f9f9; padding: 10px; margin-top: 10px; font-size: 0.9em; color: #555;&#34;&gt;
+    Photo by &lt;a href=&#34;https://unsplash.com/@thisisengineering?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&#34;&gt;ThisisEngineering&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/photos/person-holding-white-printer-paper-WDCE0T4khsE?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&#34;&gt;Unsplash&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;all-happy-families&#34;&gt;All Happy Families&lt;/h2&gt;
+&lt;p&gt;[Anna Karenina Principle][https://en.wikipedia.org/wiki/Anna_Karenina_principle] states that &amp;ldquo;All happy families are alike; each unhappy family is unhappy in its own way.&amp;rdquo; This was originally coined by the philosopher and writer Leo Tolstoy. The idea behind this principle is that all unhappy families are unhappy due to some trait that they have that prevents them from becoming happy. And the happy families are alike in the sense that all of them avoids those traits in order to become happy&lt;/p&gt;
+&lt;p&gt;This can be seen any many real world examples. One notable example that popularized this principle in the first place comes from the book &amp;ldquo;Gun, Germs and Steel&amp;rdquo; by Jared Diamond. In this book, the author argues that the reason for the rise of the modern world was due to the introduction of firearms and the spread of disease. In it he looks at domestication animals as an application of the Anna Karenina principle. His argument is that for an animal to be domesticated several properties should hold for that specicies such as:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It should be easy to feed&lt;/li&gt;
+&lt;li&gt;It should grow up quickly&lt;/li&gt;
+&lt;li&gt;It should breed in captivity&lt;/li&gt;
+&lt;li&gt;It should be easy to handle&lt;/li&gt;
+&lt;li&gt;It should be easy to train&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Any specicies that does not have at least one of these attributes will not be able to be domesticated. In this manner all domesticated animals are alike in that they all share these attributes.&lt;/p&gt;
+&lt;p&gt;Engineering Teams from my experience has a few key attributes that determines if they are an effective engineering team or not. I do not believe dogmatically that there is only one right way to run a Software Engineering Team but rather I want to argue that there are various wrong ways to run them. Amongst the key attributes, two stand out for me.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The overall engineering org&amp;rsquo;s reporting structure&lt;/li&gt;
+&lt;li&gt;The values that get the most airtime in the org&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;the-overall-engineering-orgs-reporting-structure&#34;&gt;The overall engineering org&amp;rsquo;s reporting structure&lt;/h2&gt;
+&lt;p&gt;I have been fortunate enough to work for several different companies in very different businesses and engineering orgs oraganized in various different ways within them. I have also had the pleasure of working with and knowing folks from very different companies from startups to enterprises, from contracting houses to product companies and from 30+ years old companies to ones that started within the last year.&lt;/p&gt;
+&lt;p&gt;And one of the most crucial ways in which the organizations differed and one that that they responded most to is who reported to whom. Note that the formal organizational structure does not really matter in this regard. More imrportant is the informal structure. You can observe this by looking closely at the senior executive level interactions in the company unfold - who is holding who accountable. Mostly this will depend who if there is explicit reporting of one discipline in to another. But in organizations that ostensible put these various disciplines on equal terms you get a sense for who is ultimately holding who is accountable when you look at senior level interactions.&lt;/p&gt;
+&lt;h3 id=&#34;everyone-reports-to-engineering&#34;&gt;Everyone reports to engineering&lt;/h3&gt;
+&lt;p&gt;This is mostly true for engineering shops that do consulting and long term contracting from what I have seen. The whole business is one of creating engineering talent and shopping that around. So the whole business is structured to allow that to be easy. Everyone from Delivery, Business Analysts to Marketing and Sales really report in to the engineering counterparts. CTO holds the most power at executive level and that reflects back on the ranks.&lt;/p&gt;
+&lt;p&gt;This has interesting consequences -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Engineering becomes by necessity multidisciplinary. Since they need to control all the other aspects, they become very good at understanding and directing other disciplines. They are most likely to know the vocabulary of other teams, the ways of working of them and so on. These engineering teams interface with the other teams a lot so they learn how to direct them and get the out they want from the Delivery, Sales and other teams&lt;/li&gt;
+&lt;li&gt;Engineering feats become the most celebrated achievements but they should be of the sellable variety. What gets people paid are creating the engineering output either in terms of actual software or in terms of process/tools that can be sold, so they tend to celebrate that.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;everyone-reports-to-delivery&#34;&gt;Everyone reports to Delivery&lt;/h3&gt;
+&lt;p&gt;Some organizations I have seen, have every one reporting to delivery or project management teams. The delivery teams reports back to a senior executive that is in charge of software services and these companies in general tend to be in the software services business. The delivery teams are in charge because again, that is how people in these comapnies get paid. If the service is no delivered, no one gets paid. This again has some interesting characteristics&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Any piece of engineering is measured by how easy it was to deliver. How much effort was it, how many resources did it consume and how on time was the delivery of the said software. This becomes the yardstick by which the teams are measured. The actual engineering that goes in to the product or the service does not matter as much as how quickly it was delivered. Therefore these companies tend to be extremely conservative in the tech usage and can take years to switch away from legacy tech&lt;/li&gt;
+&lt;li&gt;Because output is all that matter there tend to be a lot of corner cutting and paparing over issues. A bug that can be solved with an Standards Of Practice (SOP) document is a bug that does not have to be fixed. Every bug gets triaged with the idea that as long as it matches the customer requirement of the user story, it is not a bug. And if it needs changing you need a Change Request (CR)&lt;/li&gt;
+&lt;li&gt;Consequently these organizations tend to be process heavy because the idea is to minimize the risk. Everything will be documented and the processes will be followed as much as possible to make sure there is no disruption or even if there was, it could not be followed back to the enginering org.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;everyone-reports-to-the-core-business&#34;&gt;Everyone reports to the core business&lt;/h3&gt;
+&lt;p&gt;This is probably the case for majority of the Product centered organizations. In this case engineering ends up reporting to product team. The technical roadmap tends to be merged in with the product roadmap and the technical decisions are mostly driven by how much impact it has on the product. The quality of the engineering tends to be closely correlated to the quality of the product development vision and discipline.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Any piece of engineering is measured by how much business value it delivers. On good organizations this would be measured by a good OKR based system that evaluates the impact it has on the fundamental agility of the product and the value that can be delivered to the consumer. On other organizations this may be measured by more superficial means such as the number of feaatures a given piece of work enabled. The less deeply measured the impact is, the less inspired the team becomes and that is the true danger here.&lt;/li&gt;
+&lt;li&gt;If the team goes to the extreme end of feature delivery, they basically becomes a feature factory powered by short term thinking, code slinging with little thought given to consequences of the architecture being created and no real ownership of the system.&lt;/li&gt;
+&lt;li&gt;The processes tend to be minimal and even if it were in place usually the orgs tend to keep them as light as possible. Because the product team tends to have a bigger say in the deadlines you usually get more cases where engineering works to given deadlines and try to shape the work to fit the time available. This mean the output is much faster compared to engineering led organizations but mostly not as consistent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-gets-valued-in-the-engineering-organization&#34;&gt;What gets valued in the engineering organization&lt;/h2&gt;
+&lt;p&gt;This may seem like a surprising aspect to consider in determining how a given engineering team performs but I think it is one of the most overlooked pieces of information. Even when you are interviewing with an organization pay attendtion to what the interviewers seem to consider great achievesments their organizations have made. Note that none of these are either good or bad. Each should be valued to some extent and we should take care not to go in to extremes on any of them. Because when that happens we create an imblanced culture that has blindspots to it&amp;rsquo;s own weaknesses.&lt;/p&gt;
+&lt;h3 id=&#34;amount-or-impact-of-product-features-the-team-developed&#34;&gt;Amount or Impact of product features the team developed&lt;/h3&gt;
+&lt;p&gt;Organizations that score themselves based on the product features they deliver tend to be very lean and delivery driven. Engineering quality will often take a backseat and be only talked about in the context of how much it makes it easier to delivery the next product features.&lt;/p&gt;
+&lt;h3 id=&#34;the-depth-of-knowledge-and-experience-in-the-product&#34;&gt;The depth of knowledge and experience in the product&lt;/h3&gt;
+&lt;p&gt;This one surprised me when I first encountered it. But there are some organizations where the arcane knowledge of the product is what is valued. Usually this happens because of poor knowledge sharing culture and high attrition. A product that contains lots of surprises in it&amp;rsquo;s design causes everyone to be cautious in chaing it. And this leads to the people who understand it in depth to be valued more because they are the only ones who can decipher and deliver the features.&lt;/p&gt;
+&lt;h3 id=&#34;engineering-prowess-and-innovativeness&#34;&gt;Engineering prowess and innovativeness&lt;/h3&gt;
+&lt;p&gt;This can mostly be seen in large tech focused businesses where the (product moat)[https://www.investopedia.com/ask/answers/05/economicmoat.asp] depends a lot on the technology being used. This may at first seem the best of value to use. But beware that this can lead to cases of engineers needlessly trying the latest fad technology just because it will make them look cooler. Vanity project tend to proliferate as well so you need to be on the look out for them&lt;/p&gt;
+&lt;h2 id=&#34;final-thoughts&#34;&gt;Final thoughts&lt;/h2&gt;
+&lt;p&gt;This was written mostly using my experience over the years and from what I have gained in talking to other people in the industry. As with any article trying to generalize anecdotal evidence there will be cases where your experience does not line up with what is being said in the article. And that is fine. But I believe the incentives and the human nature will determine most of the outcomes in the fashion that is detailed in this blog post. Please reach out if you think any of this is fundamentally incorrect to me on (my LinkedIn)[https://www.linkedin.com/in/osadalakmal/]&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

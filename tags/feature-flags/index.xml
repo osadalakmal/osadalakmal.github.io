@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Feature-Flags on Curiously Recurring Thoughts in Programming</title>
+        <link>http://localhost:1313/tags/feature-flags/</link>
+        <description>Recent content in Feature-Flags on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Mon, 13 Nov 2023 10:16:11 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/feature-flags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Feature Flags - A careful approach</title>
+        <link>http://localhost:1313/posts/feature-flags-a-careful-approach/</link>
+        <pubDate>Mon, 13 Nov 2023 10:16:11 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/feature-flags-a-careful-approach/</guid>
+        <description>&lt;img src="http://localhost:1313/banner.jpg" alt="Featured image of post Feature Flags - A careful approach" /&gt;&lt;p&gt;Introduction to Feature Flag Systems&lt;/p&gt;
+&lt;p&gt;Feature Flags vs Application Configuration&lt;/p&gt;
+&lt;p&gt;Feature Flags vs Experiments&lt;/p&gt;
+&lt;p&gt;Use cases for Feature Flags&lt;/p&gt;
+&lt;p&gt;Types of feature flags&lt;/p&gt;
+&lt;p&gt;Rules for implementing feature flags&lt;/p&gt;
+&lt;p&gt;Scary stories to read in the dark about feature flags&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
