@@ -2,14 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://osadalakmal.github.io/categories/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
+  </url><url>
     <loc>https://osadalakmal.github.io/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/tags/engineering-culture/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/tags/engineering-leadership/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/tags/engineering-organizations/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/categories/engineering-organizations/</loc>
     <lastmod>2024-07-25T03:58:57+01:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/posts/</loc>
     <lastmod>2024-07-25T03:58:57+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/</loc>
-    <lastmod>2023-11-21T15:03:08+00:00</lastmod>
+    <loc>https://osadalakmal.github.io/tags/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/posts/what-does-your-engineering-team-value/</loc>
+    <lastmod>2024-07-25T03:58:57+01:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</loc>
     <lastmod>2023-11-21T15:03:08+00:00</lastmod>
@@ -26,12 +44,6 @@
     <loc>https://osadalakmal.github.io/categories/software-architecture/</loc>
     <lastmod>2023-11-21T15:03:08+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/</loc>
-    <lastmod>2023-11-21T15:03:08+00:00</lastmod>
-  </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-leadership/</loc>
-    <lastmod>2023-10-31T21:18:00+00:00</lastmod>
-  </url><url>
     <loc>https://osadalakmal.github.io/categories/engineering-leadership/</loc>
     <lastmod>2023-10-31T21:18:00+00:00</lastmod>
   </url><url>
@@ -40,9 +52,6 @@
   </url><url>
     <loc>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</loc>
     <lastmod>2023-10-31T21:18:00+00:00</lastmod>
-  </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-culture/</loc>
-    <lastmod>2023-10-08T10:51:19+01:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/posts/stakeholders-and-alliances/</loc>
     <lastmod>2023-10-08T10:51:19+01:00</lastmod>
