@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Backend-Engineering on Curiously Recurring Thoughts in Programming</title>
+        <link>https://osadalakmal.github.io/categories/backend-engineering/</link>
+        <description>Recent content in Backend-Engineering on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Thu, 25 Jul 2024 03:58:57 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/backend-engineering/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Just Use Json</title>
+        <link>https://osadalakmal.github.io/posts/just-use-json/</link>
+        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/just-use-json/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/this-is-engineering.jpg" alt="Featured image of post Just Use Json" /&gt;&lt;h1 id=&#34;just-use-json&#34;&gt;Just Use Json&lt;/h1&gt;
+&lt;h2 id=&#34;history-of-serialization-formats&#34;&gt;History of Serialization Formats&lt;/h2&gt;
+&lt;p&gt;Serialization formats have a pretty long history dating back to the 1980s when Sun Microsystems introduced XDR (External Data Representation) as part of their Network File System (NFS) protocol. XDR was designed to provide a standard way of encoding data for network transmission, allowing different computer architectures to exchange information seamlessly. This paved the way for more sophisticated serialization formats, including ASN.1 (Abstract Syntax Notation One) which gained popularity in telecommunications and cryptography, and CORBA&amp;rsquo;s CDR (Common Data Representation) used in distributed object systems. There may have been standardaized formats before XDR but I have neither studied nor known them. But XDR is still alive and can be used today with &lt;a class=&#34;link&#34; href=&#34;https://man7.org/linux/man-pages/man3/xdr.3.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;libc RPC interfaces&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As the internet evolved, new serialization formats emerged to meet changing needs. XML (eXtensible Markup Language) became widely adopted in the late 1990s and early 2000s for its human-readable format and flexibility. However, its verbosity led to the development of more compact alternatives. JSON (JavaScript Object Notation) gained traction in the mid-2000s for its simplicity and native support in web browsers. YAML (YAML Ain&amp;rsquo;t Markup Language) also emerged as a human-friendly, easy-to-read format, particularly popular for configuration files. Subsequently, binary formats like Protocol Buffers, MessagePack, and Apache Thrift were developed to offer improved performance and smaller payload sizes, catering to the growing demands of high-speed, large-scale data exchange in modern distributed systems.&lt;/p&gt;
+&lt;h2 id=&#34;from-xml-for-everything-to-xml-is-bad-for-everyone&#34;&gt;From XML for Everything to XML is bad for Everyone&lt;/h2&gt;
+&lt;p&gt;In the early 2000s you could not escape XML even if you wanted to. It was state of the art and it was everywhere. We were going to use it for communication. And with DTDs or Xml Schema Documents we were going to use it to validate communications. We were going to use it to sepcifiy the styling and formatting using XSLT. We were going to use XPath to specify subsets of XML documents as part of the XSLT standard and we were going to use XQuery to query XML files allowing us to build a document database around XML documents. Java beans were using it to specify &lt;a class=&#34;link&#34; href=&#34;https://xmlbeans.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;everything&lt;/a&gt;. And we were creating communication protocols based on &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/SOAP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;XML as a standard&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As you would inevitably expect it to, this attitude of let&amp;rsquo;s use XML for everything led to an industry backslash. This coincided with the rise of a new cohort of web based startups that were starting to grow in popularity and had to face scaling issues due to growth that was unheard of before that. Around this time &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/REST&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;REST&lt;/a&gt; starts making an appearance in the industry and is gaining ground in engineer mindspace. Compared to SOAP, the new technology is very easy to grok and much easier to setup. It uses HTTP verbs for the CRUD operations and can be used even with simple tools like curl. There is no need to use complex tooling that could generate and digest XML as before with SOAP. And along with this drop in usage of SOAP, comes the decline in usage of XML.&lt;/p&gt;
+&lt;p&gt;In to this mix comes JSON, first invented by Douglas Crockford around 2000/2001, this was a subset of Javascript when it was first created. It was simpler to understand and write than comparable XML and most certainly less verbose. This meant that it was the perfect accompaniment for REST to use as a serialization format although nothing dicatated that it must be JSON. So most of the web companies (SaaS, Social Media, etc) started using the REST + JSON as the default communications framework. And to throw another complication in to the midst of all this, the microservice revolution took off around the same time as well. From monoliths to Service Oriented Architecture to microservices, this meant that it was time to churn out more and more microservices that had drastically simpler interfaces. Due to the published best practice from around the time being that a given microservice would do one thing and one thing only, we started creating simpler services by the dozen. And this meant we needed to make the interfaces as simple as possible.&lt;/p&gt;
+&lt;p&gt;And that in a nutshell is how we went from SOAP + XML to REST + JSON in a few years. I watched in fascination and the titans in the industry debated and quarraled over all this since I was just a junior engineer with no real idea about the tradeoffs involved. All this was jargon wars for me. And now a decade on, I relaize that some profound changes happened during that era.&lt;/p&gt;
+&lt;h2 id=&#34;readability-as-the-metric-to-optimize&#34;&gt;Readability as the metric to optimize&lt;/h2&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

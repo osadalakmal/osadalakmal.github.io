@@ -6,7 +6,47 @@
         <description>Recent content in Tags on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Thu, 25 Jul 2024 03:58:57 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Nov 2024 13:29:22 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cloud</title>
+        <link>https://osadalakmal.github.io/tags/cloud/</link>
+        <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/cloud/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Software-Architecture</title>
+        <link>https://osadalakmal.github.io/tags/software-architecture/</link>
+        <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/software-architecture/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Was</title>
+        <link>https://osadalakmal.github.io/tags/was/</link>
+        <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/was/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Backend-Engineering</title>
+        <link>https://osadalakmal.github.io/tags/backend-engineering/</link>
+        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/backend-engineering/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Communication</title>
+        <link>https://osadalakmal.github.io/tags/communication/</link>
+        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/communication/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Engineering-Culture</title>
         <link>https://osadalakmal.github.io/tags/engineering-culture/</link>
         <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
@@ -31,6 +71,22 @@
         <description></description>
         </item>
         <item>
+        <title>Protocol</title>
+        <link>https://osadalakmal.github.io/tags/protocol/</link>
+        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/protocol/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Serialization</title>
+        <link>https://osadalakmal.github.io/tags/serialization/</link>
+        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
+        
+        <guid>https://osadalakmal.github.io/tags/serialization/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Engineering-Excellence</title>
         <link>https://osadalakmal.github.io/tags/engineering-excellence/</link>
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
@@ -44,14 +100,6 @@
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/tags/product-developement/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Software-Architecture</title>
-        <link>https://osadalakmal.github.io/tags/software-architecture/</link>
-        <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
-        
-        <guid>https://osadalakmal.github.io/tags/software-architecture/</guid>
         <description></description>
         </item>
         <item>
@@ -92,14 +140,6 @@
         <pubDate>Mon, 10 Jul 2023 14:30:00 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/tags/user-stories/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Communication</title>
-        <link>https://osadalakmal.github.io/tags/communication/</link>
-        <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
-        
-        <guid>https://osadalakmal.github.io/tags/communication/</guid>
         <description></description>
         </item>
         <item>
