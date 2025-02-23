@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://osadalakmal.github.io/tags/best-practices/</loc>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
+  </url><url>
     <loc>https://osadalakmal.github.io/categories/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/engineering-leadership/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <loc>https://osadalakmal.github.io/categories/engineering-culture/</loc>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/tags/engineering-culture/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/tags/engineering-leadership/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/posts/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/tags/software-engineering/</loc>
-    <lastmod>2024-12-22T16:18:00+00:00</lastmod>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/tags/</loc>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/posts/the-case-for-being-lazy/</loc>
+    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
+  </url><url>
+    <loc>https://osadalakmal.github.io/categories/engineering-leadership/</loc>
     <lastmod>2024-12-22T16:18:00+00:00</lastmod>
   </url><url>
     <loc>https://osadalakmal.github.io/tags/technical-enablers/</loc>

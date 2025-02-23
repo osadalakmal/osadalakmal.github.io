@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Why doing the absolute minimum is a gift in software engineering.'>
+<title>The Case for Being Lazy</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/the-case-for-being-lazy/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='The Case for Being Lazy'>
+<meta property='og:description' content='Why doing the absolute minimum is a gift in software engineering.'>
+<meta property='og:url' content='https://osadalakmal.github.io/posts/the-case-for-being-lazy/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='software engineering' /><meta property='article:tag' content='best-practices' /><meta property='article:tag' content='engineering culture' /><meta property='article:tag' content='engineering leadership' /><meta property='article:published_time' content='2025-02-23T12:40:47&#43;00:00'/><meta property='article:modified_time' content='2025-02-23T12:40:47&#43;00:00'/><meta property='og:image' content='https://osadalakmal.github.io/posts/the-case-for-being-lazy/virtue-of-lazy.webp' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="The Case for Being Lazy">
+<meta name="twitter:description" content="Why doing the absolute minimum is a gift in software engineering."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osadalakmal.github.io/posts/the-case-for-being-lazy/virtue-of-lazy.webp' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0KDQ9KLJCX');
+        }
+      </script>
+    
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://osada.blog/profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://osadalakmal.github.io/" selected></option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/the-case-for-being-lazy/">
+                <img src="/posts/the-case-for-being-lazy/virtue-of-lazy_hu63eed74ca6a8e7fa0c5375d977872c73_475282_800x0_resize_q75_h2_box_2.webp"
+                        srcset="/posts/the-case-for-being-lazy/virtue-of-lazy_hu63eed74ca6a8e7fa0c5375d977872c73_475282_800x0_resize_q75_h2_box_2.webp 800w, /posts/the-case-for-being-lazy/virtue-of-lazy_hu63eed74ca6a8e7fa0c5375d977872c73_475282_1600x0_resize_q75_h2_box_2.webp 1600w"
+                        width="800" 
+                        height="800" 
+                        loading="lazy"
+                        alt="Featured image of post The Case for Being Lazy" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/engineering-culture/" >
+                Engineering Culture
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/the-case-for-being-lazy/">The Case for Being Lazy</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Why doing the absolute minimum is a gift in software engineering.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 23, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<h2 id="virtue-of-being-lazy">Virtue of being lazy</h2>
+<p>Some of my favorite works of fiction are Discworld novels. And of the many great characters I got to meet, there was one that particularly drew my attention—Rincewind. In one of the books, we are told that his father has a particular arrangement for him in order to fund his study. He has to get a particular score in his exams, or otherwise, he will stop receiving the stipend from his father (I have to confess that I don&rsquo;t remember the exact marks needed). On the flip side, if he gets even one mark beyond this score, he will be considered by the university to have passed the exam and become a wizard, therefore ending his stipend again because he is supposed to receive the stipend only to study. But—and here is the crucial detail—if and only if he gets this exact score, he will never be considered passed by the Unseen University, nor will his father consider him failed in his studies. And thus is born an ironic endeavor—he now studies harder than any other student so that he can get exactly the marks he wants. And this is ultimately much harder than just passing the exam. So in order to be lazy and receive the stipend, he needs to study more. And thus, he ends up spending far more energy on <em>not</em> passing the exam than actually passing the exam.</p>
+<p>Why did I start this blog post with that detail? Because this has been my go-to scene for explaining why I think being lazy is a virtue. And why being lazy is actually far more work than not being lazy. Whether we are talking about automating things for TOIL in the SRE field, optimizing systems or algorithms for cost or performance, or building high-performance teams, this theme keeps popping up.</p>
+<h2 id="example-1--automate-everything">Example 1 : Automate Everything!</h2>
+<p><img src="/posts/the-case-for-being-lazy/automate-everything.png"
+	width="1500"
+	height="1178"
+	srcset="/posts/the-case-for-being-lazy/automate-everything_hue5f23e4a949e13e627974ea4ee49dd43_881797_480x0_resize_box_3.png 480w, /posts/the-case-for-being-lazy/automate-everything_hue5f23e4a949e13e627974ea4ee49dd43_881797_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Automate Everything"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="305px"
+	
+></p>
+<p>TOIL refers to the repetitive, manual, and automatable tasks that are necessary to maintain a service. According to the <a class="link" href="https://sre.google/sre-book/eliminating-toil/"  target="_blank" rel="noopener"
+    >Google SRE book</a>, TOIL is work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows. Automating TOIL is beneficial because it frees up engineers to focus on more strategic and value-adding activities, reduces human error, and improves the reliability and efficiency of the service. By minimizing TOIL, teams can invest more time in innovation and improving the overall system.</p>
+<p>And this is a central practice in SRE teams because this allows them to differentiate themselves from a pure Ops team where the proverbial pushing buttons is the main activity. The pushing button work gets repetitive and boring, so wouldn&rsquo;t it be nice if we did not have to do that and could just sit back and let the computers, which are good at repetitive work, do that work instead? It would be grand! But the catch is that for us to be lazy and watch the computers do all the work, we first have to work harder, expend more energy than we otherwise would, and automate these tasks. And that should be an upfront cost that we should be comfortable paying. You may have your own yardsticks as to when it becomes sensible to do so, but to automate things on principle takes a lot of conviction, and that is why building a true SRE practice is actually hard, especially in traditional organizations.</p>
+<h2 id="example-2--finops-on-public-cloud">Example 2 : FinOps on public cloud</h2>
+<p>FinOps on public cloud is a prime example of investing effort now to save hassle later. Instead of laboriously poring over monthly bills and manually reconciling cloud usage, savvy teams deploy <a class="link" href="https://www.finops.org/introduction/what-is-finops/"  target="_blank" rel="noopener"
+    >automation tools</a> and real-time dashboards to monitor and optimize spending. By doing so, they can track costs in real-time, set budgets, and receive alerts when spending deviates from expectations. This transforms an otherwise reactive process into a proactive, manageable workflow that keeps financial surprises at bay.</p>
+<p>However, setting up an effective FinOps practice requires significant upfront effort. Teams need to integrate <a class="link" href="https://aws.amazon.com/aws-cost-management/"  target="_blank" rel="noopener"
+    >cost-tracking tools</a>, configure alerting mechanisms, and continuously refine cost-optimization strategies. While this initial setup demands time and expertise, it ultimately ensures that engineers and finance teams can focus on strategic planning rather than firefighting unexpected cost spikes. Just like automating TOIL, the effort put into FinOps is about making life easier down the road—by working hard now to be lazy later.</p>
+<p>We went through this as a team recently, and creating the tools required to track costs, alert us to anomalies, and remove inefficiencies was hard work, but ultimately, it paid off. Again, the conviction to prioritize this and get it done requires that we believe that initial hard work will pay off in the end.</p>
+<h2 id="example-3-building-highly-effective-teams">Example 3: Building highly effective teams</h2>
+<p>I have now spent more than a decade and a half in this industry, and I am beginning to notice a pattern. Most of the old-timers like myself who have been around more than a couple of teams and/or companies have a favorite company or team they keep referring back to. You can notice that straight away when you get into a &ldquo;Yeah, this sucks, but how do we make it better?&rdquo; conversation. And there are ample opportunities for these in any team. Just pick a subject that seems to frustrate them and start talking about what the potential solutions might be, and you will immediately be greeted with a flashback to what they believe was the &ldquo;best team they were in.&rdquo;</p>
+<p>The only part they have missed is how much work went into preparing the groundwork for X to be implemented. This is through no fault of their own. We usually focus on the end result much more than the process to get there, and even if we did not, the process itself might not be visible to folks other than the enablers who made it possible.</p>
+<p>Enabling the team to solve their own problems is hard work. It is very tempting to go in and solve the problem at hand. After all, you (think you) know the answer, and if the team just followed your advice, the problem could be solved by lunchtime! But that would be the wrong instinct. Solving the problem for the team is the easy approach. Coaching them to come up with the solution themselves is significantly harder but much more rewarding in the end—and less work for you ultimately. After all, the definition of good in engineering leadership is to coach yourself out of your job!</p>
+<h2 id="being-lazy-on-principle">Being Lazy on Principle</h2>
+<p>Like Bret Victor talks about in his now infamous talk in inventing on principle, when you do something, it is better to do it on principle. In any given situation if you think it applies, ask yourself - what will be the way we can solve this by being maximally lazy? This applies to most software engineering decisions being taken in your day to day work. Especially so if you are a staff+ engineer or an engineering manager. What will be the way that you can make sure the work being done for a given task is</p>
+<ol>
+<li>maximally reusable - <br>
+So you don&rsquo;t have to repeatedly do the same work. This can take many forms in practice. Maybe you want to put all that code shared by all your microservices in to a <a class="link" href="https://buoyant.io/2023/06/01/what-is-a-chassis-service/"  target="_blank" rel="noopener"
+    >chassis service</a>? Or maybe you want to gather up all the validation logic spread across different build units in to a single linter tool. Or you go the whole hog and create a <a class="link" href="https://www.cncf.io/reports/platform-engineering-whitepaper/"  target="_blank" rel="noopener"
+    >platform around the reusable parts</a>.</li>
+<li>completed with least effort - so you <a class="link" href="https://www.infoq.com/presentations/Simple-Made-Easy/"  target="_blank" rel="noopener"
+    >remove any accidental complexity leaving only inherent complexity in</a>.</li>
+<li>maximally automated - so you remove the human from the equation. this decreases mistakes and maximizes utility of your engineers.</li>
+</ol>
+<h2 id="transitioning-from-mid-to-senior">Transitioning from Mid to Senior</h2>
+<p>At every software engineer&rsquo;s professional journey, there will be a time when they transition to being a senior engineer. In my opinion a large part of this is getting rid of the desire to be clever and do smart engineering. We all spent some time in our career being awed by all the amazing clever code we could create with the very sharp tools in our repotire weather that is Template Meta Programming in C++ or Monkey Patching in Python or Ruby. And then we wanted to emulate that and write come clever™ code.</p>
+<p>There comes a time when we finally understand that it is more important to be understood and write maintainable code than be clever. That&rsquo;s when you learn to be truly lazy and use a very easy to understand subset of the toolbox available to you and realize that this is a feature and not a bug. You don&rsquo;t have to use the full surface area of your language/framework/platform in order to build successful maintainable products. Be a little lazy. Stick to common things.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Being lazy, when done right, is one of the most powerful tools in an engineer&rsquo;s arsenal. It’s not about avoiding work—it’s about making smart decisions that reduce unnecessary effort in the long run. Whether it’s automating toil, optimizing costs, enabling teams to solve their own problems, or simplifying code for maintainability, the principle remains the same: <strong>invest effort upfront to save exponentially more later</strong>.</p>
+<p>The best engineers and leaders understand that their job is not to write the most code or build the most complex systems, but to ensure that things are done <strong>in the simplest, most efficient, and most reusable way possible</strong>. True engineering excellence is knowing <strong>where</strong> to put in effort and <strong>where</strong> to step back.</p>
+<p>So, if you ever find yourself in a position where brute force feels like the answer, stop and ask: <em>What’s the laziest way to solve this problem?</em> Chances are, the best solution is also the one that requires the least ongoing work.</p>
+<p><strong>Be lazy. But be lazy on principle.</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software Engineering</a>
+        
+            <a href="/tags/best-practices/">Best-Practices</a>
+        
+            <a href="/tags/engineering-culture/">Engineering-Culture</a>
+        
+            <a href="/tags/engineering-leadership/">Engineering-Leadership</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/technical-tasks-for-managers/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/technical-tasks-for-managers/_hu5459c0360c2b0cb7a147d2df0eb350ca_465496_1b820cbef4648b3a795d5ca1058ced29.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Technical Tasks for Managers"
+                        
+                        data-hash="md5-XFsAD/7gSHM5YZ6vdMsXVw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Technical Tasks for Managers</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/project-management-for-software-engineers/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/project-management-for-software-engineers/_hu5459c0360c2b0cb7a147d2df0eb350ca_541027_3fb88291df49a5aa8a7bcca4e20b8967.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Project Management for Software Engineers"
+                        
+                        data-hash="md5-r2C5gkVmF9XM4oZo5RLKfA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Project Management for Software Engineers</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/valkey-the-new-redis-alternative/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/valkey-the-new-redis-alternative/valkey.294259e4ed8138070cbd6d0f789afbb7_hu93b6af6bb15f4eca0c823e296e00d3a8_33462_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Valkey: The New Redis Alternative"
+                        
+                        data-hash="md5-KUJZ5O2BOAcMvW0PeJr7tw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Valkey: The New Redis Alternative</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/just-use-json/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/this-is-engineering.jpg" loading="lazy" data-key="" data-hash="/this-is-engineering.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Just Use Json</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/what-does-your-engineering-team-value/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/what-does-your-engineering-team-value/this-is-engineering.a3dd82628a25230ffdadeda35bdfd3ad_hu5459c0360c2b0cb7a147d2df0eb350ca_3913476_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post What Determines Your Engineering Organization&#39;s Culture"
+                        
+                        data-hash="md5-o92CYoolIw/9re2jW9/TrQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What Determines Your Engineering Organization&#39;s Culture</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
