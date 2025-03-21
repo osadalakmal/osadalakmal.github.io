@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='My transition from a transactional system background to a team managing a data serving platform'>
+<title>Data Serving vs Transactional Systems</title>
+
+<link rel='canonical' href='http://localhost:1313/posts/data-serving-vs-transactional-systems/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Data Serving vs Transactional Systems'>
+<meta property='og:description' content='My transition from a transactional system background to a team managing a data serving platform'>
+<meta property='og:url' content='http://localhost:1313/posts/data-serving-vs-transactional-systems/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='engineering-excellence' /><meta property='article:tag' content='software-architecture' /><meta property='article:published_time' content='2025-03-08T13:31:56&#43;00:00'/><meta property='article:modified_time' content='2025-03-08T13:31:56&#43;00:00'/><meta property='og:image' content='http://localhost:1313/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Data Serving vs Transactional Systems">
+<meta name="twitter:description" content="My transition from a transactional system background to a team managing a data serving platform"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0KDQ9KLJCX');
+        }
+      </script>
+    
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://osada.blog/profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="http://localhost:1313/" selected></option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/data-serving-vs-transactional-systems/">
+                <img src="/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash_hu5d92e16f0bf2843fbe0df927ca257a90_992730_800x0_resize_q75_box.jpg"
+                        srcset="/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash_hu5d92e16f0bf2843fbe0df927ca257a90_992730_800x0_resize_q75_box.jpg 800w, /posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash_hu5d92e16f0bf2843fbe0df927ca257a90_992730_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="691" 
+                        loading="lazy"
+                        alt="Featured image of post Data Serving vs Transactional Systems" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/software-architecture/" >
+                Software-Architecture
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/data-serving-vs-transactional-systems/">Data Serving vs Transactional Systems</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            My transition from a transactional system background to a team managing a data serving platform
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 08, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="a-little-bit-about-my-experience-as-a-software-professional">A little bit about my experience as a software professional</h2>
+<p>I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of<br>
+technology stack, the type of systems I work with, the industry I work in, amongst other factors. In my first couple of<br>
+years, I worked for a small (at the time!) electronics company that mostly dealt with embedded systems. My work was<br>
+mostly concerned with the interface between hardware and software. Though I studied electronics in university, I was always<br>
+interested in the programmable aspects of the systems. Accordingly, I got my start in software bringing up development<br>
+boards, porting Linux to them, and writing device drivers.</p>
+<p>After a bit of that, it was time to move to a job where I did get to use C++, but for a completely different purpose. I<br>
+was now working on trading systems, order processing systems, and other financial markets-related software. I would move<br>
+on within the company a couple of times, working on everything from mobile software to security systems software. Then, through another couple of companies where<br>
+again I worked on financial systems and an e-commerce platform, I ended up where I am now—at the BBC.</p>
+<p>The first thing that hit me when I joined was the fact that our tech stack was very different—I had never worked in Scala<br>
+before. But what hit me even harder: there were no transactions in the system! The system&rsquo;s<br>
+primary focus was to serve the data it had in its databases and data stores, but the loading of that data was mostly a batch process.<br>
+Even when it wasn’t, there were no constraints in terms of event ordering. We could afford to serve data a little bit<br>
+out of date, given that we eventually caught up in a reasonable time period. This was a completely different way of thinking about<br>
+systems for me.</p>
+<p>That contrast got me thinking more deeply about what transactional systems really are, and how they shape the way we build software.</p>
+<h2 id="the-world-of-transactions">The world of transactions</h2>
+<p>Transactional systems vary a lot in what they do and how they do it. But by and large, they can be described as systems that process<br>
+changes in real-world properties in a consistent, atomic, and durable manner. They are meant to model real-world entities such as<br>
+bank accounts, sales, orders, and inventories. As you are modeling these real-world entities, it is essential that your code<br>
+reflects the true state of the real-life entity and thus needs to be consistent. In an actual warehouse, the inventory of goods<br>
+doesn’t become zero even just for a second before assuming the same value as before.</p>
+<p>In other database parlance, these systems are often backed by OLTP databases. OLTP stands for Online Transaction Processing, and they<br>
+are optimized for the type of workloads that transactional systems generate—as opposed to OLAP databases, which are optimized<br>
+for bulk reads and the types of queries that data-serving systems generate.</p>
+<p>Most of the trading and financial applications that I have worked on followed a simple formula: process transactions as fast as possible in a serial manner,<br>
+and then find an axis along which you can shard the system so that the shards can run in a shared-nothing manner. Then you can just throw more<br>
+shards at the problem to scale.</p>
+<p>In very low latency systems, multithreading becomes an overhead. You<br>
+are much better off focusing on single-threaded performance and optimizing via techniques such as SIMD instructions. But it also means that most of the time you are worrying about write performance and avoiding actual<br>
+database writes. You’ll employ everything from in-process caches, out-of-process caches, and write-ahead logs to avoid a<br>
+round trip to the database.</p>
+<p>You give very little thought to the querying side of the system apart from basic due diligence. But you really don’t worry about the data model,<br>
+because the only way you are going to read the data is the same way you wrote it—as a transaction.</p>
+<p>In contrast, the system I joined at the BBC operated in a fundamentally different way.</p>
+<h2 id="my-adventures-on-the-other-side-of-the-fence">My adventures on the other side of the fence</h2>
+<p>The system that my team currently works on is a data-serving platform. It’s not exactly an OLAP platform in that we don’t serve arbitrary queries on the data,<br>
+but the ingestion side and serving side are cleanly separated.</p>
+<p>The data load happens through an event feed that uses ingestion logic separate from the serving logic. Ingestion can also be triggered in a batch mode to backfill the full data set if needed.</p>
+<p>The data-serving side works on a request/response model. It’s optimized for sustained workloads and is mostly concerned<br>
+with query latency. This is a textbook application of the CQRS model: the read and write sides are completely separate.</p>
+<p>Performance on the read side is determined mostly by the form of the data in the stores—Redis caches or databases. There is very little<br>
+processing when serving a request. We mostly just pull the data out, apply a bit of transformation and business logic, and serve it.</p>
+<p>And the other surprising part: write performance mattered very little. Because the system lacked real-time consistency needs, we could batch writes.<br>
+Even with ingestion delays, we could catch up when update rates dropped. This was a completely different way of thinking about systems for me. Unsettling at first, but I’ve grown comfortable with it.</p>
+<p>These systems scale along the axis of read traffic. To scale well, you manage users and data.</p>
+<p>The data model should be as close to the query model as possible. The users should be handled as efficiently as possible—avoid per-connection threading and minimize communication overhead.</p>
+<p>Seeing both systems up close helped me crystallize the differences. Here’s a simplified comparison.</p>
+<h2 id="summarizing-the-differences">Summarizing the differences</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Transactional Systems</th>
+<th>Data Serving Systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consistency</td>
+<td>Very important</td>
+<td>Not as important</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Write performance is key</td>
+<td>Read performance is key</td>
+</tr>
+<tr>
+<td>Read Data Model</td>
+<td>Not as important</td>
+<td>Very important</td>
+</tr>
+<tr>
+<td>Performance Limits</td>
+<td>Limited by computation</td>
+<td>Limited by data store performance</td>
+</tr>
+<tr>
+<td>Scaling</td>
+<td>Single-threaded performance + shared-nothing sharding</td>
+<td>Data store performance + data model + efficient network stack</td>
+</tr>
+</tbody>
+</table></div>
+<p>But switching system types wasn’t just a technical shift—it challenged how I thought about engineering altogether.</p>
+<h2 id="learning-to-think-differently">Learning to think differently</h2>
+<p>Writing a matching engine or a risk management system, there is rarely a need to model your system beyond a rudimentary way. We would have<br>
+well-established patterns and concepts—order book, positions, etc.—that everyone understood. The domains were predefined,<br>
+and user needs were prescriptive.</p>
+<p>In adapting to a system where the query model matters, I’ve had to grapple with understanding the business domain. How to model it, speak the language of domain experts,<br>
+and translate that into requirements. This requires a mindshift—especially if you’ve built your career being the one who knows things.</p>
+<p>But once you let go of the fear of needing to learn something new, the path forward becomes clearer.</p>
+<p>The most basic thing was talking to people. The team had existed a long time and had built an internal language they all implicitly understood.<br>
+But it wasn’t documented. So I asked questions—frequently, but respectfully:</p>
+<ol>
+<li>I could nod along and ask later, but that meant I’d only half understand what followed.</li>
+<li>Other new joiners would feel encouraged to ask too.</li>
+</ol>
+<p>Next was widening the circle. The more I explored, the more I realized people didn’t always know systems in depth—even when they spoke confidently. Systems people referred to daily were often not fully understood. I made it a point to talk to folks from across backgrounds and systems to understand the whole ecosystem. Often, they’d say, “Hey, this has been a long-standing problem!”</p>
+<p>Then came understanding common architectural patterns. Whether dealing with out-of-order S3 events or DB query caching with external caches, our org had go-to solutions. Even if a different approach might be incrementally better, sticking to the known pattern made the system easier for others to reason about. If you&rsquo;re not convinced, check out <a class="link" href="https://www.enterpriseintegrationpatterns.com/"  target="_blank" rel="noopener"
+    >enterprise integration pattern</a>.</p>
+<p>Still, your core skills remain useful. Understanding RDBMS internals, query optimization, network stacks, OSI layers, caching strategies—all of that continues to matter. That part never changes.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This post started as a way to contrast two very different types of software systems I’ve worked on—but along the way, it became something else. It became a reflection on how we grow as engineers when the rules of the game change.</p>
+<p>If there’s a core message here, it’s this: foundational skills matter. The ability to understand systems, think clearly about trade-offs, and collaborate with others—those are the real constants. They carry across domains, stacks, and even job descriptions.</p>
+<p>A long time ago, I read a Superman comic that said: “Once you are Superman, you will always be Superman.” That stuck with me. Once you’ve built those fundamentals, you can step into almost any system—and make it better.</p>
+<br>
+<p>Photo by <a href="https://unsplash.com/@thechaffins?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">The Chaffins</a> on <a href="https://unsplash.com/photos/person-jumping-on-big-rock-under-gray-and-white-sky-during-daytime-Zdf3zn5XXtU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/engineering-excellence/">Engineering-Excellence</a>
+        
+            <a href="/tags/software-architecture/">Software-Architecture</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/posts/the-case-for-being-lazy/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/the-case-for-being-lazy/virtue-of-lazy.cc45005621f29079a2e914306952ebe2_hu63eed74ca6a8e7fa0c5375d977872c73_475282_250x150_fill_q75_h2_box_smart1_2.webp" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Case for Being Lazy"
+                        
+                        data-hash="md5-zEUAViHykHmi6RQwaVLr4g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Case for Being Lazy</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/technical-tasks-for-managers/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/technical-tasks-for-managers/_hu5459c0360c2b0cb7a147d2df0eb350ca_465496_1b820cbef4648b3a795d5ca1058ced29.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Technical Tasks for Managers"
+                        
+                        data-hash="md5-XFsAD/7gSHM5YZ6vdMsXVw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Technical Tasks for Managers</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/project-management-for-software-engineers/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/project-management-for-software-engineers/_hu5459c0360c2b0cb7a147d2df0eb350ca_541027_3fb88291df49a5aa8a7bcca4e20b8967.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Project Management for Software Engineers"
+                        
+                        data-hash="md5-r2C5gkVmF9XM4oZo5RLKfA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Project Management for Software Engineers</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/valkey-the-new-redis-alternative/">
+        
+        
+            <div class="article-image">
+                <img src="/posts/valkey-the-new-redis-alternative/valkey.294259e4ed8138070cbd6d0f789afbb7_hu93b6af6bb15f4eca0c823e296e00d3a8_33462_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Valkey: The New Redis Alternative"
+                        
+                        data-hash="md5-KUJZ5O2BOAcMvW0PeJr7tw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Valkey: The New Redis Alternative</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/posts/just-use-json/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/this-is-engineering.jpg" loading="lazy" data-key="" data-hash="/this-is-engineering.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Just Use Json</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
