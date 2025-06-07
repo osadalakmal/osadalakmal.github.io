@@ -12,8 +12,8 @@
         <pubDate>Sat, 08 Mar 2025 13:31:56 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional&lt;/h2&gt;
-&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
+&lt;/h2&gt;&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
 technology stack, the type of systems I work with, the industry I work in, amongst other factors. In my first couple of&lt;br&gt;
 years, I worked for a small (at the time!) electronics company that mostly dealt with embedded systems. My work was&lt;br&gt;
 mostly concerned with the interface between hardware and software. Though I studied electronics in university, I was always&lt;br&gt;
@@ -30,8 +30,8 @@ Even when it wasn’t, there were no constraints in terms of event ordering. We 
 out of date, given that we eventually caught up in a reasonable time period. This was a completely different way of thinking about&lt;br&gt;
 systems for me.&lt;/p&gt;
 &lt;p&gt;That contrast got me thinking more deeply about what transactional systems really are, and how they shape the way we build software.&lt;/p&gt;
-&lt;h2 id=&#34;the-world-of-transactions&#34;&gt;The world of transactions&lt;/h2&gt;
-&lt;p&gt;Transactional systems vary a lot in what they do and how they do it. But by and large, they can be described as systems that process&lt;br&gt;
+&lt;h2 id=&#34;the-world-of-transactions&#34;&gt;The world of transactions
+&lt;/h2&gt;&lt;p&gt;Transactional systems vary a lot in what they do and how they do it. But by and large, they can be described as systems that process&lt;br&gt;
 changes in real-world properties in a consistent, atomic, and durable manner. They are meant to model real-world entities such as&lt;br&gt;
 bank accounts, sales, orders, and inventories. As you are modeling these real-world entities, it is essential that your code&lt;br&gt;
 reflects the true state of the real-life entity and thus needs to be consistent. In an actual warehouse, the inventory of goods&lt;br&gt;
@@ -49,8 +49,8 @@ round trip to the database.&lt;/p&gt;
 &lt;p&gt;You give very little thought to the querying side of the system apart from basic due diligence. But you really don’t worry about the data model,&lt;br&gt;
 because the only way you are going to read the data is the same way you wrote it—as a transaction.&lt;/p&gt;
 &lt;p&gt;In contrast, the system I joined at the BBC operated in a fundamentally different way.&lt;/p&gt;
-&lt;h2 id=&#34;my-adventures-on-the-other-side-of-the-fence&#34;&gt;My adventures on the other side of the fence&lt;/h2&gt;
-&lt;p&gt;The system that my team currently works on is a data-serving platform. It’s not exactly an OLAP platform in that we don’t serve arbitrary queries on the data,&lt;br&gt;
+&lt;h2 id=&#34;my-adventures-on-the-other-side-of-the-fence&#34;&gt;My adventures on the other side of the fence
+&lt;/h2&gt;&lt;p&gt;The system that my team currently works on is a data-serving platform. It’s not exactly an OLAP platform in that we don’t serve arbitrary queries on the data,&lt;br&gt;
 but the ingestion side and serving side are cleanly separated.&lt;/p&gt;
 &lt;p&gt;The data load happens through an event feed that uses ingestion logic separate from the serving logic. Ingestion can also be triggered in a batch mode to backfill the full data set if needed.&lt;/p&gt;
 &lt;p&gt;The data-serving side works on a request/response model. It’s optimized for sustained workloads and is mostly concerned&lt;br&gt;
@@ -62,46 +62,46 @@ Even with ingestion delays, we could catch up when update rates dropped. This wa
 &lt;p&gt;These systems scale along the axis of read traffic. To scale well, you manage users and data.&lt;/p&gt;
 &lt;p&gt;The data model should be as close to the query model as possible. The users should be handled as efficiently as possible—avoid per-connection threading and minimize communication overhead.&lt;/p&gt;
 &lt;p&gt;Seeing both systems up close helped me crystallize the differences. Here’s a simplified comparison.&lt;/p&gt;
-&lt;h2 id=&#34;summarizing-the-differences&#34;&gt;Summarizing the differences&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Transactional Systems&lt;/th&gt;
-&lt;th&gt;Data Serving Systems&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Consistency&lt;/td&gt;
-&lt;td&gt;Very important&lt;/td&gt;
-&lt;td&gt;Not as important&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Performance&lt;/td&gt;
-&lt;td&gt;Write performance is key&lt;/td&gt;
-&lt;td&gt;Read performance is key&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Read Data Model&lt;/td&gt;
-&lt;td&gt;Not as important&lt;/td&gt;
-&lt;td&gt;Very important&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Performance Limits&lt;/td&gt;
-&lt;td&gt;Limited by computation&lt;/td&gt;
-&lt;td&gt;Limited by data store performance&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Scaling&lt;/td&gt;
-&lt;td&gt;Single-threaded performance + shared-nothing sharding&lt;/td&gt;
-&lt;td&gt;Data store performance + data model + efficient network stack&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+&lt;h2 id=&#34;summarizing-the-differences&#34;&gt;Summarizing the differences
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Property&lt;/th&gt;
+          &lt;th&gt;Transactional Systems&lt;/th&gt;
+          &lt;th&gt;Data Serving Systems&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Consistency&lt;/td&gt;
+          &lt;td&gt;Very important&lt;/td&gt;
+          &lt;td&gt;Not as important&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Performance&lt;/td&gt;
+          &lt;td&gt;Write performance is key&lt;/td&gt;
+          &lt;td&gt;Read performance is key&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Read Data Model&lt;/td&gt;
+          &lt;td&gt;Not as important&lt;/td&gt;
+          &lt;td&gt;Very important&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Performance Limits&lt;/td&gt;
+          &lt;td&gt;Limited by computation&lt;/td&gt;
+          &lt;td&gt;Limited by data store performance&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scaling&lt;/td&gt;
+          &lt;td&gt;Single-threaded performance + shared-nothing sharding&lt;/td&gt;
+          &lt;td&gt;Data store performance + data model + efficient network stack&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;But switching system types wasn’t just a technical shift—it challenged how I thought about engineering altogether.&lt;/p&gt;
-&lt;h2 id=&#34;learning-to-think-differently&#34;&gt;Learning to think differently&lt;/h2&gt;
-&lt;p&gt;Writing a matching engine or a risk management system, there is rarely a need to model your system beyond a rudimentary way. We would have&lt;br&gt;
+&lt;h2 id=&#34;learning-to-think-differently&#34;&gt;Learning to think differently
+&lt;/h2&gt;&lt;p&gt;Writing a matching engine or a risk management system, there is rarely a need to model your system beyond a rudimentary way. We would have&lt;br&gt;
 well-established patterns and concepts—order book, positions, etc.—that everyone understood. The domains were predefined,&lt;br&gt;
 and user needs were prescriptive.&lt;/p&gt;
 &lt;p&gt;In adapting to a system where the query model matters, I’ve had to grapple with understanding the business domain. How to model it, speak the language of domain experts,&lt;br&gt;
@@ -117,8 +117,8 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
 &lt;p&gt;Then came understanding common architectural patterns. Whether dealing with out-of-order S3 events or DB query caching with external caches, our org had go-to solutions. Even if a different approach might be incrementally better, sticking to the known pattern made the system easier for others to reason about. If you&amp;rsquo;re not convinced, check out &lt;a class=&#34;link&#34; href=&#34;https://www.enterpriseintegrationpatterns.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;enterprise integration pattern&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Still, your core skills remain useful. Understanding RDBMS internals, query optimization, network stacks, OSI layers, caching strategies—all of that continues to matter. That part never changes.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This post started as a way to contrast two very different types of software systems I’ve worked on—but along the way, it became something else. It became a reflection on how we grow as engineers when the rules of the game change.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;This post started as a way to contrast two very different types of software systems I’ve worked on—but along the way, it became something else. It became a reflection on how we grow as engineers when the rules of the game change.&lt;/p&gt;
 &lt;p&gt;If there’s a core message here, it’s this: foundational skills matter. The ability to understand systems, think clearly about trade-offs, and collaborate with others—those are the real constants. They carry across domains, stacks, and even job descriptions.&lt;/p&gt;
 &lt;p&gt;A long time ago, I read a Superman comic that said: “Once you are Superman, you will always be Superman.” That stuck with me. Once you’ve built those fundamentals, you can step into almost any system—and make it better.&lt;/p&gt;
 &lt;br&gt;
@@ -131,12 +131,12 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
         <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/valkey.png" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?&lt;/h2&gt;
-&lt;p&gt;Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that functions as a database, cache, and message broker. Known for its high performance and versatility, Redis supports low-latency operations crucial for real-time applications. At its core, Redis organizes data as key-value pairs but extends its functionality with advanced data structures (ADTs), streaming capabilities, and persistence options.&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/valkey.png" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
+&lt;/h2&gt;&lt;p&gt;Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that functions as a database, cache, and message broker. Known for its high performance and versatility, Redis supports low-latency operations crucial for real-time applications. At its core, Redis organizes data as key-value pairs but extends its functionality with advanced data structures (ADTs), streaming capabilities, and persistence options.&lt;/p&gt;
 &lt;p&gt;Redis offers rich data types, including strings, lists, sets, sorted sets, hashes, bitmaps, and hyperloglogs. These enable complex operations like leaderboard maintenance, set intersections, or approximate cardinality estimation. Redis Streams further enhance its capabilities, enabling real-time data processing and message queuing with features like consumer groups, automatic message acknowledgment, and ordered, append-only data logs.&lt;/p&gt;
 &lt;p&gt;Redis also supports data durability through mechanisms like snapshots (RDB files) and append-only file (AOF) logs. Snapshots provide periodic states of the database, while AOF logs persist each write operation. These features make Redis suitable for both ephemeral and long-term data storage. With additional functionalities like replication, clustering, Lua scripting, and pub/sub messaging, Redis remains a critical component in modern web architectures.&lt;/p&gt;
-&lt;h2 id=&#34;a-brief-history-of-redis&#34;&gt;A Brief History of Redis&lt;/h2&gt;
-&lt;p&gt;Redis was created in 2009 by Salvatore Sanfilippo to address the performance limitations of disk-based databases for his Italian startup. Redis quickly gained traction for its innovative, memory-first design and simple API, becoming a go-to tool for applications requiring fast and reliable data access.&lt;/p&gt;
+&lt;h2 id=&#34;a-brief-history-of-redis&#34;&gt;A Brief History of Redis
+&lt;/h2&gt;&lt;p&gt;Redis was created in 2009 by Salvatore Sanfilippo to address the performance limitations of disk-based databases for his Italian startup. Redis quickly gained traction for its innovative, memory-first design and simple API, becoming a go-to tool for applications requiring fast and reliable data access.&lt;/p&gt;
 &lt;p&gt;Redis transitioned to open-source early in its development, encouraging community contributions. By 2015, Redis Labs (now Redis Inc.) became the commercial steward of the project, adding enterprise-grade features and cloud-based services. Today, Redis powers platforms ranging from small startups to tech giants like Twitter and Airbnb.&lt;/p&gt;
 &lt;p&gt;In 2018, Redis Inc. introduced the Server Side Public License (SSPL) for certain modules to prevent cloud providers from monetizing Redis without contributing back. This sparked debates within the open-source ecosystem about software freedom. Around this time, the community-driven Valkey project emerged as an open-source alternative to Redis under a permissive BSD license, addressing concerns over licensing restrictions while retaining Redis compatibility.&lt;br&gt;
 Valkey on AWS&lt;/p&gt;
@@ -189,8 +189,8 @@ Valkey on AWS&lt;/p&gt;
     &gt;here&lt;/a&gt;. For more information you can refer to their Cloudformation counterparts &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;.After that is done, we create the security group and add a ingress rule allowing incoming connections to server port 6379 which is the default for valkey. Then finally we build the actual cache using the user, usergroup and security group.&lt;/p&gt;
-&lt;h2 id=&#34;how-valkey-compares-with-serverful-redis&#34;&gt;How Valkey compares with serverful redis.&lt;/h2&gt;
-&lt;p&gt;I was already benchmarking a couple of different approaches for one our applications and had a benchmarking script lying around that I used for this not-so-scientific benchmarking process. The salient points of the benchmarking points are as follows.&lt;/p&gt;
+&lt;h2 id=&#34;how-valkey-compares-with-serverful-redis&#34;&gt;How Valkey compares with serverful redis.
+&lt;/h2&gt;&lt;p&gt;I was already benchmarking a couple of different approaches for one our applications and had a benchmarking script lying around that I used for this not-so-scientific benchmarking process. The salient points of the benchmarking points are as follows.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;I wanted to see what the best way to store relatively large blobs of json efficiently in redis were. Note that the best practice for storing values on redis is to break large values down to smaller parts. But that is not possible in this case. We are basically utilizing elasticache as a shared (amongst instances of a micro-service) look aside cache.&lt;/li&gt;
 &lt;li&gt;The alternatives I was testing were
@@ -357,30 +357,30 @@ Valkey on AWS&lt;/p&gt;
 &lt;/details&gt;
 
 &lt;p&gt;The results from running this script against a t4g.medium based 2 node, 1 shard redis cluster was as follows&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;redis&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;➜&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;redis&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;JSON&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workload&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;386.04&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Write&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ne&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workload&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;381.14&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Write&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ne&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workload&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Compressed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;381.77&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Write&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Same script when run against the Serverless valkey cache yeilds&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;redis&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;➜&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;redis&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;JSON&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workload&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;324.97&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Write&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ne&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workload&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;326.84&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Write&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ne&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workload&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Compressed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmark&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;324.98&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Write&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;operations&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So as can be seen valkey performs roughly 15% better than the serverful version. Now, the fact that it is a burstable VM may have something to do with it, but note that the CPU usage did not go beyond 5% the whole time I ran the benchmark for the redis version. So I do not think it had a huge impact. The scaling seems pretty good as well. According to docs from cold it can scale up to 30K ECPU operations for a single shard and for read replicas can scale up to 90K.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(redis-json-benchmark) ➜  redis-json-benchmark ./benchmark.py
+JSON Workload benchmark completed in 386.04 seconds.
+Read operations: 2000, Write operations: 8000
+
+String Workload benchmark completed in 381.14 seconds.
+Read operations: 2000, Write operations: 8000
+
+String Workload (Compressed) benchmark completed in 381.77 seconds.
+Read operations: 2000, Write operations: 8000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Same script when run against the Serverless valkey cache yeilds&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;(redis-json-benchmark) ➜  redis-json-benchmark ./benchmark.py
+JSON Workload benchmark completed in 324.97 seconds.
+Read operations: 2000, Write operations: 8000
+
+String Workload benchmark completed in 326.84 seconds.
+Read operations: 2000, Write operations: 8000
+
+String Workload (Compressed) benchmark completed in 324.98 seconds.
+Read operations: 2000, Write operations: 8000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So as can be seen valkey performs roughly 15% better than the serverful version. Now, the fact that it is a burstable VM may have something to do with it, but note that the CPU usage did not go beyond 5% the whole time I ran the benchmark for the redis version. So I do not think it had a huge impact. The scaling seems pretty good as well. According to docs from cold it can scale up to 30K ECPU operations for a single shard and for read replicas can scale up to 90K.&lt;/p&gt;
 &lt;p&gt;Note that using redisJSON has more advantages than pure speed. You also get ability to operate on the JSON using operators that understand the JSON structure. For example you can use &lt;a class=&#34;link&#34; href=&#34;https://github.com/json-path/JsonPath&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;JSONPath&lt;/a&gt; queries on the data and fetch partial fragments from the data if needed.&lt;/p&gt;
-&lt;h3 id=&#34;side-note-on-compression-algorithms-for-use-with-data-storagetransfer&#34;&gt;Side note on compression algorithms for use with data storage/transfer.&lt;/h3&gt;
-&lt;p&gt;I tried out a couple of different options for the compression algorithm here starting with standard gzip. What I found out was the unless you were using a newer standard that optimized for faster compression/decompression, it was really hard to get the compression to make a difference.&lt;/p&gt;
+&lt;h3 id=&#34;side-note-on-compression-algorithms-for-use-with-data-storagetransfer&#34;&gt;Side note on compression algorithms for use with data storage/transfer.
+&lt;/h3&gt;&lt;p&gt;I tried out a couple of different options for the compression algorithm here starting with standard gzip. What I found out was the unless you were using a newer standard that optimized for faster compression/decompression, it was really hard to get the compression to make a difference.&lt;/p&gt;
 &lt;p&gt;The options I tried were&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;ZLib for GZip - This is included in the standard library for python and very easy to use. But since decompression seems highly costly, it took the scores way higher than it should have. So I abandoned that option.&lt;/li&gt;
@@ -389,11 +389,11 @@ Valkey on AWS&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;If you are interested in these algorithms and are considering which one to use, you can find an interesting discussion where author of Zstd shows up on hacker news &lt;a class=&#34;link&#34; href=&#34;https://news.ycombinator.com/item?id=19678115&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;valkey-pricing&#34;&gt;Valkey pricing&lt;/h2&gt;
-&lt;p&gt;You would have noticed the unit ECPU in the paragraph above and as is customary for AWS this is a very complicated term that seems to be used for billing for it&amp;rsquo;s serverless option. In simple terms a GET or a SET of a 1 KB data blob will take 1 ECPU. For commands that have higher CPU usage like HMGET, the CPU usage dimension becomes higher and for HMGET specifically it is 3 times the base case. And the pricing is set by the dimension that is the highest. Thus if you do an operation that GETs 2 KB of data using HMGET you get charged 3 ECPUs.&lt;/p&gt;
+&lt;h2 id=&#34;valkey-pricing&#34;&gt;Valkey pricing
+&lt;/h2&gt;&lt;p&gt;You would have noticed the unit ECPU in the paragraph above and as is customary for AWS this is a very complicated term that seems to be used for billing for it&amp;rsquo;s serverless option. In simple terms a GET or a SET of a 1 KB data blob will take 1 ECPU. For commands that have higher CPU usage like HMGET, the CPU usage dimension becomes higher and for HMGET specifically it is 3 times the base case. And the pricing is set by the dimension that is the highest. Thus if you do an operation that GETs 2 KB of data using HMGET you get charged 3 ECPUs.&lt;/p&gt;
 &lt;p&gt;This all makes for a rather complex pricing structure as you can imagine but if you use redis servers today, a rough idea of pricing can be had by looking at the no of GET/SET/etc operations and your traffic in and our in your metrics. In our cases the cache nodes were quite underutilized so there was an upside to using valkey in pricing as well.&lt;/p&gt;
-&lt;h2 id=&#34;should-i-use-valkey&#34;&gt;Should I use Valkey?&lt;/h2&gt;
-&lt;p&gt;So for AWS, GCP and Azure it is a no brainer that everyone should switch to Valkey. But should you? For me that depends. Redis is a very very complex beast nowadays. It is no longer a memcached replacement only and has everything from ADTs, probabilistic data structures, streaming to vector storage. And as always the best practice is to compare your use case amongst the two options. Start by creating a sample workload that simulates your real workload and then run it on both infrastructure and compare the results so you have an apples to apples comparison. Don&amp;rsquo;t forget to take in to account all the aspects like cost and performance.&lt;/p&gt;
+&lt;h2 id=&#34;should-i-use-valkey&#34;&gt;Should I use Valkey?
+&lt;/h2&gt;&lt;p&gt;So for AWS, GCP and Azure it is a no brainer that everyone should switch to Valkey. But should you? For me that depends. Redis is a very very complex beast nowadays. It is no longer a memcached replacement only and has everything from ADTs, probabilistic data structures, streaming to vector storage. And as always the best practice is to compare your use case amongst the two options. Start by creating a sample workload that simulates your real workload and then run it on both infrastructure and compare the results so you have an apples to apples comparison. Don&amp;rsquo;t forget to take in to account all the aspects like cost and performance.&lt;/p&gt;
 &lt;p&gt;What about the serverless aspect? Is it worth it to avoiding sys admin work on the nodes and engine when you are running on your own provisioned servers? So far that does not seem like a huge task. RDS upgrades are by far a bigger headache with trying to convince DMS and pg_replication to play nicely and making sure to move the bits of the schema that DMS won&amp;rsquo;t move. Redis by comparison seems so simple but it &lt;em&gt;is&lt;/em&gt; another thing to do.&lt;/p&gt;
 &lt;p&gt;All in all, this seems like something that is worth evaluating at least so give it a go. Only thing I am wondering where else the same drama will play out now that the VCs are coming for their pound of flesh and the OSS startup are pulling the draw bridges up?&lt;/p&gt;
 </description>
@@ -404,8 +404,8 @@ Valkey on AWS&lt;/p&gt;
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?&lt;/h2&gt;
-&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+&lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
 figure {
@@ -444,18 +444,18 @@ figcaption {
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;understanding-the-product-drive-to-get-things-done&#34;&gt;Understanding the product drive to get things done&lt;/h2&gt;
-&lt;p&gt;For this, it is essential that you develop empathetic views of the various disciplines involved in the process. The whole point of the product development as a discipline is to map out a roadmap for the product that the users of the system will find useful and will be willing to pay for. For them, the clients are the users of the system. And I am using the word &amp;lsquo;client&amp;rsquo; here to mean the immediate group of people that the particular discipline&amp;rsquo;s work &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Objectives_and_key_results&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;understanding-the-product-drive-to-get-things-done&#34;&gt;Understanding the product drive to get things done
+&lt;/h2&gt;&lt;p&gt;For this, it is essential that you develop empathetic views of the various disciplines involved in the process. The whole point of the product development as a discipline is to map out a roadmap for the product that the users of the system will find useful and will be willing to pay for. For them, the clients are the users of the system. And I am using the word &amp;lsquo;client&amp;rsquo; here to mean the immediate group of people that the particular discipline&amp;rsquo;s work &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Objectives_and_key_results&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;OKRs&lt;/a&gt; are impacted by. For product, this group of people is the immediate users of the product. And the most universally effective way of keeping them happy and hitting the related OKRs is to deliver what they want, before they want it.&lt;/p&gt;
 &lt;p&gt;Now there does exist the odd bad product team, but disregarding the concept of cartoonish evil product teams, mostly they want to be able to deliver features to their users. They do understand that the delivery of features does not happen in a vacuum, that it happens within the context of the platform. They do understand that features should not increase the overall complexity of the platform as much as possible and make the development of features in the future as easy as possible. If they do not understand this, the team leads, tech leads, and the engineering managers should get better at communicating this aspect. I understand this sounds glib, but it is true - there is no solution for insufficiently good communication. And how to communicate effectively is several full books essentially. So that will have to wait!&lt;/p&gt;
-&lt;h2 id=&#34;handling-the-quick-wins&#34;&gt;Handling the quick wins&lt;/h2&gt;
-&lt;p&gt;So it is a fact of life that product will keep on asking for quick wins but what can we do about it? Two courses of action and one question - How costly is it to reverse your decision? Your course of action will depend on this one question and you should know the answer quite confidently. Can you reverse your decision given the architectural changes this decision will entail with a reasonable cost? If the answer is yes - do the change, if the answer is no - do not do the change.&lt;/p&gt;
-&lt;h3 id=&#34;do-the-required-feature-as-a-quick-win&#34;&gt;Do the required feature as a quick win&lt;/h3&gt;
-&lt;p&gt;Do play along and find a way to deliver the same effect as they are asking for. Assuming that the feature does not adversely affect the architecture of the platform no matter the implementation, great no issues then. But assuming as almost always there are several different ways to get the same thing done and the quickest is the dirtiest, how do you deliver the work? You compromise and say we will get you the feature in this manner and it will take 2 weeks instead of 6 but it is going to be hacky and we will need to take another 4 weeks to refactor so this feature does not impede us in the future. Weather you use branch by abstraction, feature flags or a combination, the concept remains the same - the audience gets the feature quickly and product are happy. Engineering gets to tidy up the implementation and they are happy. As a bonus point, often there will be some feedback from the client in the middle of your refactor which you can just incorporate into your code and make the implementation better. But remember this all depends on you being able to change the initial quick hack you deliver to a proper sustainable architecture afterward.&lt;/p&gt;
-&lt;h3 id=&#34;dont-do-the-required-feature-as-a-quick-win&#34;&gt;Don&amp;rsquo;t do the required feature as a quick win&lt;/h3&gt;
-&lt;p&gt;If the required feature cannot be delivered as a quick win and requires long term platform building work to be done first, do not give in and do it as a quick hack. It may be tempting given that it will make the product team happy and will definitely make your life easy. But understand that you will be paying for this decision later on when it breaks your team&amp;rsquo;s agility. The most important thing though is not the &amp;ldquo;No, we cannot&amp;rdquo; but &amp;ldquo;This is how we can do it&amp;rdquo;. A can-do attitude is worth its weight in gold in software architecture/development lead land because so many of us will stop after the initial no. Plot a course for the product and communicate what needs to happen in order for you to build this feature. Break it down into the smallest parts possible and explain each one. The changes are these steps can be reused for some other purpose and if the product can align their feature roadmap along those lines, most of the time you will get the go-ahead to implement the long term architectural plan.&lt;/p&gt;
-&lt;h2 id=&#34;cathedral-building---one-brick-at-a-time&#34;&gt;Cathedral building - one brick at a time&lt;/h2&gt;
-&lt;p&gt;To expand on the second answer above, because the first answer is quite simple and requires no elaboration, let us consider a simple media streaming solution. Your product managers ask you to implement a feature that allows your curation team to put together a Christmas playlist for the app. Now say you do not have a good way of putting custom styling on this play list to match Christmas theme right now. How can you achieve this? One way would be to refuse to do custom styling because this is a one-off thing that won&amp;rsquo;t last beyond Christmas and you don&amp;rsquo;t want to do a quick hack on the client side because this information should be propagated through the backend to be a proper sustainable, uniform implementation in the long run.&lt;/p&gt;
+&lt;h2 id=&#34;handling-the-quick-wins&#34;&gt;Handling the quick wins
+&lt;/h2&gt;&lt;p&gt;So it is a fact of life that product will keep on asking for quick wins but what can we do about it? Two courses of action and one question - How costly is it to reverse your decision? Your course of action will depend on this one question and you should know the answer quite confidently. Can you reverse your decision given the architectural changes this decision will entail with a reasonable cost? If the answer is yes - do the change, if the answer is no - do not do the change.&lt;/p&gt;
+&lt;h3 id=&#34;do-the-required-feature-as-a-quick-win&#34;&gt;Do the required feature as a quick win
+&lt;/h3&gt;&lt;p&gt;Do play along and find a way to deliver the same effect as they are asking for. Assuming that the feature does not adversely affect the architecture of the platform no matter the implementation, great no issues then. But assuming as almost always there are several different ways to get the same thing done and the quickest is the dirtiest, how do you deliver the work? You compromise and say we will get you the feature in this manner and it will take 2 weeks instead of 6 but it is going to be hacky and we will need to take another 4 weeks to refactor so this feature does not impede us in the future. Weather you use branch by abstraction, feature flags or a combination, the concept remains the same - the audience gets the feature quickly and product are happy. Engineering gets to tidy up the implementation and they are happy. As a bonus point, often there will be some feedback from the client in the middle of your refactor which you can just incorporate into your code and make the implementation better. But remember this all depends on you being able to change the initial quick hack you deliver to a proper sustainable architecture afterward.&lt;/p&gt;
+&lt;h3 id=&#34;dont-do-the-required-feature-as-a-quick-win&#34;&gt;Don&amp;rsquo;t do the required feature as a quick win
+&lt;/h3&gt;&lt;p&gt;If the required feature cannot be delivered as a quick win and requires long term platform building work to be done first, do not give in and do it as a quick hack. It may be tempting given that it will make the product team happy and will definitely make your life easy. But understand that you will be paying for this decision later on when it breaks your team&amp;rsquo;s agility. The most important thing though is not the &amp;ldquo;No, we cannot&amp;rdquo; but &amp;ldquo;This is how we can do it&amp;rdquo;. A can-do attitude is worth its weight in gold in software architecture/development lead land because so many of us will stop after the initial no. Plot a course for the product and communicate what needs to happen in order for you to build this feature. Break it down into the smallest parts possible and explain each one. The changes are these steps can be reused for some other purpose and if the product can align their feature roadmap along those lines, most of the time you will get the go-ahead to implement the long term architectural plan.&lt;/p&gt;
+&lt;h2 id=&#34;cathedral-building---one-brick-at-a-time&#34;&gt;Cathedral building - one brick at a time
+&lt;/h2&gt;&lt;p&gt;To expand on the second answer above, because the first answer is quite simple and requires no elaboration, let us consider a simple media streaming solution. Your product managers ask you to implement a feature that allows your curation team to put together a Christmas playlist for the app. Now say you do not have a good way of putting custom styling on this play list to match Christmas theme right now. How can you achieve this? One way would be to refuse to do custom styling because this is a one-off thing that won&amp;rsquo;t last beyond Christmas and you don&amp;rsquo;t want to do a quick hack on the client side because this information should be propagated through the backend to be a proper sustainable, uniform implementation in the long run.&lt;/p&gt;
 &lt;p&gt;But going beyond that, you can suggest an approach like this.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Implement the styling as a quick hack but make sure to get the styling data from an opaque interface ( let&amp;rsquo;s be original and call it StyleProvider )&lt;/li&gt;
@@ -465,8 +465,8 @@ figcaption {
 &lt;li&gt;Create a proper styling authoring tool that writes to the config that the curation teams can use&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Now this may sound very much like a cathedral-building exercise but understand that we had already shipped things to clients at #1 and we have a sustainable architecture at #4. You may be surprised at how many product teams you can convince to go with this approach.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-approach-compromises&#34;&gt;How to approach compromises&lt;/h2&gt;
-&lt;p&gt;I do kind of make it sound too easy in the above example as you can see. In the real world, it is rarely that straightforward and you have to take in different actors in the system and how they interact. But the gist of the approach remains the same. Make sure that your product team understands that you are&lt;/p&gt;
+&lt;h2 id=&#34;how-to-approach-compromises&#34;&gt;How to approach compromises
+&lt;/h2&gt;&lt;p&gt;I do kind of make it sound too easy in the above example as you can see. In the real world, it is rarely that straightforward and you have to take in different actors in the system and how they interact. But the gist of the approach remains the same. Make sure that your product team understands that you are&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Doing them a favor by prioritizing feature delivery against creating technical debt in the short term&lt;/li&gt;
 &lt;li&gt;That this technical debt must be paid off before interest accrues in the long term&lt;/li&gt;
@@ -485,14 +485,14 @@ figcaption {
             &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Make sure that this compromise is front and center in all discussions. It should be the basis of all discussions. Once you have done something similar, you would have built up some trust and comfort for this approach which you can reuse going forward. Once the team and stakeholders are comfortable with this approach, it becomes much easier to get people&amp;rsquo;s buy-in by pointing to previous examples of good execution of this idea.&lt;/p&gt;
-&lt;h2 id=&#34;coming-back-for-the-refactor&#34;&gt;Coming back for the refactor&lt;/h2&gt;
-&lt;p&gt;Now, you will be tempted to call the follow on work from the initial implementation as &amp;ldquo;Clean Up Work&amp;rdquo;. I think this will be a mistake - impressions matter and this is the wrong impression to make. Refactoring will be a more suitable and a neutral term that communicates the fact we are not making any changes to the observable behavior of the implementation but just making sure the work is arranged in such a manner as to increase comprehension for engineers and to make it easy to build on top of. There are a few ways in which you can do this.&lt;/p&gt;
+&lt;h2 id=&#34;coming-back-for-the-refactor&#34;&gt;Coming back for the refactor
+&lt;/h2&gt;&lt;p&gt;Now, you will be tempted to call the follow on work from the initial implementation as &amp;ldquo;Clean Up Work&amp;rdquo;. I think this will be a mistake - impressions matter and this is the wrong impression to make. Refactoring will be a more suitable and a neutral term that communicates the fact we are not making any changes to the observable behavior of the implementation but just making sure the work is arranged in such a manner as to increase comprehension for engineers and to make it easy to build on top of. There are a few ways in which you can do this.&lt;/p&gt;
 &lt;p&gt;If like most organizations in this time you are using some sort of a agile project tracker, you can create two projects or epics for each phase of the project. First phase will last from initial ideation through to delivery of the quick win. The second phase will start from just before or after that to when refactoring is completed and delivered to production with all the client feedback. Another way might be to treat this as a single epic but create all stories beforehand. Now if you use a concept like &lt;a class=&#34;link&#34; href=&#34;https://martinfowler.com/bliki/BranchByAbstraction.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;branch by abstraction&lt;/a&gt; you can even have two teams working on two phases at the same time.&lt;/p&gt;
 &lt;p&gt;You can also make use of other tooling such as &lt;a class=&#34;link&#34; href=&#34;https://martinfowler.com/articles/feature-toggles.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;feature flags&lt;/a&gt; for de-risking the actual production deployment. The key thing is to remember that whatever tools or techniques that you end up using, they should be used with a good process in place. What I mean by that is there should be a well known process, preferably documented and accessible easily that describes how all these tools are used in shipping features quickly. Then there can be no confusion regarding architecture and how it is made sustainable. Otherwise you will be doing that communication work every time this kind of compromise happens. Do the work for documenting these processes beforehand and save yourselves a whole bunch of time.&lt;/p&gt;
-&lt;h2 id=&#34;follow-ups-demonstrations-and-retros&#34;&gt;Follow-ups, Demonstrations, and Retros&lt;/h2&gt;
-&lt;p&gt;It is probably a good idea to demonstrate these actions in a retrospective about the project. If this is not standard practice, schedule a one off meeting and show it to all the stakeholders. Demonstrate the narrative of Engineering delivering something in short term by compromising ideal architecture, and recovering and perfecting the result with feedback and getting back to idea architecture. It is probably a good idea to keep a list of these occasions and their details. You would likely want to refer to this for further details, weather it is to come up with a future estimate, to recount a good year or for new team members, stakeholders or leadership to get familiarized with how compromise works in your team. It will help bring them in line with the rest of the team.&lt;/p&gt;
+&lt;h2 id=&#34;follow-ups-demonstrations-and-retros&#34;&gt;Follow-ups, Demonstrations, and Retros
+&lt;/h2&gt;&lt;p&gt;It is probably a good idea to demonstrate these actions in a retrospective about the project. If this is not standard practice, schedule a one off meeting and show it to all the stakeholders. Demonstrate the narrative of Engineering delivering something in short term by compromising ideal architecture, and recovering and perfecting the result with feedback and getting back to idea architecture. It is probably a good idea to keep a list of these occasions and their details. You would likely want to refer to this for further details, weather it is to come up with a future estimate, to recount a good year or for new team members, stakeholders or leadership to get familiarized with how compromise works in your team. It will help bring them in line with the rest of the team.&lt;/p&gt;
 &lt;p&gt;Banner Photo by &lt;a href=&#34;https://unsplash.com/@disruptxn?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&#34;&gt;Desola Lanre-Ologun&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/photos/woman-and-man-sitting-in-front-of-monitor-IgUR1iX0mqM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>

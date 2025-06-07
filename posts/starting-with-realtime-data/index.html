@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='We discuss how to get started with real time data processing'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="We discuss how to get started with real time data processing">
 <title>Starting With Realtime Data</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/starting-with-realtime-data/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Starting With Realtime Data'>
-<meta property='og:description' content='We discuss how to get started with real time data processing'>
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Starting With Realtime Data">
+<meta property='og:description' content="We discuss how to get started with real time data processing">
 <meta property='og:url' content='https://osadalakmal.github.io/posts/starting-with-realtime-data/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='realtime' /><meta property='article:tag' content='kafka' /><meta property='article:tag' content='STOMP' /><meta property='article:published_time' content='2021-11-20T20:15:01&#43;05:30'/><meta property='article:modified_time' content='2021-11-20T20:15:01&#43;05:30'/><meta property='og:image' content='https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.jpg' />
@@ -16,26 +16,6 @@
 <meta name="twitter:description" content="We discuss how to get started with real time data processing"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.jpg' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
-
-  
-    
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0KDQ9KLJCX');
-        }
-      </script>
-    
-  
-
 
     </head>
     <body class="
@@ -143,31 +123,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://osadalakmal.github.io/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -175,7 +136,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -183,10 +144,11 @@
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -197,8 +159,8 @@
     <header class="article-header">
         <div class="article-image">
             <a href="/posts/starting-with-realtime-data/">
-                <img src="/posts/starting-with-realtime-data/realtime-splash_hu957b1156cd6545e64f4a903ae42187fe_647318_800x0_resize_q75_box.jpg"
-                        srcset="/posts/starting-with-realtime-data/realtime-splash_hu957b1156cd6545e64f4a903ae42187fe_647318_800x0_resize_q75_box.jpg 800w, /posts/starting-with-realtime-data/realtime-splash_hu957b1156cd6545e64f4a903ae42187fe_647318_1600x0_resize_q75_box.jpg 1600w"
+                <img src="/posts/starting-with-realtime-data/realtime-splash_hu_cb22afd140f7ed4.jpg"
+                        srcset="/posts/starting-with-realtime-data/realtime-splash_hu_cb22afd140f7ed4.jpg 800w, /posts/starting-with-realtime-data/realtime-splash_hu_c2bb9b54a457f050.jpg 1600w"
                         width="800" 
                         height="601" 
                         loading="lazy"
@@ -278,8 +240,7 @@
     
     
     <blockquote>
-<p>(or why realtime data is elusive in most organizations)</p>
-</blockquote>
+<p>(or why realtime data is elusive in most organizations)</p></blockquote>
 <div class="toc">
     <nav id="TableOfContents">
   <ul>
@@ -295,8 +256,8 @@
 </nav>
   </div>
   
-<h2 id="data-data-and-data">Data, Data and Data</h2>
-
+<h2 id="data-data-and-data">Data, Data and Data
+</h2>
 
 
 <figure>
@@ -318,8 +279,8 @@
 </ol>
 <p>Now this is not to suggest that these are necessarily untrue - it is harder to process, and probably expensive to do so as well. And half the time the product owners and/or business users have absolutely zero imagination and cannot come up with a decent real time use case even if their lives depended on it.</p>
 <p>But the fact remains that once the stars do align, when there is a good use case we end up being unable to execute because we dont really have a lot of experience with the real time streaming systems.</p>
-<h2 id="how-to-break-out-of-the-cycle">How to break out of the cycle</h2>
-<p>As with any other use case or technology that is unfamiliar - you need to break out of the vicious cycle that allows this learned helplessness to persist. I have alluded to this in an earlier post of mine where I discuss conscious learning.</p>
+<h2 id="how-to-break-out-of-the-cycle">How to break out of the cycle
+</h2><p>As with any other use case or technology that is unfamiliar - you need to break out of the vicious cycle that allows this learned helplessness to persist. I have alluded to this in an earlier post of mine where I discuss conscious learning.</p>
 <p>The first thing to do is acquire some practice. The problem with this is that streaming data is really hard to come by in the wild. There are enough big data sets that can be used for pet projects now. Sources like <a class="link" href="https://github.com/awesomedata/awesome-public-datasets"  target="_blank" rel="noopener"
     >awesome public datasets</a> allow us to do pet projects on batch processing side of the things really easily.</p>
 <p>But when it comes to real time streaming data, the story is much more different. Since distributing such data requires significant server power, there aren&rsquo;t servers out in the open internet that will let you subscribe to kafka feeds. So we need to look for alternatives. The easiest way would be to down load a time series data file source in a program that will write that data to a kafka stream. If required it can even modify the timestamps to match.</p>
@@ -330,8 +291,8 @@
 <li>AMQP - Advanced Message Queuing Protocol was created for unifying the middleware layer</li>
 </ol>
 <p>The one source of actual useful realtime information I could find was national rail in the UK. The Transport for London was also supposed to host several real time streaming data feeds but I could not find any information on this.</p>
-<h2 id="national-rail-to-the-rescue">National Rail to the Rescue</h2>
-
+<h2 id="national-rail-to-the-rescue">National Rail to the Rescue
+</h2>
 
 
 <figure>
@@ -348,62 +309,62 @@
     >open data portal</a></p>
 <p>The feed is in STOMP format and the serialization format is XML. And it is compressed using gzip. So we will have to read the data in STOMP protocol format, unzip it and then convert to a more modern format that most of the tools understand such as json and then write it to kafka to be processed further.</p>
 <p>Let&rsquo;s go through each of these concerns and figure out how we are tackling each one</p>
-<h2 id="stomp-protocol--which-i-didnt-know-was-a-thing-">STOMP Protocol ( which I didn&rsquo;t know was a thing )</h2>
-<p>Before this project I had never heard of the STOMP format. But reading up on it, it seems quite a small, easy to understand spec that you can read <a class="link" href="https://stomp.github.io/"  target="_blank" rel="noopener"
+<h2 id="stomp-protocol--which-i-didnt-know-was-a-thing-">STOMP Protocol ( which I didn&rsquo;t know was a thing )
+</h2><p>Before this project I had never heard of the STOMP format. But reading up on it, it seems quite a small, easy to understand spec that you can read <a class="link" href="https://stomp.github.io/"  target="_blank" rel="noopener"
     >here</a>. Since it is quite easy to understand and implement, I was expecting the clients to work quite smoothly. Specially since there seemed to have been such a small amount of churn in the protocol specification itself.</p>
 <p>But it turned out that the python library was having issues. Right after connecting, the client gets disconnected. The strange thing is the command line client seems to work just fine. I had assumed that my code was having issues and I did not understand something about the library I was using - <a class="link" href="https://github.com/jasonrbriggs/stomp.py"  target="_blank" rel="noopener"
     >stomp.py</a>. But it turned out that even the <a class="link" href="https://github.com/openraildata/stomp-client-python"  target="_blank" rel="noopener"
     >official client</a> did not work either.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">❯ pipenv shell
-</span></span><span class="line"><span class="cl">Launching subshell in virtual environment...
-</span></span><span class="line"><span class="cl">❯  . /home/osada/.local/share/virtualenvs/tfltest-7b5b1zAz/bin/activate
-</span></span><span class="line"><span class="cl">❯ cd stomp-client-python
-</span></span><span class="line"><span class="cl">❯ ./opendata-nationalrail-client.py
-</span></span><span class="line"><span class="cl">Connecting to darwin-dist-44ae45.nationalrail.co.uk
-</span></span><span class="line"><span class="cl">Disconnected waiting 5 seconds before exiting
-</span></span><span class="line"><span class="cl">^CTraceback (most recent call last):
-</span></span><span class="line"><span class="cl">  File &#34;/home/osada/progs/tfltest/stomp-client-python/./opendata-nationalrail-client.py&#34;, line 108, in &lt;module&gt;
-</span></span><span class="line"><span class="cl">    time.sleep(1)
-</span></span><span class="line"><span class="cl">KeyboardInterrupt
-</span></span></code></pre></div><p>So that was a dead end because I didn&rsquo;t really have the temerity to debug this right then. Rummaging around in that openraildata org in github, the next repo was a java client. I have not done any Java development in years but I decided to give it a go since that seemed the quickest way to get things going.</p>
-<h2 id="re-learning-java-in-a-pinch">Re-learning Java in a pinch</h2>
-<p>The first thing to do was setup the developer environment. Since I had not done so before, I install the JDK. Since I wasn&rsquo;t sure which version to go with I installed both java 11 version and java 17 versions. I decided to give java 17 version a try. Since I am on arch (well, technically manjaro) I have to use the following command to update the alternatives where alternative is the term used on Ubuntu side.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">❯ sudo archlinux-java status
-</span></span><span class="line"><span class="cl">Available Java environments:
-</span></span><span class="line"><span class="cl">java-11-openjdk (default)
-</span></span><span class="line"><span class="cl">java-17-openjdk
-</span></span><span class="line"><span class="cl">❯ sudo archlinux-java set java-17-openjdk
-</span></span><span class="line"><span class="cl">❯ java --version
-</span></span><span class="line"><span class="cl">openjdk 17.0.1 2021-10-19
-</span></span><span class="line"><span class="cl">OpenJDK Runtime Environment (build 17.0.1+12)
-</span></span><span class="line"><span class="cl">OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
-</span></span></code></pre></div><p>Ok, now on to actually building and running the official client. Replace the username and password with what was assigned to you when you signed up. And build and run.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    ❯ mvn spring-boot:run
-</span></span><span class="line"><span class="cl">    [INFO] Scanning for projects...
-</span></span><span class="line"><span class="cl">    [INFO] 
-</span></span><span class="line"><span class="cl">    [INFO] ------------&lt; com.openraildata:openwire-camel-client-java &gt;-------------
-</span></span><span class="line"><span class="cl">    [INFO] Building openwire-camel-client-java 1.2
-</span></span><span class="line"><span class="cl">    [INFO] --------------------------------[ jar ]---------------------------------
-</span></span><span class="line"><span class="cl">    ....
-</span></span><span class="line"><span class="cl">    2021-11-21 21:38:52.480 ERROR 17340 --- [           main] c.s.x.b.v2.runtime.reflect.opt.Injector  : null
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    java.security.PrivilegedActionException: null
-</span></span><span class="line"><span class="cl">   at java.base/java.security.AccessController.doPrivileged(AccessController.java:573) ~[na:na]
-</span></span><span class="line"><span class="cl">   at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.&lt;clinit&gt;(Injector.java:197) ~[jaxb-impl-2.3.0.jar:2.3.0]
-</span></span></code></pre></div><p>Well, that was unexpected. Turns out that newer Java versions don&rsquo;t like some optimization used in JAXB core libraries. According to this <a class="link" href="https://stackoverflow.com/questions/50237516/proper-fix-for-java-10-complaining-about-illegal-reflection-access-by-jaxb-impl"  target="_blank" rel="noopener"
+<pre tabindex="0"><code>
+❯ pipenv shell
+Launching subshell in virtual environment...
+❯  . /home/osada/.local/share/virtualenvs/tfltest-7b5b1zAz/bin/activate
+❯ cd stomp-client-python
+❯ ./opendata-nationalrail-client.py
+Connecting to darwin-dist-44ae45.nationalrail.co.uk
+Disconnected waiting 5 seconds before exiting
+^CTraceback (most recent call last):
+  File &#34;/home/osada/progs/tfltest/stomp-client-python/./opendata-nationalrail-client.py&#34;, line 108, in &lt;module&gt;
+    time.sleep(1)
+KeyboardInterrupt
+</code></pre><p>So that was a dead end because I didn&rsquo;t really have the temerity to debug this right then. Rummaging around in that openraildata org in github, the next repo was a java client. I have not done any Java development in years but I decided to give it a go since that seemed the quickest way to get things going.</p>
+<h2 id="re-learning-java-in-a-pinch">Re-learning Java in a pinch
+</h2><p>The first thing to do was setup the developer environment. Since I had not done so before, I install the JDK. Since I wasn&rsquo;t sure which version to go with I installed both java 11 version and java 17 versions. I decided to give java 17 version a try. Since I am on arch (well, technically manjaro) I have to use the following command to update the alternatives where alternative is the term used on Ubuntu side.</p>
+<pre tabindex="0"><code>
+❯ sudo archlinux-java status
+Available Java environments:
+java-11-openjdk (default)
+java-17-openjdk
+❯ sudo archlinux-java set java-17-openjdk
+❯ java --version
+openjdk 17.0.1 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12)
+OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
+</code></pre><p>Ok, now on to actually building and running the official client. Replace the username and password with what was assigned to you when you signed up. And build and run.</p>
+<pre tabindex="0"><code>
+    ❯ mvn spring-boot:run
+    [INFO] Scanning for projects...
+    [INFO] 
+    [INFO] ------------&lt; com.openraildata:openwire-camel-client-java &gt;-------------
+    [INFO] Building openwire-camel-client-java 1.2
+    [INFO] --------------------------------[ jar ]---------------------------------
+    ....
+    2021-11-21 21:38:52.480 ERROR 17340 --- [           main] c.s.x.b.v2.runtime.reflect.opt.Injector  : null
+
+    java.security.PrivilegedActionException: null
+   at java.base/java.security.AccessController.doPrivileged(AccessController.java:573) ~[na:na]
+   at com.sun.xml.bind.v2.runtime.reflect.opt.Injector.&lt;clinit&gt;(Injector.java:197) ~[jaxb-impl-2.3.0.jar:2.3.0]
+</code></pre><p>Well, that was unexpected. Turns out that newer Java versions don&rsquo;t like some optimization used in JAXB core libraries. According to this <a class="link" href="https://stackoverflow.com/questions/50237516/proper-fix-for-java-10-complaining-about-illegal-reflection-access-by-jaxb-impl"  target="_blank" rel="noopener"
     >Stackoverflow</a> answer it seems that using any version of JAXB above 2.3.0 should do the trick but after several attempts at changing dependencies and other futile attempts, I just gave up and switched to Java 11. And that seems to work fine with just a warning. Homework for later!</p>
 <p>Switching to Java 11 made everything work and finally we were getting some data from the feed, Success!</p>
-<h2 id="note-about-the-java-solution-and-how-it-works">Note about the Java solution and how it works</h2>
-<p>Taking a step back and actually reading through the source code for the Java Client showed me that the code is unusually succinct, specially compared to my memories of bloated hunks of code that I remember being the standard enterprise Java fare. Turns out it was due to mostly the library that they were using Camel. Camel itself probably deserves a blog post of it&rsquo;s own but for the moment let&rsquo;s quickly dive in to what it is because boy its interesting.</p>
+<h2 id="note-about-the-java-solution-and-how-it-works">Note about the Java solution and how it works
+</h2><p>Taking a step back and actually reading through the source code for the Java Client showed me that the code is unusually succinct, specially compared to my memories of bloated hunks of code that I remember being the standard enterprise Java fare. Turns out it was due to mostly the library that they were using Camel. Camel itself probably deserves a blog post of it&rsquo;s own but for the moment let&rsquo;s quickly dive in to what it is because boy its interesting.</p>
 <p>This library traces it&rsquo;s roots back to <a class="link" href="https://www.enterpriseintegrationpatterns.com/"  target="_blank" rel="noopener"
     >Enterprise Integration Patterns book</a> by Gregor Hohpe and Bobby Woolf. That book comes about after the GoF book gets published about the design patterns in OO programming. Now the very second design patterns are mentioned the functional purists amongst you will scoff at the mere mortals who are forced to use Java because <em>we don&rsquo;t need design patterns</em>. But the reality is that patterns transcend individual languages and are a quite useful tool to save people time and effort when developing enterprise application. The honest truth is that Enterprise programmers have to manage with fewer resources than their Web 2.0 brethren, the same sort of expectations. And patterns that can be easily recognized, applied and shared are life savers since it makes the job easier for architects that have to come up with the blueprints and programmers that have to implement them.</p>
 <p>The book defined a set of 65 common integration patterns and the <a class="link" href="https://camel.apache.org/"  target="_blank" rel="noopener"
     >Camel library</a> implements those patterns. It also has support for numerous data formats and endpoints via a unified URI system. This makes it extremely easy to integrate different data sources and sinks. Best thing about this is that the library core is very lightweight and the rest of the functionality uses a plugin architecture. This was a surprise finding and I am somewhat dissapointed to find that no golang library fills the same niche.</p>
-<h2 id="on-to-writing-to-kafka">On to writing to Kafka</h2>
-<p>Now the only thing left to do was writing to Kafka. To accomplish only a very few changes needed to be done. Configuring the connection to Kafka is simple enough. Add the dependencies to pom.xml</p>
+<h2 id="on-to-writing-to-kafka">On to writing to Kafka
+</h2><p>Now the only thing left to do was writing to Kafka. To accomplish only a very few changes needed to be done. Configuring the connection to Kafka is simple enough. Add the dependencies to pom.xml</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;groupId&gt;</span>org.apache.camel<span class="nt">&lt;/groupId&gt;</span>
@@ -437,8 +398,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">exchange</span><span class="p">.</span><span class="na">getMessage</span><span class="p">().</span><span class="na">setBody</span><span class="p">(</span><span class="n">json</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><p>And done! Now we just run a kafka process along with the associated zookeeper instance, create the topic called &ldquo;stomp&rdquo; and viola!</p>
-<h2 id="what-next">What Next?</h2>
-<p>So you have a system that writes some set of JSON messages in to a kafka topic, what next? Well the next steps can be anything you want to learn and experiment with really. For me I am hoping to use this to toy with two pet projects.</p>
+<h2 id="what-next">What Next?
+</h2><p>So you have a system that writes some set of JSON messages in to a kafka topic, what next? Well the next steps can be anything you want to learn and experiment with really. For me I am hoping to use this to toy with two pet projects.</p>
 <ol>
 <li>I want to learn flink including it&rsquo;s CEP engine.</li>
 <li>I want to take <a class="link" href="https://materialize.com/"  target="_blank" rel="noopener"
@@ -472,98 +433,6 @@
 
     
 
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/posts/learninginorganizations/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/img/learning-in-orgs.jpg" loading="lazy" data-key="" data-hash="/img/learning-in-orgs.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Learning In Engineering Organizations</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/about/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">About Me</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/container-part2/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/img/container-arial.jpg" loading="lazy" data-key="" data-hash="/img/container-arial.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Not your grandmas&#39; docker - Part 2</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/container-intro/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/img/container-arial.jpg" loading="lazy" data-key="" data-hash="/img/container-arial.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Not your grandmas&#39; docker - Part 1</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/wsladventures/wsladventures/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Adventures in WSL Land</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
      
     
         
@@ -578,7 +447,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -667,7 +536,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

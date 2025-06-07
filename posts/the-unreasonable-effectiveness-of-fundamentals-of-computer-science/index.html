@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="How core principles of computer science unlock resilient, scalable systems.">
+<title>The Unreasonable Effectiveness of Fundamentals of Computer Science</title>
+
+<link rel='canonical' href='https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/'>
+
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="The Unreasonable Effectiveness of Fundamentals of Computer Science">
+<meta property='og:description' content="How core principles of computer science unlock resilient, scalable systems.">
+<meta property='og:url' content='https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/'>
+<meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='computer science' /><meta property='article:tag' content='distributed systems' /><meta property='article:tag' content='engineering principles' /><meta property='article:tag' content='scalability' /><meta property='article:published_time' content='2025-05-05T14:30:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-05T14:30:00&#43;00:00'/><meta property='og:image' content='https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud.png' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="The Unreasonable Effectiveness of Fundamentals of Computer Science">
+<meta name="twitter:description" content="How core principles of computer science unlock resilient, scalable systems."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud.png' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://osada.blog/profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Curiously Recurring Thoughts in Programming</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/">
+                <img src="/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud_hu_4271150dcce5309b.png"
+                        srcset="/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud_hu_4271150dcce5309b.png 800w, /posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud_hu_191c63cce06a79e3.png 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post The Unreasonable Effectiveness of Fundamentals of Computer Science" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/engineering-principles/" >
+                Engineering Principles
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/">The Unreasonable Effectiveness of Fundamentals of Computer Science</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            How core principles of computer science unlock resilient, scalable systems.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 05, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="origination-of-an-idea">Origination of an Idea
+</h2><p>In 1960, physicist Eugene Wigner published an essay titled “The Unreasonable Effectiveness of Mathematics in the Natural Sciences,” in which he wondered at how concepts born purely in the human mind—group theory, imaginary numbers, differential equations—so uncannily predict the behavior of atoms, rivers, and galaxies alike. He pointed out that the same algebraic structures underlying quantum mechanics also describe crystal symmetries—equations formulated centuries ago that still govern modern optics and fluid dynamics. Wigner called this “the miracle that the language of mathematics is so appropriate to the objects of reality,” and marveled that what seems like intellectual play often often turns out to be nature’s Rosetta Stone.</p>
+<h2 id="anecdote-1--embedded-systems-thinking-to-the-rescue">Anecdote #1 – Embedded Systems Thinking To The Rescue
+</h2><p>Sixteen years ago, I began my career as an embedded developer, coding in C on bare-metal microcontrollers. I programmed UART interfaces, USB and display drivers, and even ported kernels to new boards. I still remember sifting through Russel King’s ARM tree emails and wrestling with poorly formatted hardware manuals to debug a kernel panic at 4 PM on a Friday. Though tedious, those challenges built my detailed mental models.</p>
+<p>Later, watching Matt Godbolt’s talk <a class="link" href="https://www.youtube.com/watch?v=-HNpim5x-IE"  target="_blank" rel="noopener"
+    >“What Every Programmer Should Know about How CPUs Work”</a> reminded me how deeply that embedded foundation influenced my thinking on modern systems.</p>
+<h3 id="from-hardware-to-high-level-bugs">From Hardware to High-Level Bugs
+</h3><p>Recently, a senior engineer pointed out a race condition in our Scala-based HTTP client wrapper. We used a stack of composition layers over the plain Java HTTP client to add caching, circuit breakers, and retries—all written in Scala, a language I was still learning.</p>
+<p>Although I wasn’t a Scala expert, my embedded background gave me a working mental model:</p>
+<ol>
+<li>
+<p><strong>Thread Execution</strong></p>
+<ul>
+<li>Just as interrupt handlers preempt main code on microcontrollers, JVM threads can preempt each other.</li>
+<li>Locks in high-level languages behave like disabling interrupts: they serialize access.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cache State</strong></p>
+<ul>
+<li>In C, I dealt with buffers and pointers; here, I dealt with Scala’s <code>HashMap</code> and <code>Future</code> types.</li>
+<li>Invalidating a buffer in embedded memory mirrors evicting a cache entry in Scala.</li>
+</ul>
+</li>
+<li>
+<p><strong>Synchronization</strong></p>
+<ul>
+<li>Embedded code used mutexes; Scala uses <code>synchronized</code> blocks and <code>ReentrantLock</code>.</li>
+<li>Both ensure only one context mutates shared state at a time.</li>
+</ul>
+</li>
+</ol>
+<h3 id="walking-through-the-bug">Walking Through the Bug
+</h3><ul>
+<li>I mapped each Scala construct to its C equivalent as I stepped through logs and tests.</li>
+<li>I pictured log outputs as memory dumps and threads as interrupt routines racing for shared buffers.</li>
+<li>By the time I suggested wrapping eviction and insertion in a single lock, the engineer hardly needed to read any code—the core issue was clear.</li>
+</ul>
+<h3 id="key-insight">Key Insight
+</h3><p>These core principles of concurrency, memory consistency, and state management apply just as naturally on modern JVMs as on microcontrollers—making new syntax feel like mere icing on a familiar cake.</p>
+<h2 id="anecdote-2--databases-change-data-capture-and-cloud">Anecdote #2 – Databases, Change Data Capture, and Cloud
+</h2><p>During a zero-downtime PostgreSQL upgrade on AWS RDS using AWS DMS, I needed to explain unexpected replication gaps. I did this <strong>without knowing DMS internals</strong>—relying on a simple, general database model.</p>
+<h3 id="general-database-model">General Database Model
+</h3><ul>
+<li><strong>Compute</strong>: Executes SQL queries and transactions.</li>
+<li><strong>Storage</strong>: Persists tables, indexes, and data files.</li>
+<li><strong>WAL (Write-Ahead Log)</strong>: Logs every change before it’s applied.</li>
+</ul>
+<p>CDC tools (DMS, Debezium) tap the WAL to stream inserts, updates, and deletes in real time.</p>
+<h3 id="how-zero-downtime-works-with-dms">How Zero Downtime Works with DMS
+</h3><ol>
+<li><strong>Initial Full Load</strong>: DMS copies existing data from the source database to the target in bulk, creating an exact snapshot.</li>
+<li><strong>CDC Phase</strong>: After the full load, DMS switches to Change Data Capture mode, reading the WAL to capture ongoing changes.</li>
+<li><strong>Continuous Sync</strong>: DMS applies changes to the target in near–real time, keeping it in lockstep while the source remains live.</li>
+<li><strong>Cutover</strong>: At any convenient moment, we switch traffic to the target with negligible downtime, since DMS has reconciled all changes.</li>
+</ol>
+<h3 id="dms-constraints">DMS Constraints
+</h3><ol>
+<li>
+<p><strong>Sequences</strong></p>
+<ul>
+<li>Sequence increments (SERIAL/IDENTITY) emit via the WAL, but DMS ignores them.</li>
+<li>Result: the target’s sequence can lag, causing insert failures.</li>
+</ul>
+</li>
+<li>
+<p><strong>DDL Statements</strong></p>
+<ul>
+<li>DDL (CREATE/ALTER/DROP) bypasses the WAL and is blocked by PostgreSQL’s internal replication triggers.</li>
+<li>Triggers prevent schema changes from entering the WAL, so DMS never sees them.</li>
+</ul>
+</li>
+</ol>
+<p>When I walked through the WAL-based flow and pointed out where PostgreSQL’s internal replication triggers intercept DDL, my teammate—who had never used DMS—instantly saw the picture. They could trace exactly how inserts and updates flow from the source through the WAL, why sequence increments vanish, and how triggers halt schema changes. Within minutes, they could predict which operations DMS would drop and why, without ever consulting AWS documentation.</p>
+<blockquote>
+<p>Note: Manual sequence sync (e.g., querying <code>last_value</code> and <code>ALTER SEQUENCE</code> to catch up) exists, but that wasn’t the point.</p></blockquote>
+<h3 id="key-takeaway">Key Takeaway
+</h3><p>Anchoring on <strong>compute</strong>, <strong>storage</strong>, <strong>WAL</strong>, and <strong>triggers</strong> lets you predict any CDC tool’s behavior without learning product-specific quirks. With this core mental model, detailed DMS knowledge becomes optional.</p>
+<h2 id="anecdote-3---redis-ssh-tunneling-and-distributed-systems">Anecdote #3 - Redis, SSH Tunneling, and Distributed Systems
+</h2><p>Distributed consensus once felt like arcane wizardry—until I read the <a class="link" href="https://raft.github.io/raft.pdf"  target="_blank" rel="noopener"
+    >Raft paper</a> (highly recommended) and built my own implementation. Suddenly, concepts like <strong>leader election</strong>, <strong>log replication</strong>, and <strong>network partitions</strong> clicked, giving me a reliable mental model for any distributed system.</p>
+<h3 id="from-theory-to-redis">From Theory to Redis
+</h3><p>With Raft under my belt, I could immediately grasp how Redis handles replication in its single-master setup:</p>
+<ol>
+<li>
+<p><strong>Leader Election</strong></p>
+<ul>
+<li>A single Redis instance acts as the “master.”</li>
+<li>If it fails or is unreachable, followers hold an election to choose a new master.</li>
+</ul>
+</li>
+<li>
+<p><strong>Replication &amp; Sharding</strong></p>
+<ul>
+<li>Followers continuously pull the master’s write-ahead commands to stay in sync.</li>
+<li>In a clustered setup, Redis shards your keyspace: each master node owns a subset of hash slots (0–16383), and clients must direct commands to the correct node.</li>
+<li>Clients receive a <code>MOVED</code> or <code>ASK</code> response when they connect to the wrong shard.</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-real-world-ssh-tunnel-puzzle">The Real-World SSH-Tunnel Puzzle
+</h3><p>Last week, an engineer couldn’t <code>GET</code> keys through our AWS ElastiCache Redis cluster after I’d set up an SSH tunnel. Here’s what happened:</p>
+<ol>
+<li>
+<p><strong>What We Did</strong></p>
+<ul>
+<li>We tunneled port 6379 on <strong>one</strong> Redis node through SSH to localhost.</li>
+<li>We pointed our client at <code>localhost:6379</code> and saw all the keys that lived on <strong>that</strong> shard.</li>
+</ul>
+</li>
+<li>
+<p><strong>Why Other Keys Failed</strong></p>
+<ul>
+<li>Redis uses the <code>MOVED</code> response to tell clients when a key lives on another shard.</li>
+<li>A standard Redis client will follow this redirect—unless it’s only connected to a single tunnel endpoint.</li>
+<li>Since we didn’t tunnel the other shards, any <code>MOVED</code> response couldn’t be followed, and GETs failed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Takeaway</strong></p>
+<ul>
+<li><strong>Fundamental model</strong>: Redis clusters map keys → hash slots → specific nodes.</li>
+<li><strong>Practical fix</strong>: Either tunnel all cluster nodes (one port per shard) or use a Redis-aware proxy that understands cluster redirections (for example, <a class="link" href="https://github.com/antirez/redis/tree/unstable/src/cluster"  target="_blank" rel="noopener"
+    >redis-cluster-proxy</a>, which handles MOVED/ASK redirections automatically).</li>
+</ul>
+</li>
+</ol>
+<p>Once your mental model of leader election, replication, and sharding is set, implementation details—SSH tunnels or AWS quirks—feel like mere mechanical plumbing.</p>
+<h2 id="why-you-should-care">Why You Should Care
+</h2><p>In software, it’s easy to chase the latest framework or database. One month it’s a shiny JavaScript library; a decade ago, it was the NoSQL craze. But each new tool brings its own rules, quirks, and failure modes. If you only learn surface details, you rebuild mental models from scratch each time—and troubleshooting at 3 AM becomes a frantic search through half-memorized documentation.</p>
+<p>Instead, invest in fundamentals: consensus algorithms, write-ahead logs, and trigger mechanisms. As Daniel Kahneman explains in <a class="link" href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow"  target="_blank" rel="noopener"
+    >Thinking, Fast and Slow</a>, these become your System 1 intuitions—instant, reliable mental shortcuts. When you grasp systems at their core, mapping any new tool onto those patterns is trivial.</p>
+<p>This pays off:</p>
+<ul>
+<li><strong>Predictable troubleshooting</strong>: With mental models ingrained, you diagnose issues by analogy—whether it’s a Raft-based consensus failure or a Redis shard miss—without rummaging through half-learned tutorials.</li>
+<li><strong>Efficient collaboration</strong>: Shared fundamentals keep conversations focused on solutions, not on translating tool-specific jargon. You onboard teammates faster and avoid miscommunication by speaking a common language of system design.</li>
+</ul>
+<p>Mastering fundamentals isn’t academic—it’s the key to durable expertise, so you spend less time learning syntax and more time solving real problems, regardless of tomorrow’s hottest technology.```</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/computer-science/">Computer Science</a>
+        
+            <a href="/tags/distributed-systems/">Distributed Systems</a>
+        
+            <a href="/tags/engineering-principles/">Engineering Principles</a>
+        
+            <a href="/tags/scalability/">Scalability</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Curiously Recurring Thoughts in Programming
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

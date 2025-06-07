@@ -29,8 +29,8 @@
   &lt;/div&gt;
   
 &lt;p&gt;Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.&lt;/p&gt;
-&lt;h2 id=&#34;components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/DockerEcosystem.png&#34;
+&lt;h2 id=&#34;components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/DockerEcosystem.png&#34;
 	
 	
 	
@@ -40,8 +40,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;container-engines&#34;&gt;Container Engines&lt;/h3&gt;
-&lt;p&gt;A container engine will run a container given the user input to do so. You can customize it&amp;rsquo;s behavior through several parameters. Note that it does not necessarily need to know where images are on remote servers and how to get them. In fact it even does not actually run them by itself, usually thats delegated to the container runtime. More on that later. And there are of course proprietary implementations of container engines at various cloud providers.&lt;/p&gt;
+&lt;h3 id=&#34;container-engines&#34;&gt;Container Engines
+&lt;/h3&gt;&lt;p&gt;A container engine will run a container given the user input to do so. You can customize it&amp;rsquo;s behavior through several parameters. Note that it does not necessarily need to know where images are on remote servers and how to get them. In fact it even does not actually run them by itself, usually thats delegated to the container runtime. More on that later. And there are of course proprietary implementations of container engines at various cloud providers.&lt;/p&gt;
 &lt;p&gt;The basic responsibilities of this layer include&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Using various input to determine runtime behavior of the container (network, storage, etc)&lt;/li&gt;
@@ -61,20 +61,20 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://linuxcontainers.org/lxd/introduction/#LXD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;LXD&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;container-host&#34;&gt;Container Host&lt;/h3&gt;
-&lt;p&gt;The container host is the system that runs the containers. This could be your local machine running an *nix OS, a VM on the same or a VM/baremetal machine on public/private cloud. Once a container image is pulled from a Registry Server to the local container host, it is said to be in the local cache.&lt;/p&gt;
-&lt;h3 id=&#34;registry-server&#34;&gt;Registry Server&lt;/h3&gt;
-&lt;p&gt;A registry server is essentially a server that is used to store and server docker images from. These are just URIs usually connected to over HTTPS. you would usually use REST API to interact with them.&lt;/p&gt;
+&lt;h3 id=&#34;container-host&#34;&gt;Container Host
+&lt;/h3&gt;&lt;p&gt;The container host is the system that runs the containers. This could be your local machine running an *nix OS, a VM on the same or a VM/baremetal machine on public/private cloud. Once a container image is pulled from a Registry Server to the local container host, it is said to be in the local cache.&lt;/p&gt;
+&lt;h3 id=&#34;registry-server&#34;&gt;Registry Server
+&lt;/h3&gt;&lt;p&gt;A registry server is essentially a server that is used to store and server docker images from. These are just URIs usually connected to over HTTPS. you would usually use REST API to interact with them.&lt;/p&gt;
 &lt;p&gt;When a container runtime finds that a container image cannot be found in the local cache, it &lt;em&gt;can&lt;/em&gt; invoke a tool to fetch the container image (aka repository) from the registry server. The most well known registry server is docker.io but there are several public alternatives as well as implementations that can be hosted privately for more customization and security. There are also registries that can be reached publicly but only hosts private container images/repositories. Note that these should handled very carefully due to supply chain attacks. It is very important that you think out the consequences of what registries you enable and the security around that.&lt;/p&gt;
-&lt;h4 id=&#34;public-container-registries&#34;&gt;Public container registries&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;public-container-registries&#34;&gt;Public container registries
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docker.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;DockerHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://quay.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;CoreOS Quay&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;public-reachable---private-repository-registries&#34;&gt;Public reachable - private repository registries&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;public-reachable---private-repository-registries&#34;&gt;Public reachable - private repository registries
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/ecr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Elastic Container Registry&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/container-registry/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -82,8 +82,8 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://azure.microsoft.com/en-us/services/container-registry/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Azure Container Registry&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;self-hosted-registries&#34;&gt;Self hosted registries&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;self-hosted-registries&#34;&gt;Self hosted registries
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/datacenter/dtr/2.4/guides/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Docker Trusted Registry&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vmware/harbor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -91,18 +91,18 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jfrog.com/confluence/display/RTF/Getting&amp;#43;Started&amp;#43;with&amp;#43;Artifactory&amp;#43;as&amp;#43;a&amp;#43;Docker&amp;#43;Registry&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;JFrog Artifactory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;container-orchestration&#34;&gt;Container Orchestration&lt;/h3&gt;
-&lt;p&gt;Container usage usually starts with a single developer using a docker image to test out his software and making sure it is working as intended. But once multiple teams and multiple applications get involved, you run in to more facets to consider such as shared networking, storage, monitoring and a whole host of others. This is basically the difference between &amp;ldquo;run on my machine&amp;rdquo; vs &amp;ldquo;should run on production&amp;rdquo;. Shipping these applications to production and running these there involves a lot more scaffolding than just running a single container on a developers machine.&lt;/p&gt;
-&lt;h4 id=&#34;responsibilities-of-the-container-orchestration-system&#34;&gt;Responsibilities of the Container Orchestration System&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;container-orchestration&#34;&gt;Container Orchestration
+&lt;/h3&gt;&lt;p&gt;Container usage usually starts with a single developer using a docker image to test out his software and making sure it is working as intended. But once multiple teams and multiple applications get involved, you run in to more facets to consider such as shared networking, storage, monitoring and a whole host of others. This is basically the difference between &amp;ldquo;run on my machine&amp;rdquo; vs &amp;ldquo;should run on production&amp;rdquo;. Shipping these applications to production and running these there involves a lot more scaffolding than just running a single container on a developers machine.&lt;/p&gt;
+&lt;h4 id=&#34;responsibilities-of-the-container-orchestration-system&#34;&gt;Responsibilities of the Container Orchestration System
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Scheduling and running container workloads on top of a resource provisioning system&lt;/li&gt;
 &lt;li&gt;Providing networking layer for containers to inter-communicate&lt;/li&gt;
 &lt;li&gt;Providing network traffic control&lt;/li&gt;
 &lt;li&gt;Service Discovery (optional)&lt;/li&gt;
 &lt;li&gt;Providing a standardized system definition file (helm charts, k8s yaml, docker compose etc)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;container-orchestration-systems&#34;&gt;Container Orchestration Systems&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;container-orchestration-systems&#34;&gt;Container Orchestration Systems
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kubernetes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mesosphere.github.io/marathon/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -110,17 +110,17 @@
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/swarm/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Docker Swarm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;container-runtime&#34;&gt;Container Runtime&lt;/h3&gt;
-&lt;p&gt;A container runtime actually runs the container image that is on disk essentially converting the on-disk container image to a running process set. The Open Containers Initiative (OCI) Runtime Standard reference implementation  is runc. This is the most widely used container runtime, but there are others OCI compliant runtimes. There are various types of them as well. Some are native runtimes that run the container directly on the host. Some are sandboxed runtimes that run either on a kernel proxy layer or a unikernel. And the latest addition to this space is the standardized interface into kubernetes container runtime - Container Runtime Interface. Kubernetes started with docker runtime as the only option for this and as time went by they started to migrate away from the docker dependency. As they did, they introduced CRI as a way to democratizing/virtualizing the runtime tooling. Now there are multiple conforming implementations&lt;/p&gt;
-&lt;h4 id=&#34;responsibilities-of-the-container-runtime&#34;&gt;Responsibilities of the container runtime&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;container-runtime&#34;&gt;Container Runtime
+&lt;/h3&gt;&lt;p&gt;A container runtime actually runs the container image that is on disk essentially converting the on-disk container image to a running process set. The Open Containers Initiative (OCI) Runtime Standard reference implementation  is runc. This is the most widely used container runtime, but there are others OCI compliant runtimes. There are various types of them as well. Some are native runtimes that run the container directly on the host. Some are sandboxed runtimes that run either on a kernel proxy layer or a unikernel. And the latest addition to this space is the standardized interface into kubernetes container runtime - Container Runtime Interface. Kubernetes started with docker runtime as the only option for this and as time went by they started to migrate away from the docker dependency. As they did, they introduced CRI as a way to democratizing/virtualizing the runtime tooling. Now there are multiple conforming implementations&lt;/p&gt;
+&lt;h4 id=&#34;responsibilities-of-the-container-runtime&#34;&gt;Responsibilities of the container runtime
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Setting up the container image fs view at the mount point given&lt;/li&gt;
 &lt;li&gt;Using the config json to customize the container runtime parameters&lt;/li&gt;
 &lt;li&gt;Starting the containerized process using clone or similar syscall&lt;/li&gt;
 &lt;li&gt;Setting the isolation and security constructs such as cgroups,  namespace and SELinux&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;container-runtime-systems&#34;&gt;Container Runtime Systems&lt;/h4&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;container-runtime-systems&#34;&gt;Container Runtime Systems
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Open Container Initiative (OCI) Runtimes
 &lt;ul&gt;
 &lt;li&gt;Native Runtimes
@@ -174,8 +174,8 @@
   &lt;/div&gt;
   
 &lt;p&gt;Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.&lt;/p&gt;
-&lt;h2 id=&#34;operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/OS-level-virt.png&#34;
+&lt;h2 id=&#34;operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/OS-level-virt.png&#34;
 	
 	
 	
@@ -187,8 +187,8 @@
 &gt;&lt;br&gt;
 &lt;br&gt;
 Above is a screenshot of the wikipedia page for OS Level Virtualization Technologies. And notice that there are several technologies now close to 20 years old. So virtualization at OS level is by no means a new concept. Lets take a look at some of them&lt;/p&gt;
-&lt;h3 id=&#34;chroot&#34;&gt;chroot&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;
+&lt;h3 id=&#34;chroot&#34;&gt;chroot
+&lt;/h3&gt;&lt;p&gt;&lt;br&gt;
 This is perhaps the most simple form of a container. It basically changes the root directory to a different directory as specified by the root user. The idea being that the user in the chroot cannot then escape our of that chroot directory in to the real root dir. And for this reason we usually refer to it as a chroot jail.&lt;/p&gt;
 &lt;p&gt;There are no other privilege checking or access checking enabled. A privilege user can still create special nodes and run commands from with in the chroot. Therefore it is not really suitable as a way to prevent unwanted access from privileged users. Now since the programs usually expect a standard set of directories and files within the root dir, there are tools like &lt;a class=&#34;link&#34; href=&#34;https://olivier.sessink.nl/jailkit/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;jailkit&lt;/a&gt; that simplify this procedure&lt;/p&gt;
@@ -221,12 +221,12 @@ This is perhaps the most simple form of a container. It basically changes the ro
 &lt;li&gt;the build process is the same&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;This means that you can reproduce older builds on demand assuming you keep the chroot tarballs around for long enough.&lt;/p&gt;
-&lt;h3 id=&#34;solaris-zones-and-containers&#34;&gt;Solaris Zones and Containers&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;
+&lt;h3 id=&#34;solaris-zones-and-containers&#34;&gt;Solaris Zones and Containers
+&lt;/h3&gt;&lt;p&gt;&lt;br&gt;
 These are probably the best known implementation of OS level virtualization outside of linux. Although FreeBSD jails are quite well known too. I have no experience regarding those though so I will stick with Zones.&lt;/p&gt;
 &lt;p&gt;A Solaris Container is the combination of system resource controls and the boundary separation provided by zones. Zones are completely separate server instances within a single physical server. In fact these are usually used to provide isolated test servers for the developers since almost no one is going to need a maxed out SPARC-T5-8 to test their application. Sys admins can reduce cost and provide most of the same protections of separate machines on a single machine by using zones.&lt;/p&gt;
-&lt;h3 id=&#34;systemd-nspawn&#34;&gt;Systemd nspawn&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;
+&lt;h3 id=&#34;systemd-nspawn&#34;&gt;Systemd nspawn
+&lt;/h3&gt;&lt;p&gt;&lt;br&gt;
 &lt;img src=&#34;https://osadalakmal.github.io/img/systemd-meme.png&#34;
 	
 	
@@ -250,8 +250,8 @@ These are probably the best known implementation of OS level virtualization outs
 &gt;&lt;/p&gt;
 &lt;p&gt;This is implemented on top of cgroups and is supposed to help users with containing processes easily in systemd. It is better in security terms than a chroot since it has process level security features as well. In that way it is similar to lxd or lxd. You can find more information &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/systemd-nspawn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;lxclxd&#34;&gt;LXC/LXD&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxc-architecture.jpg&#34;
+&lt;h3 id=&#34;lxclxd&#34;&gt;LXC/LXD
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxc-architecture.jpg&#34;
 	
 	
 	
@@ -275,13 +275,13 @@ These are probably the best known implementation of OS level virtualization outs
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;LXD is a system container manager. It is basically an alternative implementation of LXC rather than something completely different. Just that it is being pushed by canonical instead of Red Hat (Oops I mean IBM!).&lt;/p&gt;
-&lt;h2 id=&#34;enter-docker&#34;&gt;Enter docker&lt;/h2&gt;
-&lt;p&gt;The problem with all these OS level virtualization technology was the audience. In fact it wasn&amp;rsquo;t even a problem but a feature. They were all aimed at system administrators, developer tooling producers and similar folks who provided services &lt;em&gt;to the developers&lt;/em&gt; To be the next big thing apparently you needed to target the developers who needed a dumbed down front end to the whole thing so they could focus on the more interesting things - the business logic.&lt;/p&gt;
+&lt;h2 id=&#34;enter-docker&#34;&gt;Enter docker
+&lt;/h2&gt;&lt;p&gt;The problem with all these OS level virtualization technology was the audience. In fact it wasn&amp;rsquo;t even a problem but a feature. They were all aimed at system administrators, developer tooling producers and similar folks who provided services &lt;em&gt;to the developers&lt;/em&gt; To be the next big thing apparently you needed to target the developers who needed a dumbed down front end to the whole thing so they could focus on the more interesting things - the business logic.&lt;/p&gt;
 &lt;p&gt;Docker was created to mostly take existing virtualization technology and simplify it to the point your average developer could operate it without even understanding what was going on under the hood. Like all good tools it allowed people to make use of the technology without worrying too much about how and why of it.&lt;/p&gt;
 &lt;p&gt;It reduced the setup of the container environment to a simple enough DSL that solved 99% of the problems of the average developer. It reduced the number of concepts the developers had to hold in their heads to a well defined few. And it made the management of the containers and their run time behavior a breeze by introducing a single well defined command line interface.&lt;/p&gt;
 &lt;p&gt;This meant that for the better part of the last decade docker was known as the defacto container management system and rightly so.&lt;/p&gt;
-&lt;h2 id=&#34;why-not-docker&#34;&gt;Why not docker?&lt;/h2&gt;
-&lt;p&gt;Even though the user facing parts of the docker eco system was well thought out and intuitive, the backend and the ergonomics were anything but. If you have ever had the (mis?)fortune of having to work with dockerfiles for anything more than simple Hello World projects, you will know how hard it is to produce good ones that make sensible trade offs and produce acceptable image sizes.&lt;/p&gt;
+&lt;h2 id=&#34;why-not-docker&#34;&gt;Why not docker?
+&lt;/h2&gt;&lt;p&gt;Even though the user facing parts of the docker eco system was well thought out and intuitive, the backend and the ergonomics were anything but. If you have ever had the (mis?)fortune of having to work with dockerfiles for anything more than simple Hello World projects, you will know how hard it is to produce good ones that make sensible trade offs and produce acceptable image sizes.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;The builds tend to be too blown up. Image layers are unnecessarily large if you don&amp;rsquo;t take absolute care. See &lt;a class=&#34;link&#34; href=&#34;https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -303,8 +303,8 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;These are just a few but you get the idea. And this is where buildah comes in&lt;/p&gt;
-&lt;h2 id=&#34;what-buildah-is&#34;&gt;What buildah is&lt;/h2&gt;
-&lt;p&gt;Buildah take the docker approach of building container images and managing them and first breaks it down in to components. Specifically there are three main components.&lt;/p&gt;
+&lt;h2 id=&#34;what-buildah-is&#34;&gt;What buildah is
+&lt;/h2&gt;&lt;p&gt;Buildah take the docker approach of building container images and managing them and first breaks it down in to components. Specifically there are three main components.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://buildah.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;buildah&lt;/a&gt; -&lt;br&gt;

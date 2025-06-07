@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers">
 <title>Getting lost in weeds of Podman</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Getting lost in weeds of Podman'>
-<meta property='og:description' content='Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers'>
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Getting lost in weeds of Podman">
+<meta property='og:description' content="Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers">
 <meta property='og:url' content='https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='docker' /><meta property='article:tag' content='virtualization' /><meta property='article:tag' content='podman' /><meta property='article:published_time' content='2022-11-07T15:31:29&#43;05:30'/><meta property='article:modified_time' content='2022-11-07T15:31:29&#43;05:30'/><meta property='og:image' content='https://osadalakmal.github.io/img/podman-logo-full-vert.png' />
@@ -16,26 +16,6 @@
 <meta name="twitter:description" content="Switching to podman in practice. We explore how we can switch to podman in reality and how to make use of rootless containers"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://osadalakmal.github.io/img/podman-logo-full-vert.png' />
     <link rel="shortcut icon" href="/img/favicon.ico" />
-
-  
-    
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0KDQ9KLJCX');
-        }
-      </script>
-    
-  
-
 
     </head>
     <body class="
@@ -143,31 +123,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://osadalakmal.github.io/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -175,7 +136,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -183,10 +144,11 @@
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -289,8 +251,8 @@
   </div>
   
 <p>Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks. It also has better integration with other tools in anything-but-docker space including buildah and skopeo</p>
-<h2 id="what-are-rootless-containers">What are rootless containers</h2>
-<p><img src="/img/rootless-containers.png"
+<h2 id="what-are-rootless-containers">What are rootless containers
+</h2><p><img src="/img/rootless-containers.png"
 	
 	
 	
@@ -311,11 +273,11 @@ A big selling point of using podman is that you will be able to run rootless con
     >supervisord</a></li>
 </ol>
 <p>But again, these are mitigating measures and not a solution to the underlying issue of running containers as the root user. rootless containers address the root cause by allowing you to run containers as a non privileged user. This means that even if there were to be a breakout, the attacker still would need a privilege escalation bug on the host env to be effective at attacking the host system</p>
-<h3 id="my-use-case-for-rootless-containers">My use case for rootless containers</h3>
-<p><br>
+<h3 id="my-use-case-for-rootless-containers">My use case for rootless containers
+</h3><p><br>
 A friend had asked me for advice on best practices in FTPing files around. Now the best advice that I can give is not to FTP files around in 2022 anymore and there are much better data transfer mechanisms out there. But if you had to do it, there are ways to take most of the pain out of it such as using checksums and delta encoding and so on. While I was thinking of writing a blog post on those practices, I needed to write some test code. To test out this code, I needed a FTP server. Now I would rather not put any server on my primary workstation that need not be there and this meant I had to do this inside a docker container.</p>
-<h3 id="but-i-dont-have-docker">But I don&rsquo;t have docker</h3>
-<p>I had tried to switch to podman sometime back but it was mostly limited to pulling images directly off docker/quay and using them. I had not gotten around to building images with podman or buildah much. But this time I had lucked out and the most commonly used FTP image seemed to lack support for running as a rootless container binding to ports higher than 1024 for the listening port. If you did not know about this - unprivileged users on linux cannot bind to ports lower than 1024 usually as explained <a class="link" href="https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html"  target="_blank" rel="noopener"
+<h3 id="but-i-dont-have-docker">But I don&rsquo;t have docker
+</h3><p>I had tried to switch to podman sometime back but it was mostly limited to pulling images directly off docker/quay and using them. I had not gotten around to building images with podman or buildah much. But this time I had lucked out and the most commonly used FTP image seemed to lack support for running as a rootless container binding to ports higher than 1024 for the listening port. If you did not know about this - unprivileged users on linux cannot bind to ports lower than 1024 usually as explained <a class="link" href="https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html"  target="_blank" rel="noopener"
     >here</a>. There are ways around this for example by using <a class="link" href="https://en.wikipedia.org/wiki/Authbind"  target="_blank" rel="noopener"
     >authbind</a> to achieve this via a setuid helper executable or using POSIX <a class="link" href="https://man7.org/linux/man-pages/man7/capabilities.7.html"  target="_blank" rel="noopener"
     >capabilities system</a></p>
@@ -323,8 +285,11 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
     >docker-vsftpd</a> to <a class="link" href="https://github.com/osadalakmal/podman-vsftpd"  target="_blank" rel="noopener"
     >here</a> and started from there. It was a simple change to add the new port. And add the change to the README. The full pull request is <a class="link" href="https://github.com/fauria/docker-vsftpd/pull/76"  target="_blank" rel="noopener"
     >here</a></p>
-<h3 id="adding-finishing-touches">Adding finishing touches</h3>
-<p>I am a bit of a perfectionist and once I had started work on this repo I had to add a couple of finishing touches. The first was an automated build process. I had used github workflows and actions to achieve this. Here is the code for that</p>
+<h3 id="adding-finishing-touches">Adding finishing touches
+</h3><p>I am a bit of a perfectionist and once I had started work on this repo I had to add a couple of finishing touches. The first was an automated build process. I had used github workflows and actions to achieve this. Here is the code for that</p>
+
+
+
 
 
 
@@ -394,7 +359,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">vsftpd</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l">latest ${{ github.sha }}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">containerfiles</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">          ./Dockerfile</span><span class="w">          
+</span></span></span><span class="line"><span class="cl"><span class="sd">          ./Dockerfile</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Podman Login action (https://github.com/redhat-actions/podman-login) also be used to log in,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># in which case &#39;username&#39; and &#39;password&#39; can be omitted.</span><span class="w">
@@ -413,6 +378,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>
+
 <p>Things to note here are the build image action. Note that we are using buildah action to build the image and not docker. This means we keep the pipeline clear of docker even though we will still use docker.io to distribute the image.</p>
 <p>Then note the secret mechanism. Github workflows manage secrets injection through envrionment variables as most other CI/CD pipelines do. The actual secret is input at the github settings level. Then it gets injected in to the CI/CD envrionment and is available for use by any action given access to it through the YAML code.</p>
 <p>The next to do thing in my list is adding shellcheck support to the CI/CD pipeline. That will be left for another day. But for now I have cleared the shellcheck comments manually. The pull request is <a class="link" href="https://github.com/osadalakmal/podman-vsftpd/pull/1/files#diff-fc8d3c534affdef352ee2e218f1bf36e45b9991b2b0e0b9f4b844eea147643c5"  target="_blank" rel="noopener"
@@ -429,8 +395,8 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 <p>Quotin variable usage. You never know when spaces in values will trip you up otherwise.</p>
 </li>
 </ol>
-<h3 id="the-preamble-becomes-the-main-act">The preamble becomes the main act</h3>
-<p>So there you have it. We set out to write about good FTP system practices instead wrote a blog post about how to use podman and shellcheck. The next one I promise will be on topic!</p>
+<h3 id="the-preamble-becomes-the-main-act">The preamble becomes the main act
+</h3><p>So there you have it. We set out to write about good FTP system practices instead wrote a blog post about how to use podman and shellcheck. The next one I promise will be on topic!</p>
 
 </section>
 
@@ -458,130 +424,6 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 
     
 
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/posts/avoiding-burnout-in-software-domain/">
-        
-        
-            <div class="article-image">
-                <img src="/posts/avoiding-burnout-in-software-domain/_hu5df0e3d8fadaef014cfca6227ca40c1a_23058_52fb1cf6682f5e219488d60f39597017.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Avoiding burnout in software domain"
-                        
-                        data-hash="md5-TGMzJqdSIIn0Hq/uYTZ85A==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Avoiding burnout in software domain</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/agile-the-snake-oil-for-cobra-bites/">
-        
-        
-            <div class="article-image">
-                <img src="/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.ffffcee268d957cdba82683f6362a020_hu043ed9e476a57edadd533ef3a80804da_33722_250x150_fill_q75_box_smart1.jpeg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Agile : The Snake Oil for Cobra Bites"
-                        
-                        data-hash="md5-///O4mjZV826gmg/Y2KgIA==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Agile : The Snake Oil for Cobra Bites</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/hyperscan-cpp-wrapper/">
-        
-        
-            <div class="article-image">
-                <img src="/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.6f9e33030afd3302f286efe1ad7db539_hu3efa0aa52005a824d69e6ac906892b60_414522_250x150_fill_q75_h2_box_smart1_2.webp" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Hyperscan C&#43;&#43; Wrapper"
-                        
-                        data-hash="md5-b54zAwr9MwLyhu/hrX21OQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Hyperscan C&#43;&#43; Wrapper</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/starting-with-realtime-data/">
-        
-        
-            <div class="article-image">
-                <img src="/posts/starting-with-realtime-data/realtime-splash.940bf567649bd924c8f9fac03dce929b_hu957b1156cd6545e64f4a903ae42187fe_647318_250x150_fill_q75_box_smart1.jpg" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Starting With Realtime Data"
-                        
-                        data-hash="md5-lAv1Z2Sb2STI&#43;frAPc6Smw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Starting With Realtime Data</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/posts/learninginorganizations/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/img/learning-in-orgs.jpg" loading="lazy" data-key="" data-hash="/img/learning-in-orgs.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Learning In Engineering Organizations</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
      
     
         
@@ -596,7 +438,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -685,7 +527,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

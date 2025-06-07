@@ -28,8 +28,8 @@
   &lt;/div&gt;
   
 &lt;p&gt;Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks. It also has better integration with other tools in anything-but-docker space including buildah and skopeo&lt;/p&gt;
-&lt;h2 id=&#34;what-are-rootless-containers&#34;&gt;What are rootless containers&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/rootless-containers.png&#34;
+&lt;h2 id=&#34;what-are-rootless-containers&#34;&gt;What are rootless containers
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/rootless-containers.png&#34;
 	
 	
 	
@@ -50,11 +50,11 @@ A big selling point of using podman is that you will be able to run rootless con
     &gt;supervisord&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;But again, these are mitigating measures and not a solution to the underlying issue of running containers as the root user. rootless containers address the root cause by allowing you to run containers as a non privileged user. This means that even if there were to be a breakout, the attacker still would need a privilege escalation bug on the host env to be effective at attacking the host system&lt;/p&gt;
-&lt;h3 id=&#34;my-use-case-for-rootless-containers&#34;&gt;My use case for rootless containers&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;
+&lt;h3 id=&#34;my-use-case-for-rootless-containers&#34;&gt;My use case for rootless containers
+&lt;/h3&gt;&lt;p&gt;&lt;br&gt;
 A friend had asked me for advice on best practices in FTPing files around. Now the best advice that I can give is not to FTP files around in 2022 anymore and there are much better data transfer mechanisms out there. But if you had to do it, there are ways to take most of the pain out of it such as using checksums and delta encoding and so on. While I was thinking of writing a blog post on those practices, I needed to write some test code. To test out this code, I needed a FTP server. Now I would rather not put any server on my primary workstation that need not be there and this meant I had to do this inside a docker container.&lt;/p&gt;
-&lt;h3 id=&#34;but-i-dont-have-docker&#34;&gt;But I don&amp;rsquo;t have docker&lt;/h3&gt;
-&lt;p&gt;I had tried to switch to podman sometime back but it was mostly limited to pulling images directly off docker/quay and using them. I had not gotten around to building images with podman or buildah much. But this time I had lucked out and the most commonly used FTP image seemed to lack support for running as a rootless container binding to ports higher than 1024 for the listening port. If you did not know about this - unprivileged users on linux cannot bind to ports lower than 1024 usually as explained &lt;a class=&#34;link&#34; href=&#34;https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;but-i-dont-have-docker&#34;&gt;But I don&amp;rsquo;t have docker
+&lt;/h3&gt;&lt;p&gt;I had tried to switch to podman sometime back but it was mostly limited to pulling images directly off docker/quay and using them. I had not gotten around to building images with podman or buildah much. But this time I had lucked out and the most commonly used FTP image seemed to lack support for running as a rootless container binding to ports higher than 1024 for the listening port. If you did not know about this - unprivileged users on linux cannot bind to ports lower than 1024 usually as explained &lt;a class=&#34;link&#34; href=&#34;https://www.w3.org/Daemon/User/Installation/PrivilegedPorts.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;. There are ways around this for example by using &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Authbind&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;authbind&lt;/a&gt; to achieve this via a setuid helper executable or using POSIX &lt;a class=&#34;link&#34; href=&#34;https://man7.org/linux/man-pages/man7/capabilities.7.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;capabilities system&lt;/a&gt;&lt;/p&gt;
@@ -62,8 +62,11 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
     &gt;docker-vsftpd&lt;/a&gt; to &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/podman-vsftpd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt; and started from there. It was a simple change to add the new port. And add the change to the README. The full pull request is &lt;a class=&#34;link&#34; href=&#34;https://github.com/fauria/docker-vsftpd/pull/76&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;adding-finishing-touches&#34;&gt;Adding finishing touches&lt;/h3&gt;
-&lt;p&gt;I am a bit of a perfectionist and once I had started work on this repo I had to add a couple of finishing touches. The first was an automated build process. I had used github workflows and actions to achieve this. Here is the code for that&lt;/p&gt;
+&lt;h3 id=&#34;adding-finishing-touches&#34;&gt;Adding finishing touches
+&lt;/h3&gt;&lt;p&gt;I am a bit of a perfectionist and once I had started work on this repo I had to add a couple of finishing touches. The first was an automated build process. I had used github workflows and actions to achieve this. Here is the code for that&lt;/p&gt;
+
+
+
 
 
 
@@ -133,7 +136,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;vsftpd&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;latest ${{ github.sha }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;containerfiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;sd&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;          ./Dockerfile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sd&#34;&gt;          ./Dockerfile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Podman Login action (https://github.com/redhat-actions/podman-login) also be used to log in,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# in which case &amp;#39;username&amp;#39; and &amp;#39;password&amp;#39; can be omitted.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -152,6 +155,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;p&gt;Things to note here are the build image action. Note that we are using buildah action to build the image and not docker. This means we keep the pipeline clear of docker even though we will still use docker.io to distribute the image.&lt;/p&gt;
 &lt;p&gt;Then note the secret mechanism. Github workflows manage secrets injection through envrionment variables as most other CI/CD pipelines do. The actual secret is input at the github settings level. Then it gets injected in to the CI/CD envrionment and is available for use by any action given access to it through the YAML code.&lt;/p&gt;
 &lt;p&gt;The next to do thing in my list is adding shellcheck support to the CI/CD pipeline. That will be left for another day. But for now I have cleared the shellcheck comments manually. The pull request is &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/podman-vsftpd/pull/1/files#diff-fc8d3c534affdef352ee2e218f1bf36e45b9991b2b0e0b9f4b844eea147643c5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -168,8 +172,8 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 &lt;p&gt;Quotin variable usage. You never know when spaces in values will trip you up otherwise.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;the-preamble-becomes-the-main-act&#34;&gt;The preamble becomes the main act&lt;/h3&gt;
-&lt;p&gt;So there you have it. We set out to write about good FTP system practices instead wrote a blog post about how to use podman and shellcheck. The next one I promise will be on topic!&lt;/p&gt;
+&lt;h3 id=&#34;the-preamble-becomes-the-main-act&#34;&gt;The preamble becomes the main act
+&lt;/h3&gt;&lt;p&gt;So there you have it. We set out to write about good FTP system practices instead wrote a blog post about how to use podman and shellcheck. The next one I promise will be on topic!&lt;/p&gt;
 </description>
         </item>
         

@@ -12,8 +12,8 @@
         <pubDate>Sat, 08 Mar 2025 13:31:56 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional&lt;/h2&gt;
-&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
+&lt;/h2&gt;&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
 technology stack, the type of systems I work with, the industry I work in, amongst other factors. In my first couple of&lt;br&gt;
 years, I worked for a small (at the time!) electronics company that mostly dealt with embedded systems. My work was&lt;br&gt;
 mostly concerned with the interface between hardware and software. Though I studied electronics in university, I was always&lt;br&gt;
@@ -30,8 +30,8 @@ Even when it wasn’t, there were no constraints in terms of event ordering. We 
 out of date, given that we eventually caught up in a reasonable time period. This was a completely different way of thinking about&lt;br&gt;
 systems for me.&lt;/p&gt;
 &lt;p&gt;That contrast got me thinking more deeply about what transactional systems really are, and how they shape the way we build software.&lt;/p&gt;
-&lt;h2 id=&#34;the-world-of-transactions&#34;&gt;The world of transactions&lt;/h2&gt;
-&lt;p&gt;Transactional systems vary a lot in what they do and how they do it. But by and large, they can be described as systems that process&lt;br&gt;
+&lt;h2 id=&#34;the-world-of-transactions&#34;&gt;The world of transactions
+&lt;/h2&gt;&lt;p&gt;Transactional systems vary a lot in what they do and how they do it. But by and large, they can be described as systems that process&lt;br&gt;
 changes in real-world properties in a consistent, atomic, and durable manner. They are meant to model real-world entities such as&lt;br&gt;
 bank accounts, sales, orders, and inventories. As you are modeling these real-world entities, it is essential that your code&lt;br&gt;
 reflects the true state of the real-life entity and thus needs to be consistent. In an actual warehouse, the inventory of goods&lt;br&gt;
@@ -49,8 +49,8 @@ round trip to the database.&lt;/p&gt;
 &lt;p&gt;You give very little thought to the querying side of the system apart from basic due diligence. But you really don’t worry about the data model,&lt;br&gt;
 because the only way you are going to read the data is the same way you wrote it—as a transaction.&lt;/p&gt;
 &lt;p&gt;In contrast, the system I joined at the BBC operated in a fundamentally different way.&lt;/p&gt;
-&lt;h2 id=&#34;my-adventures-on-the-other-side-of-the-fence&#34;&gt;My adventures on the other side of the fence&lt;/h2&gt;
-&lt;p&gt;The system that my team currently works on is a data-serving platform. It’s not exactly an OLAP platform in that we don’t serve arbitrary queries on the data,&lt;br&gt;
+&lt;h2 id=&#34;my-adventures-on-the-other-side-of-the-fence&#34;&gt;My adventures on the other side of the fence
+&lt;/h2&gt;&lt;p&gt;The system that my team currently works on is a data-serving platform. It’s not exactly an OLAP platform in that we don’t serve arbitrary queries on the data,&lt;br&gt;
 but the ingestion side and serving side are cleanly separated.&lt;/p&gt;
 &lt;p&gt;The data load happens through an event feed that uses ingestion logic separate from the serving logic. Ingestion can also be triggered in a batch mode to backfill the full data set if needed.&lt;/p&gt;
 &lt;p&gt;The data-serving side works on a request/response model. It’s optimized for sustained workloads and is mostly concerned&lt;br&gt;
@@ -62,46 +62,46 @@ Even with ingestion delays, we could catch up when update rates dropped. This wa
 &lt;p&gt;These systems scale along the axis of read traffic. To scale well, you manage users and data.&lt;/p&gt;
 &lt;p&gt;The data model should be as close to the query model as possible. The users should be handled as efficiently as possible—avoid per-connection threading and minimize communication overhead.&lt;/p&gt;
 &lt;p&gt;Seeing both systems up close helped me crystallize the differences. Here’s a simplified comparison.&lt;/p&gt;
-&lt;h2 id=&#34;summarizing-the-differences&#34;&gt;Summarizing the differences&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Property&lt;/th&gt;
-&lt;th&gt;Transactional Systems&lt;/th&gt;
-&lt;th&gt;Data Serving Systems&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Consistency&lt;/td&gt;
-&lt;td&gt;Very important&lt;/td&gt;
-&lt;td&gt;Not as important&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Performance&lt;/td&gt;
-&lt;td&gt;Write performance is key&lt;/td&gt;
-&lt;td&gt;Read performance is key&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Read Data Model&lt;/td&gt;
-&lt;td&gt;Not as important&lt;/td&gt;
-&lt;td&gt;Very important&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Performance Limits&lt;/td&gt;
-&lt;td&gt;Limited by computation&lt;/td&gt;
-&lt;td&gt;Limited by data store performance&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Scaling&lt;/td&gt;
-&lt;td&gt;Single-threaded performance + shared-nothing sharding&lt;/td&gt;
-&lt;td&gt;Data store performance + data model + efficient network stack&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+&lt;h2 id=&#34;summarizing-the-differences&#34;&gt;Summarizing the differences
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Property&lt;/th&gt;
+          &lt;th&gt;Transactional Systems&lt;/th&gt;
+          &lt;th&gt;Data Serving Systems&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Consistency&lt;/td&gt;
+          &lt;td&gt;Very important&lt;/td&gt;
+          &lt;td&gt;Not as important&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Performance&lt;/td&gt;
+          &lt;td&gt;Write performance is key&lt;/td&gt;
+          &lt;td&gt;Read performance is key&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Read Data Model&lt;/td&gt;
+          &lt;td&gt;Not as important&lt;/td&gt;
+          &lt;td&gt;Very important&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Performance Limits&lt;/td&gt;
+          &lt;td&gt;Limited by computation&lt;/td&gt;
+          &lt;td&gt;Limited by data store performance&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Scaling&lt;/td&gt;
+          &lt;td&gt;Single-threaded performance + shared-nothing sharding&lt;/td&gt;
+          &lt;td&gt;Data store performance + data model + efficient network stack&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;But switching system types wasn’t just a technical shift—it challenged how I thought about engineering altogether.&lt;/p&gt;
-&lt;h2 id=&#34;learning-to-think-differently&#34;&gt;Learning to think differently&lt;/h2&gt;
-&lt;p&gt;Writing a matching engine or a risk management system, there is rarely a need to model your system beyond a rudimentary way. We would have&lt;br&gt;
+&lt;h2 id=&#34;learning-to-think-differently&#34;&gt;Learning to think differently
+&lt;/h2&gt;&lt;p&gt;Writing a matching engine or a risk management system, there is rarely a need to model your system beyond a rudimentary way. We would have&lt;br&gt;
 well-established patterns and concepts—order book, positions, etc.—that everyone understood. The domains were predefined,&lt;br&gt;
 and user needs were prescriptive.&lt;/p&gt;
 &lt;p&gt;In adapting to a system where the query model matters, I’ve had to grapple with understanding the business domain. How to model it, speak the language of domain experts,&lt;br&gt;
@@ -117,8 +117,8 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
 &lt;p&gt;Then came understanding common architectural patterns. Whether dealing with out-of-order S3 events or DB query caching with external caches, our org had go-to solutions. Even if a different approach might be incrementally better, sticking to the known pattern made the system easier for others to reason about. If you&amp;rsquo;re not convinced, check out &lt;a class=&#34;link&#34; href=&#34;https://www.enterpriseintegrationpatterns.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;enterprise integration pattern&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Still, your core skills remain useful. Understanding RDBMS internals, query optimization, network stacks, OSI layers, caching strategies—all of that continues to matter. That part never changes.&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This post started as a way to contrast two very different types of software systems I’ve worked on—but along the way, it became something else. It became a reflection on how we grow as engineers when the rules of the game change.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;This post started as a way to contrast two very different types of software systems I’ve worked on—but along the way, it became something else. It became a reflection on how we grow as engineers when the rules of the game change.&lt;/p&gt;
 &lt;p&gt;If there’s a core message here, it’s this: foundational skills matter. The ability to understand systems, think clearly about trade-offs, and collaborate with others—those are the real constants. They carry across domains, stacks, and even job descriptions.&lt;/p&gt;
 &lt;p&gt;A long time ago, I read a Superman comic that said: “Once you are Superman, you will always be Superman.” That stuck with me. Once you’ve built those fundamentals, you can step into almost any system—and make it better.&lt;/p&gt;
 &lt;br&gt;
@@ -131,8 +131,8 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?&lt;/h2&gt;
-&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+&lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
 figure {
@@ -171,18 +171,18 @@ figcaption {
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;understanding-the-product-drive-to-get-things-done&#34;&gt;Understanding the product drive to get things done&lt;/h2&gt;
-&lt;p&gt;For this, it is essential that you develop empathetic views of the various disciplines involved in the process. The whole point of the product development as a discipline is to map out a roadmap for the product that the users of the system will find useful and will be willing to pay for. For them, the clients are the users of the system. And I am using the word &amp;lsquo;client&amp;rsquo; here to mean the immediate group of people that the particular discipline&amp;rsquo;s work &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Objectives_and_key_results&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;understanding-the-product-drive-to-get-things-done&#34;&gt;Understanding the product drive to get things done
+&lt;/h2&gt;&lt;p&gt;For this, it is essential that you develop empathetic views of the various disciplines involved in the process. The whole point of the product development as a discipline is to map out a roadmap for the product that the users of the system will find useful and will be willing to pay for. For them, the clients are the users of the system. And I am using the word &amp;lsquo;client&amp;rsquo; here to mean the immediate group of people that the particular discipline&amp;rsquo;s work &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Objectives_and_key_results&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;OKRs&lt;/a&gt; are impacted by. For product, this group of people is the immediate users of the product. And the most universally effective way of keeping them happy and hitting the related OKRs is to deliver what they want, before they want it.&lt;/p&gt;
 &lt;p&gt;Now there does exist the odd bad product team, but disregarding the concept of cartoonish evil product teams, mostly they want to be able to deliver features to their users. They do understand that the delivery of features does not happen in a vacuum, that it happens within the context of the platform. They do understand that features should not increase the overall complexity of the platform as much as possible and make the development of features in the future as easy as possible. If they do not understand this, the team leads, tech leads, and the engineering managers should get better at communicating this aspect. I understand this sounds glib, but it is true - there is no solution for insufficiently good communication. And how to communicate effectively is several full books essentially. So that will have to wait!&lt;/p&gt;
-&lt;h2 id=&#34;handling-the-quick-wins&#34;&gt;Handling the quick wins&lt;/h2&gt;
-&lt;p&gt;So it is a fact of life that product will keep on asking for quick wins but what can we do about it? Two courses of action and one question - How costly is it to reverse your decision? Your course of action will depend on this one question and you should know the answer quite confidently. Can you reverse your decision given the architectural changes this decision will entail with a reasonable cost? If the answer is yes - do the change, if the answer is no - do not do the change.&lt;/p&gt;
-&lt;h3 id=&#34;do-the-required-feature-as-a-quick-win&#34;&gt;Do the required feature as a quick win&lt;/h3&gt;
-&lt;p&gt;Do play along and find a way to deliver the same effect as they are asking for. Assuming that the feature does not adversely affect the architecture of the platform no matter the implementation, great no issues then. But assuming as almost always there are several different ways to get the same thing done and the quickest is the dirtiest, how do you deliver the work? You compromise and say we will get you the feature in this manner and it will take 2 weeks instead of 6 but it is going to be hacky and we will need to take another 4 weeks to refactor so this feature does not impede us in the future. Weather you use branch by abstraction, feature flags or a combination, the concept remains the same - the audience gets the feature quickly and product are happy. Engineering gets to tidy up the implementation and they are happy. As a bonus point, often there will be some feedback from the client in the middle of your refactor which you can just incorporate into your code and make the implementation better. But remember this all depends on you being able to change the initial quick hack you deliver to a proper sustainable architecture afterward.&lt;/p&gt;
-&lt;h3 id=&#34;dont-do-the-required-feature-as-a-quick-win&#34;&gt;Don&amp;rsquo;t do the required feature as a quick win&lt;/h3&gt;
-&lt;p&gt;If the required feature cannot be delivered as a quick win and requires long term platform building work to be done first, do not give in and do it as a quick hack. It may be tempting given that it will make the product team happy and will definitely make your life easy. But understand that you will be paying for this decision later on when it breaks your team&amp;rsquo;s agility. The most important thing though is not the &amp;ldquo;No, we cannot&amp;rdquo; but &amp;ldquo;This is how we can do it&amp;rdquo;. A can-do attitude is worth its weight in gold in software architecture/development lead land because so many of us will stop after the initial no. Plot a course for the product and communicate what needs to happen in order for you to build this feature. Break it down into the smallest parts possible and explain each one. The changes are these steps can be reused for some other purpose and if the product can align their feature roadmap along those lines, most of the time you will get the go-ahead to implement the long term architectural plan.&lt;/p&gt;
-&lt;h2 id=&#34;cathedral-building---one-brick-at-a-time&#34;&gt;Cathedral building - one brick at a time&lt;/h2&gt;
-&lt;p&gt;To expand on the second answer above, because the first answer is quite simple and requires no elaboration, let us consider a simple media streaming solution. Your product managers ask you to implement a feature that allows your curation team to put together a Christmas playlist for the app. Now say you do not have a good way of putting custom styling on this play list to match Christmas theme right now. How can you achieve this? One way would be to refuse to do custom styling because this is a one-off thing that won&amp;rsquo;t last beyond Christmas and you don&amp;rsquo;t want to do a quick hack on the client side because this information should be propagated through the backend to be a proper sustainable, uniform implementation in the long run.&lt;/p&gt;
+&lt;h2 id=&#34;handling-the-quick-wins&#34;&gt;Handling the quick wins
+&lt;/h2&gt;&lt;p&gt;So it is a fact of life that product will keep on asking for quick wins but what can we do about it? Two courses of action and one question - How costly is it to reverse your decision? Your course of action will depend on this one question and you should know the answer quite confidently. Can you reverse your decision given the architectural changes this decision will entail with a reasonable cost? If the answer is yes - do the change, if the answer is no - do not do the change.&lt;/p&gt;
+&lt;h3 id=&#34;do-the-required-feature-as-a-quick-win&#34;&gt;Do the required feature as a quick win
+&lt;/h3&gt;&lt;p&gt;Do play along and find a way to deliver the same effect as they are asking for. Assuming that the feature does not adversely affect the architecture of the platform no matter the implementation, great no issues then. But assuming as almost always there are several different ways to get the same thing done and the quickest is the dirtiest, how do you deliver the work? You compromise and say we will get you the feature in this manner and it will take 2 weeks instead of 6 but it is going to be hacky and we will need to take another 4 weeks to refactor so this feature does not impede us in the future. Weather you use branch by abstraction, feature flags or a combination, the concept remains the same - the audience gets the feature quickly and product are happy. Engineering gets to tidy up the implementation and they are happy. As a bonus point, often there will be some feedback from the client in the middle of your refactor which you can just incorporate into your code and make the implementation better. But remember this all depends on you being able to change the initial quick hack you deliver to a proper sustainable architecture afterward.&lt;/p&gt;
+&lt;h3 id=&#34;dont-do-the-required-feature-as-a-quick-win&#34;&gt;Don&amp;rsquo;t do the required feature as a quick win
+&lt;/h3&gt;&lt;p&gt;If the required feature cannot be delivered as a quick win and requires long term platform building work to be done first, do not give in and do it as a quick hack. It may be tempting given that it will make the product team happy and will definitely make your life easy. But understand that you will be paying for this decision later on when it breaks your team&amp;rsquo;s agility. The most important thing though is not the &amp;ldquo;No, we cannot&amp;rdquo; but &amp;ldquo;This is how we can do it&amp;rdquo;. A can-do attitude is worth its weight in gold in software architecture/development lead land because so many of us will stop after the initial no. Plot a course for the product and communicate what needs to happen in order for you to build this feature. Break it down into the smallest parts possible and explain each one. The changes are these steps can be reused for some other purpose and if the product can align their feature roadmap along those lines, most of the time you will get the go-ahead to implement the long term architectural plan.&lt;/p&gt;
+&lt;h2 id=&#34;cathedral-building---one-brick-at-a-time&#34;&gt;Cathedral building - one brick at a time
+&lt;/h2&gt;&lt;p&gt;To expand on the second answer above, because the first answer is quite simple and requires no elaboration, let us consider a simple media streaming solution. Your product managers ask you to implement a feature that allows your curation team to put together a Christmas playlist for the app. Now say you do not have a good way of putting custom styling on this play list to match Christmas theme right now. How can you achieve this? One way would be to refuse to do custom styling because this is a one-off thing that won&amp;rsquo;t last beyond Christmas and you don&amp;rsquo;t want to do a quick hack on the client side because this information should be propagated through the backend to be a proper sustainable, uniform implementation in the long run.&lt;/p&gt;
 &lt;p&gt;But going beyond that, you can suggest an approach like this.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Implement the styling as a quick hack but make sure to get the styling data from an opaque interface ( let&amp;rsquo;s be original and call it StyleProvider )&lt;/li&gt;
@@ -192,8 +192,8 @@ figcaption {
 &lt;li&gt;Create a proper styling authoring tool that writes to the config that the curation teams can use&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Now this may sound very much like a cathedral-building exercise but understand that we had already shipped things to clients at #1 and we have a sustainable architecture at #4. You may be surprised at how many product teams you can convince to go with this approach.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-approach-compromises&#34;&gt;How to approach compromises&lt;/h2&gt;
-&lt;p&gt;I do kind of make it sound too easy in the above example as you can see. In the real world, it is rarely that straightforward and you have to take in different actors in the system and how they interact. But the gist of the approach remains the same. Make sure that your product team understands that you are&lt;/p&gt;
+&lt;h2 id=&#34;how-to-approach-compromises&#34;&gt;How to approach compromises
+&lt;/h2&gt;&lt;p&gt;I do kind of make it sound too easy in the above example as you can see. In the real world, it is rarely that straightforward and you have to take in different actors in the system and how they interact. But the gist of the approach remains the same. Make sure that your product team understands that you are&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Doing them a favor by prioritizing feature delivery against creating technical debt in the short term&lt;/li&gt;
 &lt;li&gt;That this technical debt must be paid off before interest accrues in the long term&lt;/li&gt;
@@ -212,14 +212,14 @@ figcaption {
             &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Make sure that this compromise is front and center in all discussions. It should be the basis of all discussions. Once you have done something similar, you would have built up some trust and comfort for this approach which you can reuse going forward. Once the team and stakeholders are comfortable with this approach, it becomes much easier to get people&amp;rsquo;s buy-in by pointing to previous examples of good execution of this idea.&lt;/p&gt;
-&lt;h2 id=&#34;coming-back-for-the-refactor&#34;&gt;Coming back for the refactor&lt;/h2&gt;
-&lt;p&gt;Now, you will be tempted to call the follow on work from the initial implementation as &amp;ldquo;Clean Up Work&amp;rdquo;. I think this will be a mistake - impressions matter and this is the wrong impression to make. Refactoring will be a more suitable and a neutral term that communicates the fact we are not making any changes to the observable behavior of the implementation but just making sure the work is arranged in such a manner as to increase comprehension for engineers and to make it easy to build on top of. There are a few ways in which you can do this.&lt;/p&gt;
+&lt;h2 id=&#34;coming-back-for-the-refactor&#34;&gt;Coming back for the refactor
+&lt;/h2&gt;&lt;p&gt;Now, you will be tempted to call the follow on work from the initial implementation as &amp;ldquo;Clean Up Work&amp;rdquo;. I think this will be a mistake - impressions matter and this is the wrong impression to make. Refactoring will be a more suitable and a neutral term that communicates the fact we are not making any changes to the observable behavior of the implementation but just making sure the work is arranged in such a manner as to increase comprehension for engineers and to make it easy to build on top of. There are a few ways in which you can do this.&lt;/p&gt;
 &lt;p&gt;If like most organizations in this time you are using some sort of a agile project tracker, you can create two projects or epics for each phase of the project. First phase will last from initial ideation through to delivery of the quick win. The second phase will start from just before or after that to when refactoring is completed and delivered to production with all the client feedback. Another way might be to treat this as a single epic but create all stories beforehand. Now if you use a concept like &lt;a class=&#34;link&#34; href=&#34;https://martinfowler.com/bliki/BranchByAbstraction.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;branch by abstraction&lt;/a&gt; you can even have two teams working on two phases at the same time.&lt;/p&gt;
 &lt;p&gt;You can also make use of other tooling such as &lt;a class=&#34;link&#34; href=&#34;https://martinfowler.com/articles/feature-toggles.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;feature flags&lt;/a&gt; for de-risking the actual production deployment. The key thing is to remember that whatever tools or techniques that you end up using, they should be used with a good process in place. What I mean by that is there should be a well known process, preferably documented and accessible easily that describes how all these tools are used in shipping features quickly. Then there can be no confusion regarding architecture and how it is made sustainable. Otherwise you will be doing that communication work every time this kind of compromise happens. Do the work for documenting these processes beforehand and save yourselves a whole bunch of time.&lt;/p&gt;
-&lt;h2 id=&#34;follow-ups-demonstrations-and-retros&#34;&gt;Follow-ups, Demonstrations, and Retros&lt;/h2&gt;
-&lt;p&gt;It is probably a good idea to demonstrate these actions in a retrospective about the project. If this is not standard practice, schedule a one off meeting and show it to all the stakeholders. Demonstrate the narrative of Engineering delivering something in short term by compromising ideal architecture, and recovering and perfecting the result with feedback and getting back to idea architecture. It is probably a good idea to keep a list of these occasions and their details. You would likely want to refer to this for further details, weather it is to come up with a future estimate, to recount a good year or for new team members, stakeholders or leadership to get familiarized with how compromise works in your team. It will help bring them in line with the rest of the team.&lt;/p&gt;
+&lt;h2 id=&#34;follow-ups-demonstrations-and-retros&#34;&gt;Follow-ups, Demonstrations, and Retros
+&lt;/h2&gt;&lt;p&gt;It is probably a good idea to demonstrate these actions in a retrospective about the project. If this is not standard practice, schedule a one off meeting and show it to all the stakeholders. Demonstrate the narrative of Engineering delivering something in short term by compromising ideal architecture, and recovering and perfecting the result with feedback and getting back to idea architecture. It is probably a good idea to keep a list of these occasions and their details. You would likely want to refer to this for further details, weather it is to come up with a future estimate, to recount a good year or for new team members, stakeholders or leadership to get familiarized with how compromise works in your team. It will help bring them in line with the rest of the team.&lt;/p&gt;
 &lt;p&gt;Banner Photo by &lt;a href=&#34;https://unsplash.com/@disruptxn?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&#34;&gt;Desola Lanre-Ologun&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/photos/woman-and-man-sitting-in-front-of-monitor-IgUR1iX0mqM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash&#34;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
@@ -229,14 +229,14 @@ figcaption {
         <pubDate>Tue, 31 Oct 2023 21:18:00 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.jpg" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:&lt;/h2&gt;
-&lt;p&gt;In the world of engineering, metrics are critical for evaluating performance and progress. But relying on subjective views and opinions can lead to flawed assessments. To determine the effectiveness of engineering practices, we need unbiased and objective metrics. The choice of metrics depends on an organization&amp;rsquo;s specific goals. Metrics should be automated, transparent, and integrated into the culture. Avoid using easily gamed or individual-level metrics. The post also explores DORA and SPACE metrics and emphasizes that there is no one-size-fits-all solution in engineering metrics.&lt;/p&gt;
-&lt;h2 id=&#34;how-do-we-know-were-good&#34;&gt;How Do We Know We&amp;rsquo;re Good?&lt;/h2&gt;
-&lt;p&gt;In engineering, a discipline underpinned by the scientific method, it seems we should always seek validation of our progress using scientific methods. However, in many engineering teams I&amp;rsquo;ve encountered, there is a propensity to rely on phrases like &amp;ldquo;I feel like,&amp;rdquo; &amp;ldquo;I think,&amp;rdquo; and &amp;ldquo;My point of view is.&amp;rdquo; Such subjective views, unconscious biases, and preconceived opinions can skew measurements.&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.jpg" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
+&lt;/h2&gt;&lt;p&gt;In the world of engineering, metrics are critical for evaluating performance and progress. But relying on subjective views and opinions can lead to flawed assessments. To determine the effectiveness of engineering practices, we need unbiased and objective metrics. The choice of metrics depends on an organization&amp;rsquo;s specific goals. Metrics should be automated, transparent, and integrated into the culture. Avoid using easily gamed or individual-level metrics. The post also explores DORA and SPACE metrics and emphasizes that there is no one-size-fits-all solution in engineering metrics.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-we-know-were-good&#34;&gt;How Do We Know We&amp;rsquo;re Good?
+&lt;/h2&gt;&lt;p&gt;In engineering, a discipline underpinned by the scientific method, it seems we should always seek validation of our progress using scientific methods. However, in many engineering teams I&amp;rsquo;ve encountered, there is a propensity to rely on phrases like &amp;ldquo;I feel like,&amp;rdquo; &amp;ldquo;I think,&amp;rdquo; and &amp;ldquo;My point of view is.&amp;rdquo; Such subjective views, unconscious biases, and preconceived opinions can skew measurements.&lt;/p&gt;
 &lt;p&gt;Presuming that the goal of an engineering management structure is to enable the formation and maintenance of high-performance teams, we need to ask how we will recognize a high-performing team. Some aspects can be measured manually, such as team health and team happiness, through surveys and one-on-one meetings. However, the measurement of the effectiveness of engineering practices requires unbiased and objective metrics. These metrics are the only way we can truly know if our engineering practices are achieving the goals we set out to accomplish.&lt;/p&gt;
 &lt;p&gt;Now, whenever metrics are mentioned people tend to get skeptical and usually with good cause. After all as the title alludes to statistics and metrics have been used to dubious effect since they were invented. You may have heard any number of horror stories regarding the misuse of these. However it does not have to be that bad necessarily. Used with prudence these can provide a huge benefit to any software engineering team. That prudence is what I am setting out to put in to words in this blog post.&lt;/p&gt;
-&lt;h2 id=&#34;do-we-agree-on-what-blue-is&#34;&gt;Do We Agree on What &amp;ldquo;Blue&amp;rdquo; Is?&lt;/h2&gt;
-&lt;p&gt;A meme that originated on Reddit comes to mind. It featured a dress found in a charity or second-hand shop. What made it notable was the debate surrounding its color. The poster thought it was blue, but a significant number of replies argued it was gold. This seemingly simple question, &amp;ldquo;Do we all agree on what blue is?&amp;rdquo; led to a divisive dispute. It may seem strange that a seemingly straightforward matter could be so divisive. After all, defining &amp;ldquo;blue&amp;rdquo; isn&amp;rsquo;t a complex concept; even a preschooler could define it confidently.&lt;/p&gt;
+&lt;h2 id=&#34;do-we-agree-on-what-blue-is&#34;&gt;Do We Agree on What &amp;ldquo;Blue&amp;rdquo; Is?
+&lt;/h2&gt;&lt;p&gt;A meme that originated on Reddit comes to mind. It featured a dress found in a charity or second-hand shop. What made it notable was the debate surrounding its color. The poster thought it was blue, but a significant number of replies argued it was gold. This seemingly simple question, &amp;ldquo;Do we all agree on what blue is?&amp;rdquo; led to a divisive dispute. It may seem strange that a seemingly straightforward matter could be so divisive. After all, defining &amp;ldquo;blue&amp;rdquo; isn&amp;rsquo;t a complex concept; even a preschooler could define it confidently.&lt;/p&gt;
 
 
 
@@ -250,8 +250,8 @@ figcaption {
             &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;This story illustrates how challenging it is to reach a consensus, even on straightforward matters, within a group. Now, imagine trying to measure things like software engineering team or organizational performance and achieve a consensus within your entire organization on whether engineering is doing a good job or not. Let&amp;rsquo;s heed the lesson of the blue/gold dress people!&lt;/p&gt;
-&lt;h2 id=&#34;what-do-we-want-to-measure-anyway&#34;&gt;What Do We Want to Measure, Anyway?&lt;/h2&gt;
-&lt;p&gt;Before defining the exact metrics, let&amp;rsquo;s consider what qualities of teams we want to measure. While this question seems straightforward, it&amp;rsquo;s fraught with perils for those attempting to answer it. The most important thing to understand is that this is likely to vary from one organization to another. Like many of the best answers, the answer to this question is &amp;ldquo;it depends.&amp;rdquo; The main point to keep in mind is to consider the needs of your business. Unless you&amp;rsquo;re working on a hobby project, any organization, whether it&amp;rsquo;s a business or not, will have goals. Your software engineering team does not operate in isolation but supports the organization&amp;rsquo;s goals.&lt;/p&gt;
+&lt;h2 id=&#34;what-do-we-want-to-measure-anyway&#34;&gt;What Do We Want to Measure, Anyway?
+&lt;/h2&gt;&lt;p&gt;Before defining the exact metrics, let&amp;rsquo;s consider what qualities of teams we want to measure. While this question seems straightforward, it&amp;rsquo;s fraught with perils for those attempting to answer it. The most important thing to understand is that this is likely to vary from one organization to another. Like many of the best answers, the answer to this question is &amp;ldquo;it depends.&amp;rdquo; The main point to keep in mind is to consider the needs of your business. Unless you&amp;rsquo;re working on a hobby project, any organization, whether it&amp;rsquo;s a business or not, will have goals. Your software engineering team does not operate in isolation but supports the organization&amp;rsquo;s goals.&lt;/p&gt;
 &lt;p&gt;For example, if you&amp;rsquo;re working in a charity organization helping vulnerable women in the community, your goals for your systems might include:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Ease of use and accessibility&lt;/li&gt;
@@ -266,8 +266,8 @@ figcaption {
 &lt;li&gt;Website performance&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Your priorities are to ship features quickly and make them fast at any cost. Your company&amp;rsquo;s survival depends on emerging from stealth mode as swiftly as possible.&lt;/p&gt;
-&lt;h2 id=&#34;from-objectives-to-metrics&#34;&gt;From Objectives to Metrics&lt;/h2&gt;
-&lt;p&gt;In the business world, you&amp;rsquo;ve probably heard of OKRs (Objectives and Key Results). OKRs function similarly. You identify the areas you want your development team to focus on and select representative metrics that signify your work in those areas. Selecting these metrics is as much an art as a science. There are numerous courses available, from LinkedIn Learning and Coursera to Udemy and elsewhere. However, I can offer a couple of pointers specific to the software world.&lt;/p&gt;
+&lt;h2 id=&#34;from-objectives-to-metrics&#34;&gt;From Objectives to Metrics
+&lt;/h2&gt;&lt;p&gt;In the business world, you&amp;rsquo;ve probably heard of OKRs (Objectives and Key Results). OKRs function similarly. You identify the areas you want your development team to focus on and select representative metrics that signify your work in those areas. Selecting these metrics is as much an art as a science. There are numerous courses available, from LinkedIn Learning and Coursera to Udemy and elsewhere. However, I can offer a couple of pointers specific to the software world.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Do Not Select Metrics Directly Correlated with Development Actions&lt;/strong&gt;&lt;/p&gt;
@@ -283,8 +283,8 @@ figcaption {
 &lt;p&gt;This departs from the central idea in key results. For key results in OKRs, they are clearly targets to be achieved. However, the problem with targets in the engineering domain is that any metric that becomes a target will end up being gamed. This most famously happens with unit testing coverage metrics. There have been numerous cases of people writing nonsensical &amp;ldquo;unit tests&amp;rdquo; that do not test anything but call all the functions they can fit in so that the coverage target can be gamed. The only effect of this is to increase the amount of code you have to change every time you modify an interface. So, please do not do this.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;what-gets-measured-gets-done&#34;&gt;What Gets Measured Gets Done&lt;/h2&gt;
-&lt;p&gt;To measure the chosen metrics, you&amp;rsquo;ll need to put automated facilities in place. Unless the input is human-dependent, it should always be automated. These metrics should:&lt;/p&gt;
+&lt;h2 id=&#34;what-gets-measured-gets-done&#34;&gt;What Gets Measured Gets Done
+&lt;/h2&gt;&lt;p&gt;To measure the chosen metrics, you&amp;rsquo;ll need to put automated facilities in place. Unless the input is human-dependent, it should always be automated. These metrics should:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Be simple to calculate&lt;/li&gt;
 &lt;li&gt;Be always available&lt;/li&gt;
@@ -292,18 +292,18 @@ figcaption {
 &lt;li&gt;Be easily verifiable&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The rationale behind these requirements should be self-evident by now. Without these qualities, you cannot create a pervasive metric-driven culture.&lt;/p&gt;
-&lt;h3 id=&#34;people-need-to-know-the-metrics&#34;&gt;People Need to Know the Metrics&lt;/h3&gt;
-&lt;p&gt;This information should be easily accessible. It should be included in as many documents as possible, from onboarding documentation for newcomers to the main page of your chosen Wiki or documentation site, be it Confluence, SharePoint, or Asana. There should be no doubt in anyone&amp;rsquo;s mind regarding where to find the metrics.&lt;/p&gt;
-&lt;h3 id=&#34;people-need-to-talk-in-terms-of-metrics&#34;&gt;People Need to Talk in Terms of Metrics&lt;/h3&gt;
-&lt;p&gt;Ensure that team members, managers, and even senior leaders speak the language of the metrics. They should bring up metrics whenever discussions about team performance arise. Make sure to incorporate metrics into the conversation if someone uses softer language that doesn&amp;rsquo;t explicitly reference relevant metrics. For example:&lt;/p&gt;
+&lt;h3 id=&#34;people-need-to-know-the-metrics&#34;&gt;People Need to Know the Metrics
+&lt;/h3&gt;&lt;p&gt;This information should be easily accessible. It should be included in as many documents as possible, from onboarding documentation for newcomers to the main page of your chosen Wiki or documentation site, be it Confluence, SharePoint, or Asana. There should be no doubt in anyone&amp;rsquo;s mind regarding where to find the metrics.&lt;/p&gt;
+&lt;h3 id=&#34;people-need-to-talk-in-terms-of-metrics&#34;&gt;People Need to Talk in Terms of Metrics
+&lt;/h3&gt;&lt;p&gt;Ensure that team members, managers, and even senior leaders speak the language of the metrics. They should bring up metrics whenever discussions about team performance arise. Make sure to incorporate metrics into the conversation if someone uses softer language that doesn&amp;rsquo;t explicitly reference relevant metrics. For example:&lt;/p&gt;
 &lt;p&gt;Senior Manager: &amp;ldquo;I&amp;rsquo;ve seen that the backend team for the app has done a marvelous job in managing the infrastructure and keeping the app available.&amp;rdquo;&lt;br&gt;
 You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go to my wonderful team who worked diligently to maintain our availability metric at 99.995%, exceeding the target availability of 99.99%. Great work, team!&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Don&amp;rsquo;t correct people but add this as a clarification or elaboration. This is crucial because you want people to ultimately think in terms of the language of the metrics. You want them to think not &amp;ldquo;What will happen if we improve our app&amp;rsquo;s performance?&amp;rdquo; but &amp;ldquo;What will happen if we improve the response time for the main app to an average of 150ms from 200ms.&amp;rdquo;&lt;/p&gt;
-&lt;h3 id=&#34;the-measurements-have-to-be-transparent-public-and-in-your-face&#34;&gt;The measurements have to be transparent, public and IN YOUR FACE&lt;/h3&gt;
-&lt;p&gt;The more pervasive the metric is, the stronger it get&amp;rsquo;s ingrained to peoples minds. I worked in one organization where there was only one metric that mattered. And that metric was everywhere. It was on any number of TV screens scattered across the office. It was on the login screen some days. All big meetings started with that number and the causes of that. The bonus was directly linked to that. There was no ambiguity in where the number came from, what value it had at any given point.&lt;/p&gt;
+&lt;h3 id=&#34;the-measurements-have-to-be-transparent-public-and-in-your-face&#34;&gt;The measurements have to be transparent, public and IN YOUR FACE
+&lt;/h3&gt;&lt;p&gt;The more pervasive the metric is, the stronger it get&amp;rsquo;s ingrained to peoples minds. I worked in one organization where there was only one metric that mattered. And that metric was everywhere. It was on any number of TV screens scattered across the office. It was on the login screen some days. All big meetings started with that number and the causes of that. The bonus was directly linked to that. There was no ambiguity in where the number came from, what value it had at any given point.&lt;/p&gt;
 &lt;p&gt;Same applies to engineering metrics have a single live dashboard where the metric gets displayed and updated in real time. And make sure it is prominently visible in whatever work environment you have. Obviously this will change according if your organization is office based, hybrid or remote only. Whatever the format, make sure that this information is easily accessible.&lt;/p&gt;
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;p&gt;This is something I have put together in the past in some of the organizations I have worked with. This mostly emphasizes devops, delivery, and performance metrics. The nature of the business was a mobile application serving a large amount of data. The team was starting to get around to doing their own devops, so this was a big part of the spotlight. Also, we were under tight deadlines to deliver the project, so delivery metrics were crucial. The performance was the biggest ask from the product team, so we added a metric for that as well.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples
+&lt;/h2&gt;&lt;p&gt;This is something I have put together in the past in some of the organizations I have worked with. This mostly emphasizes devops, delivery, and performance metrics. The nature of the business was a mobile application serving a large amount of data. The team was starting to get around to doing their own devops, so this was a big part of the spotlight. Also, we were under tight deadlines to deliver the project, so delivery metrics were crucial. The performance was the biggest ask from the product team, so we added a metric for that as well.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Objectives&lt;/p&gt;
@@ -325,8 +325,8 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We got the sign-off from the project team and then the management for the metrics and created a dashboard containing real-time tracking for the above metrics. The team knew where they stood as well as management and the business.&lt;/p&gt;
-&lt;h2 id=&#34;what-about-dora-or-space&#34;&gt;What About DORA or SPACE?&lt;/h2&gt;
-&lt;p&gt;A final note about &lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;what-about-dora-or-space&#34;&gt;What About DORA or SPACE?
+&lt;/h2&gt;&lt;p&gt;A final note about &lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;DORA&lt;/a&gt; (DevOps Research and Assessment) and SPACE. DORA metrics represent Deployment Frequency (DF), Lead Time for Changes (LT), Time to Restore Service (TRS), and Change Failure Rate (CFR). DORA metrics are widely used to assess the performance of DevOps and Continuous Delivery practices. First of all, the team you are in may not even practice DevOps. And even if you do, you may not want those DORA metrics to be a component of the full team&amp;rsquo;s metric set. You can and should probably use DORA metrics for evaluating your DevOps team&amp;rsquo;s performance if you have such a team. But that does not mean the full organization should be measured on it or that it should form the full criteria upon which you measure the performance of the team.&lt;/p&gt;
 &lt;p&gt;SPACE is an emerging framework aimed at evaluating the competencies within software development teams. It stands for Satisfaction &amp;amp; Well-Being, Performance, Activity, Collaboration &amp;amp; Communication, and Efficiency &amp;amp; Flow. SPACE is designed to optimize the team&amp;rsquo;s capabilities and well-being. It looks beyond technical processes to include &amp;lsquo;soft&amp;rsquo; factors like team morale, communication, and overall well-being. Again, it is a good measure if your goal is to create an environment where your teams thrive, innovate, and grow. But it may not directly correspond to business requirements.&lt;/p&gt;
 &lt;p&gt;The conclusion in both cases is the same as what Fred Brooks said in his seminal work, &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/The_Mythical_Man-Month&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -358,26 +358,26 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 &lt;/nav&gt;
   &lt;/div&gt;
   
-&lt;h1 id=&#34;stakeholders-and-alliances&#34;&gt;Stakeholders and Alliances&lt;/h1&gt;
-&lt;h2 id=&#34;on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs and new tricks&lt;/h2&gt;
-&lt;p&gt;It was a couple of years back and I had just embarked on a new role as a Solution Architect and Engineering Manager for a significant program. My responsibilities included overseeing the development of mobile apps and data analytics software. Before officially taking the reins, I faced a pivotal interview with a CXO level senior leader. This role came with hefty responsibilities, overseeing our technical portfolio, including customer-facing software, IT systems, and backend LOB software. It marked a significant transition from my previous roles – from managing single projects to overseeing an entire program.&lt;/p&gt;
+&lt;h1 id=&#34;stakeholders-and-alliances&#34;&gt;Stakeholders and Alliances
+&lt;/h1&gt;&lt;h2 id=&#34;on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs and new tricks
+&lt;/h2&gt;&lt;p&gt;It was a couple of years back and I had just embarked on a new role as a Solution Architect and Engineering Manager for a significant program. My responsibilities included overseeing the development of mobile apps and data analytics software. Before officially taking the reins, I faced a pivotal interview with a CXO level senior leader. This role came with hefty responsibilities, overseeing our technical portfolio, including customer-facing software, IT systems, and backend LOB software. It marked a significant transition from my previous roles – from managing single projects to overseeing an entire program.&lt;/p&gt;
 &lt;p&gt;Expecting a grueling interview, most questions turned out to be quite straightforward. However, one question caught me off guard. The senior leader asked, &amp;ldquo;Who are your allies in this endeavor?&amp;rdquo; I listed our senior team members: a project manager, business manager, product manager, and operations manager. But that wasn&amp;rsquo;t what the question was about. The senior leader stressed the importance of identifying major stakeholders who had a lot of influence in the stakeholder quadrant—those who played a central role in supporting IT operations.&lt;/p&gt;
 &lt;p&gt;It dawned on me that the real challenge lay not with my project team, but with the team responsible for supporting IT operations. The senior leader&amp;rsquo;s message was crystal clear: form an alliance, collaborate closely in the short term, and figure out a way to permanently resolve this bottleneck. This was the missing piece of the puzzle.&lt;/p&gt;
 &lt;p&gt;For a brief moment, I felt out of my depth and vulnerable. I was familiar with programming and systems, but this was entirely new territory. Can an old dog learn new tricks?&lt;/p&gt;
-&lt;h2 id=&#34;stakeholder-management&#34;&gt;Stakeholder management&lt;/h2&gt;
-&lt;p&gt;This led me to go on a whirlwind tour of the subject of stakeholder management. After a few linkedin courses and HBR articles later, I had started to realize the importance of the senior leader who interviewed me said. I was very focused on how my team and I were going to deliver the product that I had lost sight of how important the rest of the organization was to deliver the product.&lt;/p&gt;
+&lt;h2 id=&#34;stakeholder-management&#34;&gt;Stakeholder management
+&lt;/h2&gt;&lt;p&gt;This led me to go on a whirlwind tour of the subject of stakeholder management. After a few linkedin courses and HBR articles later, I had started to realize the importance of the senior leader who interviewed me said. I was very focused on how my team and I were going to deliver the product that I had lost sight of how important the rest of the organization was to deliver the product.&lt;/p&gt;
 &lt;p&gt;This is true in any organization but specially true in larger organizations. There are several departments that specialize in one thing. Which means that to get anything done in such a company you need a few of those organizational units to work together. You may call them departments, divisions etc but whatever the name is the central theme is that in order to do anything useful you have to get them together and work with each other.&lt;/p&gt;
 &lt;p&gt;Even in a small organization it is quite likely you will be involved with many functions other than just software development. Everyone from business analysts to delivery management is crucial to developing a software product. In order to make sure the software product gets made according to the project plan then, we need to make sure that all of these people are on the same page about where the project is currently, where you want to get to and how you will get there. And this requires explicit communication and active stakeholder management&lt;/p&gt;
-&lt;h2 id=&#34;what-to-keep-in-mind&#34;&gt;What to keep in mind&lt;/h2&gt;
-&lt;p&gt;Now I am not going to tell you what stakeholder management is or how to do it. That you can learn from any number of online or offline resources. What I am going to tell you is what you have to keep in mind practically when doing this.&lt;/p&gt;
-&lt;h3 id=&#34;understand-what-motivates-people-understand-what-is-important-to-them&#34;&gt;Understand what motivates people. Understand what is important to them&lt;/h3&gt;
-&lt;p&gt;This is the most important thing of all. And the textbooks will usually skip this because it may not be acceptable in a corporate environment to admit that not all parts of an oraganization will work towards the same goal. But the simple truth is that they do not.&lt;/p&gt;
+&lt;h2 id=&#34;what-to-keep-in-mind&#34;&gt;What to keep in mind
+&lt;/h2&gt;&lt;p&gt;Now I am not going to tell you what stakeholder management is or how to do it. That you can learn from any number of online or offline resources. What I am going to tell you is what you have to keep in mind practically when doing this.&lt;/p&gt;
+&lt;h3 id=&#34;understand-what-motivates-people-understand-what-is-important-to-them&#34;&gt;Understand what motivates people. Understand what is important to them
+&lt;/h3&gt;&lt;p&gt;This is the most important thing of all. And the textbooks will usually skip this because it may not be acceptable in a corporate environment to admit that not all parts of an oraganization will work towards the same goal. But the simple truth is that they do not.&lt;/p&gt;
 &lt;p&gt;Maybe one team lacks the required resources so maybe their focus is on reducing the workload as much as possible so they will have some hope of maintaining a work life balance. Maybe one team is led by someone who is looking for a promotion next year so they are focused on catching all the low hanging fruit they can get their hands on. The motivations differ but the pattern stays the same. Understand the motivation and you understand how to get them to do what you want.&lt;/p&gt;
-&lt;h3 id=&#34;use-this-knowledge-to-make-sure-their-goals-are-alignd-or-at-least-point-in-the-same-direction-as-you&#34;&gt;Use this knowledge to make sure their goals are alignd or at least point in the same direction as you&lt;/h3&gt;
-&lt;p&gt;This does not necessarily have to mean that you convince them your goals are the best so they should adopt them. This involves creating an incentive structure that ultimately helps your team achieve their goals by providing the necessary support. This might mean making sure they get easier work from you or you work extra hard to make sure you get the news of all of the &lt;em&gt;great work&lt;/em&gt; that they are doing to senior management.&lt;/p&gt;
+&lt;h3 id=&#34;use-this-knowledge-to-make-sure-their-goals-are-alignd-or-at-least-point-in-the-same-direction-as-you&#34;&gt;Use this knowledge to make sure their goals are alignd or at least point in the same direction as you
+&lt;/h3&gt;&lt;p&gt;This does not necessarily have to mean that you convince them your goals are the best so they should adopt them. This involves creating an incentive structure that ultimately helps your team achieve their goals by providing the necessary support. This might mean making sure they get easier work from you or you work extra hard to make sure you get the news of all of the &lt;em&gt;great work&lt;/em&gt; that they are doing to senior management.&lt;/p&gt;
 &lt;p&gt;For example you are working with a cyber security team that has a mandate for making sure that all the systems in the enerprise gets characterized according to the risk level a penetraton would pose. You can make sure you always pre-label your systems to make their job easier. You can help them convince other teams the value of this and evangelize this work. You can create small tools that may help this work. All of this is to make sure that they understand that their goals and yours are aligned.&lt;/p&gt;
-&lt;h3 id=&#34;in-the-long-run-if-your-goals-are-not-aligned-the-best-thing-to-do-is-remove-the-need-to-coordination&#34;&gt;In the long run if your goals are not aligned, the best thing to do is remove the need to coordination.&lt;/h3&gt;
-
+&lt;h3 id=&#34;in-the-long-run-if-your-goals-are-not-aligned-the-best-thing-to-do-is-remove-the-need-to-coordination&#34;&gt;In the long run if your goals are not aligned, the best thing to do is remove the need to coordination.
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -392,12 +392,12 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 &lt;p&gt;The above steps are good as long as there is no long term misalignment between your goals and theirs. But when there are, this means that you will be expending more energy trying to get people to do their own jobs than you are expending energy to do your own job. This is &lt;strong&gt;not a heathy place&lt;/strong&gt; to be.&lt;/p&gt;
 &lt;p&gt;This is when you should stop trying to build alliances and just try to move your dependency off that particuar team. This can take the form of outsourcing things done by this particular team currently. This can also mean that you get a new team allocated to you. Perhaps an option is to bring that function in to your team and stop depending on an external team. Whatever form this action takes, the end result must be the same. Your dependency on the external team is removed or reduced so that stakeholder management stops being the obstacle that it has been.&lt;/p&gt;
 &lt;p&gt;I have had to do the same when it turned out an IT support team within our organization was incapable of being responsive as much as we wanted them to be. They were responsible for infrastructure provisioning and even though they were on public cloud, provisioning a simple 2 tier app stack took weeks. The reason was were were not the companies main product line and thus features very less in their own KPIs. So we were never a priority for them. Once we outsourced it, we were always the priority since we were paying the bill.&lt;/p&gt;
-&lt;h2 id=&#34;alliances&#34;&gt;Alliances&lt;/h2&gt;
-&lt;p&gt;Once you have the basic stakeholder management practices in place, it is important to form strategic alliances. These maybe explicit or implicit, it does not really matter. What matters is that you and the other team lead have a common understanding of where you want your mutual organizations to end up in and what each of you are doing in order to achieve that. This kind of partnership allows you to move fast and take decisions that otherwise will have to go through numerous catch ups and sign off meetings. When you have formed an alliance you have an implicit trust put in place that allows you to take a decision almost unilaterally and have your allies interpret this in the best light possible rather than assume worst.&lt;/p&gt;
+&lt;h2 id=&#34;alliances&#34;&gt;Alliances
+&lt;/h2&gt;&lt;p&gt;Once you have the basic stakeholder management practices in place, it is important to form strategic alliances. These maybe explicit or implicit, it does not really matter. What matters is that you and the other team lead have a common understanding of where you want your mutual organizations to end up in and what each of you are doing in order to achieve that. This kind of partnership allows you to move fast and take decisions that otherwise will have to go through numerous catch ups and sign off meetings. When you have formed an alliance you have an implicit trust put in place that allows you to take a decision almost unilaterally and have your allies interpret this in the best light possible rather than assume worst.&lt;/p&gt;
 &lt;p&gt;This is the most important outcome you want. If you get stuck in the quagmire of committee based decision making or you need to run to your common superior every time you need to take a decision, you will not be going anywhere in a hurry. If you are to move fast, you need this essential to be in place.&lt;/p&gt;
 &lt;p&gt;And there is one very important side effect of this - now you have a rant buddy. Day not going well - rant to your ally. Latest strategic plan stuck in committee - rant to your ally. You can do this safely in the knowledge that as long as you both agree on the goals of your organization, you can complain about not achieving your goals to each other. Considering how lonely team leaderships and management positions can be, this can be a lifeline!&lt;/p&gt;
-&lt;h2 id=&#34;actionable-steps&#34;&gt;Actionable Steps&lt;/h2&gt;
-&lt;p&gt;To effectively implement stakeholder management and alliance building, consider the following steps:&lt;/p&gt;
+&lt;h2 id=&#34;actionable-steps&#34;&gt;Actionable Steps
+&lt;/h2&gt;&lt;p&gt;To effectively implement stakeholder management and alliance building, consider the following steps:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Identify Stakeholders&lt;/strong&gt;: Understand, identify, and list down the key stakeholders who matter to your team.&lt;/p&gt;
@@ -416,8 +416,8 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;By following these steps, you&amp;rsquo;ll be well-prepared to navigate the complex world of stakeholder management and build effective alliances for your organization&amp;rsquo;s success.&lt;/p&gt;
-&lt;h2 id=&#34;last-thoughts&#34;&gt;Last thoughts&lt;/h2&gt;
-&lt;p&gt;Stakeholder management is a complex and intricate subjects. There are all kinds of academic theories of how this is supposed to work - from &lt;a class=&#34;link&#34; href=&#34;https://www.researchgate.net/publication/220920774_A_Better_Fit_-_Characterising_the_Stakeholders&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;last-thoughts&#34;&gt;Last thoughts
+&lt;/h2&gt;&lt;p&gt;Stakeholder management is a complex and intricate subjects. There are all kinds of academic theories of how this is supposed to work - from &lt;a class=&#34;link&#34; href=&#34;https://www.researchgate.net/publication/220920774_A_Better_Fit_-_Characterising_the_Stakeholders&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;onion diagrams&lt;/a&gt; to &lt;a class=&#34;link&#34; href=&#34;https://www.pmi.org/learning/library/stakeholder-analysis-pivotal-practice-projects-8905&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;quadrant based analysis&lt;/a&gt;. It does not really matter which model you use to start with as long as&lt;/p&gt;
 &lt;ol&gt;
@@ -455,15 +455,15 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 &lt;/nav&gt;
   &lt;/div&gt;
   
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;One of my best friends, who I first met in a previous job, called me one evening. For now, let&amp;rsquo;s call him Jake. He is the calmest person I have ever met. And if you know me, I am usually the farthest from calm of any of us, comfortably bubbling between enthusiasm and dejection with alarming frequency. But on this day, Jake seems a bit shaken. He wants my input on something. He is having some troubles at work with a colleague who started new in his team. They are working on something that is novel to Jake, but he is starting to feel like his new colleague, let&amp;rsquo;s call him Mike, does not know much about the fundamentals of the tech even though he is supposed to. They have just had a disagreement regarding the proper use of the standard libraries and the language they are using, and it turns out Jake was right. He wants to know how he might best handle the situation. We talk for a while, I listen for the most part and we settle on a course of action that we think will resolve the issue. But this gets me thinking - why did this situation arise in the first place.&lt;/p&gt;
-&lt;h2 id=&#34;healthy-conflict-and-unhelpful-distractions&#34;&gt;Healthy conflict and unhelpful distractions&lt;/h2&gt;
-&lt;p&gt;Conflict in teams do not have to be a siren announcing doom and gloom (And this is coming from Brené Brown and I promise you will not regret reading her take on it &lt;a class=&#34;link&#34; href=&#34;https://www.amazon.com/dp/0812995848&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;One of my best friends, who I first met in a previous job, called me one evening. For now, let&amp;rsquo;s call him Jake. He is the calmest person I have ever met. And if you know me, I am usually the farthest from calm of any of us, comfortably bubbling between enthusiasm and dejection with alarming frequency. But on this day, Jake seems a bit shaken. He wants my input on something. He is having some troubles at work with a colleague who started new in his team. They are working on something that is novel to Jake, but he is starting to feel like his new colleague, let&amp;rsquo;s call him Mike, does not know much about the fundamentals of the tech even though he is supposed to. They have just had a disagreement regarding the proper use of the standard libraries and the language they are using, and it turns out Jake was right. He wants to know how he might best handle the situation. We talk for a while, I listen for the most part and we settle on a course of action that we think will resolve the issue. But this gets me thinking - why did this situation arise in the first place.&lt;/p&gt;
+&lt;h2 id=&#34;healthy-conflict-and-unhelpful-distractions&#34;&gt;Healthy conflict and unhelpful distractions
+&lt;/h2&gt;&lt;p&gt;Conflict in teams do not have to be a siren announcing doom and gloom (And this is coming from Brené Brown and I promise you will not regret reading her take on it &lt;a class=&#34;link&#34; href=&#34;https://www.amazon.com/dp/0812995848&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;). In fact most of the time we can even turn conflict in to an asset - it can create more engagement, it serves as a barometer of people&amp;rsquo;s involvement. I am not advocating for a management style that tries to avoid conflict at all cost. But there are times when conflict is not helpful, especially when the issue at hand is debate on facts that are already well established.&lt;/p&gt;
 &lt;p&gt;I have been in pretty heated debates about language-related things like coding styles and linters. They were fun, very revealing about our values as a team, and I would dive headfirst into the next one without any hesitation. But the problem with the debate Jake was having was it was about fundamentals like the proper use of visibility modifiers. There is no debate about these, and there should not have been one. These are matters that define the engineering excellence policies a team should be following. Unlike say a ways of working based conflict, this does not really need discretion or consideration of individual preferences - engineering excellence is a policy decision.&lt;/p&gt;
 &lt;p&gt;This is where engineering standards come in. Once established, they allow your team to focus on delivering value to your customers instead of getting embroiled in issues that can be routinely handled by established guidance. They save your team from having unnecessary conflict and expending time on resolving those. And they allow you to deliver things faster because the team can offload that to various degrees of automation and concentrate on other things. They make for great quality software because now you deliver consistently good software, and they are more likely to be bug-free (Note that this is not a given. We have all seen enough AbstractSingletonProxyFactoryBean classes riddled with bugs).&lt;/p&gt;
-&lt;h2 id=&#34;how-to-do-engineering-standards-right&#34;&gt;How to do Engineering standards right&lt;/h2&gt;
-&lt;p&gt;The common complaint from engineers against engineering standards is - &lt;em&gt;But they stifle creativity!&lt;/em&gt;. Yes, they do. And that is kind of the point. &lt;em&gt;Insert Evil Laugh&lt;/em&gt;.&lt;br&gt;
+&lt;h2 id=&#34;how-to-do-engineering-standards-right&#34;&gt;How to do Engineering standards right
+&lt;/h2&gt;&lt;p&gt;The common complaint from engineers against engineering standards is - &lt;em&gt;But they stifle creativity!&lt;/em&gt;. Yes, they do. And that is kind of the point. &lt;em&gt;Insert Evil Laugh&lt;/em&gt;.&lt;br&gt;
 More seriously, they are not there to stifle creativity but to perform two very important tasks in a high-functioning team.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Establish trust.&lt;/li&gt;
@@ -471,14 +471,14 @@ More seriously, they are not there to stifle creativity but to perform two very 
 &lt;/ol&gt;
 &lt;p&gt;You sure can use enforcing standards to stifle creativity, and we have seen it happen at one time or another. This is how we get rules like all the data must always access through explicitly written accessors, and &lt;a class=&#34;link&#34; href=&#34;https://openjdk.org/jeps/395&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;record types&lt;/a&gt; get banned. But sensibly applied, engineering standards will do the two functions above without stifling creativity. In fact, I would argue that this is the test of good engineering standards - do they enable the above while allowing developers to develop innovative solutions to the product problems they have. Understand that dogma is not helpful and pragmatism is the key!&lt;/p&gt;
-&lt;h3 id=&#34;establish-trust&#34;&gt;Establish Trust&lt;/h3&gt;
-&lt;p&gt;How do engineering standards establish trust among folks in a high-functioning team? Because this gives a baseline quality and shape to the codebase. It is well established that any code above a few hundred lines will take a significant amount of time to digest and understand. Now expand that fact to the usual technical estate found in today&amp;rsquo;s typical workplace where tens of microservices each worth a few thousand lines of code is a common sight. If you cannot make simple assumptions about the fundamental aspects of the codebase, the only way to interact with the codebase becomes working with it until you have familiarized yourself with all aspects of it, and this might take years. That is a nightmare scenario for Team Leads such as myself. This means the time to be productive is years for folks making both them and us frustrated.&lt;/p&gt;
+&lt;h3 id=&#34;establish-trust&#34;&gt;Establish Trust
+&lt;/h3&gt;&lt;p&gt;How do engineering standards establish trust among folks in a high-functioning team? Because this gives a baseline quality and shape to the codebase. It is well established that any code above a few hundred lines will take a significant amount of time to digest and understand. Now expand that fact to the usual technical estate found in today&amp;rsquo;s typical workplace where tens of microservices each worth a few thousand lines of code is a common sight. If you cannot make simple assumptions about the fundamental aspects of the codebase, the only way to interact with the codebase becomes working with it until you have familiarized yourself with all aspects of it, and this might take years. That is a nightmare scenario for Team Leads such as myself. This means the time to be productive is years for folks making both them and us frustrated.&lt;/p&gt;
 &lt;p&gt;If you can assume certain fundamentals always hold true, then this becomes much easier. You are free to concentrate on the things built up from this baseline only, leaving a much less cognitive load on you. This gives you assurance that all of your team knows and takes care to follow these standards. Suddenly, they are not strangers in the code land - they are fellow travelers on your journey to a better product who share your coding values and ideas. You all agree on fundamentals, and you are assured there will be no nasty surprises were you to undertake some significant work together. This shared identity is the first step in building team trust.&lt;/p&gt;
-&lt;h3 id=&#34;optimize-workflow&#34;&gt;Optimize Workflow&lt;/h3&gt;
-&lt;p&gt;In agile teams, we talk about how to optimize our workflow and specifically in Kanban, there is an emphasis on increasing flow. The way to do this seems to be by making sure we reduce handover and context required. Engineering standards make sure that there is no new information required to handle tasks beyond the specific business value the tasks deliver. Take a team that has standardized on using Redis as a KV store for intra-service caching, for example. Imagine there is a team-specific client library for interacting with the Redis cluster for that microservice. Now, if there was no standard, and it was a custom component that talked to the Redis cluster, you will have to read through and understand everything about how Redis gets used in there, from &lt;code&gt;AUTH&lt;/code&gt; statements to if pipelining is used. But with the team-specific client, you can limit your understanding to the client interface, and it is reusable across any other microservices. If the credentials come from environment variables, they always come from the same ones, etc.&lt;/p&gt;
+&lt;h3 id=&#34;optimize-workflow&#34;&gt;Optimize Workflow
+&lt;/h3&gt;&lt;p&gt;In agile teams, we talk about how to optimize our workflow and specifically in Kanban, there is an emphasis on increasing flow. The way to do this seems to be by making sure we reduce handover and context required. Engineering standards make sure that there is no new information required to handle tasks beyond the specific business value the tasks deliver. Take a team that has standardized on using Redis as a KV store for intra-service caching, for example. Imagine there is a team-specific client library for interacting with the Redis cluster for that microservice. Now, if there was no standard, and it was a custom component that talked to the Redis cluster, you will have to read through and understand everything about how Redis gets used in there, from &lt;code&gt;AUTH&lt;/code&gt; statements to if pipelining is used. But with the team-specific client, you can limit your understanding to the client interface, and it is reusable across any other microservices. If the credentials come from environment variables, they always come from the same ones, etc.&lt;/p&gt;
 &lt;p&gt;This allows your team members to concentrate on delivering the actual business value instead of worrying about tangential technical matters.&lt;/p&gt;
-&lt;h2 id=&#34;so-how-would-i-start-implementing-engineering-standards&#34;&gt;So how would I start implementing engineering standards?&lt;/h2&gt;
-
+&lt;h2 id=&#34;so-how-would-i-start-implementing-engineering-standards&#34;&gt;So how would I start implementing engineering standards?
+&lt;/h2&gt;
 
 
 &lt;figure&gt;
@@ -495,12 +495,12 @@ More seriously, they are not there to stifle creativity but to perform two very 
 &lt;li&gt;Deliberately.&lt;/li&gt;
 &lt;li&gt;With purpose.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;slowly&#34;&gt;Slowly&lt;/h3&gt;
-&lt;p&gt;Go slow. Start by introducing a limited set of standards, focusing on the most critical areas of improvement. This gradual rollout allows the team to adjust to the changes and provides the opportunity to gather feedback and make adjustments as needed. It&amp;rsquo;s essential to balance the pace of implementation with the team&amp;rsquo;s capacity to adapt, ensuring that they can embrace the standards comfortably without feeling overwhelmed. Remember you are not in a race; it is not about being the first to implement these standards.&lt;/p&gt;
-&lt;h3 id=&#34;deliberately&#34;&gt;Deliberately&lt;/h3&gt;
-&lt;p&gt;Each step in the implementation process should be well-thought-out and intentional. Deliberation involves careful planning, clear communication, and a thorough understanding of the objectives and potential impacts of the standards. Take the time to assess the current state of the team, identify pain points and areas for improvement, and create a roadmap for introducing standards. When changes are deliberate, they are more likely to be effective and accepted by the team. Understand that a team requires a &amp;ldquo;why&amp;rdquo; more than they will ever need a &amp;ldquo;how.&amp;rdquo;&lt;/p&gt;
-&lt;h3 id=&#34;with-purpose&#34;&gt;With purpose&lt;/h3&gt;
-&lt;p&gt;The implementation of engineering standards should have a clear purpose and align with the overall goals and values of the organization. Define the specific problems or challenges that the standards aim to address, whether it&amp;rsquo;s improving code quality, enhancing collaboration, or meeting compliance requirements. Ensure that the team understands the purpose behind the standards, as this helps motivate and engage team members in the process. Having a well-defined purpose also allows you to measure the success and impact of the standards against your intended outcomes. Always make sure that the overall vision for your team aligns well with whatever engineering standards you are trying to instill.&lt;/p&gt;
+&lt;h3 id=&#34;slowly&#34;&gt;Slowly
+&lt;/h3&gt;&lt;p&gt;Go slow. Start by introducing a limited set of standards, focusing on the most critical areas of improvement. This gradual rollout allows the team to adjust to the changes and provides the opportunity to gather feedback and make adjustments as needed. It&amp;rsquo;s essential to balance the pace of implementation with the team&amp;rsquo;s capacity to adapt, ensuring that they can embrace the standards comfortably without feeling overwhelmed. Remember you are not in a race; it is not about being the first to implement these standards.&lt;/p&gt;
+&lt;h3 id=&#34;deliberately&#34;&gt;Deliberately
+&lt;/h3&gt;&lt;p&gt;Each step in the implementation process should be well-thought-out and intentional. Deliberation involves careful planning, clear communication, and a thorough understanding of the objectives and potential impacts of the standards. Take the time to assess the current state of the team, identify pain points and areas for improvement, and create a roadmap for introducing standards. When changes are deliberate, they are more likely to be effective and accepted by the team. Understand that a team requires a &amp;ldquo;why&amp;rdquo; more than they will ever need a &amp;ldquo;how.&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;with-purpose&#34;&gt;With purpose
+&lt;/h3&gt;&lt;p&gt;The implementation of engineering standards should have a clear purpose and align with the overall goals and values of the organization. Define the specific problems or challenges that the standards aim to address, whether it&amp;rsquo;s improving code quality, enhancing collaboration, or meeting compliance requirements. Ensure that the team understands the purpose behind the standards, as this helps motivate and engage team members in the process. Having a well-defined purpose also allows you to measure the success and impact of the standards against your intended outcomes. Always make sure that the overall vision for your team aligns well with whatever engineering standards you are trying to instill.&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -527,15 +527,15 @@ More seriously, they are not there to stifle creativity but to perform two very 
 &lt;/nav&gt;
   &lt;/div&gt;
   
-&lt;h2 id=&#34;broken-window-theory---origins&#34;&gt;Broken Window Theory - Origins&lt;/h2&gt;
-&lt;p&gt;The Broken Windows Theory emerged in the early 1980s as a response to the rising concerns about crime and urban decay in American cities. James Q. Wilson, a prominent social scientist, and George L. Kelling, a criminologist, co-authored an article titled &amp;ldquo;Broken Windows: The Police and Neighborhood Safety,&amp;rdquo; which was published in the Atlantic Monthly in 1982.&lt;/p&gt;
-&lt;h3 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h3&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;broken-window-theory---origins&#34;&gt;Broken Window Theory - Origins
+&lt;/h2&gt;&lt;p&gt;The Broken Windows Theory emerged in the early 1980s as a response to the rising concerns about crime and urban decay in American cities. James Q. Wilson, a prominent social scientist, and George L. Kelling, a criminologist, co-authored an article titled &amp;ldquo;Broken Windows: The Police and Neighborhood Safety,&amp;rdquo; which was published in the Atlantic Monthly in 1982.&lt;/p&gt;
+&lt;h3 id=&#34;key-concepts&#34;&gt;Key Concepts
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;Visible Signs of Disorder: Wilson and Kelling proposed that visible signs of disorder in neighborhoods, such as broken windows, graffiti, or litter, create an environment that fosters crime. They argued that when one broken window in a building goes unrepaired, it sends a signal that no one cares about the area, leading to more windows breaking and an overall sense of neglect.&lt;/li&gt;
 &lt;li&gt;Quality-of-Life Policing: The authors advocated for a shift in policing strategies from solely focusing on serious crimes to addressing low-level offenses and maintaining order in communities. They emphasized that addressing minor infractions and maintaining a sense of order would prevent the emergence of more serious criminal behavior.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;practical-application&#34;&gt;Practical Application&lt;/h3&gt;
-&lt;p&gt;The practical application of the Broken Windows Theory led to significant changes in law enforcement and community policing:&lt;/p&gt;
+&lt;h3 id=&#34;practical-application&#34;&gt;Practical Application
+&lt;/h3&gt;&lt;p&gt;The practical application of the Broken Windows Theory led to significant changes in law enforcement and community policing:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Community Policing: Police departments began adopting community policing strategies, which involved officers engaging with the community, building relationships, and addressing quality-of-life issues. This approach aimed to create a sense of partnership between law enforcement and residents.&lt;/p&gt;
@@ -548,21 +548,21 @@ More seriously, they are not there to stifle creativity but to perform two very 
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Note that there were other practices that took inspiration from this theory ( such as zero tolerance policies ). I do not discuss them as I do not believe they resulted in a net positive for the society. If anything blanket policies like that has a disproportionate impact on the minorities and exacerbates problems. Therefore we will discuss what we believe are the policies that actually made a difference here.&lt;/p&gt;
-&lt;h3 id=&#34;impact-and-controversies&#34;&gt;Impact and Controversies:&lt;/h3&gt;
-&lt;p&gt;While there were clear benefits where this theory was applied, the practical application of the Broken Windows Theory has been both praised and criticized. While some attribute reductions in crime rates to its implementation, others argue that it can lead to over-policing and the criminalization of minor offenses, disproportionately affecting marginalized communities. Additionally, the theory&amp;rsquo;s effectiveness in addressing serious crime remains a subject of debate. Having said all of that we can all agree I think that intuitively this idea holds water.&lt;/p&gt;
-&lt;h2 id=&#34;software-engineering-as-a-social-endeavour&#34;&gt;Software Engineering as a Social Endeavour&lt;/h2&gt;
-&lt;p&gt;What does all of this sociological theories have to do with software engineering you say? Well, unruliness have the same effect on software engineering systems. Think of it this way, if your technical estate is a street, then missing unit tests, no consistent styling, and other little things that may correspond to a broken window. And these indicate to your team that you no longer really care about these things. This means the team values, however you may have promoted them before, no longer really applies and are no longer important to the team&amp;rsquo;s management.&lt;/p&gt;
+&lt;h3 id=&#34;impact-and-controversies&#34;&gt;Impact and Controversies:
+&lt;/h3&gt;&lt;p&gt;While there were clear benefits where this theory was applied, the practical application of the Broken Windows Theory has been both praised and criticized. While some attribute reductions in crime rates to its implementation, others argue that it can lead to over-policing and the criminalization of minor offenses, disproportionately affecting marginalized communities. Additionally, the theory&amp;rsquo;s effectiveness in addressing serious crime remains a subject of debate. Having said all of that we can all agree I think that intuitively this idea holds water.&lt;/p&gt;
+&lt;h2 id=&#34;software-engineering-as-a-social-endeavour&#34;&gt;Software Engineering as a Social Endeavour
+&lt;/h2&gt;&lt;p&gt;What does all of this sociological theories have to do with software engineering you say? Well, unruliness have the same effect on software engineering systems. Think of it this way, if your technical estate is a street, then missing unit tests, no consistent styling, and other little things that may correspond to a broken window. And these indicate to your team that you no longer really care about these things. This means the team values, however you may have promoted them before, no longer really applies and are no longer important to the team&amp;rsquo;s management.&lt;/p&gt;
 &lt;p&gt;Signaling within a team refers to the deliberate actions and behaviors of leaders that convey their intentions, values, and expectations to team members. These signals are pivotal in influencing team dynamics and guiding individual behavior. Leaders employ both explicit and implicit forms of communication. Explicitly, leaders use clear verbal communication to articulate their objectives, mission, and guidelines. Implicitly, their actions and decisions send strong signals. For example, a leader who consistently exhibits dedication and punctuality sets a precedent for the team. Leadership signals extend to decision-making. Choices regarding resource allocation or project priorities convey the leader&amp;rsquo;s priorities and strategic direction, directly affecting team perceptions.&lt;/p&gt;
 &lt;p&gt;When the signalling within the team indicates implicitly by the way of no resource allocation to addressing &lt;em&gt;&amp;ldquo;broken windows&amp;rdquo;&lt;/em&gt; or explicitly by dictating that &lt;em&gt;&amp;ldquo;broken windows&amp;rdquo;&lt;/em&gt; are too unimportant to address, the leadership seems to communicate that these are not pivotal to the engineering standards of a team. That in turn leads the team to read in between the lines and doubt where exactly then is the proverbial line in the sand? How much can they let the engineering standards lax before the leadership holds them to account?&lt;/p&gt;
-&lt;h2 id=&#34;so-what-exactly-is-a-broken-window-in-a-software-engineering-team-then&#34;&gt;So what exactly is a broken window in a Software Engineering Team then?&lt;/h2&gt;
-&lt;p&gt;And this is the most important point - you need to communicate the expectation to the team. Lack of standard for the one Rust program within the full Java based technical estate does not constitute a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;. Consistency in communication and expectation setting matters a lot here. If your team&amp;rsquo;s primary language is C# and you do not have a style guide for it, then there is potential for trouble. If people apply different rules in different contexts leading to inconsistency and you do not intervene, then it becomes a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;. There is no hard and fast rule here I think. Use your judgement for the most part but simple few criteria should help you out for the most part&lt;/p&gt;
+&lt;h2 id=&#34;so-what-exactly-is-a-broken-window-in-a-software-engineering-team-then&#34;&gt;So what exactly is a broken window in a Software Engineering Team then?
+&lt;/h2&gt;&lt;p&gt;And this is the most important point - you need to communicate the expectation to the team. Lack of standard for the one Rust program within the full Java based technical estate does not constitute a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;. Consistency in communication and expectation setting matters a lot here. If your team&amp;rsquo;s primary language is C# and you do not have a style guide for it, then there is potential for trouble. If people apply different rules in different contexts leading to inconsistency and you do not intervene, then it becomes a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;. There is no hard and fast rule here I think. Use your judgement for the most part but simple few criteria should help you out for the most part&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Does the issue in question apply broadly across your technical estate? If so it probably is significant enough&lt;/li&gt;
 &lt;li&gt;Had you previously communicated that the issue in hand is important enough to have a team-wide consensus?&lt;/li&gt;
 &lt;li&gt;Is the excellence or following the best practice in the aspect in question a priority for your wider organization? If so, yes it probably will be a &lt;em&gt;&amp;ldquo;broken window&amp;rdquo;&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;why-you-should-care-as-a-software-engineering-manager&#34;&gt;Why you should care as a Software Engineering Manager?&lt;/h2&gt;
-&lt;p&gt;There are lots of reasons I can list but the following would probably be the top of the list&lt;/p&gt;
+&lt;h2 id=&#34;why-you-should-care-as-a-software-engineering-manager&#34;&gt;Why you should care as a Software Engineering Manager?
+&lt;/h2&gt;&lt;p&gt;There are lots of reasons I can list but the following would probably be the top of the list&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Cultural Significance: Just as the Broken Window Theory suggests that neglecting visible signs of disorder can create a culture of apathy, allowing cosmetic issues to persist in a codebase or development process can set a precedent for a lack of attention to detail. Over time, this can erode the team&amp;rsquo;s commitment to engineering excellence and high standards.&lt;/p&gt;
@@ -587,8 +587,8 @@ More seriously, they are not there to stifle creativity but to perform two very 
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;As you can see I may have stolen some talking points from the agile manifesto there. This is not an oversight - I truly do believe in agile teams it is very important that we keep up the engineering excellence lest we lose sight of the trees for the forest and sacrifice technical excellence for business value.&lt;/p&gt;
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Addressing visible but cosmetic issues is not merely about aesthetics; it&amp;rsquo;s about maintaining a culture of engineering excellence, professionalism, and continuous improvement within a software engineering team. By valuing and addressing these issues, teams can prevent the deterioration of code quality, foster collaboration, and ultimately deliver software that meets high standards and exceeds customer expectations.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary
+&lt;/h2&gt;&lt;p&gt;Addressing visible but cosmetic issues is not merely about aesthetics; it&amp;rsquo;s about maintaining a culture of engineering excellence, professionalism, and continuous improvement within a software engineering team. By valuing and addressing these issues, teams can prevent the deterioration of code quality, foster collaboration, and ultimately deliver software that meets high standards and exceeds customer expectations.&lt;/p&gt;
 &lt;p&gt;Note :&lt;br&gt;
 
 

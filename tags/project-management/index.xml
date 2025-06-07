@@ -12,12 +12,12 @@
         <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.jpg" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers&lt;/h1&gt;
-&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
-&lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?&lt;/h2&gt;
-&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
-&lt;h2 id=&#34;managing-stakeholders&#34;&gt;Managing Stakeholders&lt;/h2&gt;
-&lt;p&gt;The largest part of managing an epic or project is understanding and addressing the needs of stakeholders. Here’s how to start:&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.jpg" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
+&lt;/h1&gt;&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
+&lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?
+&lt;/h2&gt;&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
+&lt;h2 id=&#34;managing-stakeholders&#34;&gt;Managing Stakeholders
+&lt;/h2&gt;&lt;p&gt;The largest part of managing an epic or project is understanding and addressing the needs of stakeholders. Here’s how to start:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Identify Stakeholders:&lt;/strong&gt;&lt;br&gt;
@@ -32,8 +32,8 @@ Once you have a list, categorize stakeholders into meaningful groups. Stakeholde
 Tailor your engagement strategy to the needs of each stakeholder group. Some stakeholders might require frequent updates, while others might only need periodic reports. Knowing how to address each group ensures their concerns are managed proactively, reducing potential friction.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;the-stakeholder-onion&#34;&gt;The Stakeholder Onion&lt;/h3&gt;
-
+&lt;h3 id=&#34;the-stakeholder-onion&#34;&gt;The Stakeholder Onion
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -53,8 +53,8 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;li&gt;&lt;strong&gt;Layer 4:&lt;/strong&gt; External parties like customers, regulators, and suppliers, who influence the project&amp;rsquo;s broader context.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Understanding these layers clarifies how and when to engage with each group.&lt;/p&gt;
-&lt;h3 id=&#34;stakeholder-mapping&#34;&gt;Stakeholder Mapping&lt;/h3&gt;
-
+&lt;h3 id=&#34;stakeholder-mapping&#34;&gt;Stakeholder Mapping
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -74,8 +74,8 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;li&gt;&lt;strong&gt;Who controls resources?&lt;/strong&gt; Pinpoint decision-makers for funding, personnel, or infrastructure.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;What are their motivations?&lt;/strong&gt; Understanding what drives stakeholders helps you align the project goals with their interests.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;the-raci-matrix&#34;&gt;The RACI Matrix&lt;/h3&gt;
-
+&lt;h3 id=&#34;the-raci-matrix&#34;&gt;The RACI Matrix
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -108,10 +108,10 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;By implementing RACI in software projects, teams can eliminate the all-too-common &amp;ldquo;too many cooks in the kitchen&amp;rdquo; problem. It creates clear lanes of responsibility, streamlines decision-making, and ensures that everyone knows exactly what&amp;rsquo;s expected of them. This clarity is particularly valuable in agile environments where roles and responsibilities might otherwise become blurred during rapid development cycles.&lt;/p&gt;
-&lt;h2 id=&#34;communication-management&#34;&gt;Communication Management&lt;/h2&gt;
-&lt;p&gt;Clear communication is the backbone of any successful project. Miscommunication can lead to delays, confusion, and even project failure.&lt;/p&gt;
-&lt;h3 id=&#34;communications-plan&#34;&gt;Communications Plan&lt;/h3&gt;
-&lt;p&gt;At its core, a robust communication strategy in software development rests on five essential elements that work together to ensure smooth information flow.&lt;/p&gt;
+&lt;h2 id=&#34;communication-management&#34;&gt;Communication Management
+&lt;/h2&gt;&lt;p&gt;Clear communication is the backbone of any successful project. Miscommunication can lead to delays, confusion, and even project failure.&lt;/p&gt;
+&lt;h3 id=&#34;communications-plan&#34;&gt;Communications Plan
+&lt;/h3&gt;&lt;p&gt;At its core, a robust communication strategy in software development rests on five essential elements that work together to ensure smooth information flow.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Selecting the Right Method&lt;/p&gt;
@@ -136,8 +136,8 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;/ul&gt;
 &lt;p&gt;One of the most common pitfalls in project communication is overwhelming stakeholders with too much information. Here&amp;rsquo;s how to keep communications lean and effective:&lt;br&gt;
 Remember, the goal isn&amp;rsquo;t to communicate more, but to communicate better. By following these principles and remaining mindful of your audience&amp;rsquo;s needs, you can create a communication plan that supports rather than hinders project progress.&lt;/p&gt;
-&lt;h2 id=&#34;managing-risks&#34;&gt;Managing Risks&lt;/h2&gt;
-&lt;p&gt;Risk management ensures you’re prepared for challenges and can respond effectively when they arise.&lt;/p&gt;
+&lt;h2 id=&#34;managing-risks&#34;&gt;Managing Risks
+&lt;/h2&gt;&lt;p&gt;Risk management ensures you’re prepared for challenges and can respond effectively when they arise.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Identify Risks:&lt;/strong&gt;&lt;br&gt;
@@ -164,8 +164,8 @@ When a risk materializes, act immediately using your predefined plan. This minim
 Encourage team members to share insights about potential risks. Transparent communication allows you to identify issues early, before they escalate.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;the-raid-register&#34;&gt;The RAID Register&lt;/h3&gt;
-&lt;p&gt;The RAID framework is a vital tool for managing risks and ensuring project success by bringing structure and clarity to potential challenges. It allows project teams to focus on four key areas: Risks, Assumptions, Issues, and Dependencies. By categorizing and tracking these elements, the RAID register provides a centralized view of project risks and dependencies, improving decision-making and enabling proactive planning.&lt;/p&gt;
+&lt;h3 id=&#34;the-raid-register&#34;&gt;The RAID Register
+&lt;/h3&gt;&lt;p&gt;The RAID framework is a vital tool for managing risks and ensuring project success by bringing structure and clarity to potential challenges. It allows project teams to focus on four key areas: Risks, Assumptions, Issues, and Dependencies. By categorizing and tracking these elements, the RAID register provides a centralized view of project risks and dependencies, improving decision-making and enabling proactive planning.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Risks&lt;/p&gt;
@@ -186,13 +186,13 @@ Encourage team members to share insights about potential risks. Transparent comm
 &lt;/ul&gt;
 &lt;p&gt;By consolidating all these elements into a single RAID register, teams achieve better visibility into the project&amp;rsquo;s risk landscape. This centralized approach fosters proactive management, enabling teams to address potential pitfalls before they escalate. The RAID framework empowers project managers to make informed decisions, plan effectively, and keep projects on track, ultimately driving more predictable and successful outcomes.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;estimates-the-necessary-evil&#34;&gt;Estimates: The Necessary Evil&lt;/h2&gt;
-&lt;p&gt;Estimates are an essential part of project management, offering stakeholders a roadmap for planning and decision-making. However, they are inherently uncertain, and managing this uncertainty is key to making them effective and reliable. But refusing to make estimates does not solve any problems. It is just refusing to be accountable. Any organization runs on plans and roadmaps and people depend on those to guide their work and plan for their future work.&lt;/p&gt;
+&lt;h2 id=&#34;estimates-the-necessary-evil&#34;&gt;Estimates: The Necessary Evil
+&lt;/h2&gt;&lt;p&gt;Estimates are an essential part of project management, offering stakeholders a roadmap for planning and decision-making. However, they are inherently uncertain, and managing this uncertainty is key to making them effective and reliable. But refusing to make estimates does not solve any problems. It is just refusing to be accountable. Any organization runs on plans and roadmaps and people depend on those to guide their work and plan for their future work.&lt;/p&gt;
 &lt;p&gt;Start by understanding your team’s cadence, which involves learning how your team works, their delivery patterns, and leveraging historical data. This understanding helps you create more accurate and realistic predictions about timelines and workloads. Complement this with visualization tools like Mermaid or draw.io, which can illustrate project timelines, dependencies, and potential bottlenecks, making it easier to communicate the big picture to stakeholders.&lt;/p&gt;
 &lt;p&gt;When circumstances change, it’s critical to communicate changes proactively. Updating estimates and informing stakeholders early prevents misunderstandings and helps them adjust their plans accordingly. Finally, treat estimates as an accountability tool. Stakeholders rely on your timelines to plan their activities, so handle this responsibility with care, always striving for transparency and accuracy.&lt;/p&gt;
 &lt;p&gt;By following these principles, you can create estimates that are both dependable and adaptable, setting the stage for project success.&lt;/p&gt;
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Project management for software engineers goes beyond the scope of agile methodologies, addressing essential areas like stakeholder management, communication, risk mitigation, and collaboration. While agile frameworks focus on delivering working software, project management ensures effective coordination with external stakeholders, proactive risk handling, and clarity in roles and responsibilities.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary
+&lt;/h2&gt;&lt;p&gt;Project management for software engineers goes beyond the scope of agile methodologies, addressing essential areas like stakeholder management, communication, risk mitigation, and collaboration. While agile frameworks focus on delivering working software, project management ensures effective coordination with external stakeholders, proactive risk handling, and clarity in roles and responsibilities.&lt;/p&gt;
 &lt;p&gt;This guide emphasizes the importance of identifying and engaging stakeholders using tools like the Stakeholder Onion and the RACI matrix, enabling clear accountability. Communication is highlighted as a cornerstone for success, with practical tips on creating a communication plan tailored to audience needs. Risk management is demystified through the RAID framework, ensuring transparency and preparedness for potential challenges.&lt;/p&gt;
 &lt;p&gt;Additionally, the post underscores the value of reliable estimates and their role in guiding stakeholders, as well as fostering a culture of delegation and teamwork. By mastering these elements, software engineers can effectively navigate the complexities of project management, ensuring aligned goals, clear communication, and successful outcomes in an ever-evolving landscape.&lt;/p&gt;
 </description>
@@ -203,22 +203,22 @@ Encourage team members to share insights about potential risks. Transparent comm
         <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.jpg" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus&lt;/h1&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.jpg" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus
+&lt;/h1&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
 &lt;p&gt;In Japanese culture, there is a term that encapsulates this process beautifully - &amp;ldquo;nemawashi.&amp;rdquo; Nemawashi refers to the practice of laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. It is a fundamental concept that plays a significant role in achieving harmony and collaboration within organizations.&lt;/p&gt;
 &lt;p&gt;In this blog post, we will delve into the concept of nemawashi and explore its practical implications for building consensus before meetings. We will discuss the cultural significance of nemawashi in Japan and its relevance in a broader context. Furthermore, we will outline effective strategies that can help you incorporate nemawashi techniques to foster collaboration, engagement, and successful decision-making.&lt;/p&gt;
 &lt;p&gt;Here we try to understand the art of building consensus and discover how nemawashi can transform your meetings into more fruitful and harmonious experiences. Let&amp;rsquo;s explore the power of nemawashi and its impact on achieving alignment within your team.&lt;/p&gt;
-&lt;h2 id=&#34;understanding-nemawashi&#34;&gt;Understanding Nemawashi&lt;/h2&gt;
-&lt;p&gt;Nemawashi, rooted in Japanese culture, holds valuable lessons for building consensus before meetings. By embracing this practice, teams can set the stage for productive discussions and decision-making. Let&amp;rsquo;s explore the meaning and significance of nemawashi, along with some practical examples.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-nemawashi&#34;&gt;Understanding Nemawashi
+&lt;/h2&gt;&lt;p&gt;Nemawashi, rooted in Japanese culture, holds valuable lessons for building consensus before meetings. By embracing this practice, teams can set the stage for productive discussions and decision-making. Let&amp;rsquo;s explore the meaning and significance of nemawashi, along with some practical examples.&lt;/p&gt;
 &lt;p&gt;At its core, nemawashi involves laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. This process allows individuals to voice their opinions, address concerns, and find common ground, leading to smoother decision-making and improved outcomes.&lt;/p&gt;
-&lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process&lt;/h3&gt;
-&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
+&lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process
+&lt;/h3&gt;&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
 &lt;p&gt;Teams engage in cross-functional meetings, where representatives from various departments share their perspectives, concerns, and ideas. This process allows for a comprehensive understanding of the issue at hand and helps identify potential obstacles or risks. By incorporating nemawashi, Toyota ensures that decisions are made collaboratively, taking into account the viewpoints of all relevant stakeholders.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.jpg&#34;
 	width=&#34;1552&#34;
 	height=&#34;1331&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu11a3de8459562c4cb03febabc41d0cf0_434165_480x0_resize_q75_box.jpg 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu11a3de8459562c4cb03febabc41d0cf0_434165_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_693b204013435803.jpg 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_19cacd62b1aa1935.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -229,15 +229,15 @@ Encourage team members to share insights about potential risks. Transparent comm
 &gt;&lt;br&gt;
 Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota-makes-decisions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read more about Toyota&amp;rsquo;s decision-making process here&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;example-2-us-government-and-legislative-process&#34;&gt;Example 2: U.S. Government and Legislative Process&lt;/h3&gt;
-&lt;p&gt;While nemawashi is rooted in Japanese culture, similar principles of consensus-building can be observed in the U.S. government&amp;rsquo;s legislative process. Before bills are brought to the floor for a vote, extensive negotiations, discussions, and consensus-building efforts take place.&lt;/p&gt;
+&lt;h3 id=&#34;example-2-us-government-and-legislative-process&#34;&gt;Example 2: U.S. Government and Legislative Process
+&lt;/h3&gt;&lt;p&gt;While nemawashi is rooted in Japanese culture, similar principles of consensus-building can be observed in the U.S. government&amp;rsquo;s legislative process. Before bills are brought to the floor for a vote, extensive negotiations, discussions, and consensus-building efforts take place.&lt;/p&gt;
 &lt;p&gt;In the U.S. Congress, lawmakers engage in committee meetings, hearings, and informal conversations to gather input from various stakeholders. This process allows representatives to address concerns, incorporate amendments, and build consensus among different factions. Through these deliberations, consensus is sought to increase the chances of a bill&amp;rsquo;s successful passage.&lt;/p&gt;
 &lt;p&gt;An example of how the U.S. legislative process and consensus-building are depicted is the television show &amp;ldquo;The West Wing.&amp;rdquo; The show portrays the inner workings of the White House and provides insights into the intricate process of developing and passing legislation. It showcases the efforts of policymakers to build consensus, negotiate, and seek agreement among different parties to advance their policy agendas.&lt;/p&gt;
 &lt;p&gt;While &amp;ldquo;The West Wing&amp;rdquo; is a fictional representation, it offers viewers a glimpse into the complexities and nuances of consensus-building in the U.S. political landscape.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
 	width=&#34;2000&#34;
 	height=&#34;1333&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu7f659bf49c1069d142f8c4719745a8b6_398516_480x0_resize_q75_h2_box_2.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu7f659bf49c1069d142f8c4719745a8b6_398516_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_88b234675f94369d.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_b5c97dca5b65ed9f.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -249,8 +249,8 @@ Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota
 Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/790948548/the-west-wing-podcast-a-reminder-of-when-consensus-seemed-possible&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Explore more about &amp;ldquo;The West Wing&amp;rdquo; and its depiction of the U.S. legislative process here.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;By highlighting this example, we can observe that nemawashi-inspired practices and consensus-building efforts exist beyond cultural boundaries. Consensus-building is a universal concept that plays a crucial role in effective decision-making across diverse settings.&lt;/p&gt;
-&lt;h2 id=&#34;strategies-for-building-consensus&#34;&gt;Strategies for Building Consensus&lt;/h2&gt;
-&lt;p&gt;Building consensus before a meeting requires careful planning, effective communication, and fostering a collaborative environment. By employing the following strategies, you can create a foundation for productive discussions and decision-making:&lt;/p&gt;
+&lt;h2 id=&#34;strategies-for-building-consensus&#34;&gt;Strategies for Building Consensus
+&lt;/h2&gt;&lt;p&gt;Building consensus before a meeting requires careful planning, effective communication, and fostering a collaborative environment. By employing the following strategies, you can create a foundation for productive discussions and decision-making:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Preparing for the Meeting - Thorough preparation is essential for successful consensus-building. Consider the following steps:&lt;/p&gt;
@@ -289,8 +289,7 @@ Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/79
         
         <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.jpeg" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
-&lt;p&gt;How the rebellion got subverted&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;How the rebellion got subverted&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -308,11 +307,11 @@ Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/79
 &lt;/nav&gt;
   &lt;/div&gt;
   
-&lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg&#34;
+&lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg&#34;
 	width=&#34;610&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_480x0_resize_q75_box.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_1024x0_resize_q75_box.jpeg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_ecd8072ba80465e6.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_5b6528eeedcddd7d.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -327,11 +326,11 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;Now the interesting thing was these were mostly very short term engagements. There were not multi year projects with team upon teams of developers involved in it. There were no business analysts writing user stories. No QA teams doing user acceptance testing and so on. It was just a few developers mostly working with one or two QA folks who kept these projects afloat. But we didn&amp;rsquo;t have a single methodology for how these projects should be run resulting in a lot of confusion for all the parties involved.&lt;/p&gt;
 &lt;p&gt;I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &amp;ldquo;enterprise&amp;rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement &lt;a class=&#34;link&#34; href=&#34;https://prince2.wiki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PRINCE2&lt;/a&gt; which was as heavy as they came.&lt;/p&gt;
-&lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg&#34;
+&lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg&#34;
 	width=&#34;1000&#34;
 	height=&#34;645&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_480x0_resize_q75_box.jpg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_c22c30e09faf6d80.jpg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_4909599b9756db51.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -343,15 +342,15 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;I encounter agile again somewhere around 2013 when I switch teams within my Org to a mobile application focused team. In addition to using the latest and greatest in technologies in development, this team also was leading the pack in development processes. It was trying to be a thought leader in all these practices that were in with the crowd in those days. The implementation there was quite a stock one. Each team had a scope clearly defined they were responsible for. And the team sizes were just within the limits of what is possible for a normal scrum framework without resorting to SAFe and what not.&lt;/p&gt;
 &lt;p&gt;The only problem was that there was no real enforcement of continuous improvement. Daily standups of some teams would drag on for 45 minutes and most grooming and planning sessions (which were combined) would consist of - &amp;ldquo;well you obviously know how to get this done right? Just get the changes to services X, Y and Z done by friday&amp;rdquo;. The defining feature of this team was how much deep domain and technical knowledge was still intact. Most of the people there had been there for several years and had written 95% of the stuff that was in production at the time. And the 5% that wasn&amp;rsquo;t written by then had been modified by them to suit the rest of the system. So there was no real planning or grooming needed. Everyone knew who would work on a given piece of work and that person could tell you exactly how long that change would take. So it worked very very well until it didn&amp;rsquo;t - When us noobs got there. Suddenly there was an influx of people who didn&amp;rsquo;t know the system as well as incumbents and we started having all sorts of issues.&lt;/p&gt;
 &lt;p&gt;When I left that team and headed to my next team, I encountered the best version of agile that I have seen to date. The key was that, the new team was never afraid to change all the rules so that they could make things more efficient. Planning pokers were tried for a few months and found to be ineffective so we got rid of them. Retro&amp;rsquo;s were too long so we shortened them. The standups were too virtual when done over video every day so we had one always-physical day of standup. And when everything was said and done, we had a very well tuned process and we loved it.&lt;/p&gt;
-&lt;h2 id=&#34;return-to-roots&#34;&gt;Return to roots&lt;/h2&gt;
-&lt;p&gt;I had returned from UK back to Sri Lanka and started working for a company based here, when I ran in to the full fledged Scaled Agile Frameowrk for Enterprises. Quite a mouthful right? And in short that will be SAFE. This is an enterprisy version of Agile practices. Now people like to make a distinction between the small &amp;ldquo;a&amp;rdquo; agile and big &amp;ldquo;A&amp;rdquo; Agile. This is most definitely of the latter kind. The team formation calls for various very distinctive and numerous roles and as with any enterprisy product, it comes with a lot of unwanted features, baggage and caveats.&lt;/p&gt;
+&lt;h2 id=&#34;return-to-roots&#34;&gt;Return to roots
+&lt;/h2&gt;&lt;p&gt;I had returned from UK back to Sri Lanka and started working for a company based here, when I ran in to the full fledged Scaled Agile Frameowrk for Enterprises. Quite a mouthful right? And in short that will be SAFE. This is an enterprisy version of Agile practices. Now people like to make a distinction between the small &amp;ldquo;a&amp;rdquo; agile and big &amp;ldquo;A&amp;rdquo; Agile. This is most definitely of the latter kind. The team formation calls for various very distinctive and numerous roles and as with any enterprisy product, it comes with a lot of unwanted features, baggage and caveats.&lt;/p&gt;
 &lt;p&gt;The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.&lt;/p&gt;
 &lt;p&gt;SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&amp;gt; Program -&amp;gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.&lt;/p&gt;
-&lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg&#34;
+&lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg&#34;
 	width=&#34;500&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_480x0_resize_q75_box.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_1024x0_resize_q75_box.jpeg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_5a662c16e1c94a24.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_42ac06ca599279b1.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -362,8 +361,8 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &gt;&lt;/p&gt;
 &lt;p&gt;And my story of agile implementations is no unique in any way. All over the software development firms, the ground truth is that almost all agile implementations have become liabilities that have slowed down deliveries, hampered team plans and frustrated good developers who are being held back by red tape they view and wholly useless. So why don&amp;rsquo;t companies just &amp;ldquo;do the right thing®&amp;rdquo; and let the teams be fully agile? Why is it all too easy to fail.&lt;/p&gt;
 &lt;p&gt;I posit that the reason is the same reason most change management processes fail is the same reason that implementations of agile fail - humans resist change. More the change seems alien to us, the more we resist them. And agile practices, true agile practices are as alien as it gets compared to traditional waterfall practices. And I understand the temptation to seek assurance of waterfall method. waterfall eases the minds of management and it allows business analysts and PMs involved to take as much uncertainty out of the equation as possible. So what ends up happening is that on the very projects that it is supposed to help, the uncertain and hard to plan projects.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-undo-this&#34;&gt;How to undo this?&lt;/h2&gt;
-&lt;p&gt;I think the key is to build rapport and support before it ever comes to decision time. There is a reason Ali was winning fights before ever setting foot in the ring. The reason that most agile implementations are not trusted is that they seem to add little value while adding a whole lot of work to the development teams and in general to everyone involved. The key to reversing this is to make sure that&lt;/p&gt;
+&lt;h2 id=&#34;how-to-undo-this&#34;&gt;How to undo this?
+&lt;/h2&gt;&lt;p&gt;I think the key is to build rapport and support before it ever comes to decision time. There is a reason Ali was winning fights before ever setting foot in the ring. The reason that most agile implementations are not trusted is that they seem to add little value while adding a whole lot of work to the development teams and in general to everyone involved. The key to reversing this is to make sure that&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Everyone involved understands why are doing the things that we are doing. Why does agile matter, what is it going to get us? And how will we know when agile is implemented right?&lt;/p&gt;
@@ -375,12 +374,12 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;Understand what you are trying to measure. And do not, in the name of everything you love - ever measure that thing.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how&lt;/h2&gt;
-&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how
+&lt;/h2&gt;&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note.png&#34;
 	width=&#34;265&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_480x0_resize_box_3.png 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_a6cd0bdeac3f6099.png 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_3adb4095b2bdc6df.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -390,17 +389,17 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Always make sure you lead with this one. Be sure to compare and contrast with business as usual situation and other competing methodologies. That way everyone will have enough context to know why you are implementing things the way you are.And in the end give them a sense of where you want to end up. And explain that you are not quite there yet. Explain that this is a journey and not a one day task. Your teams wont be fully agile overnight. There will still be hiccups along the way and you will adjust a lot of things, but let them know why it is important and how they can know when they are there. Things will be running smoothly, there will be less admin overhead, the team will settle in to a nice delivery rhythm. Give them enough of an understanding on how to tell when they are doing it right&lt;/p&gt;
-&lt;h2 id=&#34;cutting-out-the-fluff&#34;&gt;Cutting out the fluff&lt;/h2&gt;
-&lt;p&gt;No methodology is perfect. Fredrick brooks was right all those years ago. There is no silver bullet.You have to implement things yourself, evaluate and tweak things yourself.Whatever the methodology you chose - make sure to start from only the most essential parts of the methodology. Anything that is strictly mandatory, cut out.And then run a couple of weeks on that platform and see how you like it, talk to the team, review with stakeholders and add or change things accordingly. Remember that communication does not automatically increase just because you add more meetings. In the same manner remember that lack of meetings does not mean that team is not synced up. Every team develops it&amp;rsquo;s own communication mechanism, try to guide them towards wel established escalation patterns but wait to see how the team responds first before pushing things through&lt;/p&gt;
-&lt;h2 id=&#34;understand-but-do-not-measure&#34;&gt;Understand but do not measure&lt;/h2&gt;
-&lt;p&gt;Well even if you measure, please stop using that as a KPI.First understand how agile will improve your existing delivery platform - will it reduce cycle time? Will it lead to less bug leakage? Will it lead to better automation? Seek to understand exactly what agile will give your teams. And then try and see if it is actually being improved upon as you envisioned. But do not, ever, set those numbers as a KPI or an objective. Once you do they cease to be good measures and people will just start gaming the numbers. What was once a good measure that just reflected how your team behaves now becomes a statistic made up by a bunch of engineers who are well versed in numbers and how to make them up.&lt;/p&gt;
-&lt;h2 id=&#34;use-the-tools-provided-in-whatever-flavour-of-agile-you-chose&#34;&gt;Use the tools provided in whatever flavour of Agile you chose&lt;/h2&gt;
-&lt;p&gt;Each practice of Agile comes with it&amp;rsquo;s own set of processes or lack thereof regarding how to change the processes and procedures. And if by any chance your chosen flavour of agile insists on a one size fits all model with no space for nuance, then please dump that as soon as possible because nothing in this world every got achieved by treating things as black and white. And in software, we all live in the grey.&lt;/p&gt;
+&lt;h2 id=&#34;cutting-out-the-fluff&#34;&gt;Cutting out the fluff
+&lt;/h2&gt;&lt;p&gt;No methodology is perfect. Fredrick brooks was right all those years ago. There is no silver bullet.You have to implement things yourself, evaluate and tweak things yourself.Whatever the methodology you chose - make sure to start from only the most essential parts of the methodology. Anything that is strictly mandatory, cut out.And then run a couple of weeks on that platform and see how you like it, talk to the team, review with stakeholders and add or change things accordingly. Remember that communication does not automatically increase just because you add more meetings. In the same manner remember that lack of meetings does not mean that team is not synced up. Every team develops it&amp;rsquo;s own communication mechanism, try to guide them towards wel established escalation patterns but wait to see how the team responds first before pushing things through&lt;/p&gt;
+&lt;h2 id=&#34;understand-but-do-not-measure&#34;&gt;Understand but do not measure
+&lt;/h2&gt;&lt;p&gt;Well even if you measure, please stop using that as a KPI.First understand how agile will improve your existing delivery platform - will it reduce cycle time? Will it lead to less bug leakage? Will it lead to better automation? Seek to understand exactly what agile will give your teams. And then try and see if it is actually being improved upon as you envisioned. But do not, ever, set those numbers as a KPI or an objective. Once you do they cease to be good measures and people will just start gaming the numbers. What was once a good measure that just reflected how your team behaves now becomes a statistic made up by a bunch of engineers who are well versed in numbers and how to make them up.&lt;/p&gt;
+&lt;h2 id=&#34;use-the-tools-provided-in-whatever-flavour-of-agile-you-chose&#34;&gt;Use the tools provided in whatever flavour of Agile you chose
+&lt;/h2&gt;&lt;p&gt;Each practice of Agile comes with it&amp;rsquo;s own set of processes or lack thereof regarding how to change the processes and procedures. And if by any chance your chosen flavour of agile insists on a one size fits all model with no space for nuance, then please dump that as soon as possible because nothing in this world every got achieved by treating things as black and white. And in software, we all live in the grey.&lt;/p&gt;
 &lt;p&gt;Use retrospectives, scrum of scrums, code reviews and whatever else you can in order to refine the agile processes you have. Get regular feedback from the teams. You don&amp;rsquo;t even have to stick to the feedback gathering methods dictated in your chosen flavour. If you see anything out of place, investigate, determine if you need to handle or fix it and then act accordingly. No process should be set in stone and there is always a chance to improve things.&lt;/p&gt;
 &lt;p&gt;The goal shouldn&amp;rsquo;t be to find fault with the existing processes however. Whenever you treat retro&amp;rsquo;s or other tooling as a way to find existing &lt;em&gt;issues&lt;/em&gt;, people will get overly defensive and try to obfuscate and hide as many things as possible, and that is a sure fire way to sabotaging your own performance.&lt;/p&gt;
 &lt;p&gt;The goal is always to make sure we can improve things from where we are so phrase the questions around that mind set. Instead of saying &amp;ldquo;Team morale was bad due to too many dependencies being unfulfilled, what can we do better?&amp;rdquo;, ask &amp;ldquo;How do we get ahead of as many dependencies as we can and highlight the ones we do not get to?&amp;rdquo;&lt;/p&gt;
-&lt;h2 id=&#34;to-be-continued&#34;&gt;To be continued&lt;/h2&gt;
-&lt;p&gt;This is a very interesting topic that is very close to my heart so there is a ton more I have to say on this topic. Expect to see a few more followup posts on this particular topic in the next few weeks.&lt;/p&gt;
+&lt;h2 id=&#34;to-be-continued&#34;&gt;To be continued
+&lt;/h2&gt;&lt;p&gt;This is a very interesting topic that is very close to my heart so there is a ton more I have to say on this topic. Expect to see a few more followup posts on this particular topic in the next few weeks.&lt;/p&gt;
 </description>
         </item>
         

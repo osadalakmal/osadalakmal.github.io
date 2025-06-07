@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Distributed Systems on Curiously Recurring Thoughts in Programming</title>
+        <link>https://osadalakmal.github.io/tags/distributed-systems/</link>
+        <description>Recent content in Distributed Systems on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Mon, 05 May 2025 14:30:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/distributed-systems/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Unreasonable Effectiveness of Fundamentals of Computer Science</title>
+        <link>https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</link>
+        <pubDate>Mon, 05 May 2025 14:30:00 +0000</pubDate>
+        
+        <guid>https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</guid>
+        <description>&lt;img src="https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud.png" alt="Featured image of post The Unreasonable Effectiveness of Fundamentals of Computer Science" /&gt;&lt;h2 id=&#34;origination-of-an-idea&#34;&gt;Origination of an Idea
+&lt;/h2&gt;&lt;p&gt;In 1960, physicist Eugene Wigner published an essay titled “The Unreasonable Effectiveness of Mathematics in the Natural Sciences,” in which he wondered at how concepts born purely in the human mind—group theory, imaginary numbers, differential equations—so uncannily predict the behavior of atoms, rivers, and galaxies alike. He pointed out that the same algebraic structures underlying quantum mechanics also describe crystal symmetries—equations formulated centuries ago that still govern modern optics and fluid dynamics. Wigner called this “the miracle that the language of mathematics is so appropriate to the objects of reality,” and marveled that what seems like intellectual play often often turns out to be nature’s Rosetta Stone.&lt;/p&gt;
+&lt;h2 id=&#34;anecdote-1--embedded-systems-thinking-to-the-rescue&#34;&gt;Anecdote #1 – Embedded Systems Thinking To The Rescue
+&lt;/h2&gt;&lt;p&gt;Sixteen years ago, I began my career as an embedded developer, coding in C on bare-metal microcontrollers. I programmed UART interfaces, USB and display drivers, and even ported kernels to new boards. I still remember sifting through Russel King’s ARM tree emails and wrestling with poorly formatted hardware manuals to debug a kernel panic at 4 PM on a Friday. Though tedious, those challenges built my detailed mental models.&lt;/p&gt;
+&lt;p&gt;Later, watching Matt Godbolt’s talk &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=-HNpim5x-IE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;“What Every Programmer Should Know about How CPUs Work”&lt;/a&gt; reminded me how deeply that embedded foundation influenced my thinking on modern systems.&lt;/p&gt;
+&lt;h3 id=&#34;from-hardware-to-high-level-bugs&#34;&gt;From Hardware to High-Level Bugs
+&lt;/h3&gt;&lt;p&gt;Recently, a senior engineer pointed out a race condition in our Scala-based HTTP client wrapper. We used a stack of composition layers over the plain Java HTTP client to add caching, circuit breakers, and retries—all written in Scala, a language I was still learning.&lt;/p&gt;
+&lt;p&gt;Although I wasn’t a Scala expert, my embedded background gave me a working mental model:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Thread Execution&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Just as interrupt handlers preempt main code on microcontrollers, JVM threads can preempt each other.&lt;/li&gt;
+&lt;li&gt;Locks in high-level languages behave like disabling interrupts: they serialize access.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cache State&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In C, I dealt with buffers and pointers; here, I dealt with Scala’s &lt;code&gt;HashMap&lt;/code&gt; and &lt;code&gt;Future&lt;/code&gt; types.&lt;/li&gt;
+&lt;li&gt;Invalidating a buffer in embedded memory mirrors evicting a cache entry in Scala.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Synchronization&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Embedded code used mutexes; Scala uses &lt;code&gt;synchronized&lt;/code&gt; blocks and &lt;code&gt;ReentrantLock&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Both ensure only one context mutates shared state at a time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;walking-through-the-bug&#34;&gt;Walking Through the Bug
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;I mapped each Scala construct to its C equivalent as I stepped through logs and tests.&lt;/li&gt;
+&lt;li&gt;I pictured log outputs as memory dumps and threads as interrupt routines racing for shared buffers.&lt;/li&gt;
+&lt;li&gt;By the time I suggested wrapping eviction and insertion in a single lock, the engineer hardly needed to read any code—the core issue was clear.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;key-insight&#34;&gt;Key Insight
+&lt;/h3&gt;&lt;p&gt;These core principles of concurrency, memory consistency, and state management apply just as naturally on modern JVMs as on microcontrollers—making new syntax feel like mere icing on a familiar cake.&lt;/p&gt;
+&lt;h2 id=&#34;anecdote-2--databases-change-data-capture-and-cloud&#34;&gt;Anecdote #2 – Databases, Change Data Capture, and Cloud
+&lt;/h2&gt;&lt;p&gt;During a zero-downtime PostgreSQL upgrade on AWS RDS using AWS DMS, I needed to explain unexpected replication gaps. I did this &lt;strong&gt;without knowing DMS internals&lt;/strong&gt;—relying on a simple, general database model.&lt;/p&gt;
+&lt;h3 id=&#34;general-database-model&#34;&gt;General Database Model
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Compute&lt;/strong&gt;: Executes SQL queries and transactions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: Persists tables, indexes, and data files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WAL (Write-Ahead Log)&lt;/strong&gt;: Logs every change before it’s applied.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CDC tools (DMS, Debezium) tap the WAL to stream inserts, updates, and deletes in real time.&lt;/p&gt;
+&lt;h3 id=&#34;how-zero-downtime-works-with-dms&#34;&gt;How Zero Downtime Works with DMS
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Initial Full Load&lt;/strong&gt;: DMS copies existing data from the source database to the target in bulk, creating an exact snapshot.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CDC Phase&lt;/strong&gt;: After the full load, DMS switches to Change Data Capture mode, reading the WAL to capture ongoing changes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Continuous Sync&lt;/strong&gt;: DMS applies changes to the target in near–real time, keeping it in lockstep while the source remains live.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cutover&lt;/strong&gt;: At any convenient moment, we switch traffic to the target with negligible downtime, since DMS has reconciled all changes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;dms-constraints&#34;&gt;DMS Constraints
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sequences&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sequence increments (SERIAL/IDENTITY) emit via the WAL, but DMS ignores them.&lt;/li&gt;
+&lt;li&gt;Result: the target’s sequence can lag, causing insert failures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DDL Statements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DDL (CREATE/ALTER/DROP) bypasses the WAL and is blocked by PostgreSQL’s internal replication triggers.&lt;/li&gt;
+&lt;li&gt;Triggers prevent schema changes from entering the WAL, so DMS never sees them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When I walked through the WAL-based flow and pointed out where PostgreSQL’s internal replication triggers intercept DDL, my teammate—who had never used DMS—instantly saw the picture. They could trace exactly how inserts and updates flow from the source through the WAL, why sequence increments vanish, and how triggers halt schema changes. Within minutes, they could predict which operations DMS would drop and why, without ever consulting AWS documentation.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Manual sequence sync (e.g., querying &lt;code&gt;last_value&lt;/code&gt; and &lt;code&gt;ALTER SEQUENCE&lt;/code&gt; to catch up) exists, but that wasn’t the point.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;key-takeaway&#34;&gt;Key Takeaway
+&lt;/h3&gt;&lt;p&gt;Anchoring on &lt;strong&gt;compute&lt;/strong&gt;, &lt;strong&gt;storage&lt;/strong&gt;, &lt;strong&gt;WAL&lt;/strong&gt;, and &lt;strong&gt;triggers&lt;/strong&gt; lets you predict any CDC tool’s behavior without learning product-specific quirks. With this core mental model, detailed DMS knowledge becomes optional.&lt;/p&gt;
+&lt;h2 id=&#34;anecdote-3---redis-ssh-tunneling-and-distributed-systems&#34;&gt;Anecdote #3 - Redis, SSH Tunneling, and Distributed Systems
+&lt;/h2&gt;&lt;p&gt;Distributed consensus once felt like arcane wizardry—until I read the &lt;a class=&#34;link&#34; href=&#34;https://raft.github.io/raft.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Raft paper&lt;/a&gt; (highly recommended) and built my own implementation. Suddenly, concepts like &lt;strong&gt;leader election&lt;/strong&gt;, &lt;strong&gt;log replication&lt;/strong&gt;, and &lt;strong&gt;network partitions&lt;/strong&gt; clicked, giving me a reliable mental model for any distributed system.&lt;/p&gt;
+&lt;h3 id=&#34;from-theory-to-redis&#34;&gt;From Theory to Redis
+&lt;/h3&gt;&lt;p&gt;With Raft under my belt, I could immediately grasp how Redis handles replication in its single-master setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Leader Election&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A single Redis instance acts as the “master.”&lt;/li&gt;
+&lt;li&gt;If it fails or is unreachable, followers hold an election to choose a new master.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Replication &amp;amp; Sharding&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Followers continuously pull the master’s write-ahead commands to stay in sync.&lt;/li&gt;
+&lt;li&gt;In a clustered setup, Redis shards your keyspace: each master node owns a subset of hash slots (0–16383), and clients must direct commands to the correct node.&lt;/li&gt;
+&lt;li&gt;Clients receive a &lt;code&gt;MOVED&lt;/code&gt; or &lt;code&gt;ASK&lt;/code&gt; response when they connect to the wrong shard.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-real-world-ssh-tunnel-puzzle&#34;&gt;The Real-World SSH-Tunnel Puzzle
+&lt;/h3&gt;&lt;p&gt;Last week, an engineer couldn’t &lt;code&gt;GET&lt;/code&gt; keys through our AWS ElastiCache Redis cluster after I’d set up an SSH tunnel. Here’s what happened:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What We Did&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We tunneled port 6379 on &lt;strong&gt;one&lt;/strong&gt; Redis node through SSH to localhost.&lt;/li&gt;
+&lt;li&gt;We pointed our client at &lt;code&gt;localhost:6379&lt;/code&gt; and saw all the keys that lived on &lt;strong&gt;that&lt;/strong&gt; shard.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Why Other Keys Failed&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis uses the &lt;code&gt;MOVED&lt;/code&gt; response to tell clients when a key lives on another shard.&lt;/li&gt;
+&lt;li&gt;A standard Redis client will follow this redirect—unless it’s only connected to a single tunnel endpoint.&lt;/li&gt;
+&lt;li&gt;Since we didn’t tunnel the other shards, any &lt;code&gt;MOVED&lt;/code&gt; response couldn’t be followed, and GETs failed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Key Takeaway&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fundamental model&lt;/strong&gt;: Redis clusters map keys → hash slots → specific nodes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Practical fix&lt;/strong&gt;: Either tunnel all cluster nodes (one port per shard) or use a Redis-aware proxy that understands cluster redirections (for example, &lt;a class=&#34;link&#34; href=&#34;https://github.com/antirez/redis/tree/unstable/src/cluster&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;redis-cluster-proxy&lt;/a&gt;, which handles MOVED/ASK redirections automatically).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once your mental model of leader election, replication, and sharding is set, implementation details—SSH tunnels or AWS quirks—feel like mere mechanical plumbing.&lt;/p&gt;
+&lt;h2 id=&#34;why-you-should-care&#34;&gt;Why You Should Care
+&lt;/h2&gt;&lt;p&gt;In software, it’s easy to chase the latest framework or database. One month it’s a shiny JavaScript library; a decade ago, it was the NoSQL craze. But each new tool brings its own rules, quirks, and failure modes. If you only learn surface details, you rebuild mental models from scratch each time—and troubleshooting at 3 AM becomes a frantic search through half-memorized documentation.&lt;/p&gt;
+&lt;p&gt;Instead, invest in fundamentals: consensus algorithms, write-ahead logs, and trigger mechanisms. As Daniel Kahneman explains in &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thinking, Fast and Slow&lt;/a&gt;, these become your System 1 intuitions—instant, reliable mental shortcuts. When you grasp systems at their core, mapping any new tool onto those patterns is trivial.&lt;/p&gt;
+&lt;p&gt;This pays off:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Predictable troubleshooting&lt;/strong&gt;: With mental models ingrained, you diagnose issues by analogy—whether it’s a Raft-based consensus failure or a Redis shard miss—without rummaging through half-learned tutorials.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Efficient collaboration&lt;/strong&gt;: Shared fundamentals keep conversations focused on solutions, not on translating tool-specific jargon. You onboard teammates faster and avoid miscommunication by speaking a common language of system design.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mastering fundamentals isn’t academic—it’s the key to durable expertise, so you spend less time learning syntax and more time solving real problems, regardless of tomorrow’s hottest technology.```&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,40 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.\n">
 <title>Adventures in WSL Land</title>
 
 <link rel='canonical' href='https://osadalakmal.github.io/posts/wsladventures/wsladventures/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Adventures in WSL Land'>
-<meta property='og:description' content='Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.'>
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Adventures in WSL Land">
+<meta property='og:description' content="Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.\n">
 <meta property='og:url' content='https://osadalakmal.github.io/posts/wsladventures/wsladventures/'>
 <meta property='og:site_name' content='Curiously Recurring Thoughts in Programming'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2021-06-16T12:00:05&#43;05:30'/><meta property='article:modified_time' content='2021-06-16T12:00:05&#43;05:30'/>
 <meta name="twitter:site" content="@osadaparanaliyanage">
     <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Adventures in WSL Land">
-<meta name="twitter:description" content="Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.">
+<meta name="twitter:description" content="Adventures in WSL Land Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.\n">
     <link rel="shortcut icon" href="/img/favicon.ico" />
-
-  
-    
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0KDQ9KLJCX');
-        }
-      </script>
-    
-  
-
 
     </head>
     <body class="
@@ -142,31 +122,12 @@
             </a>
         </li>
         
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-        <div class="menu-bottom-section">
-                <li id="i18n-switch">  
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 5h7" />
-  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
-  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
-  <path d="M12 20l4 -9l4 9" />
-  <path d="M19.1 18h-6.2" />
-</svg>
-
-
-
-                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
-                        
-                            <option value="https://osadalakmal.github.io/" selected></option>
-                        
-                    </select>
-                </li>
-            
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -174,7 +135,7 @@
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -182,10 +143,11 @@
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
     </ol>
 </aside>
 
@@ -252,14 +214,14 @@
     <section class="article-content">
     
     
-    <h1 id="adventures-in-wsl-land">Adventures in WSL Land</h1>
-<p>Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.</p>
-<h2 id="getting-to-a-good-starting-place">Getting to a good starting place</h2>
-<p>The first point of order was getting windows updated so that we could at least try on a new way of developing on this laptop. To this end I started by forcing a windows update. And curiously this failed. Turns out the reason was a McAfee program that was installed on the laptop for some security work. Turns out it was incompatible with the windows update. After that was resolved I was off to the races. But a good thing to keep in mind is always check if you are running the latest version of the OS and unless there is a very good reason not to do so, always upgrade it to the latest version.</p>
-<h2 id="virtualization-platforms">Virtualization platforms</h2>
-<p>Next up was selecting a virtualization platform to be used. In the past I had almost always reached for virtual box. VMWare was prohibitively costly and nowhere near as intuitive. But sadly Virtualbox seems to be neglected more and more under the stewardship of Oracle and there are no signs of things improving anytime soon. I am guessing Larry doesn&rsquo;t really see a point in free things unless it is Oracle getting those free things. So I was pretty happy to find that windows now includes a native virtualization platform called Hyper-V.</p>
-<h2 id="hyper-v---still-rough-around-the-edges">Hyper-V - Still Rough Around the edges</h2>
-<p>The management of the VMs is done via a GUI called Hyper-V Manager (This is microsoft remember?). It looks something like below <img src="/img/Microsoft-Hyper-V-manager.jpg"
+    <h1 id="adventures-in-wsl-land">Adventures in WSL Land
+</h1><p>Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.</p>
+<h2 id="getting-to-a-good-starting-place">Getting to a good starting place
+</h2><p>The first point of order was getting windows updated so that we could at least try on a new way of developing on this laptop. To this end I started by forcing a windows update. And curiously this failed. Turns out the reason was a McAfee program that was installed on the laptop for some security work. Turns out it was incompatible with the windows update. After that was resolved I was off to the races. But a good thing to keep in mind is always check if you are running the latest version of the OS and unless there is a very good reason not to do so, always upgrade it to the latest version.</p>
+<h2 id="virtualization-platforms">Virtualization platforms
+</h2><p>Next up was selecting a virtualization platform to be used. In the past I had almost always reached for virtual box. VMWare was prohibitively costly and nowhere near as intuitive. But sadly Virtualbox seems to be neglected more and more under the stewardship of Oracle and there are no signs of things improving anytime soon. I am guessing Larry doesn&rsquo;t really see a point in free things unless it is Oracle getting those free things. So I was pretty happy to find that windows now includes a native virtualization platform called Hyper-V.</p>
+<h2 id="hyper-v---still-rough-around-the-edges">Hyper-V - Still Rough Around the edges
+</h2><p>The management of the VMs is done via a GUI called Hyper-V Manager (This is microsoft remember?). It looks something like below <img src="/img/Microsoft-Hyper-V-manager.jpg"
 	
 	
 	
@@ -288,67 +250,6 @@
 
     
 
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/posts/cloud9/cloud9/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Cloud9 - A cloud based IDE for your code</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/codestar/codestar/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Codestar - A new way to get started on AWS Projects</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/allocationcost/allocationcost/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Cost Of Allocation in High Performance Systems</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/sqliteperformance/sqliteperformance/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SQLite for High Throughput Applications</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
      
     
         
@@ -363,7 +264,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -452,7 +353,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

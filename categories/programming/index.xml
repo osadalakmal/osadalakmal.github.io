@@ -13,8 +13,7 @@
         
         <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.jpeg" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
-&lt;p&gt;How the rebellion got subverted&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;How the rebellion got subverted&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -32,11 +31,11 @@
 &lt;/nav&gt;
   &lt;/div&gt;
   
-&lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg&#34;
+&lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.jpeg&#34;
 	width=&#34;610&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_480x0_resize_q75_box.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_huabb92307ecb13ee88c12ce2c5eccb116_56123_1024x0_resize_q75_box.jpeg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_ecd8072ba80465e6.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_5b6528eeedcddd7d.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -51,11 +50,11 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;Now the interesting thing was these were mostly very short term engagements. There were not multi year projects with team upon teams of developers involved in it. There were no business analysts writing user stories. No QA teams doing user acceptance testing and so on. It was just a few developers mostly working with one or two QA folks who kept these projects afloat. But we didn&amp;rsquo;t have a single methodology for how these projects should be run resulting in a lot of confusion for all the parties involved.&lt;/p&gt;
 &lt;p&gt;I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &amp;ldquo;enterprise&amp;rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement &lt;a class=&#34;link&#34; href=&#34;https://prince2.wiki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PRINCE2&lt;/a&gt; which was as heavy as they came.&lt;/p&gt;
-&lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg&#34;
+&lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.jpg&#34;
 	width=&#34;1000&#34;
 	height=&#34;645&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_480x0_resize_q75_box.jpg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu2c08d33cb894d489006817f490853cdc_116092_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_c22c30e09faf6d80.jpg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_4909599b9756db51.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -67,15 +66,15 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;I encounter agile again somewhere around 2013 when I switch teams within my Org to a mobile application focused team. In addition to using the latest and greatest in technologies in development, this team also was leading the pack in development processes. It was trying to be a thought leader in all these practices that were in with the crowd in those days. The implementation there was quite a stock one. Each team had a scope clearly defined they were responsible for. And the team sizes were just within the limits of what is possible for a normal scrum framework without resorting to SAFe and what not.&lt;/p&gt;
 &lt;p&gt;The only problem was that there was no real enforcement of continuous improvement. Daily standups of some teams would drag on for 45 minutes and most grooming and planning sessions (which were combined) would consist of - &amp;ldquo;well you obviously know how to get this done right? Just get the changes to services X, Y and Z done by friday&amp;rdquo;. The defining feature of this team was how much deep domain and technical knowledge was still intact. Most of the people there had been there for several years and had written 95% of the stuff that was in production at the time. And the 5% that wasn&amp;rsquo;t written by then had been modified by them to suit the rest of the system. So there was no real planning or grooming needed. Everyone knew who would work on a given piece of work and that person could tell you exactly how long that change would take. So it worked very very well until it didn&amp;rsquo;t - When us noobs got there. Suddenly there was an influx of people who didn&amp;rsquo;t know the system as well as incumbents and we started having all sorts of issues.&lt;/p&gt;
 &lt;p&gt;When I left that team and headed to my next team, I encountered the best version of agile that I have seen to date. The key was that, the new team was never afraid to change all the rules so that they could make things more efficient. Planning pokers were tried for a few months and found to be ineffective so we got rid of them. Retro&amp;rsquo;s were too long so we shortened them. The standups were too virtual when done over video every day so we had one always-physical day of standup. And when everything was said and done, we had a very well tuned process and we loved it.&lt;/p&gt;
-&lt;h2 id=&#34;return-to-roots&#34;&gt;Return to roots&lt;/h2&gt;
-&lt;p&gt;I had returned from UK back to Sri Lanka and started working for a company based here, when I ran in to the full fledged Scaled Agile Frameowrk for Enterprises. Quite a mouthful right? And in short that will be SAFE. This is an enterprisy version of Agile practices. Now people like to make a distinction between the small &amp;ldquo;a&amp;rdquo; agile and big &amp;ldquo;A&amp;rdquo; Agile. This is most definitely of the latter kind. The team formation calls for various very distinctive and numerous roles and as with any enterprisy product, it comes with a lot of unwanted features, baggage and caveats.&lt;/p&gt;
+&lt;h2 id=&#34;return-to-roots&#34;&gt;Return to roots
+&lt;/h2&gt;&lt;p&gt;I had returned from UK back to Sri Lanka and started working for a company based here, when I ran in to the full fledged Scaled Agile Frameowrk for Enterprises. Quite a mouthful right? And in short that will be SAFE. This is an enterprisy version of Agile practices. Now people like to make a distinction between the small &amp;ldquo;a&amp;rdquo; agile and big &amp;ldquo;A&amp;rdquo; Agile. This is most definitely of the latter kind. The team formation calls for various very distinctive and numerous roles and as with any enterprisy product, it comes with a lot of unwanted features, baggage and caveats.&lt;/p&gt;
 &lt;p&gt;The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.&lt;/p&gt;
 &lt;p&gt;SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&amp;gt; Program -&amp;gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.&lt;/p&gt;
-&lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg&#34;
+&lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.jpeg&#34;
 	width=&#34;500&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_480x0_resize_q75_box.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu0b5a9ffcb027c80c0eab142b4cb92cec_69673_1024x0_resize_q75_box.jpeg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_5a662c16e1c94a24.jpeg 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_42ac06ca599279b1.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -86,8 +85,8 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &gt;&lt;/p&gt;
 &lt;p&gt;And my story of agile implementations is no unique in any way. All over the software development firms, the ground truth is that almost all agile implementations have become liabilities that have slowed down deliveries, hampered team plans and frustrated good developers who are being held back by red tape they view and wholly useless. So why don&amp;rsquo;t companies just &amp;ldquo;do the right thing®&amp;rdquo; and let the teams be fully agile? Why is it all too easy to fail.&lt;/p&gt;
 &lt;p&gt;I posit that the reason is the same reason most change management processes fail is the same reason that implementations of agile fail - humans resist change. More the change seems alien to us, the more we resist them. And agile practices, true agile practices are as alien as it gets compared to traditional waterfall practices. And I understand the temptation to seek assurance of waterfall method. waterfall eases the minds of management and it allows business analysts and PMs involved to take as much uncertainty out of the equation as possible. So what ends up happening is that on the very projects that it is supposed to help, the uncertain and hard to plan projects.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-undo-this&#34;&gt;How to undo this?&lt;/h2&gt;
-&lt;p&gt;I think the key is to build rapport and support before it ever comes to decision time. There is a reason Ali was winning fights before ever setting foot in the ring. The reason that most agile implementations are not trusted is that they seem to add little value while adding a whole lot of work to the development teams and in general to everyone involved. The key to reversing this is to make sure that&lt;/p&gt;
+&lt;h2 id=&#34;how-to-undo-this&#34;&gt;How to undo this?
+&lt;/h2&gt;&lt;p&gt;I think the key is to build rapport and support before it ever comes to decision time. There is a reason Ali was winning fights before ever setting foot in the ring. The reason that most agile implementations are not trusted is that they seem to add little value while adding a whole lot of work to the development teams and in general to everyone involved. The key to reversing this is to make sure that&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Everyone involved understands why are doing the things that we are doing. Why does agile matter, what is it going to get us? And how will we know when agile is implemented right?&lt;/p&gt;
@@ -99,12 +98,12 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;Understand what you are trying to measure. And do not, in the name of everything you love - ever measure that thing.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how&lt;/h2&gt;
-&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how
+&lt;/h2&gt;&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note.png&#34;
 	width=&#34;265&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_480x0_resize_box_3.png 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu767b9ad43790d7eeba2802cafd2da47f_36811_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_a6cd0bdeac3f6099.png 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_3adb4095b2bdc6df.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -114,17 +113,17 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Always make sure you lead with this one. Be sure to compare and contrast with business as usual situation and other competing methodologies. That way everyone will have enough context to know why you are implementing things the way you are.And in the end give them a sense of where you want to end up. And explain that you are not quite there yet. Explain that this is a journey and not a one day task. Your teams wont be fully agile overnight. There will still be hiccups along the way and you will adjust a lot of things, but let them know why it is important and how they can know when they are there. Things will be running smoothly, there will be less admin overhead, the team will settle in to a nice delivery rhythm. Give them enough of an understanding on how to tell when they are doing it right&lt;/p&gt;
-&lt;h2 id=&#34;cutting-out-the-fluff&#34;&gt;Cutting out the fluff&lt;/h2&gt;
-&lt;p&gt;No methodology is perfect. Fredrick brooks was right all those years ago. There is no silver bullet.You have to implement things yourself, evaluate and tweak things yourself.Whatever the methodology you chose - make sure to start from only the most essential parts of the methodology. Anything that is strictly mandatory, cut out.And then run a couple of weeks on that platform and see how you like it, talk to the team, review with stakeholders and add or change things accordingly. Remember that communication does not automatically increase just because you add more meetings. In the same manner remember that lack of meetings does not mean that team is not synced up. Every team develops it&amp;rsquo;s own communication mechanism, try to guide them towards wel established escalation patterns but wait to see how the team responds first before pushing things through&lt;/p&gt;
-&lt;h2 id=&#34;understand-but-do-not-measure&#34;&gt;Understand but do not measure&lt;/h2&gt;
-&lt;p&gt;Well even if you measure, please stop using that as a KPI.First understand how agile will improve your existing delivery platform - will it reduce cycle time? Will it lead to less bug leakage? Will it lead to better automation? Seek to understand exactly what agile will give your teams. And then try and see if it is actually being improved upon as you envisioned. But do not, ever, set those numbers as a KPI or an objective. Once you do they cease to be good measures and people will just start gaming the numbers. What was once a good measure that just reflected how your team behaves now becomes a statistic made up by a bunch of engineers who are well versed in numbers and how to make them up.&lt;/p&gt;
-&lt;h2 id=&#34;use-the-tools-provided-in-whatever-flavour-of-agile-you-chose&#34;&gt;Use the tools provided in whatever flavour of Agile you chose&lt;/h2&gt;
-&lt;p&gt;Each practice of Agile comes with it&amp;rsquo;s own set of processes or lack thereof regarding how to change the processes and procedures. And if by any chance your chosen flavour of agile insists on a one size fits all model with no space for nuance, then please dump that as soon as possible because nothing in this world every got achieved by treating things as black and white. And in software, we all live in the grey.&lt;/p&gt;
+&lt;h2 id=&#34;cutting-out-the-fluff&#34;&gt;Cutting out the fluff
+&lt;/h2&gt;&lt;p&gt;No methodology is perfect. Fredrick brooks was right all those years ago. There is no silver bullet.You have to implement things yourself, evaluate and tweak things yourself.Whatever the methodology you chose - make sure to start from only the most essential parts of the methodology. Anything that is strictly mandatory, cut out.And then run a couple of weeks on that platform and see how you like it, talk to the team, review with stakeholders and add or change things accordingly. Remember that communication does not automatically increase just because you add more meetings. In the same manner remember that lack of meetings does not mean that team is not synced up. Every team develops it&amp;rsquo;s own communication mechanism, try to guide them towards wel established escalation patterns but wait to see how the team responds first before pushing things through&lt;/p&gt;
+&lt;h2 id=&#34;understand-but-do-not-measure&#34;&gt;Understand but do not measure
+&lt;/h2&gt;&lt;p&gt;Well even if you measure, please stop using that as a KPI.First understand how agile will improve your existing delivery platform - will it reduce cycle time? Will it lead to less bug leakage? Will it lead to better automation? Seek to understand exactly what agile will give your teams. And then try and see if it is actually being improved upon as you envisioned. But do not, ever, set those numbers as a KPI or an objective. Once you do they cease to be good measures and people will just start gaming the numbers. What was once a good measure that just reflected how your team behaves now becomes a statistic made up by a bunch of engineers who are well versed in numbers and how to make them up.&lt;/p&gt;
+&lt;h2 id=&#34;use-the-tools-provided-in-whatever-flavour-of-agile-you-chose&#34;&gt;Use the tools provided in whatever flavour of Agile you chose
+&lt;/h2&gt;&lt;p&gt;Each practice of Agile comes with it&amp;rsquo;s own set of processes or lack thereof regarding how to change the processes and procedures. And if by any chance your chosen flavour of agile insists on a one size fits all model with no space for nuance, then please dump that as soon as possible because nothing in this world every got achieved by treating things as black and white. And in software, we all live in the grey.&lt;/p&gt;
 &lt;p&gt;Use retrospectives, scrum of scrums, code reviews and whatever else you can in order to refine the agile processes you have. Get regular feedback from the teams. You don&amp;rsquo;t even have to stick to the feedback gathering methods dictated in your chosen flavour. If you see anything out of place, investigate, determine if you need to handle or fix it and then act accordingly. No process should be set in stone and there is always a chance to improve things.&lt;/p&gt;
 &lt;p&gt;The goal shouldn&amp;rsquo;t be to find fault with the existing processes however. Whenever you treat retro&amp;rsquo;s or other tooling as a way to find existing &lt;em&gt;issues&lt;/em&gt;, people will get overly defensive and try to obfuscate and hide as many things as possible, and that is a sure fire way to sabotaging your own performance.&lt;/p&gt;
 &lt;p&gt;The goal is always to make sure we can improve things from where we are so phrase the questions around that mind set. Instead of saying &amp;ldquo;Team morale was bad due to too many dependencies being unfulfilled, what can we do better?&amp;rdquo;, ask &amp;ldquo;How do we get ahead of as many dependencies as we can and highlight the ones we do not get to?&amp;rdquo;&lt;/p&gt;
-&lt;h2 id=&#34;to-be-continued&#34;&gt;To be continued&lt;/h2&gt;
-&lt;p&gt;This is a very interesting topic that is very close to my heart so there is a ton more I have to say on this topic. Expect to see a few more followup posts on this particular topic in the next few weeks.&lt;/p&gt;
+&lt;h2 id=&#34;to-be-continued&#34;&gt;To be continued
+&lt;/h2&gt;&lt;p&gt;This is a very interesting topic that is very close to my heart so there is a ton more I have to say on this topic. Expect to see a few more followup posts on this particular topic in the next few weeks.&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -134,8 +133,7 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
         
         <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
         <description>&lt;img src="https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
-&lt;p&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -148,16 +146,16 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;/nav&gt;
   &lt;/div&gt;
   
-&lt;h2 id=&#34;being-a-c-library-in-a-c-world&#34;&gt;Being a C library in a C++ World&lt;/h2&gt;
-&lt;p&gt;This weekend I was looking at a regex library written by intel called &lt;a class=&#34;link&#34; href=&#34;https://github.com/intel/hyperscan/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;being-a-c-library-in-a-c-world&#34;&gt;Being a C library in a C++ World
+&lt;/h2&gt;&lt;p&gt;This weekend I was looking at a regex library written by intel called &lt;a class=&#34;link&#34; href=&#34;https://github.com/intel/hyperscan/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hyperscan&lt;/a&gt;. I had needed to use a regex library that was performant  and easy to use. I needed the library to use all the new hardware features such as new instructions such as AVX2 and AVX512. This library was the best one I came across.&lt;/p&gt;
 &lt;p&gt;It has support for block mode for bounded data and also supports streaming mode for unbounded or streaming data. It uses graph decomposition and hybrid automata based approach to match the data and uses the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Ragel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;ragel library&lt;/a&gt; for parsing the regex. It also uses SIMD instructions and has a lot of optimizations as is to be expected from a CPU vendors library.&lt;/p&gt;
-&lt;h2 id=&#34;why-c-is-still-being-used&#34;&gt;Why C is still being used&lt;/h2&gt;
-&lt;p&gt;Now, given all that had transpired during the last decade from Heartbleed to POODLE, you might be forgiven for asking why anyone in their right frame of mind, would implement a regex library in C. But the fact of the matter is for performant idiomatic code that is portable, nothing comes as close as C. Rust is a promising language and I wish that all the very best and a bright future. But it still has a long ways to go to grab the same mind share as C. The biggest thing is that C is such a simple language.&lt;/p&gt;
+&lt;h2 id=&#34;why-c-is-still-being-used&#34;&gt;Why C is still being used
+&lt;/h2&gt;&lt;p&gt;Now, given all that had transpired during the last decade from Heartbleed to POODLE, you might be forgiven for asking why anyone in their right frame of mind, would implement a regex library in C. But the fact of the matter is for performant idiomatic code that is portable, nothing comes as close as C. Rust is a promising language and I wish that all the very best and a bright future. But it still has a long ways to go to grab the same mind share as C. The biggest thing is that C is such a simple language.&lt;/p&gt;
 &lt;p&gt;It is based on a very simple mental modal and once you have mastered it, it pays dividends over and above. It has barely changed over the time I first learned it around 14 years ago. And this durability is a huge plus in the practical world. This means that for projects that will stay relatively stable, C is a great choice.&lt;/p&gt;
-&lt;h2 id=&#34;c-is-nice-but-c-is-nicer&#34;&gt;C is nice but C++ is nicer&lt;/h2&gt;
-
+&lt;h2 id=&#34;c-is-nice-but-c-is-nicer&#34;&gt;C is nice but C++ is nicer
+&lt;/h2&gt;
 
 
 &lt;figure&gt;
@@ -175,8 +173,8 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;The &amp;ldquo;dot method&amp;rdquo; of programming as I like to call it, is a very convenient way to experiment quickly. Basically the idea is that you include the main header file for the library you are experimenting with, then you instantiate whatever seems to be the most relevant class for what you want to achieve. And finally you type the object name and then press dot and wait for autocompletion of the IDE to kick in. Assuming the library author was a sensible person, you would be off to the races at this point. You would have everything you need to do right there and it will be a matter of calling the right methods with the right parameters.&lt;/p&gt;
 &lt;p&gt;Now this is not how you would necessarily do the actual development for the production code but this is very useful in prototyping and testing.&lt;/p&gt;
 &lt;p&gt;Another nice thing about C++ is it&amp;rsquo;s capability to hide unwanted complexity. And make sure the code moves only within the parameters set by the library. Enum classes and other features introduced in C++11 is the main driver for this functionality.&lt;/p&gt;
-&lt;h2 id=&#34;implementing-a-c-wrapper-for-hyperscan&#34;&gt;Implementing a C++ Wrapper for Hyperscan&lt;/h2&gt;
-&lt;p&gt;With all that in mind, let&amp;rsquo;s get down to business of creating the wrapper. Lets start with the header file.&lt;/p&gt;
+&lt;h2 id=&#34;implementing-a-c-wrapper-for-hyperscan&#34;&gt;Implementing a C++ Wrapper for Hyperscan
+&lt;/h2&gt;&lt;p&gt;With all that in mind, let&amp;rsquo;s get down to business of creating the wrapper. Lets start with the header file.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;HyperScanDatabase&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;typedef&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;match_event_handler&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EventHandler&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -292,8 +290,8 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
     &gt;Guru of the week&lt;/a&gt;. But in particular pay attention to the fact we hid the implementation of the compile function from the header in an anonymous namespace. This is something that I have seen almost all the C++ newbies, specially ones that started out with Java make. Those functions do not need to be part of the header file. Even if you make it private, it ends up polluting the namespace and needing recompiles of all the translation units including this header for no real gain. And no, you do not have to test that. The whole point of TDD is to test the unit - i.e. the interface you defined in the header. The public interface of the class can and should be tested and the &lt;code&gt;compile&lt;/code&gt; function will get tested while you do that. You don&amp;rsquo;t need to write a specific test for that function.&lt;/p&gt;
 &lt;p&gt;Also note that we delegate resource management to the constructor and destructor as much as possible. The user of the class should not have to worry about freeing the resources. Obviously resource holding classes should not ideally be value semantic classes, so copying etc should be prevented. So in hindsight I should have used something like &lt;a class=&#34;link&#34; href=&#34;https://en.cppreference.com/w/cpp/language/rule_of_three&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;rule of three&lt;/a&gt; and defined a copy constructor and assignment operator as well. So strike one for me :)&lt;/p&gt;
-&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways&lt;/h2&gt;
-&lt;p&gt;In general the first thing that I instinctively do when I have to use a non-trivial C library is to look for a C++ wrapper. It is much easier to work with a C++ interface and not have to worry about manual resource management. This pattern of creating C++ wrappers go back to when we had to use OpenSSL in one of my previous jobs and we ended up writing a pretty comprehensive C++ wrapper for that. In case you have to do that for your work, try to make sure that you never ever leak the resource management details to outside. The moment you do that, you lose all advantage that C++ gives you.&lt;/p&gt;
+&lt;h2 id=&#34;takeaways&#34;&gt;Takeaways
+&lt;/h2&gt;&lt;p&gt;In general the first thing that I instinctively do when I have to use a non-trivial C library is to look for a C++ wrapper. It is much easier to work with a C++ interface and not have to worry about manual resource management. This pattern of creating C++ wrappers go back to when we had to use OpenSSL in one of my previous jobs and we ended up writing a pretty comprehensive C++ wrapper for that. In case you have to do that for your work, try to make sure that you never ever leak the resource management details to outside. The moment you do that, you lose all advantage that C++ gives you.&lt;/p&gt;
 &lt;p&gt;Make sure that your wrappers public interface is independent from the underlying C libraries. Redefine enums to enum classes, use narrower types, use types with custom validation - whatever you do, define your own interfaces since that will allow you to customize the internal behavior to your hearts content as well upgrade or modify the underlying C library without having to change the clients of your library.&lt;/p&gt;
 </description>
         </item>

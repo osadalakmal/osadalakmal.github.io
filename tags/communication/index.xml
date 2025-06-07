@@ -12,12 +12,12 @@
         <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.jpg" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers&lt;/h1&gt;
-&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
-&lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?&lt;/h2&gt;
-&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
-&lt;h2 id=&#34;managing-stakeholders&#34;&gt;Managing Stakeholders&lt;/h2&gt;
-&lt;p&gt;The largest part of managing an epic or project is understanding and addressing the needs of stakeholders. Here’s how to start:&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.jpg" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
+&lt;/h1&gt;&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
+&lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?
+&lt;/h2&gt;&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
+&lt;h2 id=&#34;managing-stakeholders&#34;&gt;Managing Stakeholders
+&lt;/h2&gt;&lt;p&gt;The largest part of managing an epic or project is understanding and addressing the needs of stakeholders. Here’s how to start:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Identify Stakeholders:&lt;/strong&gt;&lt;br&gt;
@@ -32,8 +32,8 @@ Once you have a list, categorize stakeholders into meaningful groups. Stakeholde
 Tailor your engagement strategy to the needs of each stakeholder group. Some stakeholders might require frequent updates, while others might only need periodic reports. Knowing how to address each group ensures their concerns are managed proactively, reducing potential friction.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;the-stakeholder-onion&#34;&gt;The Stakeholder Onion&lt;/h3&gt;
-
+&lt;h3 id=&#34;the-stakeholder-onion&#34;&gt;The Stakeholder Onion
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -53,8 +53,8 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;li&gt;&lt;strong&gt;Layer 4:&lt;/strong&gt; External parties like customers, regulators, and suppliers, who influence the project&amp;rsquo;s broader context.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Understanding these layers clarifies how and when to engage with each group.&lt;/p&gt;
-&lt;h3 id=&#34;stakeholder-mapping&#34;&gt;Stakeholder Mapping&lt;/h3&gt;
-
+&lt;h3 id=&#34;stakeholder-mapping&#34;&gt;Stakeholder Mapping
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -74,8 +74,8 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;li&gt;&lt;strong&gt;Who controls resources?&lt;/strong&gt; Pinpoint decision-makers for funding, personnel, or infrastructure.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;What are their motivations?&lt;/strong&gt; Understanding what drives stakeholders helps you align the project goals with their interests.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;the-raci-matrix&#34;&gt;The RACI Matrix&lt;/h3&gt;
-
+&lt;h3 id=&#34;the-raci-matrix&#34;&gt;The RACI Matrix
+&lt;/h3&gt;
 
 
 &lt;figure&gt;
@@ -108,10 +108,10 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;By implementing RACI in software projects, teams can eliminate the all-too-common &amp;ldquo;too many cooks in the kitchen&amp;rdquo; problem. It creates clear lanes of responsibility, streamlines decision-making, and ensures that everyone knows exactly what&amp;rsquo;s expected of them. This clarity is particularly valuable in agile environments where roles and responsibilities might otherwise become blurred during rapid development cycles.&lt;/p&gt;
-&lt;h2 id=&#34;communication-management&#34;&gt;Communication Management&lt;/h2&gt;
-&lt;p&gt;Clear communication is the backbone of any successful project. Miscommunication can lead to delays, confusion, and even project failure.&lt;/p&gt;
-&lt;h3 id=&#34;communications-plan&#34;&gt;Communications Plan&lt;/h3&gt;
-&lt;p&gt;At its core, a robust communication strategy in software development rests on five essential elements that work together to ensure smooth information flow.&lt;/p&gt;
+&lt;h2 id=&#34;communication-management&#34;&gt;Communication Management
+&lt;/h2&gt;&lt;p&gt;Clear communication is the backbone of any successful project. Miscommunication can lead to delays, confusion, and even project failure.&lt;/p&gt;
+&lt;h3 id=&#34;communications-plan&#34;&gt;Communications Plan
+&lt;/h3&gt;&lt;p&gt;At its core, a robust communication strategy in software development rests on five essential elements that work together to ensure smooth information flow.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Selecting the Right Method&lt;/p&gt;
@@ -136,8 +136,8 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 &lt;/ul&gt;
 &lt;p&gt;One of the most common pitfalls in project communication is overwhelming stakeholders with too much information. Here&amp;rsquo;s how to keep communications lean and effective:&lt;br&gt;
 Remember, the goal isn&amp;rsquo;t to communicate more, but to communicate better. By following these principles and remaining mindful of your audience&amp;rsquo;s needs, you can create a communication plan that supports rather than hinders project progress.&lt;/p&gt;
-&lt;h2 id=&#34;managing-risks&#34;&gt;Managing Risks&lt;/h2&gt;
-&lt;p&gt;Risk management ensures you’re prepared for challenges and can respond effectively when they arise.&lt;/p&gt;
+&lt;h2 id=&#34;managing-risks&#34;&gt;Managing Risks
+&lt;/h2&gt;&lt;p&gt;Risk management ensures you’re prepared for challenges and can respond effectively when they arise.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Identify Risks:&lt;/strong&gt;&lt;br&gt;
@@ -164,8 +164,8 @@ When a risk materializes, act immediately using your predefined plan. This minim
 Encourage team members to share insights about potential risks. Transparent communication allows you to identify issues early, before they escalate.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;the-raid-register&#34;&gt;The RAID Register&lt;/h3&gt;
-&lt;p&gt;The RAID framework is a vital tool for managing risks and ensuring project success by bringing structure and clarity to potential challenges. It allows project teams to focus on four key areas: Risks, Assumptions, Issues, and Dependencies. By categorizing and tracking these elements, the RAID register provides a centralized view of project risks and dependencies, improving decision-making and enabling proactive planning.&lt;/p&gt;
+&lt;h3 id=&#34;the-raid-register&#34;&gt;The RAID Register
+&lt;/h3&gt;&lt;p&gt;The RAID framework is a vital tool for managing risks and ensuring project success by bringing structure and clarity to potential challenges. It allows project teams to focus on four key areas: Risks, Assumptions, Issues, and Dependencies. By categorizing and tracking these elements, the RAID register provides a centralized view of project risks and dependencies, improving decision-making and enabling proactive planning.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Risks&lt;/p&gt;
@@ -186,37 +186,15 @@ Encourage team members to share insights about potential risks. Transparent comm
 &lt;/ul&gt;
 &lt;p&gt;By consolidating all these elements into a single RAID register, teams achieve better visibility into the project&amp;rsquo;s risk landscape. This centralized approach fosters proactive management, enabling teams to address potential pitfalls before they escalate. The RAID framework empowers project managers to make informed decisions, plan effectively, and keep projects on track, ultimately driving more predictable and successful outcomes.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;estimates-the-necessary-evil&#34;&gt;Estimates: The Necessary Evil&lt;/h2&gt;
-&lt;p&gt;Estimates are an essential part of project management, offering stakeholders a roadmap for planning and decision-making. However, they are inherently uncertain, and managing this uncertainty is key to making them effective and reliable. But refusing to make estimates does not solve any problems. It is just refusing to be accountable. Any organization runs on plans and roadmaps and people depend on those to guide their work and plan for their future work.&lt;/p&gt;
+&lt;h2 id=&#34;estimates-the-necessary-evil&#34;&gt;Estimates: The Necessary Evil
+&lt;/h2&gt;&lt;p&gt;Estimates are an essential part of project management, offering stakeholders a roadmap for planning and decision-making. However, they are inherently uncertain, and managing this uncertainty is key to making them effective and reliable. But refusing to make estimates does not solve any problems. It is just refusing to be accountable. Any organization runs on plans and roadmaps and people depend on those to guide their work and plan for their future work.&lt;/p&gt;
 &lt;p&gt;Start by understanding your team’s cadence, which involves learning how your team works, their delivery patterns, and leveraging historical data. This understanding helps you create more accurate and realistic predictions about timelines and workloads. Complement this with visualization tools like Mermaid or draw.io, which can illustrate project timelines, dependencies, and potential bottlenecks, making it easier to communicate the big picture to stakeholders.&lt;/p&gt;
 &lt;p&gt;When circumstances change, it’s critical to communicate changes proactively. Updating estimates and informing stakeholders early prevents misunderstandings and helps them adjust their plans accordingly. Finally, treat estimates as an accountability tool. Stakeholders rely on your timelines to plan their activities, so handle this responsibility with care, always striving for transparency and accuracy.&lt;/p&gt;
 &lt;p&gt;By following these principles, you can create estimates that are both dependable and adaptable, setting the stage for project success.&lt;/p&gt;
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Project management for software engineers goes beyond the scope of agile methodologies, addressing essential areas like stakeholder management, communication, risk mitigation, and collaboration. While agile frameworks focus on delivering working software, project management ensures effective coordination with external stakeholders, proactive risk handling, and clarity in roles and responsibilities.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary
+&lt;/h2&gt;&lt;p&gt;Project management for software engineers goes beyond the scope of agile methodologies, addressing essential areas like stakeholder management, communication, risk mitigation, and collaboration. While agile frameworks focus on delivering working software, project management ensures effective coordination with external stakeholders, proactive risk handling, and clarity in roles and responsibilities.&lt;/p&gt;
 &lt;p&gt;This guide emphasizes the importance of identifying and engaging stakeholders using tools like the Stakeholder Onion and the RACI matrix, enabling clear accountability. Communication is highlighted as a cornerstone for success, with practical tips on creating a communication plan tailored to audience needs. Risk management is demystified through the RAID framework, ensuring transparency and preparedness for potential challenges.&lt;/p&gt;
 &lt;p&gt;Additionally, the post underscores the value of reliable estimates and their role in guiding stakeholders, as well as fostering a culture of delegation and teamwork. By mastering these elements, software engineers can effectively navigate the complexities of project management, ensuring aligned goals, clear communication, and successful outcomes in an ever-evolving landscape.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Just Use Json</title>
-        <link>https://osadalakmal.github.io/posts/just-use-json/</link>
-        <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
-        
-        <guid>https://osadalakmal.github.io/posts/just-use-json/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/this-is-engineering.jpg" alt="Featured image of post Just Use Json" /&gt;&lt;h1 id=&#34;just-use-json&#34;&gt;Just Use Json&lt;/h1&gt;
-&lt;h2 id=&#34;history-of-serialization-formats&#34;&gt;History of Serialization Formats&lt;/h2&gt;
-&lt;p&gt;Serialization formats have a pretty long history dating back to the 1980s when Sun Microsystems introduced XDR (External Data Representation) as part of their Network File System (NFS) protocol. XDR was designed to provide a standard way of encoding data for network transmission, allowing different computer architectures to exchange information seamlessly. This paved the way for more sophisticated serialization formats, including ASN.1 (Abstract Syntax Notation One) which gained popularity in telecommunications and cryptography, and CORBA&amp;rsquo;s CDR (Common Data Representation) used in distributed object systems. There may have been standardaized formats before XDR but I have neither studied nor known them. But XDR is still alive and can be used today with &lt;a class=&#34;link&#34; href=&#34;https://man7.org/linux/man-pages/man3/xdr.3.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;libc RPC interfaces&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As the internet evolved, new serialization formats emerged to meet changing needs. XML (eXtensible Markup Language) became widely adopted in the late 1990s and early 2000s for its human-readable format and flexibility. However, its verbosity led to the development of more compact alternatives. JSON (JavaScript Object Notation) gained traction in the mid-2000s for its simplicity and native support in web browsers. YAML (YAML Ain&amp;rsquo;t Markup Language) also emerged as a human-friendly, easy-to-read format, particularly popular for configuration files. Subsequently, binary formats like Protocol Buffers, MessagePack, and Apache Thrift were developed to offer improved performance and smaller payload sizes, catering to the growing demands of high-speed, large-scale data exchange in modern distributed systems.&lt;/p&gt;
-&lt;h2 id=&#34;from-xml-for-everything-to-xml-is-bad-for-everyone&#34;&gt;From XML for Everything to XML is bad for Everyone&lt;/h2&gt;
-&lt;p&gt;In the early 2000s you could not escape XML even if you wanted to. It was state of the art and it was everywhere. We were going to use it for communication. And with DTDs or Xml Schema Documents we were going to use it to validate communications. We were going to use it to sepcifiy the styling and formatting using XSLT. We were going to use XPath to specify subsets of XML documents as part of the XSLT standard and we were going to use XQuery to query XML files allowing us to build a document database around XML documents. Java beans were using it to specify &lt;a class=&#34;link&#34; href=&#34;https://xmlbeans.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;everything&lt;/a&gt;. And we were creating communication protocols based on &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/SOAP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;XML as a standard&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As you would inevitably expect it to, this attitude of let&amp;rsquo;s use XML for everything led to an industry backslash. This coincided with the rise of a new cohort of web based startups that were starting to grow in popularity and had to face scaling issues due to growth that was unheard of before that. Around this time &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/REST&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;REST&lt;/a&gt; starts making an appearance in the industry and is gaining ground in engineer mindspace. Compared to SOAP, the new technology is very easy to grok and much easier to setup. It uses HTTP verbs for the CRUD operations and can be used even with simple tools like curl. There is no need to use complex tooling that could generate and digest XML as before with SOAP. And along with this drop in usage of SOAP, comes the decline in usage of XML.&lt;/p&gt;
-&lt;p&gt;In to this mix comes JSON, first invented by Douglas Crockford around 2000/2001, this was a subset of Javascript when it was first created. It was simpler to understand and write than comparable XML and most certainly less verbose. This meant that it was the perfect accompaniment for REST to use as a serialization format although nothing dicatated that it must be JSON. So most of the web companies (SaaS, Social Media, etc) started using the REST + JSON as the default communications framework. And to throw another complication in to the midst of all this, the microservice revolution took off around the same time as well. From monoliths to Service Oriented Architecture to microservices, this meant that it was time to churn out more and more microservices that had drastically simpler interfaces. Due to the published best practice from around the time being that a given microservice would do one thing and one thing only, we started creating simpler services by the dozen. And this meant we needed to make the interfaces as simple as possible.&lt;/p&gt;
-&lt;p&gt;And that in a nutshell is how we went from SOAP + XML to REST + JSON in a few years. I watched in fascination and the titans in the industry debated and quarraled over all this since I was just a junior engineer with no real idea about the tradeoffs involved. All this was jargon wars for me. And now a decade on, I relaize that some profound changes happened during that era.&lt;/p&gt;
-&lt;h2 id=&#34;readability-as-the-metric-to-optimize&#34;&gt;Readability as the metric to optimize&lt;/h2&gt;
 </description>
         </item>
         <item>
@@ -225,22 +203,22 @@ Encourage team members to share insights about potential risks. Transparent comm
         <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.jpg" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus&lt;/h1&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.jpg" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus
+&lt;/h1&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
 &lt;p&gt;In Japanese culture, there is a term that encapsulates this process beautifully - &amp;ldquo;nemawashi.&amp;rdquo; Nemawashi refers to the practice of laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. It is a fundamental concept that plays a significant role in achieving harmony and collaboration within organizations.&lt;/p&gt;
 &lt;p&gt;In this blog post, we will delve into the concept of nemawashi and explore its practical implications for building consensus before meetings. We will discuss the cultural significance of nemawashi in Japan and its relevance in a broader context. Furthermore, we will outline effective strategies that can help you incorporate nemawashi techniques to foster collaboration, engagement, and successful decision-making.&lt;/p&gt;
 &lt;p&gt;Here we try to understand the art of building consensus and discover how nemawashi can transform your meetings into more fruitful and harmonious experiences. Let&amp;rsquo;s explore the power of nemawashi and its impact on achieving alignment within your team.&lt;/p&gt;
-&lt;h2 id=&#34;understanding-nemawashi&#34;&gt;Understanding Nemawashi&lt;/h2&gt;
-&lt;p&gt;Nemawashi, rooted in Japanese culture, holds valuable lessons for building consensus before meetings. By embracing this practice, teams can set the stage for productive discussions and decision-making. Let&amp;rsquo;s explore the meaning and significance of nemawashi, along with some practical examples.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-nemawashi&#34;&gt;Understanding Nemawashi
+&lt;/h2&gt;&lt;p&gt;Nemawashi, rooted in Japanese culture, holds valuable lessons for building consensus before meetings. By embracing this practice, teams can set the stage for productive discussions and decision-making. Let&amp;rsquo;s explore the meaning and significance of nemawashi, along with some practical examples.&lt;/p&gt;
 &lt;p&gt;At its core, nemawashi involves laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. This process allows individuals to voice their opinions, address concerns, and find common ground, leading to smoother decision-making and improved outcomes.&lt;/p&gt;
-&lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process&lt;/h3&gt;
-&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
+&lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process
+&lt;/h3&gt;&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
 &lt;p&gt;Teams engage in cross-functional meetings, where representatives from various departments share their perspectives, concerns, and ideas. This process allows for a comprehensive understanding of the issue at hand and helps identify potential obstacles or risks. By incorporating nemawashi, Toyota ensures that decisions are made collaboratively, taking into account the viewpoints of all relevant stakeholders.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.jpg&#34;
 	width=&#34;1552&#34;
 	height=&#34;1331&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu11a3de8459562c4cb03febabc41d0cf0_434165_480x0_resize_q75_box.jpg 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu11a3de8459562c4cb03febabc41d0cf0_434165_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_693b204013435803.jpg 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_19cacd62b1aa1935.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -251,15 +229,15 @@ Encourage team members to share insights about potential risks. Transparent comm
 &gt;&lt;br&gt;
 Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota-makes-decisions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read more about Toyota&amp;rsquo;s decision-making process here&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;example-2-us-government-and-legislative-process&#34;&gt;Example 2: U.S. Government and Legislative Process&lt;/h3&gt;
-&lt;p&gt;While nemawashi is rooted in Japanese culture, similar principles of consensus-building can be observed in the U.S. government&amp;rsquo;s legislative process. Before bills are brought to the floor for a vote, extensive negotiations, discussions, and consensus-building efforts take place.&lt;/p&gt;
+&lt;h3 id=&#34;example-2-us-government-and-legislative-process&#34;&gt;Example 2: U.S. Government and Legislative Process
+&lt;/h3&gt;&lt;p&gt;While nemawashi is rooted in Japanese culture, similar principles of consensus-building can be observed in the U.S. government&amp;rsquo;s legislative process. Before bills are brought to the floor for a vote, extensive negotiations, discussions, and consensus-building efforts take place.&lt;/p&gt;
 &lt;p&gt;In the U.S. Congress, lawmakers engage in committee meetings, hearings, and informal conversations to gather input from various stakeholders. This process allows representatives to address concerns, incorporate amendments, and build consensus among different factions. Through these deliberations, consensus is sought to increase the chances of a bill&amp;rsquo;s successful passage.&lt;/p&gt;
 &lt;p&gt;An example of how the U.S. legislative process and consensus-building are depicted is the television show &amp;ldquo;The West Wing.&amp;rdquo; The show portrays the inner workings of the White House and provides insights into the intricate process of developing and passing legislation. It showcases the efforts of policymakers to build consensus, negotiate, and seek agreement among different parties to advance their policy agendas.&lt;/p&gt;
 &lt;p&gt;While &amp;ldquo;The West Wing&amp;rdquo; is a fictional representation, it offers viewers a glimpse into the complexities and nuances of consensus-building in the U.S. political landscape.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
 	width=&#34;2000&#34;
 	height=&#34;1333&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu7f659bf49c1069d142f8c4719745a8b6_398516_480x0_resize_q75_h2_box_2.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu7f659bf49c1069d142f8c4719745a8b6_398516_1024x0_resize_q75_h2_box_2.webp 1024w&#34;
+	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_88b234675f94369d.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_b5c97dca5b65ed9f.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -271,8 +249,8 @@ Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota
 Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/790948548/the-west-wing-podcast-a-reminder-of-when-consensus-seemed-possible&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Explore more about &amp;ldquo;The West Wing&amp;rdquo; and its depiction of the U.S. legislative process here.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;By highlighting this example, we can observe that nemawashi-inspired practices and consensus-building efforts exist beyond cultural boundaries. Consensus-building is a universal concept that plays a crucial role in effective decision-making across diverse settings.&lt;/p&gt;
-&lt;h2 id=&#34;strategies-for-building-consensus&#34;&gt;Strategies for Building Consensus&lt;/h2&gt;
-&lt;p&gt;Building consensus before a meeting requires careful planning, effective communication, and fostering a collaborative environment. By employing the following strategies, you can create a foundation for productive discussions and decision-making:&lt;/p&gt;
+&lt;h2 id=&#34;strategies-for-building-consensus&#34;&gt;Strategies for Building Consensus
+&lt;/h2&gt;&lt;p&gt;Building consensus before a meeting requires careful planning, effective communication, and fostering a collaborative environment. By employing the following strategies, you can create a foundation for productive discussions and decision-making:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Preparing for the Meeting - Thorough preparation is essential for successful consensus-building. Consider the following steps:&lt;/p&gt;

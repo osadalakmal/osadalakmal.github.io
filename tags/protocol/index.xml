@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Protocol on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/protocol/</link>
+        <link>http://localhost:1313/tags/protocol/</link>
         <description>Recent content in Protocol on Curiously Recurring Thoughts in Programming</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Thu, 25 Jul 2024 03:58:57 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/protocol/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 25 Jul 2024 03:58:57 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/protocol/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Just Use Json</title>
-        <link>https://osadalakmal.github.io/posts/just-use-json/</link>
+        <link>http://localhost:1313/posts/just-use-json/</link>
         <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/just-use-json/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/this-is-engineering.jpg" alt="Featured image of post Just Use Json" /&gt;&lt;h1 id=&#34;just-use-json&#34;&gt;Just Use Json&lt;/h1&gt;
+        <guid>http://localhost:1313/posts/just-use-json/</guid>
+        <description>&lt;img src="http://localhost:1313/this-is-engineering.jpg" alt="Featured image of post Just Use Json" /&gt;&lt;h1 id=&#34;just-use-json&#34;&gt;Just Use Json&lt;/h1&gt;
 &lt;h2 id=&#34;history-of-serialization-formats&#34;&gt;History of Serialization Formats&lt;/h2&gt;
 &lt;p&gt;Serialization formats have a pretty long history dating back to the 1980s when Sun Microsystems introduced XDR (External Data Representation) as part of their Network File System (NFS) protocol. XDR was designed to provide a standard way of encoding data for network transmission, allowing different computer architectures to exchange information seamlessly. This paved the way for more sophisticated serialization formats, including ASN.1 (Abstract Syntax Notation One) which gained popularity in telecommunications and cryptography, and CORBA&amp;rsquo;s CDR (Common Data Representation) used in distributed object systems. There may have been standardaized formats before XDR but I have neither studied nor known them. But XDR is still alive and can be used today with &lt;a class=&#34;link&#34; href=&#34;https://man7.org/linux/man-pages/man3/xdr.3.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;libc RPC interfaces&lt;/a&gt;.&lt;/p&gt;
