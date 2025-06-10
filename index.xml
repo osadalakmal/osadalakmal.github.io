@@ -2582,14 +2582,118 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/img/profile.jpg&#34; alt=&#34;My Profile Picture&#34; width=&#34;60%&#34;/&gt; &lt;/figure&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/img/osada-conf-speech.png&#34; alt=&#34;My Profile Picture&#34; width=&#34;60%&#34;/&gt; &lt;figcaption&gt;
+                
+                    &lt;h4&gt;Presenting at Develop Conference @ BBC&lt;/h4&gt;
+                
+                
+            &lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;I am a software developer with more than a decade of experience in software development currently working as a Lead Senior Solutions Architect at Dialog PLC in Colombo, Sri Lanka.&lt;/p&gt;
-&lt;p&gt;I graduated from University of Moratuwa, the leading university in Sri Lanka with a degree in Electronics and Telecommunication. Since then I have had many hats, played many roles in the software industry. My primary interests in the field are software build systems, developer experience, programming languages and database systems.&lt;/p&gt;
-&lt;p&gt;My primary field of domain knowledge is in trading and finance. With almost ten years at Bloomberg, two years and London Stock Exchange Group after completing all three exams in CFA, I am proficient in Buy side, FMI space and financial information systems.&lt;/p&gt;
-&lt;p&gt;I have recently switched to a more direct consumer software related role and am enjoying the challenges that comes with leaving a comfortable are for a fresh start.&lt;/p&gt;
-&lt;p&gt;My brief resume is available &lt;a class=&#34;link&#34; href=&#34;https://osadalakmal.github.io/docs/osada-resume.pdf&#34; &gt;here&lt;/a&gt; and detailed resume is available &lt;a class=&#34;link&#34; href=&#34;https://osadalakmal.github.io/docs/osada-resume-detailed.pdf&#34; &gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I am a dad of two lovely kids who I spend most of my free time with. Creating memories with them is a second full time Job! In my spare time I like to travel, read and play table tennis. I hold dual citizenship in United Kingdom and Sri Lanka. After having spent nearly a decade in UK, I am currently back in Colombo, Sri Lanka.&lt;/p&gt;
+&lt;h1 id=&#34;osada-lakmal-paranaliyanage&#34;&gt;Osada Lakmal Paranaliyanage
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Software Engineering Manager | Distributed Systems &amp;amp; DevOps Enthusiast&lt;/strong&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/osadalakmal/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LinkedIn&lt;/a&gt; • &lt;a class=&#34;link&#34; href=&#34;https://osada.blog/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog: Curiously Recurring Thoughts in Programming&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;about-me&#34;&gt;About Me
+&lt;/h2&gt;&lt;p&gt;I’m an experienced Software Engineering Manager with over 17 years of leadership in building scalable, cloud-native solutions across finance, telecom, and media. At the BBC in Glasgow, I head a backend engineering team utilizing API-driven microservices on AWS that powers the backend of &lt;a class=&#34;link&#34; href=&#34;https://www.bbc.co.uk/sounds&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BBC Sounds&lt;/a&gt;. Our main tech stack is typescript based and we prefer fully cloud native and Infrastructure as Code (IaaC) solutions. We focus on building a high performing, psychologically safe team that delivers business value early and often.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;professional-journey&#34;&gt;Professional Journey
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Software Engineering Team Lead&lt;/strong&gt;, BBC (Glasgow)&lt;br&gt;
+May 2023 – Present&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I head up the team that provides metadata to power BBC Sounds.&lt;/li&gt;
+&lt;li&gt;We are currently moving to a new tech stack and rewriting most of our infrastructure to bring them inline with modern technology standards.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Senior Lead Solutions Architect&lt;/strong&gt;, Dialog Axiata PLC (Colombo)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Head of Platform Technology&lt;/strong&gt;, Dialog Axiata PLC (Colombo)&lt;br&gt;
+Apr 2021 – Sep 2021&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I take on several different roles in Dialog. I first work on the Customer Management System as a solution architect, helping design and implement a move from an Oracle PL SQL system to a Java microservices based system.&lt;/li&gt;
+&lt;li&gt;Later on I head up the technology aspect of a startup with an enterprise - WOW. We were one of the first super apps to launch in Sri Lanka containing multiple mini apps and allowing consumers to do shopping, consume entertainment, manage Dialog accounts, play games and access a social network within it.&lt;/li&gt;
+&lt;li&gt;We also design and implement a full data platform that powers the super app and extends further. It consumes real time feeds of data, creates real time triggers for marketing and promotional aspects and powers all the data analytics within the business. We also implement a Customer Data Platform(CDP) for powering the business. Tech stack was Java based using Neptune, Postgress and Kafka.&lt;/li&gt;
+&lt;li&gt;I also design and implement a Apache Airflow based system for scheduling jobs.&lt;/li&gt;
+&lt;li&gt;I ran the Architecture Review Board (ARB) that reviews and approves the new solutions across the enterprise.&lt;/li&gt;
+&lt;li&gt;I learn about high stakes stakeholder management, programme management and delivery, managing and executing highly complex programmes of work spanning multiple scrum teams. I also learn several new technologies, design several brand new software systems using cutting edge technologies.&lt;/li&gt;
+&lt;li&gt;Due to personal reasons in May 2023, I move back to UK and join BBC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Associate Software Architect&lt;/strong&gt;, LSEG Technology (Malabe)&lt;br&gt;
+Apr 2019 – Apr 2021&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I join and lead two scrum teams to develop the first solution of the brand new Risk Management software for Stock Exchanges. We successfully develop and deploy it within very tight delivery deadlines. We improve the codebase and bring it up to C++14 standard. I also design and run several learning and development programmes for engineers.&lt;/li&gt;
+&lt;li&gt;I learn about leading teams in my first management experience. I learn that I actually enjoy line management, coaching, mentoring and developing my teams. I also learn about stringent quality control, standardized QA processes and software delivery practice moving to a SAFe process.&lt;/li&gt;
+&lt;li&gt;Once our risk managenent solution is delivered I move on to Dialog Axiata PLC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Senior Software Engineer&lt;/strong&gt;, Bloomberg LP (UK)&lt;br&gt;
+Sept 2009 – Mar 2019&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My first team was Tradebook team, the independent brokerage arm of Bloomberg. Spent nearly three years building everything from exchange connectivity systems to matching trading books to commission calculation systems. Cut my teeth on trading systems first in here. Finance was a new domain so I spent a lot of time learning about it. Probably how I ended up doing my CFA exams.&lt;/li&gt;
+&lt;li&gt;In addition my first encounter with legcy UNIX systems including AIX, Solaris and HP UX. I have the blisters in the hands and the deep brows in my forehead as proof! But this is when I also learn my way around a *nix shell and learn to enjoy terminal based programming including vim. Something that has served me well in my journey.&lt;/li&gt;
+&lt;li&gt;I move to Mobile team around 2012 and start working on a backend authentication system and connectivity system. The original connectivity solution depended on an always open connection that made it a energy sink. We switch to a session based protocol with associated authentication machinary. We drop the energy requirements over 90% and remove significant amounts of legacy infra along the way. I also design and implement a notification service for a new alerting system. My first brush with high performance systems pumping out hundreds of thousands of messages a minute under time crticial conditions.&lt;/li&gt;
+&lt;li&gt;I do my first iOS and android development. But more importantly, learn my first security systems concepts. Which I carry over to my next team&lt;/li&gt;
+&lt;li&gt;I move the Security Systems team which provide fundamental appsec services such as encryption at rest as a service etc. to the rest of Bloomberg. We develop multiple systems that have almost zero production incidents, are a breeze to maintain. We develop everything from encryption as a service to identity solutions to trusted platform systems.&lt;/li&gt;
+&lt;li&gt;I leave as I am moving to Sri Lanka and join LSEG Technology.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Electronic &amp;amp; Software Engineer&lt;/strong&gt;, Zone24x7 (Sri Lanka)&lt;br&gt;
+Jun 2006 – Apr 2009&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Embedded System Programming. I brought up development boards, wrote device driver software, POS Systems, soldered circuit boards and did regular crunch time. I was young, enthusiastic and full of energy. Itching for challanges I set about doing as much as I could and spent as much time as I could on it. Eighteen hour days were not uncommon. Thankfully I don&amp;rsquo;t think I will ever do this again!&lt;/li&gt;
+&lt;li&gt;I move to UK and join Bloomberg.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-i-care-about&#34;&gt;What I Care About
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;First-Principles Foundations&lt;/strong&gt;&lt;br&gt;
+I believe deeply that first principles are the bedrock of software systems design.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Software Architecture&lt;/strong&gt;&lt;br&gt;
+Everything in software architecture is a tradeoff. There are no silver bullets. Every system needs to find it&amp;rsquo;s balance point. I enjoy this process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Developer Productivity &amp;amp; Experience&lt;/strong&gt;&lt;br&gt;
+DevEx is important because developers are our biggest asset. We owe it to ourselves to create a great experience and envrionment for them to thrive in. Tooling to culture, anything that makes my team better is my passion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Engineering Culture &amp;amp; Leadership&lt;/strong&gt;&lt;br&gt;
+I have transitioned to mostly troublehooting people-systems now. Creating and maintaining a great culture, leading people effectivelt and creating high performance teams are what I focus on.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Continuous Learning &amp;amp; Sharing&lt;/strong&gt;&lt;br&gt;
+I truly believe that our trade is one where we need to learn continously and better ourselves. Whether it is AI tooling or newest database trend, the industry moves quickly and we need to understand that backdrop as engineering leaders. Part of the reason I started this blog.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Life Beyond Code&lt;/strong&gt;&lt;br&gt;
+I have two lovely kids and an amazing wife that keeps me grounded and are the most important part of my life.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;education--certifications&#34;&gt;Education &amp;amp; Certifications
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;B.Sc. (1st Class Hons), Electronic &amp;amp; Telecommunication Engineering&lt;/strong&gt;, University of Moratuwa&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AWS Certified Solutions Architect – Associate&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CFA Program&lt;/strong&gt; (all three levels passed; charter pending work experience)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PSM I, PSPO I &amp;amp; PSK I&lt;/strong&gt; (Professional Scrum Master, Product Owner &amp;amp; Scrum with Kanban)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;outside-work&#34;&gt;Outside Work
+&lt;/h2&gt;&lt;p&gt;I’m a proud father of two, creating memories is my favorite “second full-time job”. I love spending time with them, cooking for them, taking them places and genrally being around them. In my spare time, I travel, read, cook, and play table tennis. Dual citizen of the UK &amp;amp; Sri Lanka, I’m energized by helping shape Sri Lanka&amp;rsquo;s tech landscape.&lt;/p&gt;
 </description>
         </item>
         <item>

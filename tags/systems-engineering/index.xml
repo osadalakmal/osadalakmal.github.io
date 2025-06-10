@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Systems Engineering on Curiously Recurring Thoughts in Programming</title>
+        <link>http://localhost:1313/tags/systems-engineering/</link>
+        <description>Recent content in Systems Engineering on Curiously Recurring Thoughts in Programming</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Tue, 10 Jun 2025 06:18:58 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/systems-engineering/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>All Problems Are Either Compiler or Database</title>
+        <link>http://localhost:1313/posts/all-problems-are-either-compiler-or-database/</link>
+        <pubDate>Tue, 10 Jun 2025 06:18:58 +0000</pubDate>
+        
+        <guid>http://localhost:1313/posts/all-problems-are-either-compiler-or-database/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
