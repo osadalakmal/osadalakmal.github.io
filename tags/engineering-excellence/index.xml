@@ -12,7 +12,7 @@
         <pubDate>Sat, 08 Mar 2025 13:31:56 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.jpg" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
+        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.webp" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
 &lt;/h2&gt;&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
 technology stack, the type of systems I work with, the industry I work in, amongst other factors. In my first couple of&lt;br&gt;
 years, I worked for a small (at the time!) electronics company that mostly dealt with embedded systems. My work was&lt;br&gt;
@@ -131,7 +131,7 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
 &lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
@@ -204,7 +204,7 @@ figcaption {
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.jpg&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Technical Debt and the Interest Accrued&lt;/h4&gt;
                 
@@ -229,7 +229,7 @@ figcaption {
         <pubDate>Tue, 31 Oct 2023 21:18:00 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.jpg" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
+        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.webp" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
 &lt;/h2&gt;&lt;p&gt;In the world of engineering, metrics are critical for evaluating performance and progress. But relying on subjective views and opinions can lead to flawed assessments. To determine the effectiveness of engineering practices, we need unbiased and objective metrics. The choice of metrics depends on an organization&amp;rsquo;s specific goals. Metrics should be automated, transparent, and integrated into the culture. Avoid using easily gamed or individual-level metrics. The post also explores DORA and SPACE metrics and emphasizes that there is no one-size-fits-all solution in engineering metrics.&lt;/p&gt;
 &lt;h2 id=&#34;how-do-we-know-were-good&#34;&gt;How Do We Know We&amp;rsquo;re Good?
 &lt;/h2&gt;&lt;p&gt;In engineering, a discipline underpinned by the scientific method, it seems we should always seek validation of our progress using scientific methods. However, in many engineering teams I&amp;rsquo;ve encountered, there is a propensity to rely on phrases like &amp;ldquo;I feel like,&amp;rdquo; &amp;ldquo;I think,&amp;rdquo; and &amp;ldquo;My point of view is.&amp;rdquo; Such subjective views, unconscious biases, and preconceived opinions can skew measurements.&lt;/p&gt;
@@ -242,7 +242,7 @@ figcaption {
 
 &lt;figure&gt;
     &lt;a href=&#34;https://en.wikipedia.org/wiki/The_dress&#34;&gt;
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.jpg&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.webp&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
                 
                     &lt;h4&gt;The controversial dress in question&lt;/h4&gt;
                 
@@ -339,7 +339,7 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
         <pubDate>Sun, 08 Oct 2023 10:51:19 +0100</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/stakeholders-and-alliances/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/stakeholders-and-alliances/working-together.jpg" alt="Featured image of post Stakeholder Management and Alliance Forming" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/stakeholders-and-alliances/working-together.webp" alt="Featured image of post Stakeholder Management and Alliance Forming" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs and new tricks&lt;/a&gt;&lt;/li&gt;
@@ -382,7 +382,7 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/stakeholders-and-alliances/escape.jpg&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/stakeholders-and-alliances/escape.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Escape Hatch!&lt;/h4&gt;
                 
@@ -433,7 +433,7 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
         <pubDate>Mon, 11 Sep 2023 01:38:25 +0100</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/engineering-standards-in-teams/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/engineering-standards-in-teams/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="Featured image of post Engineering Standards in Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/engineering-standards-in-teams/scott-graham-5fNmWej4tAA-unsplash.webp" alt="Featured image of post Engineering Standards in Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
@@ -483,7 +483,7 @@ More seriously, they are not there to stifle creativity but to perform two very 
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/engineering-standards-in-teams/nick-abrams-FTKfX3xZIcc-unsplash.jpg&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/engineering-standards-in-teams/nick-abrams-FTKfX3xZIcc-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Slow and Steady&lt;/h4&gt;
                 
@@ -509,7 +509,7 @@ More seriously, they are not there to stifle creativity but to perform two very 
         <pubDate>Sun, 03 Sep 2023 10:51:19 +0100</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/broken-windows.jpg" alt="Featured image of post Broken Window Theory in Software Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <description>&lt;img src="https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/broken-windows.webp" alt="Featured image of post Broken Window Theory in Software Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#broken-window-theory---origins&#34;&gt;Broken Window Theory - Origins&lt;/a&gt;

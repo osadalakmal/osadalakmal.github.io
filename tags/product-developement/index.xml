@@ -12,7 +12,7 @@
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
         <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
 &lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
@@ -85,7 +85,7 @@ figcaption {
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.jpg&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Technical Debt and the Interest Accrued&lt;/h4&gt;
                 
