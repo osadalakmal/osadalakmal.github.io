@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Curiously recurring thoughts on software engineering, systems, leadership, and life. \n">
-<title>Cost Of Allocation in High Performance Systems</title>
+<title>Unwanted Meetings and Fomo</title>
 
-<link rel='canonical' href='https://osada.blog/posts/allocationcost/allocationcost/'>
+<link rel='canonical' href='http://localhost:1313/posts/unwanted-meetings-and-fomo/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Cost Of Allocation in High Performance Systems">
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Unwanted Meetings and Fomo">
 <meta property='og:description' content=" Curiously recurring thoughts on software engineering, systems, leadership, and life. \n">
-<meta property='og:url' content='https://osada.blog/posts/allocationcost/allocationcost/'>
+<meta property='og:url' content='http://localhost:1313/posts/unwanted-meetings-and-fomo/'>
 <meta property='og:site_name' content='Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2021-02-05T08:08:50&#43;05:30'/><meta property='article:modified_time' content='2021-02-05T08:08:50&#43;05:30'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2025-07-07T12:55:11&#43;01:00'/><meta property='article:modified_time' content='2025-07-07T12:55:11&#43;01:00'/>
 <meta name="twitter:site" content="@osadaparanaliyanage">
-    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Cost Of Allocation in High Performance Systems">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Unwanted Meetings and Fomo">
 <meta name="twitter:description" content=" Curiously recurring thoughts on software engineering, systems, leadership, and life. \n">
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
@@ -177,7 +177,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/allocationcost/allocationcost/">Cost Of Allocation in High Performance Systems</a>
+            <a href="/posts/unwanted-meetings-and-fomo/">Unwanted Meetings and Fomo</a>
         </h2>
     
         
@@ -199,7 +199,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Feb 05, 2021</time>
+                <time class="article-time--published">Jul 07, 2025</time>
             </div>
         
 
@@ -214,7 +214,7 @@
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -229,59 +229,54 @@
     <section class="article-content">
     
     
-    <h2 id="impact-of-unproductive-work">Impact of unproductive work
-</h2><p>In high performance systems we try to make sure we do as little unproductive work as we possible. As Andrei Alexdrascu points out in one of his presentations on the subject, the fastest bit of code is the code that does not run. So it is essential that we try to avoid as much unproductive work as possible.</p>
-<p>When we say unproductive work it usually seems we are talking about unwanted calculations, operations, file access and db access. But this goes beyond that - Any operation that does not directly contribute to calculating the output that your application is responsible for is a waste. This includes GC in garbage collected languages, memory allocation and deallocation in languages with manual memory management languages such as C++</p>
-<h2 id="memory-is-unessential">Memory is unessential?
-</h2><p><img src="https://i.imgflip.com/4wxk03.jpg"
-	
-	
-	
+    <h1 id="rise-of-ai-meeting-bots-aka-silent-protest">Rise of AI Meeting Bots aka Silent Protest
+</h1><p>The newest trend in remote meeting space is AI meeting bots that attend the meetings on your behalf and take notes.</p>
+<p><img src="/posts/unwanted-meetings-and-fomo/zoom-with-bots.png"
+	width="720"
+	height="459"
+	srcset="/posts/unwanted-meetings-and-fomo/zoom-with-bots_hu_dd32f918832fc528.png 480w, /posts/unwanted-meetings-and-fomo/zoom-with-bots_hu_eee8435919b6499a.png 1024w"
 	loading="lazy"
 	
-		alt="Surpised Pikachu"
+		alt="Zoom With Bots"
 	
 	
-></p>
-<p>No it is essential. But it is a supporting operation. So try not to do it in the critical path. When you know you need memory, allocate it beforehand and reuse what you can. Try and avoid fragmentation as much as you can. There are several ways to do this.</p>
-<ol>
-<li>Preallocate enough memory and reuse</li>
-<li>Use a smart factory pattern that allows object level reuse</li>
-<li>Use an allocator that reduces cost of memory allocation and deallocation ( eg: <a class="link" href="https://google.github.io/tcmalloc/"  target="_blank" rel="noopener"
-    >tcmalloc</a> )</li>
-</ol>
-<h2 id="in-practise">In practise
-</h2><p>We will use the following code sample to simulate the effect of malloc causing thread contention.</p>
-<script src="https://gist.github.com/osadalakmal/e0a3bd5c8f9d27c2de20163fde1c4af9.js"></script>
-
-<p>This allows us to benchmark the completion time for two threads when they are allocating memory vs when they are not. The following is the result when running on my machine</p>
-<p><img src="/img/perf-with-system-malloc.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="system-malloc-perf"
-	
+		class="gallery-image" 
+		data-flex-grow="156"
+		data-flex-basis="376px"
 	
 ></p>
-<p>As can be seen there is a significant slow down when two threads are both running malloc at the same time. You can see that the slow down purely due to malloc when running the same two function calls serially is much less when compared to the slow down in threads. This is because by default malloc has to synchronize across threads due to there being a single allocator for the whole program.</p>
-<p>This synchronization causes a delay that exceeds the cost of pure malloc call. Now this can be reduced by using an allocator that performs better in multithreaded applications. One example of this is tcmalloc as explained earlier. Here is the same code running but this time linked against tcmaloc</p>
-<p><img src="/img/perf-with-system-malloc.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="system-malloc-perf"
-	
-	
-></p>
-<p>As can be seen this signiicantly reduces the cost of malloc synchronisations. This is better than using system malloc but still worse than not mallocing at all.</p>
-<h2 id="takeaways">Takeaways
-</h2><p>Memory management is not essential to produce the out of an application. Since it is an auxilary function, try to keep it away from the critical path at all times. Specially when you are running multithreaded workloads where thread contention due to global locks in malloc become a big bottleneck.</p>
-<p>You can use better allocator if you absolustely have to do allocation in the critical path to do it more efficiently than system malloc</p>
-<p>As always remember to measure. YMMV</p>
+<p>It has become such a hot topic that there must be at least a dozen high profile silicon valley startups working on products that are either meeting bots or in related area. This marks a siginificant juncture in the use of AI because most of the preivous uses were by a single person in the course of their day to day work while trying to accomplish their tasks. This is one where an AI is immitating (however badly) a human in a collaborative setting. This is a more truer form of substitution by AI for humans.</p>
+<h2 id="the-agenda-problem">The Agenda Problem
+</h2><p>Let’s start with the basics: If a meeting doesn’t have an agenda, it shouldn’t happen. That sounds harsh, but it’s true. A vague calendar invite titled “Catch-up” or “Sync” with no context is a red flag. You’re asking for 30–60 minutes of people’s time — the least you can do is say why.</p>
+<p>But even when an agenda is present, it often lacks specificity. “Talk about next sprint” or “Discuss priorities” isn’t a goal. A goal is: “Decide on top 3 priorities for sprint X, so we can unblock design by Tuesday.” That kind of focus keeps people engaged, and it signals that the meeting has a point.</p>
+<h2 id="fomo-the-silent-attendee-magnet">FOMO: The Silent Attendee Magnet
+</h2><p>Why do people still show up to low-value meetings? Often, it’s fear — fear of missing out on key decisions, on updates, on the signal that “you were in the loop.” It’s not irrational. In many workplaces, information flows primarily through live conversation, not written updates. And so, even if the meeting is a mess, people attend just in case.</p>
+<p>This dynamic is a symptom of poor psychological safety. When people don’t feel safe to miss a meeting — when they fear being seen as disengaged or falling behind — they attend everything. Even if they have nothing to contribute. Even if it’s not relevant to them.</p>
+<h2 id="ai-is-making-it-obvious">AI Is Making It Obvious
+</h2><p>One of the most ironic things happening right now is how AI tools are exposing just how unnecessary some meetings are. If a chatbot can listen to your meeting, generate a summary, and extract action items… maybe you didn’t need the meeting at all.</p>
+<p>What people actually needed was the <strong>outcome</strong>, not the time-consuming ritual of getting there. The summary. The decision. The alignment. If that can be achieved asynchronously, why not do it?</p>
+<h2 id="purpose-driven-meeting-structures">Purpose-Driven Meeting Structures
+</h2><p>A productive meeting starts with its <strong>purpose</strong>. Ask: Is this for sharing information, making a decision, or brainstorming together? These require different structures, different participants, and different facilitation styles.</p>
+<p>Every agenda item should have a clear outcome:</p>
+<ul>
+<li>“Decide between A and B.”</li>
+<li>“Align on the rollout timeline.”</li>
+<li>“Surface key concerns before launch.”</li>
+</ul>
+<p>A simple real-time progress tracker or even a checklist visible during the meeting can help avoid derailments. If the group knows they have three things to cover and 20 minutes left, they’re far more likely to stay focused.</p>
+<h2 id="fixing-the-culture">Fixing the Culture
+</h2><p>You can’t fix this with process alone. You need a culture where people feel safe to <strong>not attend</strong>. That requires trust — that they’ll get a useful summary, that decisions won’t be made in secret, and that opting out isn’t career suicide.</p>
+<p>Start with team norms:</p>
+<ul>
+<li>No meeting without an agenda.</li>
+<li>Define the outcome up front.</li>
+<li>Default to async unless sync is essential.</li>
+<li>If a meeting happens, someone summarizes and shares the outcome.</li>
+</ul>
+<p>This creates a culture where meetings are for collaboration, not status dumps — and where people can make informed decisions about where their time is best spent.</p>
+<h2 id="respect-peoples-time">Respect People’s Time
+</h2><p>Meetings should not be the default. They are a tool — one of many — to get work done. And if we want to build healthy, focused, high-trust teams, we have to treat people’s calendars like sacred ground.</p>
+<p>If AI can summarize your meeting better than most people can remember it, that’s not a failure of memory. It’s a sign the meeting shouldn’t have happened in the first place.</p>
 
 </section>
 
@@ -402,7 +397,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.ae355efd1789f26c72022700068dd833e3ced7d549b753cd271f5855cb9a281c.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
