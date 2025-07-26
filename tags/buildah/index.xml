@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Buildah on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/buildah/</link>
-        <description>Recent content in Buildah on Curiously Recurring Thoughts in Programming</description>
+        <title>Buildah on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/buildah/</link>
+        <description>Recent content in Buildah on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Thu, 26 Aug 2021 10:00:50 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/buildah/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Aug 2021 10:00:50 +0530</lastBuildDate><atom:link href="https://osada.blog/tags/buildah/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Not your grandmas&#39; docker - Part 2</title>
-        <link>https://osadalakmal.github.io/posts/container-part2/</link>
+        <link>https://osada.blog/posts/container-part2/</link>
         <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/container-part2/</guid>
+        <description>&lt;img src="https://osada.blog/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem&lt;/a&gt;
@@ -30,7 +30,7 @@
   
 &lt;p&gt;Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.&lt;/p&gt;
 &lt;h2 id=&#34;components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/DockerEcosystem.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/DockerEcosystem.png&#34;
 	
 	
 	
@@ -151,11 +151,11 @@
         </item>
         <item>
         <title>Not your grandmas&#39; docker - Part 1</title>
-        <link>https://osadalakmal.github.io/posts/container-intro/</link>
+        <link>https://osada.blog/posts/container-intro/</link>
         <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/container-intro/</guid>
+        <description>&lt;img src="https://osada.blog/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization&lt;/a&gt;
@@ -175,7 +175,7 @@
   
 &lt;p&gt;Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.&lt;/p&gt;
 &lt;h2 id=&#34;operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/OS-level-virt.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/OS-level-virt.png&#34;
 	
 	
 	
@@ -227,7 +227,7 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;p&gt;A Solaris Container is the combination of system resource controls and the boundary separation provided by zones. Zones are completely separate server instances within a single physical server. In fact these are usually used to provide isolated test servers for the developers since almost no one is going to need a maxed out SPARC-T5-8 to test their application. Sys admins can reduce cost and provide most of the same protections of separate machines on a single machine by using zones.&lt;/p&gt;
 &lt;h3 id=&#34;systemd-nspawn&#34;&gt;Systemd nspawn
 &lt;/h3&gt;&lt;p&gt;&lt;br&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/systemd-meme.png&#34;
+&lt;img src=&#34;https://osada.blog/img/systemd-meme.png&#34;
 	
 	
 	
@@ -251,7 +251,7 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;p&gt;This is implemented on top of cgroups and is supposed to help users with containing processes easily in systemd. It is better in security terms than a chroot since it has process level security features as well. In that way it is similar to lxd or lxd. You can find more information &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/systemd-nspawn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;lxclxd&#34;&gt;LXC/LXD
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxc-architecture.jpg&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/lxc-architecture.jpg&#34;
 	
 	
 	
@@ -264,7 +264,7 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;p&gt;LXC allows running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.&lt;/p&gt;
 &lt;p&gt;It combines cgroups functionality that allows limitation and prioritization of resources (CPU, memory, block I/O, network, etc.) and namespace isolation functionality that allows complete isolation of an application&amp;rsquo;s view of the operating environment, including process trees, networking and mounted file systems.&lt;/p&gt;
 &lt;p&gt;Previously LXC only supported privilege containers though starting with the LXC 1.0 release, it is possible to run containers as regular users on the host using &amp;ldquo;unprivileged containers&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxd-architecture.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/lxd-architecture.jpg&#34;
 	
 	
 	

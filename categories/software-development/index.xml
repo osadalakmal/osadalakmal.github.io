@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Software-Development on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/categories/software-development/</link>
-        <description>Recent content in Software-Development on Curiously Recurring Thoughts in Programming</description>
+        <title>Software-Development on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/categories/software-development/</link>
+        <description>Recent content in Software-Development on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Mon, 10 Jul 2023 14:30:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/software-development/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Jul 2023 14:30:00 +0000</lastBuildDate><atom:link href="https://osada.blog/categories/software-development/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories</title>
-        <link>https://osadalakmal.github.io/posts/small-user-stories/</link>
+        <link>https://osada.blog/posts/small-user-stories/</link>
         <pubDate>Mon, 10 Jul 2023 14:30:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/small-user-stories/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/small-user-stories/john-moeses-bauan-Oj-G9GYlLr0-unsplash.webp" alt="Featured image of post Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/small-user-stories/</guid>
+        <description>&lt;img src="https://osada.blog/posts/small-user-stories/john-moeses-bauan-Oj-G9GYlLr0-unsplash.webp" alt="Featured image of post Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
@@ -34,7 +34,7 @@
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/small-user-stories/markus-spiske-C0koz3G1I4I-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/small-user-stories/markus-spiske-C0koz3G1I4I-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
                 
                 &lt;p&gt;
                     
@@ -100,7 +100,7 @@
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/small-user-stories/elena-mozhvilo-hbJtngKksDo-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/small-user-stories/elena-mozhvilo-hbJtngKksDo-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
                 
                 &lt;p&gt;
                     
@@ -120,7 +120,7 @@
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/small-user-stories/SlicingStoresDown.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/small-user-stories/SlicingStoresDown.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;How to Break Down Any Story to smaller parts&lt;/h4&gt;
                 

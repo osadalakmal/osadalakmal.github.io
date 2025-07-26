@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Technical Enablers on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/technical-enablers/</link>
-        <description>Recent content in Technical Enablers on Curiously Recurring Thoughts in Programming</description>
+        <title>Technical Enablers on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/technical-enablers/</link>
+        <description>Recent content in Technical Enablers on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 22 Dec 2024 16:18:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/technical-enablers/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Dec 2024 16:18:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/technical-enablers/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Technical Tasks for Managers</title>
-        <link>https://osadalakmal.github.io/posts/technical-tasks-for-managers/</link>
+        <link>https://osada.blog/posts/technical-tasks-for-managers/</link>
         <pubDate>Sun, 22 Dec 2024 16:18:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/technical-tasks-for-managers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/technical-tasks-for-managers/marvin-meyer-SYTO3xs06fU-unsplash.webp" alt="Featured image of post Technical Tasks for Managers" /&gt;&lt;h2 id=&#34;what-does-being-technical-mean-for-engineering-team-leads-and-managers&#34;&gt;What does being technical mean for Engineering Team Leads and Managers
+        <guid>https://osada.blog/posts/technical-tasks-for-managers/</guid>
+        <description>&lt;img src="https://osada.blog/posts/technical-tasks-for-managers/marvin-meyer-SYTO3xs06fU-unsplash.webp" alt="Featured image of post Technical Tasks for Managers" /&gt;&lt;h2 id=&#34;what-does-being-technical-mean-for-engineering-team-leads-and-managers&#34;&gt;What does being technical mean for Engineering Team Leads and Managers
 &lt;/h2&gt;&lt;p&gt;I have now been in a management position for the better part of a decade and with that milestone comes a bit of a time to reflect back on how the journey has been and what I have learnt along the way. When I first started leading a team formally back in 2019 I had modeled my expectations on what I would be doing on what my managers up until that point had done. And they had mostly done coding. This was a peculiarity of the company I worked for till then. In that situation team leaders were essentially tech leads that also had 1-1s with you occastionally. There was no real personal development planning or coaching or any of the leadership whizz words that you cannot escape from in any of the engineering leadership text books today. They reviewed most of the code and were very hands on, from forming system designs to actually implementing the solutions they did it all.&lt;/p&gt;
 &lt;p&gt;But this came at an expense, because most of the time things had to go through them, they became a bottlenek. They may have been the original implementers of the system, they may have at point or the other had the best contextual knowledge of the system. But that is all a hindrance when the system is being continually updated and you are waiting for their approval to move forward with any of the real work. Even worse they had become silos of information that made the bus factor for the most critical parts of the system one. While this did ensure their job security for the most part it made it very hard to change these systems in even the most basic agile manner.&lt;/p&gt;
 &lt;p&gt;So if you cannot be the single most knowledgable person and approver of system designs (dare I say should not!), what should a technical mananager do that will help their team? What should being technical mean for the team lead or manager that wants to empower their teams but do not want to be the bottleneck?&lt;/p&gt;

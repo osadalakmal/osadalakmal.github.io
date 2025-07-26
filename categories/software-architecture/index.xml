@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Software-Architecture on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/categories/software-architecture/</link>
-        <description>Recent content in Software-Architecture on Curiously Recurring Thoughts in Programming</description>
+        <title>Software-Architecture on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/categories/software-architecture/</link>
+        <description>Recent content in Software-Architecture on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sat, 08 Mar 2025 13:31:56 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/software-architecture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Mar 2025 13:31:56 +0000</lastBuildDate><atom:link href="https://osada.blog/categories/software-architecture/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Data Serving vs Transactional Systems</title>
-        <link>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</link>
+        <link>https://osada.blog/posts/data-serving-vs-transactional-systems/</link>
         <pubDate>Sat, 08 Mar 2025 13:31:56 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.webp" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
+        <guid>https://osada.blog/posts/data-serving-vs-transactional-systems/</guid>
+        <description>&lt;img src="https://osada.blog/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.webp" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
 &lt;/h2&gt;&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
 technology stack, the type of systems I work with, the industry I work in, amongst other factors. In my first couple of&lt;br&gt;
 years, I worked for a small (at the time!) electronics company that mostly dealt with embedded systems. My work was&lt;br&gt;
@@ -127,11 +127,11 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
         </item>
         <item>
         <title>Valkey: The New Redis Alternative</title>
-        <link>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</link>
+        <link>https://osada.blog/posts/valkey-the-new-redis-alternative/</link>
         <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/valkey.webp" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
+        <guid>https://osada.blog/posts/valkey-the-new-redis-alternative/</guid>
+        <description>&lt;img src="https://osada.blog/posts/valkey-the-new-redis-alternative/valkey.webp" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
 &lt;/h2&gt;&lt;p&gt;Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that functions as a database, cache, and message broker. Known for its high performance and versatility, Redis supports low-latency operations crucial for real-time applications. At its core, Redis organizes data as key-value pairs but extends its functionality with advanced data structures (ADTs), streaming capabilities, and persistence options.&lt;/p&gt;
 &lt;p&gt;Redis offers rich data types, including strings, lists, sets, sorted sets, hashes, bitmaps, and hyperloglogs. These enable complex operations like leaderboard maintenance, set intersections, or approximate cardinality estimation. Redis Streams further enhance its capabilities, enabling real-time data processing and message queuing with features like consumer groups, automatic message acknowledgment, and ordered, append-only data logs.&lt;/p&gt;
 &lt;p&gt;Redis also supports data durability through mechanisms like snapshots (RDB files) and append-only file (AOF) logs. Snapshots provide periodic states of the database, while AOF logs persist each write operation. These features make Redis suitable for both ephemeral and long-term data storage. With additional functionalities like replication, clustering, Lua scripting, and pub/sub messaging, Redis remains a critical component in modern web architectures.&lt;/p&gt;
@@ -400,11 +400,11 @@ Read operations: 2000, Write operations: 8000
         </item>
         <item>
         <title>Compromises and Moving Forward</title>
-        <link>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</link>
+        <link>https://osada.blog/posts/compromises-and-moving-forward/</link>
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+        <guid>https://osada.blog/posts/compromises-and-moving-forward/</guid>
+        <description>&lt;img src="https://osada.blog/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
 &lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
@@ -435,11 +435,11 @@ figcaption {
 &lt;div id=&#34;content&#34; class=&#34;center&#34;&gt;
 &lt;div class=&#34;flex&#34;&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/compromises/joker.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
+&lt;img src=&#34;https://osada.blog/img/compromises/joker.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
 &lt;figcaption&gt; Truly Evil? &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/compromises/joker-misunderstood.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
+&lt;img src=&#34;https://osada.blog/img/compromises/joker-misunderstood.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
 &lt;figcaption&gt; Misunderstood? &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -477,7 +477,7 @@ figcaption {
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Technical Debt and the Interest Accrued&lt;/h4&gt;
                 

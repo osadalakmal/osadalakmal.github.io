@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Was on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/was/</link>
-        <description>Recent content in Was on Curiously Recurring Thoughts in Programming</description>
+        <title>Was on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/was/</link>
+        <description>Recent content in Was on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 17 Nov 2024 13:29:22 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/was/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Nov 2024 13:29:22 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/was/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Valkey: The New Redis Alternative</title>
-        <link>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</link>
+        <link>https://osada.blog/posts/valkey-the-new-redis-alternative/</link>
         <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/valkey.webp" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
+        <guid>https://osada.blog/posts/valkey-the-new-redis-alternative/</guid>
+        <description>&lt;img src="https://osada.blog/posts/valkey-the-new-redis-alternative/valkey.webp" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
 &lt;/h2&gt;&lt;p&gt;Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that functions as a database, cache, and message broker. Known for its high performance and versatility, Redis supports low-latency operations crucial for real-time applications. At its core, Redis organizes data as key-value pairs but extends its functionality with advanced data structures (ADTs), streaming capabilities, and persistence options.&lt;/p&gt;
 &lt;p&gt;Redis offers rich data types, including strings, lists, sets, sorted sets, hashes, bitmaps, and hyperloglogs. These enable complex operations like leaderboard maintenance, set intersections, or approximate cardinality estimation. Redis Streams further enhance its capabilities, enabling real-time data processing and message queuing with features like consumer groups, automatic message acknowledgment, and ordered, append-only data logs.&lt;/p&gt;
 &lt;p&gt;Redis also supports data durability through mechanisms like snapshots (RDB files) and append-only file (AOF) logs. Snapshots provide periodic states of the database, while AOF logs persist each write operation. These features make Redis suitable for both ephemeral and long-term data storage. With additional functionalities like replication, clustering, Lua scripting, and pub/sub messaging, Redis remains a critical component in modern web architectures.&lt;/p&gt;

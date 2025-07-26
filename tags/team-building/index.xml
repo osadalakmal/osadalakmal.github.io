@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Team-Building on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/team-building/</link>
-        <description>Recent content in Team-Building on Curiously Recurring Thoughts in Programming</description>
+        <title>Team-Building on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/team-building/</link>
+        <description>Recent content in Team-Building on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Tue, 29 Aug 2023 00:51:19 +0100</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/team-building/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 29 Aug 2023 00:51:19 +0100</lastBuildDate><atom:link href="https://osada.blog/tags/team-building/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Empathy and Respect in Software Engineering Teams: Actions for a Team Lead</title>
-        <link>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</link>
+        <link>https://osada.blog/posts/respect-and-empathy-in-teams/</link>
         <pubDate>Tue, 29 Aug 2023 00:51:19 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/empathy-banner.webp" alt="Featured image of post Empathy and Respect in Software Engineering Teams: Actions for a Team Lead" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/respect-and-empathy-in-teams/</guid>
+        <description>&lt;img src="https://osada.blog/posts/respect-and-empathy-in-teams/empathy-banner.webp" alt="Featured image of post Empathy and Respect in Software Engineering Teams: Actions for a Team Lead" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;

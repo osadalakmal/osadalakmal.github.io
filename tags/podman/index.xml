@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Podman on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/podman/</link>
-        <description>Recent content in Podman on Curiously Recurring Thoughts in Programming</description>
+        <title>Podman on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/podman/</link>
+        <description>Recent content in Podman on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/podman/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 07 Nov 2022 15:31:29 +0530</lastBuildDate><atom:link href="https://osada.blog/tags/podman/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Getting lost in weeds of Podman</title>
-        <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
+        <link>https://osada.blog/posts/getting-lost-in-weeds-of-podman/</link>
         <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/getting-lost-in-weeds-of-podman/</guid>
+        <description>&lt;img src="https://osada.blog/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#what-are-rootless-containers&#34;&gt;What are rootless containers&lt;/a&gt;
@@ -29,7 +29,7 @@
   
 &lt;p&gt;Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks. It also has better integration with other tools in anything-but-docker space including buildah and skopeo&lt;/p&gt;
 &lt;h2 id=&#34;what-are-rootless-containers&#34;&gt;What are rootless containers
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/rootless-containers.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/rootless-containers.png&#34;
 	
 	
 	

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Project Management on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/project-management/</link>
-        <description>Recent content in Project Management on Curiously Recurring Thoughts in Programming</description>
+        <title>Project Management on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/project-management/</link>
+        <description>Recent content in Project Management on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/project-management/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/project-management/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Project Management for Software Engineers</title>
-        <link>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</link>
+        <link>https://osada.blog/posts/project-management-for-software-engineers/</link>
         <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.webp" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
+        <guid>https://osada.blog/posts/project-management-for-software-engineers/</guid>
+        <description>&lt;img src="https://osada.blog/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.webp" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
 &lt;/h1&gt;&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
 &lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?
 &lt;/h2&gt;&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
@@ -38,7 +38,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/stakeholder-onion.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/stakeholder-onion.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Example Stakeholder Onion&lt;/h4&gt;
                 
@@ -59,7 +59,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/stakeholder-quadrant.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/stakeholder-quadrant.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Stakeholder Mapping Quadrant Diagram&lt;/h4&gt;
                 
@@ -80,7 +80,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/raci-matrix-example.webp&#34; width=&#34;75%&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/raci-matrix-example.webp&#34; width=&#34;75%&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Example RACI Matrix&lt;/h4&gt;
                 
@@ -199,11 +199,11 @@ Encourage team members to share insights about potential risks. Transparent comm
         </item>
         <item>
         <title>Nemawashi - Power of building consensus</title>
-        <link>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</link>
+        <link>https://osada.blog/posts/nemawashi-power-of-consensus/</link>
         <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.webp" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus
+        <guid>https://osada.blog/posts/nemawashi-power-of-consensus/</guid>
+        <description>&lt;img src="https://osada.blog/posts/nemawashi-power-of-consensus/nemawashi-main.webp" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus
 &lt;/h1&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
 &lt;/h2&gt;&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
 &lt;p&gt;In Japanese culture, there is a term that encapsulates this process beautifully - &amp;ldquo;nemawashi.&amp;rdquo; Nemawashi refers to the practice of laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. It is a fundamental concept that plays a significant role in achieving harmony and collaboration within organizations.&lt;/p&gt;
@@ -215,10 +215,10 @@ Encourage team members to share insights about potential risks. Transparent comm
 &lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process
 &lt;/h3&gt;&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
 &lt;p&gt;Teams engage in cross-functional meetings, where representatives from various departments share their perspectives, concerns, and ideas. This process allows for a comprehensive understanding of the issue at hand and helps identify potential obstacles or risks. By incorporating nemawashi, Toyota ensures that decisions are made collaboratively, taking into account the viewpoints of all relevant stakeholders.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.webp&#34;
 	width=&#34;1552&#34;
 	height=&#34;1331&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_b4ecb7127663ecfa.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_2c0ae54b49fcee5a.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_b4ecb7127663ecfa.webp 480w, https://osada.blog/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_2c0ae54b49fcee5a.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -234,10 +234,10 @@ Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota
 &lt;p&gt;In the U.S. Congress, lawmakers engage in committee meetings, hearings, and informal conversations to gather input from various stakeholders. This process allows representatives to address concerns, incorporate amendments, and build consensus among different factions. Through these deliberations, consensus is sought to increase the chances of a bill&amp;rsquo;s successful passage.&lt;/p&gt;
 &lt;p&gt;An example of how the U.S. legislative process and consensus-building are depicted is the television show &amp;ldquo;The West Wing.&amp;rdquo; The show portrays the inner workings of the White House and provides insights into the intricate process of developing and passing legislation. It showcases the efforts of policymakers to build consensus, negotiate, and seek agreement among different parties to advance their policy agendas.&lt;/p&gt;
 &lt;p&gt;While &amp;ldquo;The West Wing&amp;rdquo; is a fictional representation, it offers viewers a glimpse into the complexities and nuances of consensus-building in the U.S. political landscape.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
 	width=&#34;2000&#34;
 	height=&#34;1333&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_88b234675f94369d.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_b5c97dca5b65ed9f.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_88b234675f94369d.webp 480w, https://osada.blog/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_b5c97dca5b65ed9f.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -284,11 +284,11 @@ Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/79
         </item>
         <item>
         <title>Agile : The Snake Oil for Cobra Bites</title>
-        <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
+        <link>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</link>
         <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.webp" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</guid>
+        <description>&lt;img src="https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.webp" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
 &lt;p&gt;How the rebellion got subverted&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -308,10 +308,10 @@ Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/79
   &lt;/div&gt;
   
 &lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.webp&#34;
 	width=&#34;610&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3bae885212f2619d.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3489e5c74c4ccd52.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3bae885212f2619d.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3489e5c74c4ccd52.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -327,10 +327,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &amp;ldquo;enterprise&amp;rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement &lt;a class=&#34;link&#34; href=&#34;https://prince2.wiki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PRINCE2&lt;/a&gt; which was as heavy as they came.&lt;/p&gt;
 &lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.webp&#34;
 	width=&#34;1000&#34;
 	height=&#34;645&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_80b3fb48583ec458.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_574d521c89bdadde.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_80b3fb48583ec458.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_574d521c89bdadde.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -347,10 +347,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.&lt;/p&gt;
 &lt;p&gt;SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&amp;gt; Program -&amp;gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.&lt;/p&gt;
 &lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.webp&#34;
 	width=&#34;500&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_ec8e13a8e63a5176.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_2dbca90c4dac935e.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_ec8e13a8e63a5176.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_2dbca90c4dac935e.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -376,10 +376,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;/ol&gt;
 &lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how
 &lt;/h2&gt;&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note.webp&#34;
 	width=&#34;265&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_de1b85375e1f38b3.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_ebd869f08c447fdd.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_de1b85375e1f38b3.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_ebd869f08c447fdd.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

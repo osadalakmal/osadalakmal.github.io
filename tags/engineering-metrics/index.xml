@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Engineering-Metrics on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/engineering-metrics/</link>
-        <description>Recent content in Engineering-Metrics on Curiously Recurring Thoughts in Programming</description>
+        <title>Engineering-Metrics on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/engineering-metrics/</link>
+        <description>Recent content in Engineering-Metrics on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Tue, 31 Oct 2023 21:18:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/engineering-metrics/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 31 Oct 2023 21:18:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/engineering-metrics/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Lies, Damn Lies and Engineering Metrics</title>
-        <link>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</link>
+        <link>https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/</link>
         <pubDate>Tue, 31 Oct 2023 21:18:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.webp" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
+        <guid>https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/</guid>
+        <description>&lt;img src="https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/banner.webp" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
 &lt;/h2&gt;&lt;p&gt;In the world of engineering, metrics are critical for evaluating performance and progress. But relying on subjective views and opinions can lead to flawed assessments. To determine the effectiveness of engineering practices, we need unbiased and objective metrics. The choice of metrics depends on an organization&amp;rsquo;s specific goals. Metrics should be automated, transparent, and integrated into the culture. Avoid using easily gamed or individual-level metrics. The post also explores DORA and SPACE metrics and emphasizes that there is no one-size-fits-all solution in engineering metrics.&lt;/p&gt;
 &lt;h2 id=&#34;how-do-we-know-were-good&#34;&gt;How Do We Know We&amp;rsquo;re Good?
 &lt;/h2&gt;&lt;p&gt;In engineering, a discipline underpinned by the scientific method, it seems we should always seek validation of our progress using scientific methods. However, in many engineering teams I&amp;rsquo;ve encountered, there is a propensity to rely on phrases like &amp;ldquo;I feel like,&amp;rdquo; &amp;ldquo;I think,&amp;rdquo; and &amp;ldquo;My point of view is.&amp;rdquo; Such subjective views, unconscious biases, and preconceived opinions can skew measurements.&lt;/p&gt;
@@ -25,7 +25,7 @@
 
 &lt;figure&gt;
     &lt;a href=&#34;https://en.wikipedia.org/wiki/The_dress&#34;&gt;
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.webp&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.webp&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
                 
                     &lt;h4&gt;The controversial dress in question&lt;/h4&gt;
                 

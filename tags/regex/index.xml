@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Regex on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/regex/</link>
-        <description>Recent content in Regex on Curiously Recurring Thoughts in Programming</description>
+        <title>Regex on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/regex/</link>
+        <description>Recent content in Regex on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 19 Dec 2021 22:16:45 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/regex/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Dec 2021 22:16:45 +0530</lastBuildDate><atom:link href="https://osada.blog/tags/regex/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hyperscan C&#43;&#43; Wrapper</title>
-        <link>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</link>
+        <link>https://osada.blog/posts/hyperscan-cpp-wrapper/</link>
         <pubDate>Sun, 19 Dec 2021 22:16:45 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/hyperscan-cpp-wrapper/</guid>
+        <description>&lt;img src="https://osada.blog/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
 &lt;p&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -40,7 +40,7 @@
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/A12SR71.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/hyperscan-cpp-wrapper/A12SR71.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;For every nice thing, there is a nicer thing - A12 vs SR71&lt;/h4&gt;
                 

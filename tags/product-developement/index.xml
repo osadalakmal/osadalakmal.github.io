@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Product-Developement on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/product-developement/</link>
-        <description>Recent content in Product-Developement on Curiously Recurring Thoughts in Programming</description>
+        <title>Product-Developement on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/product-developement/</link>
+        <description>Recent content in Product-Developement on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Tue, 21 Nov 2023 15:03:08 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/product-developement/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Nov 2023 15:03:08 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/product-developement/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Compromises and Moving Forward</title>
-        <link>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</link>
+        <link>https://osada.blog/posts/compromises-and-moving-forward/</link>
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+        <guid>https://osada.blog/posts/compromises-and-moving-forward/</guid>
+        <description>&lt;img src="https://osada.blog/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
 &lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
@@ -43,11 +43,11 @@ figcaption {
 &lt;div id=&#34;content&#34; class=&#34;center&#34;&gt;
 &lt;div class=&#34;flex&#34;&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/compromises/joker.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
+&lt;img src=&#34;https://osada.blog/img/compromises/joker.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
 &lt;figcaption&gt; Truly Evil? &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/compromises/joker-misunderstood.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
+&lt;img src=&#34;https://osada.blog/img/compromises/joker-misunderstood.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
 &lt;figcaption&gt; Misunderstood? &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -85,7 +85,7 @@ figcaption {
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Technical Debt and the Interest Accrued&lt;/h4&gt;
                 

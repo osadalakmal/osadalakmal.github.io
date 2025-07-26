@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Learning on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/learning/</link>
-        <description>Recent content in Learning on Curiously Recurring Thoughts in Programming</description>
+        <title>Learning on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/learning/</link>
+        <description>Recent content in Learning on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Thu, 14 Oct 2021 15:36:00 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Oct 2021 15:36:00 +0530</lastBuildDate><atom:link href="https://osada.blog/tags/learning/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Learning In Engineering Organizations</title>
-        <link>https://osadalakmal.github.io/posts/learninginorganizations/</link>
+        <link>https://osada.blog/posts/learninginorganizations/</link>
         <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/learninginorganizations/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;&lt;h1 id=&#34;learning-in-software-engineering-organizations&#34;&gt;Learning In Software Engineering Organizations
+        <guid>https://osada.blog/posts/learninginorganizations/</guid>
+        <description>&lt;img src="https://osada.blog/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;&lt;h1 id=&#34;learning-in-software-engineering-organizations&#34;&gt;Learning In Software Engineering Organizations
 &lt;/h1&gt;
 
 
@@ -60,7 +60,7 @@
     &gt;many things that inhibit chances for learning at large oraganizations&lt;/a&gt;. So you have to be aware of these limitations and then overcome them in order for you to be successful. There are reasons to do with management and incentives but they again deserve their own blog post.&lt;/p&gt;
 &lt;p&gt;Lets talk about tooling for learning. The good thing about larger organizations is that they have cash to burn. There are boxes to be ticked and systems to be put in place - no one will bat an eyelid when you ask for a chat app or a documentation server. Here are some of the tooling you can leverage to make it easier for employees to learn.&lt;/p&gt;
 &lt;h3 id=&#34;corporate-knowledge-systems&#34;&gt;Corporate Knowledge Systems.
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/kms-infographic.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/kms-infographic.png&#34;
 	
 	
 	

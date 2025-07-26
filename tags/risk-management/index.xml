@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Risk Management on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/tags/risk-management/</link>
-        <description>Recent content in Risk Management on Curiously Recurring Thoughts in Programming</description>
+        <title>Risk Management on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/risk-management/</link>
+        <description>Recent content in Risk Management on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/tags/risk-management/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 23 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/risk-management/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Project Management for Software Engineers</title>
-        <link>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</link>
+        <link>https://osada.blog/posts/project-management-for-software-engineers/</link>
         <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.webp" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
+        <guid>https://osada.blog/posts/project-management-for-software-engineers/</guid>
+        <description>&lt;img src="https://osada.blog/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.webp" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
 &lt;/h1&gt;&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
 &lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?
 &lt;/h2&gt;&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
@@ -38,7 +38,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/stakeholder-onion.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/stakeholder-onion.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Example Stakeholder Onion&lt;/h4&gt;
                 
@@ -59,7 +59,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/stakeholder-quadrant.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/stakeholder-quadrant.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Stakeholder Mapping Quadrant Diagram&lt;/h4&gt;
                 
@@ -80,7 +80,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/raci-matrix-example.webp&#34; width=&#34;75%&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/raci-matrix-example.webp&#34; width=&#34;75%&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Example RACI Matrix&lt;/h4&gt;
                 

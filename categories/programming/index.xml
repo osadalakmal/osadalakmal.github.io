@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Programming on Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/categories/programming/</link>
-        <description>Recent content in Programming on Curiously Recurring Thoughts in Programming</description>
+        <title>Programming on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/categories/programming/</link>
+        <description>Recent content in Programming on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 06 Feb 2022 21:57:42 +0530</lastBuildDate><atom:link href="https://osadalakmal.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 06 Feb 2022 21:57:42 +0530</lastBuildDate><atom:link href="https://osada.blog/categories/programming/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Agile : The Snake Oil for Cobra Bites</title>
-        <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
+        <link>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</link>
         <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.webp" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</guid>
+        <description>&lt;img src="https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.webp" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
 &lt;p&gt;How the rebellion got subverted&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -32,10 +32,10 @@
   &lt;/div&gt;
   
 &lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.webp&#34;
 	width=&#34;610&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3bae885212f2619d.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3489e5c74c4ccd52.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3bae885212f2619d.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3489e5c74c4ccd52.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -51,10 +51,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &amp;ldquo;enterprise&amp;rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement &lt;a class=&#34;link&#34; href=&#34;https://prince2.wiki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PRINCE2&lt;/a&gt; which was as heavy as they came.&lt;/p&gt;
 &lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.webp&#34;
 	width=&#34;1000&#34;
 	height=&#34;645&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_80b3fb48583ec458.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_574d521c89bdadde.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_80b3fb48583ec458.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_574d521c89bdadde.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -71,10 +71,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.&lt;/p&gt;
 &lt;p&gt;SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&amp;gt; Program -&amp;gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.&lt;/p&gt;
 &lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.webp&#34;
 	width=&#34;500&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_ec8e13a8e63a5176.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_2dbca90c4dac935e.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_ec8e13a8e63a5176.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_2dbca90c4dac935e.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -100,10 +100,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;/ol&gt;
 &lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how
 &lt;/h2&gt;&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note.webp&#34;
 	width=&#34;265&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_de1b85375e1f38b3.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_ebd869f08c447fdd.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_de1b85375e1f38b3.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_ebd869f08c447fdd.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -128,11 +128,11 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
         </item>
         <item>
         <title>Hyperscan C&#43;&#43; Wrapper</title>
-        <link>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</link>
+        <link>https://osada.blog/posts/hyperscan-cpp-wrapper/</link>
         <pubDate>Sun, 19 Dec 2021 22:16:45 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/hyperscan-cpp-wrapper/</guid>
+        <description>&lt;img src="https://osada.blog/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
 &lt;p&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -160,7 +160,7 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/A12SR71.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/hyperscan-cpp-wrapper/A12SR71.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;For every nice thing, there is a nicer thing - A12 vs SR71&lt;/h4&gt;
                 

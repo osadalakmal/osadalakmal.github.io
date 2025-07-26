@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Curiously Recurring Thoughts in Programming</title>
-        <link>https://osadalakmal.github.io/</link>
-        <description>Recent content on Curiously Recurring Thoughts in Programming</description>
+        <title>Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/</link>
+        <description>Recent content on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Mon, 05 May 2025 14:30:00 +0000</lastBuildDate><atom:link href="https://osadalakmal.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 05 May 2025 14:30:00 +0000</lastBuildDate><atom:link href="https://osada.blog/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The Unreasonable Effectiveness of Fundamentals of Computer Science</title>
-        <link>https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</link>
+        <link>https://osada.blog/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</link>
         <pubDate>Mon, 05 May 2025 14:30:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud.webp" alt="Featured image of post The Unreasonable Effectiveness of Fundamentals of Computer Science" /&gt;&lt;h2 id=&#34;origination-of-an-idea&#34;&gt;Origination of an Idea
+        <guid>https://osada.blog/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</guid>
+        <description>&lt;img src="https://osada.blog/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/LowLevelToCloud.webp" alt="Featured image of post The Unreasonable Effectiveness of Fundamentals of Computer Science" /&gt;&lt;h2 id=&#34;origination-of-an-idea&#34;&gt;Origination of an Idea
 &lt;/h2&gt;&lt;p&gt;In 1960, physicist Eugene Wigner published an essay titled “The Unreasonable Effectiveness of Mathematics in the Natural Sciences,” in which he wondered at how concepts born purely in the human mind—group theory, imaginary numbers, differential equations—so uncannily predict the behavior of atoms, rivers, and galaxies alike. He pointed out that the same algebraic structures underlying quantum mechanics also describe crystal symmetries—equations formulated centuries ago that still govern modern optics and fluid dynamics. Wigner called this “the miracle that the language of mathematics is so appropriate to the objects of reality,” and marveled that what seems like intellectual play often often turns out to be nature’s Rosetta Stone.&lt;/p&gt;
 &lt;h2 id=&#34;anecdote-1--embedded-systems-thinking-to-the-rescue&#34;&gt;Anecdote #1 – Embedded Systems Thinking To The Rescue
 &lt;/h2&gt;&lt;p&gt;Sixteen years ago, I began my career as an embedded developer, coding in C on bare-metal microcontrollers. I programmed UART interfaces, USB and display drivers, and even ported kernels to new boards. I still remember sifting through Russel King’s ARM tree emails and wrestling with poorly formatted hardware manuals to debug a kernel panic at 4 PM on a Friday. Though tedious, those challenges built my detailed mental models.&lt;/p&gt;
@@ -154,11 +154,11 @@
         </item>
         <item>
         <title>Data Serving vs Transactional Systems</title>
-        <link>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</link>
+        <link>https://osada.blog/posts/data-serving-vs-transactional-systems/</link>
         <pubDate>Sat, 08 Mar 2025 13:31:56 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.webp" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
+        <guid>https://osada.blog/posts/data-serving-vs-transactional-systems/</guid>
+        <description>&lt;img src="https://osada.blog/posts/data-serving-vs-transactional-systems/the-chaffins-Zdf3zn5XXtU-unsplash.webp" alt="Featured image of post Data Serving vs Transactional Systems" /&gt;&lt;h2 id=&#34;a-little-bit-about-my-experience-as-a-software-professional&#34;&gt;A little bit about my experience as a software professional
 &lt;/h2&gt;&lt;p&gt;I have now been in the industry close to two decades, and in that time I have moved around a fair bit in terms of&lt;br&gt;
 technology stack, the type of systems I work with, the industry I work in, amongst other factors. In my first couple of&lt;br&gt;
 years, I worked for a small (at the time!) electronics company that mostly dealt with embedded systems. My work was&lt;br&gt;
@@ -273,19 +273,19 @@ But it wasn’t documented. So I asked questions—frequently, but respectfully:
         </item>
         <item>
         <title>The Case for Being Lazy</title>
-        <link>https://osadalakmal.github.io/posts/the-case-for-being-lazy/</link>
+        <link>https://osada.blog/posts/the-case-for-being-lazy/</link>
         <pubDate>Sun, 23 Feb 2025 12:40:47 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/the-case-for-being-lazy/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/the-case-for-being-lazy/virtue-of-lazy.webp" alt="Featured image of post The Case for Being Lazy" /&gt;&lt;hr&gt;
+        <guid>https://osada.blog/posts/the-case-for-being-lazy/</guid>
+        <description>&lt;img src="https://osada.blog/posts/the-case-for-being-lazy/virtue-of-lazy.webp" alt="Featured image of post The Case for Being Lazy" /&gt;&lt;hr&gt;
 &lt;h2 id=&#34;virtue-of-being-lazy&#34;&gt;Virtue of being lazy
 &lt;/h2&gt;&lt;p&gt;Some of my favorite works of fiction are Discworld novels. And of the many great characters I got to meet, there was one that particularly drew my attention—Rincewind. In one of the books, we are told that his father has a particular arrangement for him in order to fund his study. He has to get a particular score in his exams, or otherwise, he will stop receiving the stipend from his father (I have to confess that I don&amp;rsquo;t remember the exact marks needed). On the flip side, if he gets even one mark beyond this score, he will be considered by the university to have passed the exam and become a wizard, therefore ending his stipend again because he is supposed to receive the stipend only to study. But—and here is the crucial detail—if and only if he gets this exact score, he will never be considered passed by the Unseen University, nor will his father consider him failed in his studies. And thus is born an ironic endeavor—he now studies harder than any other student so that he can get exactly the marks he wants. And this is ultimately much harder than just passing the exam. So in order to be lazy and receive the stipend, he needs to study more. And thus, he ends up spending far more energy on &lt;em&gt;not&lt;/em&gt; passing the exam than actually passing the exam.&lt;/p&gt;
 &lt;p&gt;Why did I start this blog post with that detail? Because this has been my go-to scene for explaining why I think being lazy is a virtue. And why being lazy is actually far more work than not being lazy. Whether we are talking about automating things for TOIL in the SRE field, optimizing systems or algorithms for cost or performance, or building high-performance teams, this theme keeps popping up.&lt;/p&gt;
 &lt;h2 id=&#34;example-1--automate-everything&#34;&gt;Example 1 : Automate Everything!
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/the-case-for-being-lazy/automate-everything.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/the-case-for-being-lazy/automate-everything.webp&#34;
 	width=&#34;1500&#34;
 	height=&#34;1178&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/the-case-for-being-lazy/automate-everything_hu_921a395c35272d73.webp 480w, https://osadalakmal.github.io/posts/the-case-for-being-lazy/automate-everything_hu_d0c491e549c0af91.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/the-case-for-being-lazy/automate-everything_hu_921a395c35272d73.webp 480w, https://osada.blog/posts/the-case-for-being-lazy/automate-everything_hu_d0c491e549c0af91.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Automate Everything&#34;
@@ -332,11 +332,11 @@ So you don&amp;rsquo;t have to repeatedly do the same work. This can take many f
         </item>
         <item>
         <title>Technical Tasks for Managers</title>
-        <link>https://osadalakmal.github.io/posts/technical-tasks-for-managers/</link>
+        <link>https://osada.blog/posts/technical-tasks-for-managers/</link>
         <pubDate>Sun, 22 Dec 2024 16:18:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/technical-tasks-for-managers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/technical-tasks-for-managers/marvin-meyer-SYTO3xs06fU-unsplash.webp" alt="Featured image of post Technical Tasks for Managers" /&gt;&lt;h2 id=&#34;what-does-being-technical-mean-for-engineering-team-leads-and-managers&#34;&gt;What does being technical mean for Engineering Team Leads and Managers
+        <guid>https://osada.blog/posts/technical-tasks-for-managers/</guid>
+        <description>&lt;img src="https://osada.blog/posts/technical-tasks-for-managers/marvin-meyer-SYTO3xs06fU-unsplash.webp" alt="Featured image of post Technical Tasks for Managers" /&gt;&lt;h2 id=&#34;what-does-being-technical-mean-for-engineering-team-leads-and-managers&#34;&gt;What does being technical mean for Engineering Team Leads and Managers
 &lt;/h2&gt;&lt;p&gt;I have now been in a management position for the better part of a decade and with that milestone comes a bit of a time to reflect back on how the journey has been and what I have learnt along the way. When I first started leading a team formally back in 2019 I had modeled my expectations on what I would be doing on what my managers up until that point had done. And they had mostly done coding. This was a peculiarity of the company I worked for till then. In that situation team leaders were essentially tech leads that also had 1-1s with you occastionally. There was no real personal development planning or coaching or any of the leadership whizz words that you cannot escape from in any of the engineering leadership text books today. They reviewed most of the code and were very hands on, from forming system designs to actually implementing the solutions they did it all.&lt;/p&gt;
 &lt;p&gt;But this came at an expense, because most of the time things had to go through them, they became a bottlenek. They may have been the original implementers of the system, they may have at point or the other had the best contextual knowledge of the system. But that is all a hindrance when the system is being continually updated and you are waiting for their approval to move forward with any of the real work. Even worse they had become silos of information that made the bus factor for the most critical parts of the system one. While this did ensure their job security for the most part it made it very hard to change these systems in even the most basic agile manner.&lt;/p&gt;
 &lt;p&gt;So if you cannot be the single most knowledgable person and approver of system designs (dare I say should not!), what should a technical mananager do that will help their team? What should being technical mean for the team lead or manager that wants to empower their teams but do not want to be the bottleneck?&lt;/p&gt;
@@ -399,11 +399,11 @@ Every one tends to do one on one meetings differently and I think it is only rig
         </item>
         <item>
         <title>Project Management for Software Engineers</title>
-        <link>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</link>
+        <link>https://osada.blog/posts/project-management-for-software-engineers/</link>
         <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.webp" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
+        <guid>https://osada.blog/posts/project-management-for-software-engineers/</guid>
+        <description>&lt;img src="https://osada.blog/posts/project-management-for-software-engineers/daria-nepriakhina-zoCDWPuiRuA-unsplash.webp" alt="Featured image of post Project Management for Software Engineers" /&gt;&lt;h1 id=&#34;project-management-for-software-engineers&#34;&gt;Project Management for Software Engineers
 &lt;/h1&gt;&lt;p&gt;Project management can sometimes feel like madness. However, with the right tools and approaches, you can navigate the chaos effectively. This guide focuses on stakeholder management, communication strategies, risk handling, and fostering collaboration—critical skills for every software engineer leading a project.&lt;/p&gt;
 &lt;h2 id=&#34;do-we-need-project-management-in-the-age-of-agile&#34;&gt;Do we need project management in the age of agile?
 &lt;/h2&gt;&lt;p&gt;Nowadays it is hard to find a software team or company that does not implement some form of agile methodology weather it is Scrum or Kanban or one of the many agile flavors. And a genuine question you might have is, why we need project management skills if we have agile methodologies being implemented in our teams. The key point here is that none of the agile methodologies are project management frameworks. Rather they more or less focus on delivering working software following on from the principles laid out in the Agile Manifesto. They have very little to say about communications with and management of external stakeholders such as customers, executives and other sponsors. Nor are there a special focus on management of risks on the project. In real world very few scrum teams can be completely autonomous so there will be responsibilities distributed across multiple teams. And thus the reason for managing projects outside of the frameworks like scrum.&lt;/p&gt;
@@ -429,7 +429,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/stakeholder-onion.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/stakeholder-onion.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Example Stakeholder Onion&lt;/h4&gt;
                 
@@ -450,7 +450,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/stakeholder-quadrant.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/stakeholder-quadrant.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Stakeholder Mapping Quadrant Diagram&lt;/h4&gt;
                 
@@ -471,7 +471,7 @@ Tailor your engagement strategy to the needs of each stakeholder group. Some sta
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/project-management-for-software-engineers/raci-matrix-example.webp&#34; width=&#34;75%&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/project-management-for-software-engineers/raci-matrix-example.webp&#34; width=&#34;75%&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Example RACI Matrix&lt;/h4&gt;
                 
@@ -590,11 +590,11 @@ Encourage team members to share insights about potential risks. Transparent comm
         </item>
         <item>
         <title>Valkey: The New Redis Alternative</title>
-        <link>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</link>
+        <link>https://osada.blog/posts/valkey-the-new-redis-alternative/</link>
         <pubDate>Sun, 17 Nov 2024 13:29:22 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/valkey.webp" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
+        <guid>https://osada.blog/posts/valkey-the-new-redis-alternative/</guid>
+        <description>&lt;img src="https://osada.blog/posts/valkey-the-new-redis-alternative/valkey.webp" alt="Featured image of post Valkey: The New Redis Alternative" /&gt;&lt;h2 id=&#34;what-is-redis&#34;&gt;What is Redis?
 &lt;/h2&gt;&lt;p&gt;Redis (Remote Dictionary Server) is an open-source, in-memory data structure store that functions as a database, cache, and message broker. Known for its high performance and versatility, Redis supports low-latency operations crucial for real-time applications. At its core, Redis organizes data as key-value pairs but extends its functionality with advanced data structures (ADTs), streaming capabilities, and persistence options.&lt;/p&gt;
 &lt;p&gt;Redis offers rich data types, including strings, lists, sets, sorted sets, hashes, bitmaps, and hyperloglogs. These enable complex operations like leaderboard maintenance, set intersections, or approximate cardinality estimation. Redis Streams further enhance its capabilities, enabling real-time data processing and message queuing with features like consumer groups, automatic message acknowledgment, and ordered, append-only data logs.&lt;/p&gt;
 &lt;p&gt;Redis also supports data durability through mechanisms like snapshots (RDB files) and append-only file (AOF) logs. Snapshots provide periodic states of the database, while AOF logs persist each write operation. These features make Redis suitable for both ephemeral and long-term data storage. With additional functionalities like replication, clustering, Lua scripting, and pub/sub messaging, Redis remains a critical component in modern web architectures.&lt;/p&gt;
@@ -863,11 +863,11 @@ Read operations: 2000, Write operations: 8000
         </item>
         <item>
         <title>What Determines Your Engineering Organization&#39;s Culture</title>
-        <link>https://osadalakmal.github.io/posts/what-does-your-engineering-team-value/</link>
+        <link>https://osada.blog/posts/what-does-your-engineering-team-value/</link>
         <pubDate>Thu, 25 Jul 2024 03:58:57 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/what-does-your-engineering-team-value/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/what-does-your-engineering-team-value/this-is-engineering.webp" alt="Featured image of post What Determines Your Engineering Organization&#39;s Culture" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/what-does-your-engineering-team-value/</guid>
+        <description>&lt;img src="https://osada.blog/posts/what-does-your-engineering-team-value/this-is-engineering.webp" alt="Featured image of post What Determines Your Engineering Organization&#39;s Culture" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#all-happy-families&#34;&gt;All Happy Families&lt;/a&gt;&lt;/li&gt;
@@ -950,11 +950,11 @@ Read operations: 2000, Write operations: 8000
         </item>
         <item>
         <title>Compromises and Moving Forward</title>
-        <link>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</link>
+        <link>https://osada.blog/posts/compromises-and-moving-forward/</link>
         <pubDate>Tue, 21 Nov 2023 15:03:08 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
+        <guid>https://osada.blog/posts/compromises-and-moving-forward/</guid>
+        <description>&lt;img src="https://osada.blog/posts/compromises-and-moving-forward/desola-lanre-ologun-IgUR1iX0mqM-unsplash.webp" alt="Featured image of post Compromises and Moving Forward" /&gt;&lt;h2 id=&#34;move-fast-and-break-things-or-slow-and-steady-wins-the-race&#34;&gt;Move fast and break things? Or slow and steady wins the race?
 &lt;/h2&gt;&lt;p&gt;While researching a topic at work, I was referring to several conference talks as well as blog posts on how to evolve architecture of systems in a practical manner taking in to account the human element. In between getting my self bored and going &amp;ldquo;aha!&amp;rdquo;, very loudly to the utter annoyance of my kids, I managed to gather some good insights. But the breakthrough came when a colleague mentioned the fact that product as a discipline always seem to have urgency in mind. Everything needed to be done now or even better still, yesterday. So what drives them? Are they truly evil? Out to foil the genuine do-goodder attempts of development and architecture teams? Or are they simply misunderstood most of the time?&lt;/p&gt;
 &lt;style&gt;
 .flex{display: flex;}
@@ -985,11 +985,11 @@ figcaption {
 &lt;div id=&#34;content&#34; class=&#34;center&#34;&gt;
 &lt;div class=&#34;flex&#34;&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/compromises/joker.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
+&lt;img src=&#34;https://osada.blog/img/compromises/joker.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
 &lt;figcaption&gt; Truly Evil? &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/compromises/joker-misunderstood.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
+&lt;img src=&#34;https://osada.blog/img/compromises/joker-misunderstood.jpg&#34; width=&#34;50%&#34;&gt;  &lt;br/&gt;
 &lt;figcaption&gt; Misunderstood? &lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -1027,7 +1027,7 @@ figcaption {
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/compromises-and-moving-forward/technical-debt.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Technical Debt and the Interest Accrued&lt;/h4&gt;
                 
@@ -1048,11 +1048,11 @@ figcaption {
         </item>
         <item>
         <title>Lies, Damn Lies and Engineering Metrics</title>
-        <link>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</link>
+        <link>https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/</link>
         <pubDate>Tue, 31 Oct 2023 21:18:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/banner.webp" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
+        <guid>https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/</guid>
+        <description>&lt;img src="https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/banner.webp" alt="Featured image of post Lies, Damn Lies and Engineering Metrics" /&gt;&lt;h2 id=&#34;tldr-summary&#34;&gt;TL;DR Summary:
 &lt;/h2&gt;&lt;p&gt;In the world of engineering, metrics are critical for evaluating performance and progress. But relying on subjective views and opinions can lead to flawed assessments. To determine the effectiveness of engineering practices, we need unbiased and objective metrics. The choice of metrics depends on an organization&amp;rsquo;s specific goals. Metrics should be automated, transparent, and integrated into the culture. Avoid using easily gamed or individual-level metrics. The post also explores DORA and SPACE metrics and emphasizes that there is no one-size-fits-all solution in engineering metrics.&lt;/p&gt;
 &lt;h2 id=&#34;how-do-we-know-were-good&#34;&gt;How Do We Know We&amp;rsquo;re Good?
 &lt;/h2&gt;&lt;p&gt;In engineering, a discipline underpinned by the scientific method, it seems we should always seek validation of our progress using scientific methods. However, in many engineering teams I&amp;rsquo;ve encountered, there is a propensity to rely on phrases like &amp;ldquo;I feel like,&amp;rdquo; &amp;ldquo;I think,&amp;rdquo; and &amp;ldquo;My point of view is.&amp;rdquo; Such subjective views, unconscious biases, and preconceived opinions can skew measurements.&lt;/p&gt;
@@ -1065,7 +1065,7 @@ figcaption {
 
 &lt;figure&gt;
     &lt;a href=&#34;https://en.wikipedia.org/wiki/The_dress&#34;&gt;
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.webp&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/The_dress_blueblackwhitegold.webp&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
                 
                     &lt;h4&gt;The controversial dress in question&lt;/h4&gt;
                 
@@ -1158,11 +1158,11 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
         </item>
         <item>
         <title>Stakeholder Management and Alliance Forming</title>
-        <link>https://osadalakmal.github.io/posts/stakeholders-and-alliances/</link>
+        <link>https://osada.blog/posts/stakeholders-and-alliances/</link>
         <pubDate>Sun, 08 Oct 2023 10:51:19 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/stakeholders-and-alliances/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/stakeholders-and-alliances/working-together.webp" alt="Featured image of post Stakeholder Management and Alliance Forming" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/stakeholders-and-alliances/</guid>
+        <description>&lt;img src="https://osada.blog/posts/stakeholders-and-alliances/working-together.webp" alt="Featured image of post Stakeholder Management and Alliance Forming" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#on-new-beginnings-old-dogs-and-new-tricks&#34;&gt;On new beginnings, old dogs and new tricks&lt;/a&gt;&lt;/li&gt;
@@ -1205,7 +1205,7 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/stakeholders-and-alliances/escape.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/stakeholders-and-alliances/escape.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Escape Hatch!&lt;/h4&gt;
                 
@@ -1252,11 +1252,11 @@ You, as a Team Lead: &amp;ldquo;Absolutely, Jeff, and all the credit should go t
         </item>
         <item>
         <title>Engineering Standards in Teams</title>
-        <link>https://osadalakmal.github.io/posts/engineering-standards-in-teams/</link>
+        <link>https://osada.blog/posts/engineering-standards-in-teams/</link>
         <pubDate>Mon, 11 Sep 2023 01:38:25 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/engineering-standards-in-teams/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/engineering-standards-in-teams/scott-graham-5fNmWej4tAA-unsplash.webp" alt="Featured image of post Engineering Standards in Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/engineering-standards-in-teams/</guid>
+        <description>&lt;img src="https://osada.blog/posts/engineering-standards-in-teams/scott-graham-5fNmWej4tAA-unsplash.webp" alt="Featured image of post Engineering Standards in Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
@@ -1306,7 +1306,7 @@ More seriously, they are not there to stifle creativity but to perform two very 
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/engineering-standards-in-teams/nick-abrams-FTKfX3xZIcc-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/engineering-standards-in-teams/nick-abrams-FTKfX3xZIcc-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Slow and Steady&lt;/h4&gt;
                 
@@ -1328,11 +1328,11 @@ More seriously, they are not there to stifle creativity but to perform two very 
         </item>
         <item>
         <title>Broken Window Theory in Software Teams</title>
-        <link>https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/</link>
+        <link>https://osada.blog/posts/broken-window-theory-in-software-teams/</link>
         <pubDate>Sun, 03 Sep 2023 10:51:19 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/broken-windows.webp" alt="Featured image of post Broken Window Theory in Software Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/broken-window-theory-in-software-teams/</guid>
+        <description>&lt;img src="https://osada.blog/posts/broken-window-theory-in-software-teams/broken-windows.webp" alt="Featured image of post Broken Window Theory in Software Teams" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#broken-window-theory---origins&#34;&gt;Broken Window Theory - Origins&lt;/a&gt;
@@ -1421,11 +1421,11 @@ Photo by &lt;a href=&#34;https://unsplash.com/@christopherphigh?utm_source=unspl
         </item>
         <item>
         <title>Empathy and Respect in Software Engineering Teams: Actions for a Team Lead</title>
-        <link>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</link>
+        <link>https://osada.blog/posts/respect-and-empathy-in-teams/</link>
         <pubDate>Tue, 29 Aug 2023 00:51:19 +0100</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/empathy-banner.webp" alt="Featured image of post Empathy and Respect in Software Engineering Teams: Actions for a Team Lead" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/respect-and-empathy-in-teams/</guid>
+        <description>&lt;img src="https://osada.blog/posts/respect-and-empathy-in-teams/empathy-banner.webp" alt="Featured image of post Empathy and Respect in Software Engineering Teams: Actions for a Team Lead" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
@@ -1521,11 +1521,11 @@ Address conflicts with empathy and fairness, ensuring that all voices are heard 
         </item>
         <item>
         <title>Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories</title>
-        <link>https://osadalakmal.github.io/posts/small-user-stories/</link>
+        <link>https://osada.blog/posts/small-user-stories/</link>
         <pubDate>Mon, 10 Jul 2023 14:30:00 +0000</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/small-user-stories/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/small-user-stories/john-moeses-bauan-Oj-G9GYlLr0-unsplash.webp" alt="Featured image of post Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/small-user-stories/</guid>
+        <description>&lt;img src="https://osada.blog/posts/small-user-stories/john-moeses-bauan-Oj-G9GYlLr0-unsplash.webp" alt="Featured image of post Unleashing the Power of Small Stories: Strategies for Breaking Down Backend API User Stories" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
@@ -1547,7 +1547,7 @@ Address conflicts with empathy and fairness, ensuring that all voices are heard 
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/small-user-stories/markus-spiske-C0koz3G1I4I-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/small-user-stories/markus-spiske-C0koz3G1I4I-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
                 
                 &lt;p&gt;
                     
@@ -1613,7 +1613,7 @@ Address conflicts with empathy and fairness, ensuring that all voices are heard 
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/small-user-stories/elena-mozhvilo-hbJtngKksDo-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/small-user-stories/elena-mozhvilo-hbJtngKksDo-unsplash.webp&#34;/&gt; &lt;figcaption&gt;
                 
                 &lt;p&gt;
                     
@@ -1633,7 +1633,7 @@ Address conflicts with empathy and fairness, ensuring that all voices are heard 
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/small-user-stories/SlicingStoresDown.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/small-user-stories/SlicingStoresDown.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;How to Break Down Any Story to smaller parts&lt;/h4&gt;
                 
@@ -1652,11 +1652,11 @@ Address conflicts with empathy and fairness, ensuring that all voices are heard 
         </item>
         <item>
         <title>Nemawashi - Power of building consensus</title>
-        <link>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</link>
+        <link>https://osada.blog/posts/nemawashi-power-of-consensus/</link>
         <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/nemawashi-main.webp" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus
+        <guid>https://osada.blog/posts/nemawashi-power-of-consensus/</guid>
+        <description>&lt;img src="https://osada.blog/posts/nemawashi-power-of-consensus/nemawashi-main.webp" alt="Featured image of post Nemawashi - Power of building consensus" /&gt;&lt;h1 id=&#34;nemawashi---power-of-building-consensus&#34;&gt;Nemawashi - Power of building consensus
 &lt;/h1&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
 &lt;/h2&gt;&lt;p&gt;In the fast-paced world of business and decision-making, ensuring that everyone is on the same page and in agreement is essential. A crucial aspect of effective decision-making is building consensus before a meeting takes place. Consensus-building allows teams to align their thoughts, opinions, and goals, leading to more productive meetings and better outcomes.&lt;/p&gt;
 &lt;p&gt;In Japanese culture, there is a term that encapsulates this process beautifully - &amp;ldquo;nemawashi.&amp;rdquo; Nemawashi refers to the practice of laying the groundwork and seeking agreement among stakeholders before a meeting or decision-making process begins. It is a fundamental concept that plays a significant role in achieving harmony and collaboration within organizations.&lt;/p&gt;
@@ -1668,10 +1668,10 @@ Address conflicts with empathy and fairness, ensuring that all voices are heard 
 &lt;h3 id=&#34;example-1-toyotas-decision-making-process&#34;&gt;Example 1: Toyota&amp;rsquo;s Decision-Making Process
 &lt;/h3&gt;&lt;p&gt;One of the most famous examples of nemawashi can be found in the decision-making process at Toyota, a renowned Japanese automobile manufacturer. Before any major decision is made, Toyota follows a meticulous approach that involves extensive consultation and consensus-building.&lt;/p&gt;
 &lt;p&gt;Teams engage in cross-functional meetings, where representatives from various departments share their perspectives, concerns, and ideas. This process allows for a comprehensive understanding of the issue at hand and helps identify potential obstacles or risks. By incorporating nemawashi, Toyota ensures that decisions are made collaboratively, taking into account the viewpoints of all relevant stakeholders.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars.webp&#34;
 	width=&#34;1552&#34;
 	height=&#34;1331&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_b4ecb7127663ecfa.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_2c0ae54b49fcee5a.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_b4ecb7127663ecfa.webp 480w, https://osada.blog/posts/nemawashi-power-of-consensus/Nemawashi-japanese-chars_hu_2c0ae54b49fcee5a.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1687,10 +1687,10 @@ Sidebar: &lt;a class=&#34;link&#34; href=&#34;https://hbr.org/2011/01/how-toyota
 &lt;p&gt;In the U.S. Congress, lawmakers engage in committee meetings, hearings, and informal conversations to gather input from various stakeholders. This process allows representatives to address concerns, incorporate amendments, and build consensus among different factions. Through these deliberations, consensus is sought to increase the chances of a bill&amp;rsquo;s successful passage.&lt;/p&gt;
 &lt;p&gt;An example of how the U.S. legislative process and consensus-building are depicted is the television show &amp;ldquo;The West Wing.&amp;rdquo; The show portrays the inner workings of the White House and provides insights into the intricate process of developing and passing legislation. It showcases the efforts of policymakers to build consensus, negotiate, and seek agreement among different parties to advance their policy agendas.&lt;/p&gt;
 &lt;p&gt;While &amp;ldquo;The West Wing&amp;rdquo; is a fictional representation, it offers viewers a glimpse into the complexities and nuances of consensus-building in the U.S. political landscape.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/the-west-wing-discussion.webp&#34;
 	width=&#34;2000&#34;
 	height=&#34;1333&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_88b234675f94369d.webp 480w, https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_b5c97dca5b65ed9f.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_88b234675f94369d.webp 480w, https://osada.blog/posts/nemawashi-power-of-consensus/the-west-wing-discussion_hu_b5c97dca5b65ed9f.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1737,11 +1737,11 @@ Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/79
         </item>
         <item>
         <title>Getting lost in weeds of Podman</title>
-        <link>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</link>
+        <link>https://osada.blog/posts/getting-lost-in-weeds-of-podman/</link>
         <pubDate>Mon, 07 Nov 2022 15:31:29 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/getting-lost-in-weeds-of-podman/</guid>
+        <description>&lt;img src="https://osada.blog/img/podman-logo-full-vert.png" alt="Featured image of post Getting lost in weeds of Podman" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#what-are-rootless-containers&#34;&gt;What are rootless containers&lt;/a&gt;
@@ -1758,7 +1758,7 @@ Sidebar : &lt;a class=&#34;link&#34; href=&#34;https://www.npr.org/2019/12/20/79
   
 &lt;p&gt;Podman is a tool developed by Redhat that is intended to replace docker at the command line level. It has full compatibility with docker CLI. At least this is true on Linux. Like docker it is written in golang and is quite performant. But unlike docker it does not have a lot of legacy warts, compatibility issues and quirks. It also has better integration with other tools in anything-but-docker space including buildah and skopeo&lt;/p&gt;
 &lt;h2 id=&#34;what-are-rootless-containers&#34;&gt;What are rootless containers
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/rootless-containers.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/rootless-containers.png&#34;
 	
 	
 	
@@ -1907,11 +1907,11 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
         </item>
         <item>
         <title>Avoiding burnout in software domain</title>
-        <link>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</link>
+        <link>https://osada.blog/posts/avoiding-burnout-in-software-domain/</link>
         <pubDate>Mon, 09 May 2022 00:35:34 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/young-woman-eyes-closed-hand-on-forehead-768.webp" alt="Featured image of post Avoiding burnout in software domain" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/avoiding-burnout-in-software-domain/</guid>
+        <description>&lt;img src="https://osada.blog/posts/avoiding-burnout-in-software-domain/young-woman-eyes-closed-hand-on-forehead-768.webp" alt="Featured image of post Avoiding burnout in software domain" /&gt;&lt;blockquote&gt;
 &lt;p&gt;How to avoid the dangers of the trade&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -1938,7 +1938,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/burnout-head-down.webp&#34; alt=&#34;Burnout Profile&#34; width=&#34;60%&#34;/&gt; &lt;/figure&gt;
+        &lt;img src=&#34;https://osada.blog/posts/avoiding-burnout-in-software-domain/burnout-head-down.webp&#34; alt=&#34;Burnout Profile&#34; width=&#34;60%&#34;/&gt; &lt;/figure&gt;
 
 &lt;p&gt;You know the drill. It starts with a couple spillovers from your usual sprints. It snowballs in to a stream of issues and before you know it, you are at risk of missing a major deadline. You walk in to release planning meetings and your stomach falls out from underneath you. Your head feels tight and there is a ringing in your ears. Sleep doesn&amp;rsquo;t come easy and when it does, it feels like cheating. After all you could be making progress on that one critical issue that you know will hold up the next sprint and will end up wasting the whole team&amp;rsquo;s time.&lt;/p&gt;
 &lt;p&gt;If any of the above sounds familiar then you have walked close to the burnout zone and you may even have fallen in. To be very clear we are not talking about crunch time - that time in every projects end time frame when everyone customaraly runs around like headless chickens trying to figure out where they are supposed to be. That is a cyclical thing and more importantly they finish off once you ship. Little bit of breathing space and you are off to the races again.&lt;/p&gt;
@@ -1984,7 +1984,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/Top-7-Tips-to-Prevent-Burnout-as-a-Remote-Software-Developer--1024x683.webp&#34;/&gt; &lt;/figure&gt;
+        &lt;img src=&#34;https://osada.blog/posts/avoiding-burnout-in-software-domain/Top-7-Tips-to-Prevent-Burnout-as-a-Remote-Software-Developer--1024x683.webp&#34;/&gt; &lt;/figure&gt;
 
 &lt;p&gt;Most of us like to think that it won&amp;rsquo;t happen to us. We like to believe we are singular, unbreakable and quite resilient. Specially when we are young, we tend to think that we can just keep going on and on and it will be ok. But know that none of us are infallible. We will all break down sometime and it is quite ok. It is ok to seek help and it is ok to accept help.&lt;/p&gt;
 &lt;p&gt;Whether you recognize the warning signs of impending burnout or you’re already past the breaking point, trying to push through the exhaustion and continuing as you have been will only cause further emotional and physical damage. Now is the time to pause and change direction by learning how you can help yourself overcome burnout and feel healthy and positive again.&lt;/p&gt;
@@ -2006,7 +2006,7 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/tips-to-avoid-burnout.webp&#34;/&gt; &lt;/figure&gt;
+        &lt;img src=&#34;https://osada.blog/posts/avoiding-burnout-in-software-domain/tips-to-avoid-burnout.webp&#34;/&gt; &lt;/figure&gt;
 
 &lt;p&gt;There are several guides online on how to avoid burnout, including the graphic above. But I chose to follow a set of points set forth by a Harvard Business Review article as follows.&lt;/p&gt;
 &lt;h3 id=&#34;prioritize-self-care&#34;&gt;Prioritize self-care
@@ -2031,11 +2031,11 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
         </item>
         <item>
         <title>Agile : The Snake Oil for Cobra Bites</title>
-        <link>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</link>
+        <link>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</link>
         <pubDate>Sun, 06 Feb 2022 21:57:42 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.webp" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</guid>
+        <description>&lt;img src="https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/agile-poster.webp" alt="Featured image of post Agile : The Snake Oil for Cobra Bites" /&gt;&lt;blockquote&gt;
 &lt;p&gt;How the rebellion got subverted&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -2055,10 +2055,10 @@ A friend had asked me for advice on best practices in FTPing files around. Now t
   &lt;/div&gt;
   
 &lt;h2 id=&#34;the-agile-manifesto---the-rebellion-that-was-not&#34;&gt;The agile manifesto - The Rebellion that was not
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile.webp&#34;
 	width=&#34;610&#34;
 	height=&#34;500&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3bae885212f2619d.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3489e5c74c4ccd52.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3bae885212f2619d.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/100-percent-agile_hu_3489e5c74c4ccd52.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2074,10 +2074,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;I had heard about the agile movement and I vaguely remember seeing an article by Martin Fowler on the topic. This immediately piqued my interest since it seemed to be light on rules and bureaucracy and seemed to get to the point very quickly. This was not scrum or Scaled Agile Framework or any of the &amp;ldquo;enterprise&amp;rdquo; versions of agile. It was just a simple way of doing things that brought a little bit of order to the madness and let the team be predictable and present a more sane interface to management. This was very radical in that era since we had just started to implement &lt;a class=&#34;link&#34; href=&#34;https://prince2.wiki/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PRINCE2&lt;/a&gt; which was as heavy as they came.&lt;/p&gt;
 &lt;h2 id=&#34;the-call-is-coming-from-inside-the-house&#34;&gt;The call is coming from inside the house
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile.webp&#34;
 	width=&#34;1000&#34;
 	height=&#34;645&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_80b3fb48583ec458.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_574d521c89bdadde.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_80b3fb48583ec458.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/welcome-to-agile_hu_574d521c89bdadde.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2094,10 +2094,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;p&gt;The biggest issue that I had with it, is the amount of pompous ceremonies around it. There will be no way for the designated scrum master to allocate more than 50% of the time to actual business process work by working normally. So inevitably they will turn to working extra hours to catch up. The even worse part was that it was usually the most senior person in the team who will be the scrum master. So not only is the team loosing a really good engineering resource, now he will end up with a burnout after six months.&lt;/p&gt;
 &lt;p&gt;SAFE also tries to enforce communication lines, streamline them. What it actually end up doing is forcing tribal thinking and create self sabotaging teams. In the end you realize that it is just the traditional way of thinking ( Project -&amp;gt; Program -&amp;gt; Portfolio ) re-skinned with a slight agile twist. There is no real effort being made to follow the original agile manifesto in any way, shape or form. So you essentially end up building software the same exact way you did before just with less time and more admin overhead.&lt;/p&gt;
 &lt;h2 id=&#34;why-is-it-so-easy-to-fail&#34;&gt;Why is it so easy to fail?
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum.webp&#34;
 	width=&#34;500&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_ec8e13a8e63a5176.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_2dbca90c4dac935e.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_ec8e13a8e63a5176.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/kanban-vs-scrum_hu_2dbca90c4dac935e.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2123,10 +2123,10 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 &lt;/ol&gt;
 &lt;h2 id=&#34;understanding-the-what-why-and-how&#34;&gt;Understanding the what, why and how
 &lt;/h2&gt;&lt;p&gt;We should try to get all stakeholders to understand why want a particular agile methodology implemented - maybe it is scrum or maybe it is Kanban. Whatever it is, everyone involved should know why they are doing it and not something else. The new guys who joined yesterday should be able to tell you why you are doing Kanban and not scrum or waterfall. And you should not require a fifty page brief in order to understand it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note.webp&#34;
 	width=&#34;265&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_de1b85375e1f38b3.webp 480w, https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_ebd869f08c447fdd.webp 1024w&#34;
+	srcset=&#34;https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_de1b85375e1f38b3.webp 480w, https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/postit-note_hu_ebd869f08c447fdd.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2151,11 +2151,11 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
         </item>
         <item>
         <title>Hyperscan C&#43;&#43; Wrapper</title>
-        <link>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</link>
+        <link>https://osada.blog/posts/hyperscan-cpp-wrapper/</link>
         <pubDate>Sun, 19 Dec 2021 22:16:45 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/hyperscan-cpp-wrapper/</guid>
+        <description>&lt;img src="https://osada.blog/posts/hyperscan-cpp-wrapper/Hyperspace_falcon.webp" alt="Featured image of post Hyperscan C&#43;&#43; Wrapper" /&gt;&lt;blockquote&gt;
 &lt;p&gt;(or why using the phrase &amp;ldquo;C/C++&amp;rdquo; is crime against programming)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -2183,7 +2183,7 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/A12SR71.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/hyperscan-cpp-wrapper/A12SR71.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;For every nice thing, there is a nicer thing - A12 vs SR71&lt;/h4&gt;
                 
@@ -2320,11 +2320,11 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
         </item>
         <item>
         <title>Starting With Realtime Data</title>
-        <link>https://osadalakmal.github.io/posts/starting-with-realtime-data/</link>
+        <link>https://osada.blog/posts/starting-with-realtime-data/</link>
         <pubDate>Sat, 20 Nov 2021 20:15:01 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/starting-with-realtime-data/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/posts/starting-with-realtime-data/realtime-splash.webp" alt="Featured image of post Starting With Realtime Data" /&gt;&lt;blockquote&gt;
+        <guid>https://osada.blog/posts/starting-with-realtime-data/</guid>
+        <description>&lt;img src="https://osada.blog/posts/starting-with-realtime-data/realtime-splash.webp" alt="Featured image of post Starting With Realtime Data" /&gt;&lt;blockquote&gt;
 &lt;p&gt;(or why realtime data is elusive in most organizations)&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -2347,7 +2347,7 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/starting-with-realtime-data/hand-out-of-water.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/starting-with-realtime-data/hand-out-of-water.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Drowning in Data but Thirsting for Insights&lt;/h4&gt;
                 
@@ -2382,7 +2382,7 @@ runway left but we had to be nimble on our feet and attack every opportunity wit
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/posts/starting-with-realtime-data/national-rail-realtime.webp&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/posts/starting-with-realtime-data/national-rail-realtime.webp&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;An Unlikely Rescuer&lt;/h4&gt;
                 
@@ -2495,11 +2495,11 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
         </item>
         <item>
         <title>Learning In Engineering Organizations</title>
-        <link>https://osadalakmal.github.io/posts/learninginorganizations/</link>
+        <link>https://osada.blog/posts/learninginorganizations/</link>
         <pubDate>Thu, 14 Oct 2021 15:36:00 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/learninginorganizations/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;&lt;h1 id=&#34;learning-in-software-engineering-organizations&#34;&gt;Learning In Software Engineering Organizations
+        <guid>https://osada.blog/posts/learninginorganizations/</guid>
+        <description>&lt;img src="https://osada.blog/img/learning-in-orgs.jpg" alt="Featured image of post Learning In Engineering Organizations" /&gt;&lt;h1 id=&#34;learning-in-software-engineering-organizations&#34;&gt;Learning In Software Engineering Organizations
 &lt;/h1&gt;
 
 
@@ -2547,7 +2547,7 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
     &gt;many things that inhibit chances for learning at large oraganizations&lt;/a&gt;. So you have to be aware of these limitations and then overcome them in order for you to be successful. There are reasons to do with management and incentives but they again deserve their own blog post.&lt;/p&gt;
 &lt;p&gt;Lets talk about tooling for learning. The good thing about larger organizations is that they have cash to burn. There are boxes to be ticked and systems to be put in place - no one will bat an eyelid when you ask for a chat app or a documentation server. Here are some of the tooling you can leverage to make it easier for employees to learn.&lt;/p&gt;
 &lt;h3 id=&#34;corporate-knowledge-systems&#34;&gt;Corporate Knowledge Systems.
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/kms-infographic.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/kms-infographic.png&#34;
 	
 	
 	
@@ -2573,16 +2573,16 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12, mixed mode)
         </item>
         <item>
         <title>About Me</title>
-        <link>https://osadalakmal.github.io/about/</link>
+        <link>https://osada.blog/about/</link>
         <pubDate>Sat, 28 Aug 2021 19:40:31 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/about/</guid>
+        <guid>https://osada.blog/about/</guid>
         <description>
 
 
 &lt;figure&gt;
     
-        &lt;img src=&#34;https://osadalakmal.github.io/img/osada-conf-speech.png&#34; alt=&#34;My Profile Picture&#34; width=&#34;60%&#34;/&gt; &lt;figcaption&gt;
+        &lt;img src=&#34;https://osada.blog/img/osada-conf-speech.png&#34; alt=&#34;My Profile Picture&#34; width=&#34;60%&#34;/&gt; &lt;figcaption&gt;
                 
                     &lt;h4&gt;Presenting at Develop Conference @ BBC&lt;/h4&gt;
                 
@@ -2699,11 +2699,11 @@ I have two lovely kids and an amazing wife that keeps me grounded and are the mo
         </item>
         <item>
         <title>Not your grandmas&#39; docker - Part 2</title>
-        <link>https://osadalakmal.github.io/posts/container-part2/</link>
+        <link>https://osada.blog/posts/container-part2/</link>
         <pubDate>Thu, 26 Aug 2021 10:00:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/container-part2/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/container-part2/</guid>
+        <description>&lt;img src="https://osada.blog/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 2" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem&lt;/a&gt;
@@ -2721,7 +2721,7 @@ I have two lovely kids and an amazing wife that keeps me grounded and are the mo
   
 &lt;p&gt;Now that we have discussed the basics of containers, lets dive in to the details. Modern container tooling goes way beyond simply running an OS image in a separate context.&lt;/p&gt;
 &lt;h2 id=&#34;components-of-the-container-ecosystem&#34;&gt;Components of the container ecosystem
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/DockerEcosystem.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/DockerEcosystem.png&#34;
 	
 	
 	
@@ -2842,11 +2842,11 @@ I have two lovely kids and an amazing wife that keeps me grounded and are the mo
         </item>
         <item>
         <title>Not your grandmas&#39; docker - Part 1</title>
-        <link>https://osadalakmal.github.io/posts/container-intro/</link>
+        <link>https://osada.blog/posts/container-intro/</link>
         <pubDate>Sat, 14 Aug 2021 14:00:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/container-intro/</guid>
-        <description>&lt;img src="https://osadalakmal.github.io/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;&lt;div class=&#34;toc&#34;&gt;
+        <guid>https://osada.blog/posts/container-intro/</guid>
+        <description>&lt;img src="https://osada.blog/img/container-arial.jpg" alt="Featured image of post Not your grandmas&#39; docker - Part 1" /&gt;&lt;div class=&#34;toc&#34;&gt;
     &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization&lt;/a&gt;
@@ -2866,7 +2866,7 @@ I have two lovely kids and an amazing wife that keeps me grounded and are the mo
   
 &lt;p&gt;Most of us got introduced to containers with docker. In fact it seems that docker for most intents and purposes and has become synonym with containers. However there is a vast landscape of technology underneath this seemingly simple facade of containers. So lets try and dig in to what a container is before we introduce the tooling that we will be using today.&lt;/p&gt;
 &lt;h2 id=&#34;operating-system-level-virtualization&#34;&gt;Operating System Level Virtualization
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/OS-level-virt.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/OS-level-virt.png&#34;
 	
 	
 	
@@ -2918,7 +2918,7 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;p&gt;A Solaris Container is the combination of system resource controls and the boundary separation provided by zones. Zones are completely separate server instances within a single physical server. In fact these are usually used to provide isolated test servers for the developers since almost no one is going to need a maxed out SPARC-T5-8 to test their application. Sys admins can reduce cost and provide most of the same protections of separate machines on a single machine by using zones.&lt;/p&gt;
 &lt;h3 id=&#34;systemd-nspawn&#34;&gt;Systemd nspawn
 &lt;/h3&gt;&lt;p&gt;&lt;br&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/systemd-meme.png&#34;
+&lt;img src=&#34;https://osada.blog/img/systemd-meme.png&#34;
 	
 	
 	
@@ -2942,7 +2942,7 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;p&gt;This is implemented on top of cgroups and is supposed to help users with containing processes easily in systemd. It is better in security terms than a chroot since it has process level security features as well. In that way it is similar to lxd or lxd. You can find more information &lt;a class=&#34;link&#34; href=&#34;https://wiki.archlinux.org/title/systemd-nspawn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;lxclxd&#34;&gt;LXC/LXD
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxc-architecture.jpg&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/lxc-architecture.jpg&#34;
 	
 	
 	
@@ -2955,7 +2955,7 @@ These are probably the best known implementation of OS level virtualization outs
 &lt;p&gt;LXC allows running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.&lt;/p&gt;
 &lt;p&gt;It combines cgroups functionality that allows limitation and prioritization of resources (CPU, memory, block I/O, network, etc.) and namespace isolation functionality that allows complete isolation of an application&amp;rsquo;s view of the operating environment, including process trees, networking and mounted file systems.&lt;/p&gt;
 &lt;p&gt;Previously LXC only supported privilege containers though starting with the LXC 1.0 release, it is possible to run containers as regular users on the host using &amp;ldquo;unprivileged containers&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/lxd-architecture.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/lxd-architecture.jpg&#34;
 	
 	
 	
@@ -3013,10 +3013,10 @@ This allows us to work with container registries&lt;/li&gt;
         </item>
         <item>
         <title>Adventures in WSL Land</title>
-        <link>https://osadalakmal.github.io/posts/wsladventures/wsladventures/</link>
+        <link>https://osada.blog/posts/wsladventures/wsladventures/</link>
         <pubDate>Wed, 16 Jun 2021 12:00:05 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/wsladventures/wsladventures/</guid>
+        <guid>https://osada.blog/posts/wsladventures/wsladventures/</guid>
         <description>&lt;h1 id=&#34;adventures-in-wsl-land&#34;&gt;Adventures in WSL Land
 &lt;/h1&gt;&lt;p&gt;Recently I have joined a new company and as almost always is the case ( at least in Sri Lanka ) I received a laptopthat runs Windows. In this case it was running a rather old version of Windows 10 that did not support WSL2. This documents my adventures in getting this laptop setup so that I can have a relatively modest working and development environment familiar to most *nix developers.&lt;/p&gt;
 &lt;h2 id=&#34;getting-to-a-good-starting-place&#34;&gt;Getting to a good starting place
@@ -3024,7 +3024,7 @@ This allows us to work with container registries&lt;/li&gt;
 &lt;h2 id=&#34;virtualization-platforms&#34;&gt;Virtualization platforms
 &lt;/h2&gt;&lt;p&gt;Next up was selecting a virtualization platform to be used. In the past I had almost always reached for virtual box. VMWare was prohibitively costly and nowhere near as intuitive. But sadly Virtualbox seems to be neglected more and more under the stewardship of Oracle and there are no signs of things improving anytime soon. I am guessing Larry doesn&amp;rsquo;t really see a point in free things unless it is Oracle getting those free things. So I was pretty happy to find that windows now includes a native virtualization platform called Hyper-V.&lt;/p&gt;
 &lt;h2 id=&#34;hyper-v---still-rough-around-the-edges&#34;&gt;Hyper-V - Still Rough Around the edges
-&lt;/h2&gt;&lt;p&gt;The management of the VMs is done via a GUI called Hyper-V Manager (This is microsoft remember?). It looks something like below &lt;img src=&#34;https://osadalakmal.github.io/img/Microsoft-Hyper-V-manager.jpg&#34;
+&lt;/h2&gt;&lt;p&gt;The management of the VMs is done via a GUI called Hyper-V Manager (This is microsoft remember?). It looks something like below &lt;img src=&#34;https://osada.blog/img/Microsoft-Hyper-V-manager.jpg&#34;
 	
 	
 	
@@ -3040,16 +3040,16 @@ This allows us to work with container registries&lt;/li&gt;
         </item>
         <item>
         <title>Cloud9 - A cloud based IDE for your code</title>
-        <link>https://osadalakmal.github.io/posts/cloud9/cloud9/</link>
+        <link>https://osada.blog/posts/cloud9/cloud9/</link>
         <pubDate>Mon, 29 Mar 2021 12:33:51 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/cloud9/cloud9/</guid>
+        <guid>https://osada.blog/posts/cloud9/cloud9/</guid>
         <description>&lt;h2 id=&#34;cloud9---a-cloud-based-ide-for-your-code&#34;&gt;Cloud9 - A cloud based IDE for your code
 &lt;/h2&gt;&lt;p&gt;I first heard of cloud9 before it was acquired by AWS in 2016. In those days it was a novelty. But the good sort - the sort of thing you think of and say &amp;ldquo;Man, if only I had that sort of flexibility&amp;rdquo;. This was before Google docs was a widespread thing and collaborating on a cloud IDE that existed independently of your computer was unheard of. Everytime I wanted to send some code snippet to a coworker and they needed more context, I would think to myself, there has to be a better way to do this.&lt;/p&gt;
 &lt;p&gt;Cloud9 was originally founded in 2010 and created the open source product. This was then acquired by Amazon and turned in to their own offering of a cloud IDE running on EC2.&lt;/p&gt;
 &lt;h3 id=&#34;provisioning-a-developer-environment&#34;&gt;Provisioning a developer environment
 &lt;/h3&gt;&lt;p&gt;The IDE itself is actually free. What you pay for is the environment that it runs on. Lets see how to provision one of these. Go to cloud9 on the management console and start spinning up an environment and you are presented with the initial screen.&lt;br&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/cloud9-1.png&#34;
+&lt;img src=&#34;https://osada.blog/img/cloud9-1.png&#34;
 	
 	
 	
@@ -3058,7 +3058,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After that you get to choose the environment that you run the cloud9 IDE on. I am of course choosing a t2.micro so that I can use the free tier for it.&lt;br&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/cloud9-2.png&#34;
+&lt;img src=&#34;https://osada.blog/img/cloud9-2.png&#34;
 	
 	
 	
@@ -3067,7 +3067,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Finally you get to review and approve the request.&lt;br&gt;
-&lt;img src=&#34;https://osadalakmal.github.io/img/cloud9-3.png&#34;
+&lt;img src=&#34;https://osada.blog/img/cloud9-3.png&#34;
 	
 	
 	
@@ -3079,13 +3079,13 @@ This allows us to work with container registries&lt;/li&gt;
         </item>
         <item>
         <title>Codestar - A new way to get started on AWS Projects</title>
-        <link>https://osadalakmal.github.io/posts/codestar/codestar/</link>
+        <link>https://osada.blog/posts/codestar/codestar/</link>
         <pubDate>Sun, 28 Mar 2021 20:08:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/codestar/codestar/</guid>
+        <guid>https://osada.blog/posts/codestar/codestar/</guid>
         <description>&lt;h2 id=&#34;codestar---a-new-approach-to-development-on-aws&#34;&gt;Codestar - A new approach to development on AWS
 &lt;/h2&gt;&lt;p&gt;Codestar is a relatively new approach to creating new application that run on AWS infrastructure. The interesting thing about this seems to be that it gives newbie developers like myself to get bootstrapped and go from zero to hundred in a relatively short time period.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codestar-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codestar-1.png&#34;
 	
 	
 	
@@ -3096,7 +3096,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;This is the initial screen shown when you first try to create a codestar project. There are several options to choose from but it is mostly elastic beanstalk and lambda focused. I selected golan based lambda project.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codestar-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codestar-2.png&#34;
 	
 	
 	
@@ -3109,7 +3109,7 @@ This allows us to work with container registries&lt;/li&gt;
 &lt;p&gt;Then you get to choose a project ID and a project name. Simple enough!. Then comes the choice of where to host the project repository. For now only &lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/codecommit/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;AWS codecommit&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;github&lt;/a&gt; are supported.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codestar-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codestar-3.png&#34;
 	
 	
 	
@@ -3120,7 +3120,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I chose github as the hosting option since I only wanted to try one new thing at a time. After going through the usual permission windows, it creates the initial project.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codestar-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codestar-4.png&#34;
 	
 	
 	
@@ -3131,7 +3131,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;The final review screen before things are created fully.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codestar-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codestar-5.png&#34;
 	
 	
 	
@@ -3142,7 +3142,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;And these are all the different resources that are created by the codestar tool. Looking at that list there are several different things that you may be hard pressed to get right if you were doing this by hand. Considering the whole process took me less than 2 mins to complete, this seems like a no brainer to use.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codebuild-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codebuild-1.png&#34;
 	
 	
 	
@@ -3153,7 +3153,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;This is my first time seeing AWS CodeBuild and it seems usable enough and easy enough to navigate for even a first timer like me. I have been an avid user of Jenkins and CircleCI for the most part of my career. Lately I have been toying around with Gitlab and Github built in automation frameworks. Compared to them Codebuild does seem to have a lot more room for growth. But it seems promising enough to warrant a post of its own.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codedeploy-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codedeploy-1.png&#34;
 	
 	
 	
@@ -3164,7 +3164,7 @@ This allows us to work with container registries&lt;/li&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Codedeploy is probably the one part of the puzzle that I took the least effort to review. It seems to be handling the deployment ok and I stopped looking at it after that cursory glance. Hopefully I can correct that in my next post about CodeBuild and CodeDeploy.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/codepipeline-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/codepipeline-1.png&#34;
 	
 	
 	
@@ -3176,7 +3176,7 @@ This allows us to work with container registries&lt;/li&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;And together CodeBuild and CodeDeploy form CodePipeline. The CI/CD solution on AWS. Again compared to something like Jenkins it seems to leave a lot to desire but for the task at hand it seems to work pretty well. And best of all I didn&amp;rsquo;t have to create any of it!&lt;/p&gt;
 &lt;p&gt;So there it is. The application was created, built and deployed all within the space of a few minutes. Here is a simple REST request&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/REST-codestar-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/REST-codestar-1.png&#34;
 	
 	
 	
@@ -3191,10 +3191,10 @@ This allows us to work with container registries&lt;/li&gt;
         </item>
         <item>
         <title>Cost Of Allocation in High Performance Systems</title>
-        <link>https://osadalakmal.github.io/posts/allocationcost/allocationcost/</link>
+        <link>https://osada.blog/posts/allocationcost/allocationcost/</link>
         <pubDate>Fri, 05 Feb 2021 08:08:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/allocationcost/allocationcost/</guid>
+        <guid>https://osada.blog/posts/allocationcost/allocationcost/</guid>
         <description>&lt;h2 id=&#34;impact-of-unproductive-work&#34;&gt;Impact of unproductive work
 &lt;/h2&gt;&lt;p&gt;In high performance systems we try to make sure we do as little unproductive work as we possible. As Andrei Alexdrascu points out in one of his presentations on the subject, the fastest bit of code is the code that does not run. So it is essential that we try to avoid as much unproductive work as possible.&lt;/p&gt;
 &lt;p&gt;When we say unproductive work it usually seems we are talking about unwanted calculations, operations, file access and db access. But this goes beyond that - Any operation that does not directly contribute to calculating the output that your application is responsible for is a waste. This includes GC in garbage collected languages, memory allocation and deallocation in languages with manual memory management languages such as C++&lt;/p&gt;
@@ -3221,7 +3221,7 @@ This allows us to work with container registries&lt;/li&gt;
 &lt;script src=&#34;https://gist.github.com/osadalakmal/e0a3bd5c8f9d27c2de20163fde1c4af9.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;This allows us to benchmark the completion time for two threads when they are allocating memory vs when they are not. The following is the result when running on my machine&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/perf-with-system-malloc.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/perf-with-system-malloc.png&#34;
 	
 	
 	
@@ -3233,7 +3233,7 @@ This allows us to work with container registries&lt;/li&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;As can be seen there is a significant slow down when two threads are both running malloc at the same time. You can see that the slow down purely due to malloc when running the same two function calls serially is much less when compared to the slow down in threads. This is because by default malloc has to synchronize across threads due to there being a single allocator for the whole program.&lt;/p&gt;
 &lt;p&gt;This synchronization causes a delay that exceeds the cost of pure malloc call. Now this can be reduced by using an allocator that performs better in multithreaded applications. One example of this is tcmalloc as explained earlier. Here is the same code running but this time linked against tcmaloc&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/perf-with-system-malloc.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/perf-with-system-malloc.png&#34;
 	
 	
 	
@@ -3252,10 +3252,10 @@ This allows us to work with container registries&lt;/li&gt;
         </item>
         <item>
         <title>SQLite for High Throughput Applications</title>
-        <link>https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/</link>
+        <link>https://osada.blog/posts/sqliteperformance/sqliteperformance/</link>
         <pubDate>Sat, 30 Jan 2021 15:27:50 +0530</pubDate>
         
-        <guid>https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/</guid>
+        <guid>https://osada.blog/posts/sqliteperformance/sqliteperformance/</guid>
         <description>&lt;p&gt;SQLite is an embedded SQL Library. This means that It is a single library that you link against and now your application has access to a full blown SQL server within the process itself. It does not need a separate tool to access the database. The database is a single file stored on Disk. It also comes with a binary that can read and manipulate databases&lt;/p&gt;
 &lt;h3 id=&#34;when-to-use-sqlite&#34;&gt;When to use SQLite
 &lt;/h3&gt;&lt;p&gt;The advise straight from its creator is to use it to replace flat files. This is specially true if you are writing strucutred data that consist of a set of repeated fields. Usually these can be written in any of the human readable formats - XML, JSON, YAML or good old CSV. So what are the advantages of using a sqlite database instead of one of the above?&lt;/p&gt;
@@ -3292,7 +3292,7 @@ This allows us to work with container registries&lt;/li&gt;
 &lt;script src=&#34;http://gist-it.appspot.com/http://github.com/osadalakmal/sqlite-performance/blob/main/test.cpp&#34;&gt;&lt;/script&gt;
 &lt;h3 id=&#34;results&#34;&gt;Results
 &lt;/h3&gt;&lt;p&gt;The results can be seen here running on my laptop&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://osadalakmal.github.io/img/sqlite-performance.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://osada.blog/img/sqlite-performance.png&#34;
 	
 	
 	

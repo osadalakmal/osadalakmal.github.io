@@ -2,288 +2,288 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://osadalakmal.github.io/categories/</loc>
+    <loc>https://osada.blog/</loc>
+    <lastmod>2025-07-07T12:55:11+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/</loc>
+    <lastmod>2025-07-07T12:55:11+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/computer-science/</loc>
+    <loc>https://osada.blog/tags/computer-science/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/</loc>
+    <loc>https://osada.blog/tags/distributed-systems/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/distributed-systems/</loc>
+    <loc>https://osada.blog/categories/engineering-principles/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/engineering-principles/</loc>
+    <loc>https://osada.blog/tags/engineering-principles/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-principles/</loc>
+    <loc>https://osada.blog/tags/scalability/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/</loc>
+    <loc>https://osada.blog/tags/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/scalability/</loc>
+    <loc>https://osada.blog/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</loc>
     <lastmod>2025-05-05T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/</loc>
-    <lastmod>2025-05-05T14:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://osadalakmal.github.io/posts/the-unreasonable-effectiveness-of-fundamentals-of-computer-science/</loc>
-    <lastmod>2025-05-05T14:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://osadalakmal.github.io/posts/data-serving-vs-transactional-systems/</loc>
+    <loc>https://osada.blog/posts/data-serving-vs-transactional-systems/</loc>
     <lastmod>2025-03-08T13:31:56+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-excellence/</loc>
+    <loc>https://osada.blog/tags/engineering-excellence/</loc>
     <lastmod>2025-03-08T13:31:56+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/software-architecture/</loc>
+    <loc>https://osada.blog/categories/software-architecture/</loc>
     <lastmod>2025-03-08T13:31:56+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/software-architecture/</loc>
+    <loc>https://osada.blog/tags/software-architecture/</loc>
     <lastmod>2025-03-08T13:31:56+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/best-practices/</loc>
+    <loc>https://osada.blog/tags/best-practices/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/engineering-culture/</loc>
+    <loc>https://osada.blog/categories/engineering-culture/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-culture/</loc>
+    <loc>https://osada.blog/tags/engineering-culture/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-leadership/</loc>
+    <loc>https://osada.blog/tags/engineering-leadership/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/software-engineering/</loc>
+    <loc>https://osada.blog/tags/software-engineering/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/the-case-for-being-lazy/</loc>
+    <loc>https://osada.blog/posts/the-case-for-being-lazy/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/engineering-leadership/</loc>
+    <loc>https://osada.blog/categories/engineering-leadership/</loc>
     <lastmod>2024-12-22T16:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/technical-enablers/</loc>
+    <loc>https://osada.blog/tags/technical-enablers/</loc>
     <lastmod>2024-12-22T16:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/technical-tasks-for-managers/</loc>
+    <loc>https://osada.blog/posts/technical-tasks-for-managers/</loc>
     <lastmod>2024-12-22T16:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/communication/</loc>
+    <loc>https://osada.blog/tags/communication/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/project-management/</loc>
+    <loc>https://osada.blog/categories/project-management/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/project-management/</loc>
+    <loc>https://osada.blog/tags/project-management/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/project-management-for-software-engineers/</loc>
+    <loc>https://osada.blog/posts/project-management-for-software-engineers/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/risk-management/</loc>
+    <loc>https://osada.blog/tags/risk-management/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/stakeholders/</loc>
+    <loc>https://osada.blog/tags/stakeholders/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/cloud/</loc>
+    <loc>https://osada.blog/tags/cloud/</loc>
     <lastmod>2024-11-17T13:29:22+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/valkey-the-new-redis-alternative/</loc>
+    <loc>https://osada.blog/posts/valkey-the-new-redis-alternative/</loc>
     <lastmod>2024-11-17T13:29:22+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/was/</loc>
+    <loc>https://osada.blog/tags/was/</loc>
     <lastmod>2024-11-17T13:29:22+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/engineering-organizations/</loc>
+    <loc>https://osada.blog/categories/engineering-organizations/</loc>
     <lastmod>2024-07-25T03:58:57+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-organizations/</loc>
+    <loc>https://osada.blog/tags/engineering-organizations/</loc>
     <lastmod>2024-07-25T03:58:57+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/what-does-your-engineering-team-value/</loc>
+    <loc>https://osada.blog/posts/what-does-your-engineering-team-value/</loc>
     <lastmod>2024-07-25T03:58:57+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/compromises-and-moving-forward/</loc>
+    <loc>https://osada.blog/posts/compromises-and-moving-forward/</loc>
     <lastmod>2023-11-21T15:03:08+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/product-developement/</loc>
+    <loc>https://osada.blog/tags/product-developement/</loc>
     <lastmod>2023-11-21T15:03:08+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering-metrics/</loc>
+    <loc>https://osada.blog/tags/engineering-metrics/</loc>
     <lastmod>2023-10-31T21:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/lies-damn-lies-and-engineering-metrics/</loc>
+    <loc>https://osada.blog/posts/lies-damn-lies-and-engineering-metrics/</loc>
     <lastmod>2023-10-31T21:18:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/stakeholders-and-alliances/</loc>
+    <loc>https://osada.blog/posts/stakeholders-and-alliances/</loc>
     <lastmod>2023-10-08T10:51:19+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/engineering-standards-in-teams/</loc>
+    <loc>https://osada.blog/posts/engineering-standards-in-teams/</loc>
     <lastmod>2023-09-11T01:38:25+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/broken-window-theory-in-software-teams/</loc>
+    <loc>https://osada.blog/posts/broken-window-theory-in-software-teams/</loc>
     <lastmod>2023-09-03T10:51:19+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/respect-and-empathy-in-teams/</loc>
+    <loc>https://osada.blog/posts/respect-and-empathy-in-teams/</loc>
     <lastmod>2023-08-29T00:51:19+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/team-building/</loc>
+    <loc>https://osada.blog/tags/team-building/</loc>
     <lastmod>2023-08-29T00:51:19+01:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/agile-development/</loc>
+    <loc>https://osada.blog/tags/agile-development/</loc>
     <lastmod>2023-07-10T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/backend-api/</loc>
+    <loc>https://osada.blog/tags/backend-api/</loc>
     <lastmod>2023-07-10T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/software-development/</loc>
+    <loc>https://osada.blog/categories/software-development/</loc>
     <lastmod>2023-07-10T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/small-user-stories/</loc>
+    <loc>https://osada.blog/posts/small-user-stories/</loc>
     <lastmod>2023-07-10T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/user-stories/</loc>
+    <loc>https://osada.blog/tags/user-stories/</loc>
     <lastmod>2023-07-10T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/communication/</loc>
+    <loc>https://osada.blog/categories/communication/</loc>
     <lastmod>2023-06-23T18:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/nemawashi-power-of-consensus/</loc>
+    <loc>https://osada.blog/posts/nemawashi-power-of-consensus/</loc>
     <lastmod>2023-06-23T18:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/organizations/</loc>
+    <loc>https://osada.blog/tags/organizations/</loc>
     <lastmod>2023-06-23T18:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/docker/</loc>
+    <loc>https://osada.blog/tags/docker/</loc>
     <lastmod>2022-11-07T15:31:29+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/getting-lost-in-weeds-of-podman/</loc>
+    <loc>https://osada.blog/posts/getting-lost-in-weeds-of-podman/</loc>
     <lastmod>2022-11-07T15:31:29+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/podman/</loc>
+    <loc>https://osada.blog/tags/podman/</loc>
     <lastmod>2022-11-07T15:31:29+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/virtualization/</loc>
+    <loc>https://osada.blog/categories/virtualization/</loc>
     <lastmod>2022-11-07T15:31:29+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/virtualization/</loc>
+    <loc>https://osada.blog/tags/virtualization/</loc>
     <lastmod>2022-11-07T15:31:29+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/avoiding-burnout-in-software-domain/</loc>
+    <loc>https://osada.blog/posts/avoiding-burnout-in-software-domain/</loc>
     <lastmod>2022-05-09T00:35:34+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/burnout/</loc>
+    <loc>https://osada.blog/tags/burnout/</loc>
     <lastmod>2022-05-09T00:35:34+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/engineering/</loc>
+    <loc>https://osada.blog/tags/engineering/</loc>
     <lastmod>2022-05-09T00:35:34+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/industry/</loc>
+    <loc>https://osada.blog/categories/industry/</loc>
     <lastmod>2022-05-09T00:35:34+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/mental-health/</loc>
+    <loc>https://osada.blog/tags/mental-health/</loc>
     <lastmod>2022-05-09T00:35:34+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/software/</loc>
+    <loc>https://osada.blog/tags/software/</loc>
     <lastmod>2022-05-09T00:35:34+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/agile/</loc>
+    <loc>https://osada.blog/tags/agile/</loc>
     <lastmod>2022-02-06T21:57:42+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/agile-the-snake-oil-for-cobra-bites/</loc>
+    <loc>https://osada.blog/posts/agile-the-snake-oil-for-cobra-bites/</loc>
     <lastmod>2022-02-06T21:57:42+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/programming/</loc>
+    <loc>https://osada.blog/categories/programming/</loc>
     <lastmod>2022-02-06T21:57:42+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/programming/</loc>
+    <loc>https://osada.blog/tags/programming/</loc>
     <lastmod>2022-02-06T21:57:42+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/software-development/</loc>
+    <loc>https://osada.blog/tags/software-development/</loc>
     <lastmod>2022-02-06T21:57:42+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/software-practices/</loc>
+    <loc>https://osada.blog/tags/software-practices/</loc>
     <lastmod>2022-02-06T21:57:42+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/c&#43;&#43;/</loc>
+    <loc>https://osada.blog/tags/c&#43;&#43;/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/cpp/</loc>
+    <loc>https://osada.blog/tags/cpp/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/hyperscan/</loc>
+    <loc>https://osada.blog/tags/hyperscan/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/hyperscan-cpp-wrapper/</loc>
+    <loc>https://osada.blog/posts/hyperscan-cpp-wrapper/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/intel/</loc>
+    <loc>https://osada.blog/tags/intel/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/regex/</loc>
+    <loc>https://osada.blog/tags/regex/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/wrapper/</loc>
+    <loc>https://osada.blog/tags/wrapper/</loc>
     <lastmod>2021-12-19T22:16:45+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/data/</loc>
+    <loc>https://osada.blog/categories/data/</loc>
     <lastmod>2021-11-20T20:15:01+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/kafka/</loc>
+    <loc>https://osada.blog/tags/kafka/</loc>
     <lastmod>2021-11-20T20:15:01+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/realtime/</loc>
+    <loc>https://osada.blog/tags/realtime/</loc>
     <lastmod>2021-11-20T20:15:01+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/starting-with-realtime-data/</loc>
+    <loc>https://osada.blog/posts/starting-with-realtime-data/</loc>
     <lastmod>2021-11-20T20:15:01+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/stomp/</loc>
+    <loc>https://osada.blog/tags/stomp/</loc>
     <lastmod>2021-11-20T20:15:01+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/knowledge/</loc>
+    <loc>https://osada.blog/tags/knowledge/</loc>
     <lastmod>2021-10-14T15:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/categories/learning/</loc>
+    <loc>https://osada.blog/categories/learning/</loc>
     <lastmod>2021-10-14T15:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/learning/</loc>
+    <loc>https://osada.blog/tags/learning/</loc>
     <lastmod>2021-10-14T15:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/learninginorganizations/</loc>
+    <loc>https://osada.blog/posts/learninginorganizations/</loc>
     <lastmod>2021-10-14T15:36:00+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/about/</loc>
+    <loc>https://osada.blog/about/</loc>
     <lastmod>2021-08-28T19:40:31+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/tags/buildah/</loc>
+    <loc>https://osada.blog/tags/buildah/</loc>
     <lastmod>2021-08-26T10:00:50+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/container-part2/</loc>
+    <loc>https://osada.blog/posts/container-part2/</loc>
     <lastmod>2021-08-26T10:00:50+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/container-intro/</loc>
+    <loc>https://osada.blog/posts/container-intro/</loc>
     <lastmod>2021-08-14T14:00:50+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/wsladventures/wsladventures/</loc>
+    <loc>https://osada.blog/posts/wsladventures/wsladventures/</loc>
     <lastmod>2021-06-16T12:00:05+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/cloud9/cloud9/</loc>
+    <loc>https://osada.blog/posts/cloud9/cloud9/</loc>
     <lastmod>2021-03-29T12:33:51+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/codestar/codestar/</loc>
+    <loc>https://osada.blog/posts/codestar/codestar/</loc>
     <lastmod>2021-03-28T20:08:50+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/allocationcost/allocationcost/</loc>
+    <loc>https://osada.blog/posts/allocationcost/allocationcost/</loc>
     <lastmod>2021-02-05T08:08:50+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/posts/sqliteperformance/sqliteperformance/</loc>
+    <loc>https://osada.blog/posts/sqliteperformance/sqliteperformance/</loc>
     <lastmod>2021-01-30T15:27:50+05:30</lastmod>
   </url><url>
-    <loc>https://osadalakmal.github.io/series/</loc>
+    <loc>https://osada.blog/series/</loc>
   </url>
 </urlset>
