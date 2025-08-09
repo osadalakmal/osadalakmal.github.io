@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI Integration on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/ai-integration/</link>
+        <description>Recent content in AI Integration on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Sat, 09 Aug 2025 14:30:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/ai-integration/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MCP vs SDK: Two Paths to LLM-Powered Extensibility</title>
+        <link>https://osada.blog/posts/llms-and-programmable-software/</link>
+        <pubDate>Sat, 09 Aug 2025 14:30:00 +0000</pubDate>
+        
+        <guid>https://osada.blog/posts/llms-and-programmable-software/</guid>
+        <description>&lt;img src="https://osada.blog/posts/llms-and-programmable-software/powers.webp" alt="Featured image of post MCP vs SDK: Two Paths to LLM-Powered Extensibility" /&gt;&lt;h1 id=&#34;mcp-vs-sdk-two-paths-to-llmpowered-extensibility&#34;&gt;MCP vs SDK: Two Paths to LLM‑Powered Extensibility
+&lt;/h1&gt;&lt;p&gt;&lt;em&gt;Two different ways to let your app work better for people (and their AI helpers).&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;from-software-eats-the-world-to-ai-in-the-loop&#34;&gt;From &amp;ldquo;software eats the world&amp;rdquo; to AI in the loop
+&lt;/h2&gt;&lt;p&gt;When software started taking over everything, the real winners were the people who could make it do exactly what they wanted. That usually meant writing code - either a whole new app, or scripts inside an existing one. Which meant you had to be a programmer - a costly, time consuming affair that needed significant investment from users point of view. In every office/workplace that is not a software shop, you would know the one person who is the designated computer whisperer, the genius who knows the right incantations to make the computer do exactly what they want. In reality they are comfortable with the operation system, tools and a couple of scripting languages.&lt;/p&gt;
+&lt;p&gt;And then came the rise of user‑programmable environments. Lotus 1‑2‑3, for example, had macros as far back as the late ’80s, and Excel carried that torch with VBA. These weren’t just nice extras - they opened up whole new ways for people to bend the software to their own needs. This meant now you did not need to program everything from the ground up. These tools were end user software as well so there was some functionality already built in - infact a heck of a lot of functionality. But more importantly they allowed those functionality to be used as building blocks now.&lt;/p&gt;
+&lt;p&gt;This paved the way for a generation of end‑user programmable tools. Some evolved into full scripting environments inside mainstream apps. elisp is probably the most famous of these leading to many programmers who wax lyrical about how powerful it makes emacs (now you know which editor I prefer!). And some others spun off into no‑code platforms. No‑code is an interesting branch - it promises power without syntax, but it’s still unclear where it fits in the long run. It sits somewhere between “use what’s shipped” and “write a proper program,” but it’s not always clear how far it can take you.&lt;/p&gt;
+&lt;p&gt;At the heart of all this is one goal: let people get more out of the software you build. The stock functionality matters, sure, but in the age of LLMs, it matters just as much - maybe more - what &lt;em&gt;hooks&lt;/em&gt; you give those AI‑powered tools to work with. People are going to be using them, and the more effectively those tools can drive your software, the more value your users will be able to extract.&lt;/p&gt;
+&lt;p&gt;I’m not saying replace your app with a language - ship the app you want to ship. But alongside that, think hard about what you enable the AI layer to do. If people are using a tool, you should make sure they can use it in the most effective way possible - whether they’re typing commands themselves or letting an AI do it for them.&lt;/p&gt;
+&lt;p&gt;From that perspective, there are two main ways forward:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Expose an MCP server&lt;/strong&gt; (or something similar) so an LLM can directly call into your app using a set of defined commands.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Expose a programmable interface&lt;/strong&gt; (SDK, DSL, low‑code) and let the LLM write the code that uses it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Think AWS CLI vs AWS SDK - one’s a quick, command‑driven way in; the other’s a fully programmable toolkit.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mcp-a-command-surface-for-ai&#34;&gt;MCP: a command surface for AI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;What it is&lt;/strong&gt;: You publish a set of clear, well‑defined actions: &lt;code&gt;create_invoice&lt;/code&gt;, &lt;code&gt;fetch_customer&lt;/code&gt;, &lt;code&gt;transcode_audio&lt;/code&gt;, etc. The LLM calls them, your app runs them, and returns results.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pros&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quick wins&lt;/strong&gt;: Easy for an LLM to use without setup.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Safety first&lt;/strong&gt;: You control what’s exposed, check inputs, and keep risky stuff locked down.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Predictable&lt;/strong&gt;: The API contract is stable even if internals change.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Great for operations&lt;/strong&gt;: Easy to log, audit, and trace exactly what happened.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cons&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Less composable&lt;/strong&gt;: You can chain calls, but big workflows get clunky without another layer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feature creep&lt;/strong&gt;: Power users ask for more and more commands.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic ends up elsewhere&lt;/strong&gt;: The “brains” live in the orchestrator, not your app.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Good for&lt;/strong&gt;: Repetitive tasks, customer support tools, CRUD operations, data lookups.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;sdkdsl-let-ais-write-real-programs&#34;&gt;SDK/DSL: let AIs write “real” programs
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;What it is&lt;/strong&gt;: A language binding, DSL, or low‑code setup that the LLM can write to build workflows and automations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pros&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fully composable&lt;/strong&gt;: Loops, conditionals, abstractions - you can build proper systems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Durable&lt;/strong&gt;: Code can be saved, versioned, and reused.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plays well with others&lt;/strong&gt;: Easy to integrate with the rest of a tech stack.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cons&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;More friction&lt;/strong&gt;: Needs an environment, keys, maybe a bit of human literacy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security risks&lt;/strong&gt;: Arbitrary code execution means you need guardrails.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Higher support load&lt;/strong&gt;: You’re now running a developer platform.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Good for&lt;/strong&gt;: Data pipelines, complex automations, custom integrations.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-most-mature-platforms-end-up-with-both&#34;&gt;Why most mature platforms end up with both
+&lt;/h2&gt;&lt;p&gt;CLI‑style (MCP) is great for quick wins. SDK‑style is great for deep integrations. People (and AIs) often start with one‑off commands and then graduate to building proper systems. The key is keeping boundaries clear:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MCP tools: coarse‑grained, task‑focused, with well‑defined inputs and outputs.&lt;/li&gt;
+&lt;li&gt;SDK/DSL: small, composable primitives that can be wired together any way the user needs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I predict that most mature software products/platforms will end up with both.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;checklist&#34;&gt;Checklist
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;For MCP&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ship tools for your top 10 “jobs to be done.”&lt;/li&gt;
+&lt;li&gt;Lock down inputs/outputs with schemas.&lt;/li&gt;
+&lt;li&gt;Include dry‑run mode, idempotency, and audit logs.&lt;/li&gt;
+&lt;li&gt;Scope permissions tightly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;For SDK/DSL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep functions small and focused.&lt;/li&gt;
+&lt;li&gt;Provide examples and a quick dev loop.&lt;/li&gt;
+&lt;li&gt;Version properly and ship migration guides.&lt;/li&gt;
+&lt;li&gt;Include typed clients and golden‑path recipes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;example-for-erporder-management-system&#34;&gt;Example for ERP/Order Management System
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;MCP tool:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;generate_invoice&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Create and email a PDF invoice for a paid order&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;input_schema&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;order_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;send_email&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;boolean&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;order_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;SDK:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;invoice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;order_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add_memo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Rush delivery&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;require_po&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;accounting_alias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Same capability, different ergonomics: MCP is &lt;strong&gt;do the thing&lt;/strong&gt;; SDK is &lt;strong&gt;build the process&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thought&#34;&gt;Final thought
+&lt;/h2&gt;&lt;p&gt;Start small with MCP for quick wins. Build out an SDK for the power users. Link the two so people can move from “just run this” to “build me the workflow” without friction.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
