@@ -12,8 +12,7 @@
         <pubDate>Thu, 14 Aug 2025 20:16:03 +0100</pubDate>
         
         <guid>https://osada.blog/posts/languages-designed-for-llms/</guid>
-        <description>&lt;img src="https://osada.blog/posts/languages-designed-for-llms/designed.webp" alt="Featured image of post Programming&#39;s New Frontier: The Rise of LLM-First Languages" /&gt;&lt;h1 id=&#34;programmings-new-frontier-the-rise-of-llm-first-languages&#34;&gt;Programming&amp;rsquo;s New Frontier: The Rise of LLM-First Languages.
-&lt;/h1&gt;&lt;p&gt;Large Language Models (LLMs) have quickly become an integral part of modern software development. Today, most developers encounter them as coding assistants-tools that can generate code on demand by drawing upon patterns learned from vast quantities of open-source and proprietary code. These models can also reference online resources and produce functioning code in seconds.&lt;/p&gt;
+        <description>&lt;img src="https://osada.blog/posts/languages-designed-for-llms/designed.webp" alt="Featured image of post Programming&#39;s New Frontier: The Rise of LLM-First Languages" /&gt;&lt;p&gt;Large Language Models (LLMs) have quickly become an integral part of modern software development. Today, most developers encounter them as coding assistants-tools that can generate code on demand by drawing upon patterns learned from vast quantities of open-source and proprietary code. These models can also reference online resources and produce functioning code in seconds.&lt;/p&gt;
 &lt;p&gt;But as impressive as they are, this process is far from foolproof.&lt;/p&gt;
 &lt;h2 id=&#34;the-problem-with-current-llm-assisted-coding&#34;&gt;The Problem with Current LLM-Assisted Coding
 &lt;/h2&gt;&lt;p&gt;While LLMs can produce working solutions quickly, they are prone to significant shortcomings:&lt;/p&gt;
