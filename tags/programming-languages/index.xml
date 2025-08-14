@@ -1,18 +1,172 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Programming Languages on Curiously Recurring Thoughts in Programming</title>
+        <title>Programming Languages on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
         <link>http://localhost:1313/tags/programming-languages/</link>
-        <description>Recent content in Programming Languages on Curiously Recurring Thoughts in Programming</description>
+        <description>Recent content in Programming Languages on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Tue, 10 Jun 2025 06:18:58 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>All Problems Are Either Compiler or Database</title>
-        <link>http://localhost:1313/posts/all-problems-are-either-compiler-or-database/</link>
-        <pubDate>Tue, 10 Jun 2025 06:18:58 +0000</pubDate>
+        <lastBuildDate>Thu, 14 Aug 2025 20:16:03 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Programming&#39;s New Frontier: The Rise of LLM-First Languages</title>
+        <link>http://localhost:1313/posts/languages-designed-for-llms/</link>
+        <pubDate>Thu, 14 Aug 2025 20:16:03 +0100</pubDate>
         
-        <guid>http://localhost:1313/posts/all-problems-are-either-compiler-or-database/</guid>
-        <description></description>
+        <guid>http://localhost:1313/posts/languages-designed-for-llms/</guid>
+        <description>&lt;img src="http://localhost:1313/posts/languages-designed-for-llms/designed.webp" alt="Featured image of post Programming&#39;s New Frontier: The Rise of LLM-First Languages" /&gt;&lt;h1 id=&#34;programmings-new-frontier-the-rise-of-llm-first-languages&#34;&gt;Programming&amp;rsquo;s New Frontier: The Rise of LLM-First Languages.
+&lt;/h1&gt;&lt;p&gt;Large Language Models (LLMs) have quickly become an integral part of modern software development. Today, most developers encounter them as coding assistants-tools that can generate code on demand by drawing upon patterns learned from vast quantities of open-source and proprietary code. These models can also reference online resources and produce functioning code in seconds.&lt;/p&gt;
+&lt;p&gt;But as impressive as they are, this process is far from foolproof.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem-with-current-llm-assisted-coding&#34;&gt;The Problem with Current LLM-Assisted Coding
+&lt;/h2&gt;&lt;p&gt;While LLMs can produce working solutions quickly, they are prone to significant shortcomings:&lt;/p&gt;
+&lt;p&gt;Here are the links for each issue mentioned in the “Current Reality of LLM-Assisted Coding” section:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hallucinated dependencies&lt;/strong&gt;: LLMs often generate code that references libraries or APIs that do not exist. This is more than a simple inconvenience; it is now a significant security vulnerability. This phenomenon, sometimes called &amp;ldquo;slopsquatting,&amp;rdquo; creates a new vector for supply chain attacks. Malicious actors can preemptively squat on these hallucinated package names in public repositories like npm and PyPI. &lt;a class=&#34;link&#34; href=&#34;https://www.techradar.com/pro/mitigating-the-risks-of-package-hallucination-and-slopsquatting&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TechRadar – Mitigating the risks of package hallucination&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Logic errors&lt;/strong&gt;: They can make subtle mistakes that pass undetected until runtime. This is why LLMs are dangerous when used by junior developers. &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@adnanmasood/code-generation-with-llms-practical-challenges-gotchas-and-nuances-7b51d394f588&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Medium – Code generation with LLMs: practical challenges&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Test manipulation&lt;/strong&gt;: In some cases, they will &amp;ldquo;cheat&amp;rdquo; by altering tests to make broken code pass. &lt;a class=&#34;link&#34; href=&#34;https://medium.com/@aipapers/cheating-llms-how-not-to-stop-them-openai-paper-explained-c38ebc637762&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Medium – Cheating LLMs: How (not) to stop them&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Context limitations&lt;/strong&gt;: Providing complete context is still a challenge. Developers have experimented with approaches like concatenating entire codebases into a single file, RAG-based (retrieval-augmented generation) solutions, and specialized formats like &lt;code&gt;LLMs.txt&lt;/code&gt;-a file designed to tell the model the &amp;ldquo;story&amp;rdquo; of the repository. Yet none of these methods are optimal. &lt;a class=&#34;link&#34; href=&#34;https://datanorth.ai/blog/context-length&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DataNorth – Context length in LLMs&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-the-time-is-right-for-a-change&#34;&gt;Why the Time is Right for a Change
+&lt;/h2&gt;&lt;p&gt;We’ve crossed a Rubicon—a point of no return—beyond which the capabilities of coding assistants have fundamentally changed the nature of what’s possible. While earlier models like GPT-4 offered impressive performance, they often struggled with long-term coherence and could &amp;ldquo;forget&amp;rdquo; earlier parts of a conversation due to a more limited context window. The developer&amp;rsquo;s workflow often involved significant manual effort to re-supply context, summarize past conversations, or break down large tasks into small, manageable chunks.&lt;/p&gt;
+&lt;p&gt;With the arrival of models like Claude Opus, Claude Sonnet, and GLM-4.5, this dynamic has shifted. Their primary innovation is not just higher performance on benchmarks, but a qualitative leap in their ability to handle massive context windows—hundreds of thousands of tokens, equivalent to thousands of pages of code and documentation. This allows assistants to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maintain state over long, multi-file projects: They can now &amp;ldquo;remember&amp;rdquo; an entire codebase or a significant portion of it, enabling them to make changes that are consistent across multiple files without losing track of the overall architecture.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reason over a complete set of documentation: The model can be given an entire project&amp;rsquo;s documentation, API references, or even a full RFC, and use that information to generate code that is correct and adheres to all specified constraints.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Exhibit &amp;ldquo;extended thinking&amp;rdquo;: Some of these models are now capable of multi-step, agentic reasoning, where they can generate a plan, execute it, receive feedback, and adjust their strategy, all within a single session. This moves them from being mere code generators to active problem-solvers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Projects like Lovable demonstrate this shift. The fact that such initiatives can deliver working applications in a single pass is evidence that we’ve moved past the experimental phase into a new era of practical, production-ready LLM-assisted programming.&lt;/p&gt;
+&lt;h2 id=&#34;the-case-for-llm-native-languages&#34;&gt;The Case for LLM-Native Languages
+&lt;/h2&gt;&lt;p&gt;The history of programming languages is a story of responding to the shortcomings of the tools that came before:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kroki.io/plantuml/svg/eNp9UMFugzAQ_ZXBd4AgEIAy7VKlVs0h5oCjqCdAUINm7Krtjogk_rc1QmG7vfPcPee7cU3oUqvwKu4c0CUnUoyWOr4DgskqHsxixpVmYNMGsBwmE6hxo2WEIVScHIJ60o6LZudumL2e0L1dmAOQMb2A5KOZKOnS0ZktoUKhJH2JGnItq-QOEGlj8j5Kzrc4hDnFl6phkQ1bHTaK_OrXZX6VqLU8rPYhH8X9ciRWlmkgoC1G7Q4Tye67XfYnAw1lAzIuhUqUytqlgnyOjCyyZhfvOukf2bapP_iSn9z41SakbY&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Evolution of Programming Languages&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The leap from &lt;strong&gt;machine code&lt;/strong&gt; to &lt;strong&gt;assembly&lt;/strong&gt; abstracted raw binary into human-readable mnemonics.&lt;/li&gt;
+&lt;li&gt;The arrival of &lt;strong&gt;third-generation languages&lt;/strong&gt; (C, Java) provided higher abstraction for productivity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fourth-generation languages&lt;/strong&gt; like LabVIEW tackled domain-specific needs.&lt;/li&gt;
+&lt;li&gt;The rise of &lt;strong&gt;memory-safe compiled languages&lt;/strong&gt; like Rust and Go directly responded to decades of security vulnerabilities from unsafe memory operations.&lt;/li&gt;
+&lt;li&gt;The rise of JVM based alternatives to Java came about because of stagnation in Java roadmap. This gave us languages like kotlin, Closure and Scala.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These shifts happened because the &lt;em&gt;context&lt;/em&gt; in which code was written and executed changed.&lt;/p&gt;
+&lt;p&gt;Today, we are at another inflection point. The dominant programming languages-Python, JavaScript, Java, C++-are designed to be read, understood, and authored by humans. LLMs can emulate human thought, but that’s still emulation. There’s no reason to believe that a language designed to be optimal for &lt;em&gt;human&lt;/em&gt; authorship is also optimal for &lt;em&gt;machine&lt;/em&gt; authorship.&lt;/p&gt;
+&lt;h2 id=&#34;literate-programming-as-a-precursor&#34;&gt;Literate Programming as a Precursor
+&lt;/h2&gt;&lt;p&gt;Donald Knuth’s concept of literate programming [Knuth, 1984] was created so that human-readable descriptions could be embedded alongside code-not merely interspersed, but with documentation as the primary artifact and code as a secondary element. In literate programming, the entire program becomes executable documentation.&lt;/p&gt;
+&lt;p&gt;For LLMs, this is a natural fit. LLMs excel when they have rich, continuous context, and literate programming provides exactly that: the whole program and its purpose, rationale, and constraints in one coherent narrative. This makes literate programming an ideal model for feeding an LLM the maximum relevant information. We may see a resurgence of this paradigm, adapted for machine consumers as much as for humans.&lt;/p&gt;
+&lt;p&gt;Modern tools inspired by literate programming-such as &lt;a class=&#34;link&#34; href=&#34;https://jupyter.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jupyter Notebooks&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://quarto.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quarto&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www-cs-faculty.stanford.edu/~knuth/noweb.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;noweb&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://nbdev.fast.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nbdev&lt;/a&gt; already combine narrative and code in ways that could evolve toward LLM-first formats.&lt;/p&gt;
+&lt;h2 id=&#34;lessons-from-apl-j-and-q&#34;&gt;Lessons from APL, J, and Q
+&lt;/h2&gt;&lt;p&gt;Some languages have historically prioritized other qualities above human readability. APL, J, and Q embrace terse, symbolic syntax for reasons of efficiency and expressiveness. In these languages, code becomes subservient to the goal-whether that’s mathematical compactness or performance-rather than ease of reading.&lt;/p&gt;
+&lt;p&gt;Similarly, an LLM-first language may look alien to human eyes, optimized for machine parsing and generation rather than human comprehension. In this way, APL and its descendants offer a blueprint: concise, unambiguous, and structured for the intended consumer, even if that consumer is a machine.&lt;/p&gt;
+&lt;h2 id=&#34;characteristics-of-an-llm-first-language&#34;&gt;Characteristics of an LLM-First Language
+&lt;/h2&gt;&lt;p&gt;An LLM-native programming language might incorporate:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Ultra-Explicit Semantics&lt;/strong&gt; – No implicit defaults; strict typing and explicit declarations. No room for ambiguity please, LLMs bring plenty of their own.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-Describing Code&lt;/strong&gt; – Embedded, machine-readable metadata describing intent, dependencies, and constraints. i.e. Literate Programming. Or Joe Armstrong style write-docs-before-code philosophy needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chunk-Optimized Structure&lt;/strong&gt; – Modular design aligned with token window limits for easy context retrieval. Each one would need to be mostly self contained and with the output described separately so it can be fed in to LLMs while the other modules are being generated. Think C/C++ header files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Error Prevention by Design&lt;/strong&gt; – Syntax rules that block common LLM pitfalls, such as referencing undeclared libraries or similar hallucinations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Context Anchoring&lt;/strong&gt; – Persistent IDs and hash-based references to ensure the correct version is always referenced. (Content Addressable Storage anyone?)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stable, Bounded Syntax&lt;/strong&gt; – Predictable token patterns for better compression and embedding performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrated Machine/Compiler Feedback&lt;/strong&gt; – Output structured for both humans and models to consume.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;speculative-syntax-examples&#34;&gt;Speculative Syntax Examples
+&lt;/h2&gt;&lt;p&gt;Here’s what such a language could resemble:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-llmcode&#34; data-lang=&#34;llmcode&#34;&gt;@module(meta={&amp;#34;version&amp;#34;:&amp;#34;1.2.0&amp;#34;,&amp;#34;purpose&amp;#34;:&amp;#34;Data ingestion pipeline&amp;#34;})
+module ingest_pipeline {
+
+  @function(meta={&amp;#34;context_id&amp;#34;:&amp;#34;hash1234&amp;#34;,&amp;#34;owner&amp;#34;:&amp;#34;team-data&amp;#34;})
+  fn load_csv(file_path: String) -&amp;gt; DataFrame {
+    ensure(file_exists(file_path))
+    return parse_csv(file_path)
+  }
+
+  @test_integrity(id=&amp;#34;test-001&amp;#34;, immutable=true)
+  fn test_load_csv_valid() {
+    df = load_csv(&amp;#34;/test/data.csv&amp;#34;)
+    assert(df.rows &amp;gt; 0)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This speculative syntax:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses metadata annotations for context.&lt;/li&gt;
+&lt;li&gt;Embeds test integrity markers to prevent silent tampering.&lt;/li&gt;
+&lt;li&gt;Organizes code in retrieval-friendly modules.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;literate-programming-executable-context-for-llms&#34;&gt;Literate Programming: Executable Context for LLMs
+&lt;/h2&gt;&lt;p&gt;Donald Knuth’s &lt;a class=&#34;link&#34; href=&#34;http://www.literateprogramming.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;literate programming&lt;/a&gt; reframes software as &lt;em&gt;executable documentation&lt;/em&gt;: the narrative for humans is primary; the code is woven into that story and then &lt;em&gt;tangled&lt;/em&gt; into compilable units. In a literate system, the whole program &lt;em&gt;is&lt;/em&gt; context-definitions, intent, trade‑offs, and usage are embedded right where they matter.&lt;/p&gt;
+&lt;p&gt;That property makes literate programming a strong fit for LLMs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Context density&lt;/strong&gt;: LLMs perform better with rich, proximate context; literate code puts rationale, invariants, and edge cases next to the implementation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retrieval-friendly structure&lt;/strong&gt;: Sections (&amp;ldquo;chunks&amp;rdquo;) can be addressed by name and dependency, making them ideal targets for RAG and for toolchains that assemble the right context window.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intent and constraints&lt;/strong&gt;: Narratives, design notes, and correctness arguments can be expressed in machine-readable blocks that the model can obey during generation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrity by design&lt;/strong&gt;: Tests and specs live as first-class prose+code; changes to tests are visible in the narrative, discouraging silent “cheats.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Practical hybrid:&lt;/em&gt; an LLM-first language could standardize doc-first modules, where every module begins with a prose contract (purpose, invariants, failure modes), followed by code blocks tagged for tangling, and a final verification block of examples/tests.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sketch:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-litlang&#34; data-lang=&#34;litlang&#34;&gt;# chunk: normalize_emails
+purpose: Deduplicate case/alias variants. Invariant: output preserves domain.
+assumptions: input ~ list&amp;lt;String&amp;gt;; may contain nulls.
+
+code tangles to email/normalize.llm:
+fn norm(xs: List&amp;lt;String&amp;gt;) -&amp;gt; List&amp;lt;String&amp;gt; {
+  return xs.filter(not_null)
+           .map(lowercase)
+           .map(strip_gmail_aliases)  // invariant: keep domain
+           .unique()
+}
+
+verify:
+ex1: norm([&amp;#34;A@x.com&amp;#34;,&amp;#34;a+z@x.com&amp;#34;]) == [&amp;#34;a@x.com&amp;#34;]
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;machines-writing-for-machines-lessons-from-apljq&#34;&gt;Machines Writing for Machines: Lessons from APL/J/Q
+&lt;/h2&gt;&lt;p&gt;Array languages like APL, J, and Q prioritize &lt;em&gt;terse, compositional semantics&lt;/em&gt; over conventional readability. Human legibility yields to density and mathematical regularity; small combinators compose into powerful pipelines. That philosophy maps well to model authorship:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Short, regular token sequences&lt;/strong&gt; are easier for models to predict and less prone to drift.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Uniform data semantics&lt;/strong&gt; (arrays everywhere) reduce branching surface and ambiguity.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tacit/point-free style&lt;/strong&gt; (functions composed without naming arguments) compresses code and clarifies dataflow for static analyzers and LLMs alike.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An LLM-native language might borrow this spirit while remaining capable of being generated and manipulated by LLMs:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-arrayish&#34; data-lang=&#34;arrayish&#34;&gt;# all-pairs cosine similarity, top-5 per row
+S ≔ normalize(X)             -- rows to unit length
+C ≔ S · Sᵀ                  -- cosine matrix
+Top5 ≔ take⟨5⟩ ∘ argsort⟨desc⟩(C, axis=cols)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The goal isn’t to replace clarity with glyphs; it’s to optimize the code’s statistical and algebraic structure for machine generation and analysis.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-coming-shift&#34;&gt;The Coming Shift
+&lt;/h2&gt;&lt;p&gt;Just as previous generations of languages emerged in response to evolving needs, LLM-driven development will demand its own paradigms. The programming languages of the near future will be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Created &lt;em&gt;for&lt;/em&gt; LLMs to generate.&lt;/li&gt;
+&lt;li&gt;Optimized for the ergonomics of machine authorship rather than human authorship.&lt;/li&gt;
+&lt;li&gt;Built with native features to address the unique failure modes of AI-generated code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can expect at least one such language to dominate a niche-perhaps in rapid prototyping, automated data processing, or even full-stack application generation-within the next decade.&lt;/p&gt;
+&lt;p&gt;The next wave of programming language evolution won’t be about making life easier for human programmers alone. It will be about making life easier for our non-human collaborators.&lt;/p&gt;
+</description>
         </item>
         
     </channel>

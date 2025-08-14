@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Exploring the rise of programming languages designed for LLMs, why now is the tipping point, and how challenges like hallucinated dependencies, logic errors, test manipulation, and context limitations are shaping this next wave of language design. \n">
+<title>Programming&#39;s New Frontier: The Rise of LLM-First Languages</title>
+
+<link rel='canonical' href='http://localhost:1313/posts/languages-designed-for-llms/'>
+
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Programming's New Frontier: The Rise of LLM-First Languages">
+<meta property='og:description' content=" Exploring the rise of programming languages designed for LLMs, why now is the tipping point, and how challenges like hallucinated dependencies, logic errors, test manipulation, and context limitations are shaping this next wave of language design. \n">
+<meta property='og:url' content='http://localhost:1313/posts/languages-designed-for-llms/'>
+<meta property='og:site_name' content='Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='LLM' /><meta property='article:tag' content='programming languages' /><meta property='article:tag' content='AI-assisted coding' /><meta property='article:tag' content='literate programming' /><meta property='article:tag' content='code generation' /><meta property='article:tag' content='developer tools' /><meta property='article:published_time' content='2025-08-14T20:16:03&#43;01:00'/><meta property='article:modified_time' content='2025-08-14T20:16:03&#43;01:00'/><meta property='og:image' content='http://localhost:1313/posts/languages-designed-for-llms/designed.webp' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Programming's New Frontier: The Rise of LLM-First Languages">
+<meta name="twitter:description" content=" Exploring the rise of programming languages designed for LLMs, why now is the tipping point, and how challenges like hallucinated dependencies, logic errors, test manipulation, and context limitations are shaping this next wave of language design. \n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/posts/languages-designed-for-llms/designed.webp' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0KDQ9KLJCX');
+        }
+      </script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://osada.blog/profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/languages-designed-for-llms/">
+                <img src="/posts/languages-designed-for-llms/designed_hu_9a99498851b0d1f.webp"
+                        srcset="/posts/languages-designed-for-llms/designed_hu_9a99498851b0d1f.webp 800w, /posts/languages-designed-for-llms/designed_hu_af4a7ae097a8fac8.webp 1600w"
+                        width="800" 
+                        height="600" 
+                        loading="lazy"
+                        alt="Featured image of post Programming&#39;s New Frontier: The Rise of LLM-First Languages" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/programming-languages/" >
+                Programming Languages
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/languages-designed-for-llms/">Programming&#39;s New Frontier: The Rise of LLM-First Languages</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Exploring the rise of programming languages designed for LLMs, why now is the tipping point, and how challenges like hallucinated dependencies, logic errors, test manipulation, and context limitations are shaping this next wave of language design.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 14, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    9 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="programmings-new-frontier-the-rise-of-llm-first-languages">Programming&rsquo;s New Frontier: The Rise of LLM-First Languages.
+</h1><p>Large Language Models (LLMs) have quickly become an integral part of modern software development. Today, most developers encounter them as coding assistants-tools that can generate code on demand by drawing upon patterns learned from vast quantities of open-source and proprietary code. These models can also reference online resources and produce functioning code in seconds.</p>
+<p>But as impressive as they are, this process is far from foolproof.</p>
+<h2 id="the-problem-with-current-llm-assisted-coding">The Problem with Current LLM-Assisted Coding
+</h2><p>While LLMs can produce working solutions quickly, they are prone to significant shortcomings:</p>
+<p>Here are the links for each issue mentioned in the “Current Reality of LLM-Assisted Coding” section:</p>
+<ul>
+<li>
+<p><strong>Hallucinated dependencies</strong>: LLMs often generate code that references libraries or APIs that do not exist. This is more than a simple inconvenience; it is now a significant security vulnerability. This phenomenon, sometimes called &ldquo;slopsquatting,&rdquo; creates a new vector for supply chain attacks. Malicious actors can preemptively squat on these hallucinated package names in public repositories like npm and PyPI. <a class="link" href="https://www.techradar.com/pro/mitigating-the-risks-of-package-hallucination-and-slopsquatting"  target="_blank" rel="noopener"
+    >TechRadar – Mitigating the risks of package hallucination</a></p>
+</li>
+<li>
+<p><strong>Logic errors</strong>: They can make subtle mistakes that pass undetected until runtime. This is why LLMs are dangerous when used by junior developers. <a class="link" href="https://medium.com/@adnanmasood/code-generation-with-llms-practical-challenges-gotchas-and-nuances-7b51d394f588"  target="_blank" rel="noopener"
+    >Medium – Code generation with LLMs: practical challenges</a></p>
+</li>
+<li>
+<p><strong>Test manipulation</strong>: In some cases, they will &ldquo;cheat&rdquo; by altering tests to make broken code pass. <a class="link" href="https://medium.com/@aipapers/cheating-llms-how-not-to-stop-them-openai-paper-explained-c38ebc637762"  target="_blank" rel="noopener"
+    >Medium – Cheating LLMs: How (not) to stop them</a></p>
+</li>
+<li>
+<p><strong>Context limitations</strong>: Providing complete context is still a challenge. Developers have experimented with approaches like concatenating entire codebases into a single file, RAG-based (retrieval-augmented generation) solutions, and specialized formats like <code>LLMs.txt</code>-a file designed to tell the model the &ldquo;story&rdquo; of the repository. Yet none of these methods are optimal. <a class="link" href="https://datanorth.ai/blog/context-length"  target="_blank" rel="noopener"
+    >DataNorth – Context length in LLMs</a></p>
+</li>
+</ul>
+<h2 id="why-the-time-is-right-for-a-change">Why the Time is Right for a Change
+</h2><p>We’ve crossed a Rubicon—a point of no return—beyond which the capabilities of coding assistants have fundamentally changed the nature of what’s possible. While earlier models like GPT-4 offered impressive performance, they often struggled with long-term coherence and could &ldquo;forget&rdquo; earlier parts of a conversation due to a more limited context window. The developer&rsquo;s workflow often involved significant manual effort to re-supply context, summarize past conversations, or break down large tasks into small, manageable chunks.</p>
+<p>With the arrival of models like Claude Opus, Claude Sonnet, and GLM-4.5, this dynamic has shifted. Their primary innovation is not just higher performance on benchmarks, but a qualitative leap in their ability to handle massive context windows—hundreds of thousands of tokens, equivalent to thousands of pages of code and documentation. This allows assistants to:</p>
+<ul>
+<li>
+<p>Maintain state over long, multi-file projects: They can now &ldquo;remember&rdquo; an entire codebase or a significant portion of it, enabling them to make changes that are consistent across multiple files without losing track of the overall architecture.</p>
+</li>
+<li>
+<p>Reason over a complete set of documentation: The model can be given an entire project&rsquo;s documentation, API references, or even a full RFC, and use that information to generate code that is correct and adheres to all specified constraints.</p>
+</li>
+<li>
+<p>Exhibit &ldquo;extended thinking&rdquo;: Some of these models are now capable of multi-step, agentic reasoning, where they can generate a plan, execute it, receive feedback, and adjust their strategy, all within a single session. This moves them from being mere code generators to active problem-solvers.</p>
+</li>
+</ul>
+<p>Projects like Lovable demonstrate this shift. The fact that such initiatives can deliver working applications in a single pass is evidence that we’ve moved past the experimental phase into a new era of practical, production-ready LLM-assisted programming.</p>
+<h2 id="the-case-for-llm-native-languages">The Case for LLM-Native Languages
+</h2><p>The history of programming languages is a story of responding to the shortcomings of the tools that came before:</p>
+<p><img src="https://kroki.io/plantuml/svg/eNptkl1v0zAUhu_9K46WG6gWqU3SrtsFWqnKBEqrQSW44eYkPk2sOfZkO2UD8d-x3VAiNt_5PI_Oef1xax0a13eS2QehHtFgBxXWD43RveJrLbUBZ1BZj0i5kYXG6B8nIaniGkFOB-yl-6CV22FHsDIC5et8L34SzJYj6ISTdEZZ9hoaBlNcI2EVUr0URobSnOAXA3j_3zGTLMuW-SwQbTiZoTqdIq_mvvqyK8A9ci5UA9nUb76cehlFBmZz9psxSQcHToMRTeuAC0O1E1qxeAzYHLXswx70Ae6Nbny8LnQrUTU9NmQZi2kvtli3QhGs_e4C0MJ2DUl-nVOxGIyVtdRV8jnS1X4LSUFzvqgHnBsOd6S-qzfrS_iER3wbxbvNLodkzq_yKxrMwrWDWWL19ePm2yXsP5dnvYBkwa-Xy79zJ5Oy3KY7dOJI_3JPJtH36Hx_zEeGNH0Xw90AVtZ_q9NthEogMc0NtP6yyKSSjiTBPiuHTyyiwSm8w3WHQqX2kWpxEDWL5cDDSM9r_1b05FIj6hbCu3PRdJbdkuLhr_8BZ4P21Q=="
+	
+	
+	
+	loading="lazy"
+	
+		alt="Evolution of Programming Languages"
+	
+	
+></p>
+<ul>
+<li>The leap from <strong>machine code</strong> to <strong>assembly</strong> abstracted raw binary into human-readable mnemonics.</li>
+<li>The arrival of <strong>third-generation languages</strong> (C, Java) provided higher abstraction for productivity.</li>
+<li><strong>Fourth-generation languages</strong> like LabVIEW tackled domain-specific needs.</li>
+<li>The rise of <strong>memory-safe compiled languages</strong> like Rust and Go directly responded to decades of security vulnerabilities from unsafe memory operations.</li>
+<li>The rise of JVM based alternatives to Java came about because of stagnation in Java roadmap. This gave us languages like kotlin, Closure and Scala.</li>
+</ul>
+<p>These shifts happened because the <em>context</em> in which code was written and executed changed.</p>
+<p>Today, we are at another inflection point. The dominant programming languages-Python, JavaScript, Java, C++-are designed to be read, understood, and authored by humans. LLMs can emulate human thought, but that’s still emulation. There’s no reason to believe that a language designed to be optimal for <em>human</em> authorship is also optimal for <em>machine</em> authorship.</p>
+<h2 id="literate-programming-as-a-precursor">Literate Programming as a Precursor
+</h2><p>Donald Knuth’s concept of literate programming [Knuth, 1984] was created so that human-readable descriptions could be embedded alongside code-not merely interspersed, but with documentation as the primary artifact and code as a secondary element. In literate programming, the entire program becomes executable documentation.</p>
+<p>For LLMs, this is a natural fit. LLMs excel when they have rich, continuous context, and literate programming provides exactly that: the whole program and its purpose, rationale, and constraints in one coherent narrative. This makes literate programming an ideal model for feeding an LLM the maximum relevant information. We may see a resurgence of this paradigm, adapted for machine consumers as much as for humans.</p>
+<p>Modern tools inspired by literate programming-such as <a class="link" href="https://jupyter.org/"  target="_blank" rel="noopener"
+    >Jupyter Notebooks</a>, <a class="link" href="https://quarto.org/"  target="_blank" rel="noopener"
+    >Quarto</a>, <a class="link" href="https://www-cs-faculty.stanford.edu/~knuth/noweb.html"  target="_blank" rel="noopener"
+    >noweb</a>, and <a class="link" href="https://nbdev.fast.ai/"  target="_blank" rel="noopener"
+    >nbdev</a> already combine narrative and code in ways that could evolve toward LLM-first formats.</p>
+<h2 id="lessons-from-apl-j-and-q">Lessons from APL, J, and Q
+</h2><p>Some languages have historically prioritized other qualities above human readability. APL, J, and Q embrace terse, symbolic syntax for reasons of efficiency and expressiveness. In these languages, code becomes subservient to the goal-whether that’s mathematical compactness or performance-rather than ease of reading.</p>
+<p>Similarly, an LLM-first language may look alien to human eyes, optimized for machine parsing and generation rather than human comprehension. In this way, APL and its descendants offer a blueprint: concise, unambiguous, and structured for the intended consumer, even if that consumer is a machine.</p>
+<h2 id="characteristics-of-an-llm-first-language">Characteristics of an LLM-First Language
+</h2><p>An LLM-native programming language might incorporate:</p>
+<ol>
+<li><strong>Ultra-Explicit Semantics</strong> – No implicit defaults; strict typing and explicit declarations. No room for ambiguity please, LLMs bring plenty of their own.</li>
+<li><strong>Self-Describing Code</strong> – Embedded, machine-readable metadata describing intent, dependencies, and constraints. i.e. Literate Programming. Or Joe Armstrong style write-docs-before-code philosophy needed.</li>
+<li><strong>Chunk-Optimized Structure</strong> – Modular design aligned with token window limits for easy context retrieval. Each one would need to be mostly self contained and with the output described separately so it can be fed in to LLMs while the other modules are being generated. Think C/C++ header files.</li>
+<li><strong>Error Prevention by Design</strong> – Syntax rules that block common LLM pitfalls, such as referencing undeclared libraries or similar hallucinations.</li>
+<li><strong>Context Anchoring</strong> – Persistent IDs and hash-based references to ensure the correct version is always referenced. (Content Addressable Storage anyone?)</li>
+<li><strong>Stable, Bounded Syntax</strong> – Predictable token patterns for better compression and embedding performance.</li>
+<li><strong>Integrated Machine/Compiler Feedback</strong> – Output structured for both humans and models to consume.</li>
+</ol>
+<h2 id="speculative-syntax-examples">Speculative Syntax Examples
+</h2><p>Here’s what such a language could resemble:</p>
+<pre tabindex="0"><code class="language-llmcode" data-lang="llmcode">@module(meta={&#34;version&#34;:&#34;1.2.0&#34;,&#34;purpose&#34;:&#34;Data ingestion pipeline&#34;})
+module ingest_pipeline {
+
+  @function(meta={&#34;context_id&#34;:&#34;hash1234&#34;,&#34;owner&#34;:&#34;team-data&#34;})
+  fn load_csv(file_path: String) -&gt; DataFrame {
+    ensure(file_exists(file_path))
+    return parse_csv(file_path)
+  }
+
+  @test_integrity(id=&#34;test-001&#34;, immutable=true)
+  fn test_load_csv_valid() {
+    df = load_csv(&#34;/test/data.csv&#34;)
+    assert(df.rows &gt; 0)
+  }
+}
+</code></pre><p>This speculative syntax:</p>
+<ul>
+<li>Uses metadata annotations for context.</li>
+<li>Embeds test integrity markers to prevent silent tampering.</li>
+<li>Organizes code in retrieval-friendly modules.</li>
+</ul>
+<h2 id="literate-programming-executable-context-for-llms">Literate Programming: Executable Context for LLMs
+</h2><p>Donald Knuth’s <a class="link" href="http://www.literateprogramming.com/"  target="_blank" rel="noopener"
+    >literate programming</a> reframes software as <em>executable documentation</em>: the narrative for humans is primary; the code is woven into that story and then <em>tangled</em> into compilable units. In a literate system, the whole program <em>is</em> context-definitions, intent, trade‑offs, and usage are embedded right where they matter.</p>
+<p>That property makes literate programming a strong fit for LLMs:</p>
+<ul>
+<li><strong>Context density</strong>: LLMs perform better with rich, proximate context; literate code puts rationale, invariants, and edge cases next to the implementation.</li>
+<li><strong>Retrieval-friendly structure</strong>: Sections (&ldquo;chunks&rdquo;) can be addressed by name and dependency, making them ideal targets for RAG and for toolchains that assemble the right context window.</li>
+<li><strong>Intent and constraints</strong>: Narratives, design notes, and correctness arguments can be expressed in machine-readable blocks that the model can obey during generation.</li>
+<li><strong>Integrity by design</strong>: Tests and specs live as first-class prose+code; changes to tests are visible in the narrative, discouraging silent “cheats.”</li>
+</ul>
+<p><em>Practical hybrid:</em> an LLM-first language could standardize doc-first modules, where every module begins with a prose contract (purpose, invariants, failure modes), followed by code blocks tagged for tangling, and a final verification block of examples/tests.</p>
+<p><strong>Sketch:</strong></p>
+<pre tabindex="0"><code class="language-litlang" data-lang="litlang"># chunk: normalize_emails
+purpose: Deduplicate case/alias variants. Invariant: output preserves domain.
+assumptions: input ~ list&lt;String&gt;; may contain nulls.
+
+code tangles to email/normalize.llm:
+fn norm(xs: List&lt;String&gt;) -&gt; List&lt;String&gt; {
+  return xs.filter(not_null)
+           .map(lowercase)
+           .map(strip_gmail_aliases)  // invariant: keep domain
+           .unique()
+}
+
+verify:
+ex1: norm([&#34;A@x.com&#34;,&#34;a+z@x.com&#34;]) == [&#34;a@x.com&#34;]
+</code></pre><h2 id="machines-writing-for-machines-lessons-from-apljq">Machines Writing for Machines: Lessons from APL/J/Q
+</h2><p>Array languages like APL, J, and Q prioritize <em>terse, compositional semantics</em> over conventional readability. Human legibility yields to density and mathematical regularity; small combinators compose into powerful pipelines. That philosophy maps well to model authorship:</p>
+<ul>
+<li><strong>Short, regular token sequences</strong> are easier for models to predict and less prone to drift.</li>
+<li><strong>Uniform data semantics</strong> (arrays everywhere) reduce branching surface and ambiguity.</li>
+<li><strong>Tacit/point-free style</strong> (functions composed without naming arguments) compresses code and clarifies dataflow for static analyzers and LLMs alike.</li>
+</ul>
+<p>An LLM-native language might borrow this spirit while remaining capable of being generated and manipulated by LLMs:</p>
+<pre tabindex="0"><code class="language-arrayish" data-lang="arrayish"># all-pairs cosine similarity, top-5 per row
+S ≔ normalize(X)             -- rows to unit length
+C ≔ S · Sᵀ                  -- cosine matrix
+Top5 ≔ take⟨5⟩ ∘ argsort⟨desc⟩(C, axis=cols)
+</code></pre><p>The goal isn’t to replace clarity with glyphs; it’s to optimize the code’s statistical and algebraic structure for machine generation and analysis.</p>
+<hr>
+<h2 id="the-coming-shift">The Coming Shift
+</h2><p>Just as previous generations of languages emerged in response to evolving needs, LLM-driven development will demand its own paradigms. The programming languages of the near future will be:</p>
+<ul>
+<li>Created <em>for</em> LLMs to generate.</li>
+<li>Optimized for the ergonomics of machine authorship rather than human authorship.</li>
+<li>Built with native features to address the unique failure modes of AI-generated code.</li>
+</ul>
+<p>We can expect at least one such language to dominate a niche-perhaps in rapid prototyping, automated data processing, or even full-stack application generation-within the next decade.</p>
+<p>The next wave of programming language evolution won’t be about making life easier for human programmers alone. It will be about making life easier for our non-human collaborators.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/llm/">LLM</a>
+        
+            <a href="/tags/programming-languages/">Programming Languages</a>
+        
+            <a href="/tags/ai-assisted-coding/">AI-Assisted Coding</a>
+        
+            <a href="/tags/literate-programming/">Literate Programming</a>
+        
+            <a href="/tags/code-generation/">Code Generation</a>
+        
+            <a href="/tags/developer-tools/">Developer Tools</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.ae355efd1789f26c72022700068dd833e3ced7d549b753cd271f5855cb9a281c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
