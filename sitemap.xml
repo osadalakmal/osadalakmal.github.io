@@ -2,10 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://osada.blog/tags/ai-assisted-coding/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
+    <loc>https://osada.blog/tags/bbc/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/categories/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/communication/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/engineering-management/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/incident-management/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/leadership/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/organizational-change/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/programming-languages/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/shipping-forecast/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/technical-writing/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/be-more-like-shipping-forecast/</loc>
+    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/ai-assisted-coding/</loc>
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/code-generation/</loc>
@@ -20,22 +59,10 @@
     <loc>https://osada.blog/tags/llm/</loc>
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/posts/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/categories/programming-languages/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/tags/programming-languages/</loc>
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/posts/languages-designed-for-llms/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/</loc>
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/ai-integration/</loc>
@@ -112,9 +139,6 @@
   </url><url>
     <loc>https://osada.blog/posts/technical-tasks-for-managers/</loc>
     <lastmod>2024-12-22T16:18:00+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/communication/</loc>
-    <lastmod>2024-11-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/categories/project-management/</loc>
     <lastmod>2024-11-23T00:00:00+00:00</lastmod>

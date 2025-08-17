@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" What the century-old Shipping Forecast can teach us about clear, consistent communication in technical teams, especially during incidents and organizational change. \n">
+<title>The Shipping Forecast and the Art of Communication</title>
+
+<link rel='canonical' href='https://osada.blog/posts/be-more-like-shipping-forecast/'>
+
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="The Shipping Forecast and the Art of Communication">
+<meta property='og:description' content=" What the century-old Shipping Forecast can teach us about clear, consistent communication in technical teams, especially during incidents and organizational change. \n">
+<meta property='og:url' content='https://osada.blog/posts/be-more-like-shipping-forecast/'>
+<meta property='og:site_name' content='Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='communication' /><meta property='article:tag' content='leadership' /><meta property='article:tag' content='technical-writing' /><meta property='article:tag' content='incident-management' /><meta property='article:tag' content='organizational-change' /><meta property='article:tag' content='engineering-management' /><meta property='article:tag' content='BBC' /><meta property='article:tag' content='shipping-forecast' /><meta property='article:published_time' content='2025-08-17T21:50:31&#43;01:00'/><meta property='article:modified_time' content='2025-08-17T21:50:31&#43;01:00'/><meta property='og:image' content='https://osada.blog/posts/be-more-like-shipping-forecast/shipping.webp' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="The Shipping Forecast and the Art of Communication">
+<meta name="twitter:description" content=" What the century-old Shipping Forecast can teach us about clear, consistent communication in technical teams, especially during incidents and organizational change. \n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osada.blog/posts/be-more-like-shipping-forecast/shipping.webp' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0KDQ9KLJCX');
+        }
+      </script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://osada.blog/profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/be-more-like-shipping-forecast/">
+                <img src="/posts/be-more-like-shipping-forecast/shipping_hu_64218788a6f35c49.webp"
+                        srcset="/posts/be-more-like-shipping-forecast/shipping_hu_64218788a6f35c49.webp 800w, /posts/be-more-like-shipping-forecast/shipping_hu_f697e846e841a278.webp 1600w"
+                        width="800" 
+                        height="532" 
+                        loading="lazy"
+                        alt="Featured image of post The Shipping Forecast and the Art of Communication" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/programming-languages/" >
+                Programming Languages
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/be-more-like-shipping-forecast/">The Shipping Forecast and the Art of Communication</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            What the century-old Shipping Forecast can teach us about clear, consistent communication in technical teams, especially during incidents and organizational change.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 17, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>As an immigrant to the UK, I had to absorb the culture as a grown-up. Things that others learned through cultural osmosis, I had to consciously seek out and understand - including the norms of UK TV and radio. Now that I&rsquo;m working on BBC Sounds, it&rsquo;s more important than ever for me to be aware of the cultural touchstones of Radioland.</p>
+<p>For a long time, I had no idea what the Shipping Forecast was, although it seemed as quintessentially British as it could get. I only knew it from the “Calm” playlists on BBC Sounds - a chant-like recital of odd place names and numbers that people found oddly soothing.</p>
+<p>Then one day, exhausted and a little breathless after a hike, I caught the Shipping Forecast live on Radio 4. For the first time, I truly listened. Its rhythm was regular, clipped, steady - strangely calming. Most of it was guessable: numbers for wind force, the last part for visibility. But the place names were a mystery. My curiosity was piqued.</p>
+<p>What struck me when I dug deeper was how deliberately it was designed - not for poetry, but for survival. A century on air, the Shipping Forecast continues to save sailors’ lives because of the way it communicates: clearly, consistently, and unambiguously in a noisy environment. And that, I realized, is exactly the lesson we need for technical communication in our own teams and organizations.</p>
+<h2 id="a-crash-course-on-the-shipping-forecast">A Crash Course on the Shipping Forecast
+</h2><p>The Shipping Forecast is a weather bulletin for the seas around the British Isles. Issued by the UK Met Office, it has been on the air since 1924. Its origins trace back to Vice-Admiral Robert FitzRoy in the 1860s, who began issuing storm warnings to reduce shipwrecks.</p>
+<h3 id="structure-of-the-forecast">Structure of the Forecast
+</h3><ul>
+<li>
+<p><strong>General Synopsis</strong> - A summary of pressure systems (highs and lows), their current location, pressure in millibars, and their expected movement.</p>
+<ul>
+<li>Example: “Low, Rockall, 990, slow-moving, expected 1002 by 0600 tomorrow.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Sea Area Forecasts</strong> - 31 named sea areas around the UK and Ireland, always read in the same order.</p>
+</li>
+</ul>
+<h3 id="each-areas-forecast-includes">Each Area’s Forecast Includes
+</h3><ul>
+<li>Wind direction and strength (Beaufort scale, 0-12)</li>
+<li>Weather (e.g., rain, showers, fog, fair)</li>
+<li>Visibility (good = &gt;5 miles, moderate = 2-5 miles, poor = 1-2 miles, very poor = &lt;1 mile)</li>
+<li>Optional tidal notes in extended bulletins</li>
+</ul>
+<h3 id="key-facts">Key Facts
+</h3><ul>
+<li>First broadcast: 1924 on the BBC.</li>
+<li>Still broadcast four times daily on Radio 4 (0048, 0520, 1201, 1754).</li>
+<li>It covers 31 sea areas, such as Viking, Dogger, German Bight, Fastnet, and Rockall.</li>
+<li>The language is deliberately short, standardized, and unambiguous for clarity on poor radios.</li>
+</ul>
+<h2 id="when-the-seas-are-rough-organizational-communication">When the Seas Are Rough: Organizational Communication
+</h2><p>I’ve experienced firsthand how crucial communication becomes during upheaval. When an organization goes through a major transformation, communication is not an afterthought-it&rsquo;s the glue that holds everything together. As leaders, how we handle this communication is paramount, because the success of the transformation depends on it. The people we manage look to us to provide information and reassurance that the disruptions and changes are truly for the good of the organization. They want to know how it will impact them, and what tomorrow will look like.</p>
+<p>And yet, too often, communication during transformations feels overbearing. Updates are packed with details people don’t need or aren’t equipped to decipher. The essentials get buried, and people tune out. In tuning out, they miss the pieces of information that could genuinely help them navigate change. Even more harmful, they may interpret a lack of clarity and superfluous details as an intentional effort to obfuscate. This quickly erodes trust, making it harder to get positive buy-in for the changes we are implementing.</p>
+<p>This has always frustrated me. We need a framework that keeps communicators focused on what matters most - the salient details, presented consistently, with no ambiguity. And the Shipping Forecast offers exactly that model.</p>
+<h2 id="the-problem-noisy-inefficient-communication">The Problem: Noisy, Inefficient Communication
+</h2><p>In the situations that matter most - organizational updates, incident response, migrations - the goal is simple: provide enough information to give employees the confidence they need. But communication often fails in predictable ways:</p>
+<ul>
+<li>Updates ramble and lose people’s attention. For example, an incident update that drags on for ten minutes without ever stating the impact or action items leaves everyone confused.</li>
+<li>Messages lack structure, so if you join late, you’re lost. A migration briefing that jumps between topics with no clear beginning, middle, or end forces people to guess where they are in the plan.</li>
+<li>Jargon creeps in, introducing ambiguity. Saying “we’ll refactor the orchestration layer” without explaining what systems that refers to leaves many stakeholders unsure of the change.</li>
+<li>Some things are over-explained while others are skipped. A design review might go into detail about which framework version is used but never mention who owns the rollout.</li>
+<li>Updates arrive inconsistently, so no one knows when to expect them. A status email sent at random times each week is quickly ignored because the team cannot rely on it as a dependable source of truth.</li>
+</ul>
+<p>The result is confusion, frustration, and wasted energy. In moments of transformation or crisis, the cost is even higher: teams feel unmoored.</p>
+<h2 id="what-the-shipping-forecast-gets-right">What the Shipping Forecast Gets Right
+</h2><p>The Shipping Forecast has perfected communication for noisy, high-stakes environments. Its principles are deceptively simple but powerful:</p>
+<ul>
+<li><strong>Consistency</strong>: Always in the same order, with the same structure.</li>
+<li><strong>Brevity</strong>: Nothing is superfluous; only the essentials remain.</li>
+<li><strong>Clarity</strong>: Standardized words ensure there is no ambiguity.</li>
+<li><strong>Coverage</strong>: The whole coastline is covered, end to end.</li>
+<li><strong>Reliability</strong>: Delivered four times daily, without fail.</li>
+<li><strong>Repetition</strong>: Core facts are repeated until they stick.</li>
+</ul>
+<p>For sailors, these principles are life-saving. For us, they can make the difference between communication that enables action and communication that creates noise.</p>
+<h2 id="why-consistency-coverage-and-reliability-matter">Why Consistency, Coverage and Reliability Matter
+</h2><p>In organizational transformations, consistency and reliable repetition aren’t dull-they build confidence. People are dealing with new ways of working, new technology, and new structures. In that environment, clear consistent repetition is reassurance:</p>
+<ul>
+<li>It shows nothing is being hidden.</li>
+<li>It signals that everything has been thoroughly thought through.</li>
+<li>It makes the audience confident in the plan because they can see its completeness.</li>
+</ul>
+<p>For engineering managers and tech leads, this matters directly. Your team should come to believe that communication is crafted for their benefit, that it was intentional and thoughtful, and that leadership cares about making the change succeed.</p>
+<h2 id="how-to-make-your-communication-more-like-the-forecast">How to Make Your Communication More Like the Forecast
+</h2><p>When clarity matters most - for organizational updates, technical changes, incidents, or migrations - we should borrow from the Shipping Forecast:</p>
+<h3 id="consistency">Consistency
+</h3><p>Use the same structure every time. For example, always start incident updates with impact, then mitigation, then next steps. Likewise, if you write weekly status reports, keep the same headings so readers know where to look for information.</p>
+<h3 id="brevity">Brevity
+</h3><p>Cut the noise; provide only what matters. An update that simply says, “Service X is degraded, engineers are working on rollback, ETA 20 minutes” is far more effective than three paragraphs of background detail. A migration notice that summarizes the change in three bullet points is more likely to be read than a three-page essay.</p>
+<h3 id="clarity">Clarity
+</h3><p>Avoid ambiguity; use the simplest words. Instead of saying “there are issues with authentication subsystems,” say “users cannot log in.” Instead of “orchestration layer refactor,” say “we are changing how services talk to each other.”</p>
+<h3 id="coverage">Coverage
+</h3><p>Cover the topic end to end. If you announce a new deployment pipeline, don’t just describe the technical flow; also mention who owns it, how teams onboard, and what support is available. Similarly, if you communicate a process change, spell out both what is changing and what stays the same.</p>
+<h3 id="reliability">Reliability
+</h3><p>Deliver updates at a predictable rhythm. Sending a daily stand-up note at 9am sharp builds trust. Publishing a weekly engineering summary every Friday ensures people rely on it. Irregular communication erodes confidence.</p>
+<h3 id="repetition">Repetition
+</h3><p>Reinforce the essentials until they stick. In a transformation, it is worth saying three times: “The old system will be retired on 31 October.” In incident communications, repeat the key action: “Restart your client if you see this error.” Repetition of core facts reassures people that they haven’t missed something.</p>
+<h2 id="closing">Closing
+</h2><p>For a century, the Shipping Forecast has guided sailors through storms. I discovered it by chance and was struck by how soothing it was. But the reason it’s soothing is the same reason it’s effective: it is structured, consistent, reliable, and repetitive.</p>
+<p>Not every kind of communication should be like the Shipping Forecast - some moments demand storytelling, persuasion, or brainstorming. But when the goal is to disseminate information clearly and efficiently, especially in noisy or turbulent environments, the lesson holds.</p>
+<p>Good communication doesn’t just inform. Like the Shipping Forecast, it enables people to act with confidence, no matter how stormy the seas.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/communication/">Communication</a>
+        
+            <a href="/tags/leadership/">Leadership</a>
+        
+            <a href="/tags/technical-writing/">Technical-Writing</a>
+        
+            <a href="/tags/incident-management/">Incident-Management</a>
+        
+            <a href="/tags/organizational-change/">Organizational-Change</a>
+        
+            <a href="/tags/engineering-management/">Engineering-Management</a>
+        
+            <a href="/tags/bbc/">BBC</a>
+        
+            <a href="/tags/shipping-forecast/">Shipping-Forecast</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
