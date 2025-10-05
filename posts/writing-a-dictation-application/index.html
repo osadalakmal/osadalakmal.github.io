@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Why and How I wrote an application that uses local ML models for dictation/writing. \n">
+<title>Writing a Dictation Application</title>
+
+<link rel='canonical' href='https://osada.blog/posts/writing-a-dictation-application/'>
+
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Writing a Dictation Application">
+<meta property='og:description' content=" Why and How I wrote an application that uses local ML models for dictation/writing. \n">
+<meta property='og:url' content='https://osada.blog/posts/writing-a-dictation-application/'>
+<meta property='og:site_name' content='Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='local-first' /><meta property='article:tag' content='dictation' /><meta property='article:tag' content='voice-to-text' /><meta property='article:tag' content='Parakeet' /><meta property='article:tag' content='MLX' /><meta property='article:tag' content='Python packaging' /><meta property='article:tag' content='macOS development' /><meta property='article:tag' content='open-source' /><meta property='article:tag' content='small models' /><meta property='article:published_time' content='2025-10-05T19:52:51&#43;01:00'/><meta property='article:modified_time' content='2025-10-05T19:52:51&#43;01:00'/><meta property='og:image' content='https://osada.blog/posts/writing-a-dictation-application/dictation.webp' />
+<meta name="twitter:site" content="@osadaparanaliyanage">
+    <meta name="twitter:creator" content="@osadaparanaliyanage"><meta name="twitter:title" content="Writing a Dictation Application">
+<meta name="twitter:description" content=" Why and How I wrote an application that uses local ML models for dictation/writing. \n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://osada.blog/posts/writing-a-dictation-application/dictation.webp' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KDQ9KLJCX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0KDQ9KLJCX');
+        }
+      </script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="https://osada.blog/profile.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">🧑‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</a></h1>
+            <h2 class="site-description">Musings about coding, systems, fatherhood and everything in between.</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>All Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/writing-a-dictation-application/">
+                <img src="/posts/writing-a-dictation-application/dictation_hu_a11469a470e3a1c7.webp"
+                        srcset="/posts/writing-a-dictation-application/dictation_hu_a11469a470e3a1c7.webp 800w, /posts/writing-a-dictation-application/dictation_hu_bacf997f21203341.webp 1600w"
+                        width="800" 
+                        height="594" 
+                        loading="lazy"
+                        alt="Featured image of post Writing a Dictation Application" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/developer-tools/" >
+                Developer Tools
+            </a>
+        
+            <a href="/categories/machine-learning/" >
+                Machine Learning
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/writing-a-dictation-application/">Writing a Dictation Application</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Why and How I wrote an application that uses local ML models for dictation/writing.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 05, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="trouble-with-typing">Trouble with typing
+</h2><p>Typing is one of those things that we do all day without thinking about how much friction it adds. Every pause for a typo, every moment spent rephrasing or adjusting syntax, breaks the flow of thought. It’s like there’s a bottleneck between your brain and the screen.</p>
+<p>Sure, every time a conversation about GenAI comes up, someone always pops up in the discussion and says &ldquo;typing was never the bottleneck&rdquo;. Sure, it may not have been for you but it is very annoying for me. I’ve always found speaking easier and was never an aspiring or otherwise touch typist. Talking feels natural, it flows at the speed of ideas. Typing, even when you’re fast, still feels like translating thoughts into keystrokes.</p>
+<p>I simply wanted talk to my Mac, and have it type for me, anywhere, in any app, as if I were typing it myself? I didn’t want a cloud service or some subscription-based AI pipeline. I just wanted a small, local, privacy-friendly dictation app that stayed out of the way and let me speak freely.</p>
+<p>That’s how <a class="link" href="https://github.com/osadalakmal/parakeet-dictation"  target="_blank" rel="noopener"
+    ><strong>Parakeet Dictation</strong></a> started - out of a small but persistent frustration, and the belief that sometimes, the simplest tools come from building the thing you wish existed.</p>
+<p>That and the fact that I had not done a fun side project in a long while. While I enjoy wardley maps and process improvements at work, I missed the joy of building something from scratch, wrestling with code, and shipping a tiny app that solves a real problem.</p>
+<hr>
+<h2 id="why-local-first">Why Local-First
+</h2><p>When I started building Parakeet Dictation, I knew I didn’t want it to rely on any external servers. The goal was for it to work even if I was offline, without sending audio anywhere. Privacy was one reason, but not the only one. Local models also mean lower latency, zero API costs, and full control over what happens on your machine.</p>
+<p>At the time, there were two realistic open-source options for speech-to-text: <a class="link" href="https://github.com/openai/whisper"  target="_blank" rel="noopener"
+    ><strong>Whisper</strong></a> from OpenAI and <a class="link" href="https://github.com/NVIDIA/NeMo"  target="_blank" rel="noopener"
+    ><strong>Parakeet</strong></a> from NVIDIA. Whisper is great for multilingual support, but it’s large and not the fastest on-device. Parakeet, on the other hand, is lightweight and tuned for English. That trade-off made sense for my use case, so I went with Parakeet.</p>
+<p>Then came the question of how to actually run it. I didn’t want to depend on external runtimes like <a class="link" href="https://ollama.com"  target="_blank" rel="noopener"
+    >Ollama</a> or anything that required Docker images or heavy system dependencies. Since I was building on a Mac, <a class="link" href="https://github.com/ml-explore/mlx"  target="_blank" rel="noopener"
+    ><strong>MLX</strong></a> - Apple’s framework for running ML models natively on Apple Silicon - was the obvious choice. It’s fast, efficient, and feels like the right foundation for something that’s meant to stay local.</p>
+<p>The combination of Parakeet and MLX turned out to be a perfect match: small enough to run locally, smart enough to keep up with natural speech, and private by design.</p>
+<hr>
+<h2 id="setting-up-the-environment">Setting Up the Environment
+</h2><p>I picked Python right away, because that’s just how machine learning ecosystems work. Every model, every framework, every experimental idea eventually comes wrapped in Python. The only issue is that the Python ecosystem itself can be a bit fragile.</p>
+<p>Getting everything to run together wasn’t smooth. MLX wanted newer dependencies, while Parakeet depended on older ones. Some libraries simply wouldn’t build with the latest interpreters. After a long round of trial and error, I pinned it down to Python <strong>3.12</strong>. It’s the only version that works reliably. 3.13 is too new, and 3.11 is too old.</p>
+<p>It’s one of those moments where you realize how brittle Python packaging still is. For a language that dominates data science, it shouldn’t be this hard to have a working environment. Maybe it’s because the interpreter changes too much between versions, or because maintainers can’t keep up with the churn. Either way, it feels like something the community needs to solve.</p>
+<p>Once I finally had the environment sorted out, the rest of the build started to come together nicely.</p>
+<hr>
+<h2 id="making-it-work-keybindings-logging-ux">Making It Work: Keybindings, Logging, UX
+</h2><p>Once the core dictation loop worked, I turned to the small things that make an app actually pleasant to use.</p>
+<p>The first problem was getting the hotkey to behave. I used <a class="link" href="https://pypi.org/project/pynput/"  target="_blank" rel="noopener"
+    ><strong>pynput</strong></a> for global key listening, but the original implementation used the <code>GLFW_KEY_GLOOP</code> constant as a shortcut, which didn’t actually register on macOS. After a lot of testing, I settled on <strong>Ctrl + Alt + A</strong>. It’s comfortable to press, doesn’t conflict with other system shortcuts, and works reliably.</p>
+<p>The intended flow is simple: press <strong>Ctrl + Alt + A</strong>, speak naturally, and the app types your words instantly. Press the same hotkey again to stop dictation. It’s designed to be invisible until you need it, then out of the way when you don’t.</p>
+<p>Then I added proper logging. I didn’t want it to be noisy, so I set it up to respect an environment variable, meaning it only logs in debug mode. When you’re using the app day to day, it stays silent. When something goes wrong, you can flip the flag and see what’s happening.</p>
+<p>For the UI, the app started off as a <a class="link" href="https://github.com/jaredks/rumps"  target="_blank" rel="noopener"
+    ><strong>RUMPS</strong></a> status bar app, which is a tiny framework for building macOS menu bar tools in Python. It’s minimal and does the job, but it’s also limited. I plan to replace it with a proper GUI later using native macOS components, so it can show a small floating control panel for toggling dictation and displaying status.</p>
+<p>Each of these small tweaks made the app feel more natural, more like a built-in tool than a Python script running in the background.</p>
+<hr>
+<h2 id="key-code-snippets--diffs">Key Code Snippets &amp; Diffs
+</h2><p>Below are a few focused diffs that show how the app evolved. They’re simplified for clarity, but map to the repo layout.</p>
+<h3 id="1-pin-the-python-interpreter-and-tidy-packaging">1) Pin the Python interpreter and tidy packaging
+</h3><p>For this tiny diff, it caused the most pain. Getting the right Python version, and then making sure all dependencies worked together, took a lot of trial and error.</p>
+<blockquote>
+<p>Files: <a class="link" href="https://github.com/osadalakmal/parakeet-dictation/blob/main/pyproject.toml"  target="_blank" rel="noopener"
+    ><code>pyproject.toml</code></a>, <a class="link" href="https://github.com/osadalakmal/parakeet-dictation/blob/main/requirements.txt"  target="_blank" rel="noopener"
+    ><code>requirements.txt</code></a>, <a class="link" href="https://github.com/osadalakmal/parakeet-dictation/blob/main/constraints.txt"  target="_blank" rel="noopener"
+    ><code>constraints.txt</code></a></p></blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"># pyproject.toml
+</span></span><span class="line"><span class="cl"> [project]
+</span></span><span class="line"><span class="cl"> name = &#34;parakeet-dictation&#34;
+</span></span><span class="line"><span class="cl"><span class="gd">-version = &#34;0.1.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="gd">-requires-python = &#34;&gt;=3.10&#34;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+version = &#34;0.1.1&#34;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+requires-python = &#34;&gt;=3.12,&lt;3.13&#34;  # 3.12 works reliably; 3.11 too old, 3.13 too new
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> description = &#34;Local dictation for macOS using Parakeet (MLX)&#34;
+</span></span><span class="line"><span class="cl"> readme = &#34;README.md&#34;
+</span></span><span class="line"><span class="cl"> license = {file = &#34;LICENSE&#34;}
+</span></span><span class="line"><span class="cl"> authors = [{name = &#34;Osada Lakmal&#34;}]
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> dependencies = [
+</span></span><span class="line"><span class="cl"><span class="gd">-  &#34;parakeet-mlx&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gd">-  &#34;pyaudio&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gd">-  &#34;pynput&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gd">-  &#34;rumps&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gd">-  &#34;numpy&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+  &#34;parakeet-mlx&gt;=0.0.8&#34;,   # MLX-backed Parakeet builds
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  &#34;mlx&gt;=0.18.0&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  &#34;pyaudio&gt;=0.2.14&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  &#34;pynput&gt;=1.7.7&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  &#34;rumps&gt;=0.4.0&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gi">+  &#34;numpy&gt;=1.26&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span> ]
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> [build-system]
+</span></span><span class="line"><span class="cl"> requires = [&#34;setuptools&gt;=68&#34;, &#34;wheel&#34;]
+</span></span><span class="line"><span class="cl"> build-backend = &#34;setuptools.build_meta&#34;
+</span></span></code></pre></div><p>If you need a hard pin for transitive packages, use <code>constraints.txt</code> and install with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install -r requirements.txt -c constraints.txt
+</span></span></code></pre></div><p>References:</p>
+<ul>
+<li><a class="link" href="https://packaging.python.org/en/latest/specifications/declaring-project-metadata/"  target="_blank" rel="noopener"
+    >PEP 621 project metadata</a></li>
+<li><a class="link" href="https://packaging.python.org/en/latest/specifications/core-metadata/#requires-python"  target="_blank" rel="noopener"
+    >requires-python</a></li>
+</ul>
+<hr>
+<h2 id="shipping-a-python-app-pypi-vs-homebrew">Shipping a Python App: PyPI vs. Homebrew
+</h2><p>My first instinct was to ship it with <a class="link" href="https://brew.sh/"  target="_blank" rel="noopener"
+    >Homebrew</a>. It felt like the natural route for macOS, but as soon as you try to bundle a Python virtual environment inside a formula, you hit walls. Brew is great for C or Rust style binaries, but Python apps with tight interpreter and wheel constraints do not have a clean path. The problem lies with the fact that brew applications are global by default and really only setup to work with system python version. After chasing workarounds, I dropped the idea, removed the formula, and went the way most Python tools go - publish to <a class="link" href="https://pypi.org/"  target="_blank" rel="noopener"
+    >PyPI</a>.</p>
+<p>That meant converting the project to a standards based build with <code>pyproject.toml</code>, and adding a CLI entry point so people can run it directly. I used <a class="link" href="https://pypi.org/project/build/"  target="_blank" rel="noopener"
+    >pypa/build</a> to produce wheels, and set up publishing with <a class="link" href="https://docs.pypi.org/trusted-publishers/"  target="_blank" rel="noopener"
+    >Trusted Publishers</a> so GitHub Actions can release without storing API tokens.</p>
+<p><strong>Build and publish, locally:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python -m pip install --upgrade build twine
+</span></span><span class="line"><span class="cl">python -m build                  <span class="c1"># creates dist/*.whl and dist/*.tar.gz</span>
+</span></span><span class="line"><span class="cl">twine check dist/*               <span class="c1"># sanity checks</span>
+</span></span></code></pre></div><p><strong>Install to try it out:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># clean, isolated install for CLI tools</span>
+</span></span><span class="line"><span class="cl">python -m pip install --user parakeet-dictation
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl">pipx install parakeet-dictation  <span class="c1"># https://pypa.github.io/pipx/</span>
+</span></span></code></pre></div><p><strong>GitHub Actions sketch</strong> - using Trusted Publishers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">publish-to-pypi</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">release</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">types</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">published]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">publish</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l">write  </span><span class="w"> </span><span class="c"># OIDC for PyPI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l">read</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/setup-python@v5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3.12&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">python -m pip install --upgrade build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">python -m build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">pypa/gh-action-pypi-publish@release/v1</span><span class="w">
+</span></span></span></code></pre></div><p>This is the least surprising path for Python today. Brew is still great for installing system tools, but for Python applications with native ML wheels, PyPI and <code>pipx</code> give users a smoother experience.</p>
+<hr>
+<h2 id="local-text-rewriting-adding-a-tiny-llm">Local Text Rewriting: Adding a Tiny LLM
+</h2><p>One of my favorite features from the original project was the ability to select some text, speak an instruction, and get a rewritten version. The original used <a class="link" href="https://aws.amazon.com/bedrock/"  target="_blank" rel="noopener"
+    >AWS Bedrock</a> to call a hosted model. I wanted the same workflow without any network calls, so I swapped it for a small on device model.</p>
+<p>I picked a tiny <a class="link" href="https://huggingface.co/Qwen"  target="_blank" rel="noopener"
+    >Qwen</a> instruct model that runs on <a class="link" href="https://github.com/ml-explore/mlx"  target="_blank" rel="noopener"
+    >MLX</a>. It is fast enough on Apple Silicon, and it can handle simple editing prompts like “make this friendlier,” or “be more concise.”</p>
+<p><strong>Minimal editing helper:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">mlx_lm</span> <span class="kn">import</span> <span class="n">load</span> <span class="k">as</span> <span class="n">mlx_load</span><span class="p">,</span> <span class="n">generate</span> <span class="k">as</span> <span class="n">mlx_generate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">_qwen</span><span class="p">,</span> <span class="n">_tok</span> <span class="o">=</span> <span class="n">mlx_load</span><span class="p">(</span><span class="s2">&#34;Qwen/Qwen2.5-0.5B-Instruct-MLX&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rewrite_selected_text</span><span class="p">(</span><span class="n">instruction</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">system</span> <span class="o">=</span> <span class="s2">&#34;You are an editor. Keep meaning, change tone and clarity only.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;&lt;|system|&gt;</span><span class="si">{</span><span class="n">system</span><span class="si">}</span><span class="se">\n</span><span class="s2">&lt;|user|&gt;Instruction: </span><span class="si">{</span><span class="n">instruction</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">Text:</span><span class="se">\n</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">out</span> <span class="o">=</span> <span class="n">mlx_generate</span><span class="p">(</span><span class="n">_qwen</span><span class="p">,</span> <span class="n">_tok</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="n">prompt</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">out</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span></code></pre></div><p>Wire this so that if the user has a selection, the app sends that to <code>rewrite_selected_text</code>, otherwise it performs normal dictation. Simple, predictable, and it never leaves your machine.</p>
+<hr>
+<h2 id="whats-next-beyond-rumps">What’s next: beyond RUMPS
+</h2><p>Right now the app uses <a class="link" href="https://github.com/jaredks/rumps"  target="_blank" rel="noopener"
+    >RUMPS</a> for a minimal menu bar presence. It works, but I want a proper macOS experience, with a small floating panel and clearer feedback.</p>
+<p>Plans:</p>
+<ul>
+<li>Replace the status bar only approach with a lightweight GUI, likely using <a class="link" href="https://pyobjc.readthedocs.io/en/latest/"  target="_blank" rel="noopener"
+    >PyObjC</a> to reach native controls.</li>
+<li>Show a tiny always on top panel with a microphone indicator, a big toggle button, and the current hotkey hint.</li>
+<li>Add small start and stop sounds, or a <a class="link" href="https://developer.apple.com/documentation/foundation/nsnotification"  target="_blank" rel="noopener"
+    >NSUserNotification</a> style nudge so you know when capture starts and stops.</li>
+<li>Make hotkeys, models, and logging fully configurable from the UI, stored in a simple config file.</li>
+<li>Make an actual installer. It has been ages since I have built a desktop application. So this will be fun.</li>
+</ul>
+<p>That should make it feel like a first class macOS tool, while keeping the model on device, fast, and private by default.</p>
+<hr>
+<h2 id="conclusion">Conclusion
+</h2><p>What started as a small frustration with typing turned into a full project that rethinks how voice can fit into daily workflows. <strong>Parakeet Dictation</strong> is a tiny experiment in what local-first AI can feel like - instant, private, and under your control. There’s no cloud dependency, no telemetry, no waiting for a response from someone else’s server. It’s just your voice, your machine, and your words.</p>
+<p>Building it was a reminder that simplicity is harder than it looks. Getting Python dependencies to cooperate, fighting with packaging, and wrestling with macOS quirks all took time. But once it came together, it felt worth it. There’s something deeply satisfying about pressing a hotkey and watching your thoughts appear on screen in real time.</p>
+<p>The next step is polishing the experience - turning it from a script into a true macOS app with a clean, native interface. But even as it stands, it’s a small proof of concept for a bigger idea: that powerful AI tools don’t have to live in the cloud. They can live right here, on your desk, quietly doing their job.*<br>
+Make an actual installer. It has been ages since I have built a desktop application. So this will be fun.</p>
+<p>If you want to try it out or contribute, check out <a class="link" href="https://github.com/osadalakmal/parakeet-dictation"  target="_blank" rel="noopener"
+    ><strong>Parakeet Dictation on GitHub</strong></a>.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/local-first/">Local-First</a>
+        
+            <a href="/tags/dictation/">Dictation</a>
+        
+            <a href="/tags/voice-to-text/">Voice-to-Text</a>
+        
+            <a href="/tags/parakeet/">Parakeet</a>
+        
+            <a href="/tags/mlx/">MLX</a>
+        
+            <a href="/tags/python-packaging/">Python Packaging</a>
+        
+            <a href="/tags/macos-development/">MacOS Development</a>
+        
+            <a href="/tags/open-source/">Open-Source</a>
+        
+            <a href="/tags/small-models/">Small Models</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

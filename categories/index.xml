@@ -6,10 +6,34 @@
         <description>Recent content in Categories on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 17 Aug 2025 21:50:31 +0100</lastBuildDate><atom:link href="https://osada.blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Oct 2025 19:52:51 +0100</lastBuildDate><atom:link href="https://osada.blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Developer Tools</title>
+        <link>https://osada.blog/categories/developer-tools/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/categories/developer-tools/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Machine Learning</title>
+        <link>https://osada.blog/categories/machine-learning/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/categories/machine-learning/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Communication</title>
+        <link>https://osada.blog/categories/communication/</link>
+        <pubDate>Sun, 17 Aug 2025 21:50:31 +0100</pubDate>
+        
+        <guid>https://osada.blog/categories/communication/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Programming Languages</title>
         <link>https://osada.blog/categories/programming-languages/</link>
-        <pubDate>Sun, 17 Aug 2025 21:50:31 +0100</pubDate>
+        <pubDate>Thu, 14 Aug 2025 20:16:03 +0100</pubDate>
         
         <guid>https://osada.blog/categories/programming-languages/</guid>
         <description></description>
@@ -68,14 +92,6 @@
         <pubDate>Mon, 10 Jul 2023 14:30:00 +0000</pubDate>
         
         <guid>https://osada.blog/categories/software-development/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Communication</title>
-        <link>https://osada.blog/categories/communication/</link>
-        <pubDate>Fri, 23 Jun 2023 18:36:00 +0530</pubDate>
-        
-        <guid>https://osada.blog/categories/communication/</guid>
         <description></description>
         </item>
         <item>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Local-First on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</title>
+        <link>https://osada.blog/tags/local-first/</link>
+        <description>Recent content in Local-First on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-gb</language>
+        <lastBuildDate>Sun, 05 Oct 2025 19:52:51 +0100</lastBuildDate><atom:link href="https://osada.blog/tags/local-first/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Writing a Dictation Application</title>
+        <link>https://osada.blog/posts/writing-a-dictation-application/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/posts/writing-a-dictation-application/</guid>
+        <description>&lt;img src="https://osada.blog/posts/writing-a-dictation-application/dictation.webp" alt="Featured image of post Writing a Dictation Application" /&gt;&lt;h2 id=&#34;trouble-with-typing&#34;&gt;Trouble with typing
+&lt;/h2&gt;&lt;p&gt;Typing is one of those things that we do all day without thinking about how much friction it adds. Every pause for a typo, every moment spent rephrasing or adjusting syntax, breaks the flow of thought. It’s like there’s a bottleneck between your brain and the screen.&lt;/p&gt;
+&lt;p&gt;Sure, every time a conversation about GenAI comes up, someone always pops up in the discussion and says &amp;ldquo;typing was never the bottleneck&amp;rdquo;. Sure, it may not have been for you but it is very annoying for me. I’ve always found speaking easier and was never an aspiring or otherwise touch typist. Talking feels natural, it flows at the speed of ideas. Typing, even when you’re fast, still feels like translating thoughts into keystrokes.&lt;/p&gt;
+&lt;p&gt;I simply wanted talk to my Mac, and have it type for me, anywhere, in any app, as if I were typing it myself? I didn’t want a cloud service or some subscription-based AI pipeline. I just wanted a small, local, privacy-friendly dictation app that stayed out of the way and let me speak freely.&lt;/p&gt;
+&lt;p&gt;That’s how &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/parakeet-dictation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Parakeet Dictation&lt;/strong&gt;&lt;/a&gt; started - out of a small but persistent frustration, and the belief that sometimes, the simplest tools come from building the thing you wish existed.&lt;/p&gt;
+&lt;p&gt;That and the fact that I had not done a fun side project in a long while. While I enjoy wardley maps and process improvements at work, I missed the joy of building something from scratch, wrestling with code, and shipping a tiny app that solves a real problem.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-local-first&#34;&gt;Why Local-First
+&lt;/h2&gt;&lt;p&gt;When I started building Parakeet Dictation, I knew I didn’t want it to rely on any external servers. The goal was for it to work even if I was offline, without sending audio anywhere. Privacy was one reason, but not the only one. Local models also mean lower latency, zero API costs, and full control over what happens on your machine.&lt;/p&gt;
+&lt;p&gt;At the time, there were two realistic open-source options for speech-to-text: &lt;a class=&#34;link&#34; href=&#34;https://github.com/openai/whisper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Whisper&lt;/strong&gt;&lt;/a&gt; from OpenAI and &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/NeMo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Parakeet&lt;/strong&gt;&lt;/a&gt; from NVIDIA. Whisper is great for multilingual support, but it’s large and not the fastest on-device. Parakeet, on the other hand, is lightweight and tuned for English. That trade-off made sense for my use case, so I went with Parakeet.&lt;/p&gt;
+&lt;p&gt;Then came the question of how to actually run it. I didn’t want to depend on external runtimes like &lt;a class=&#34;link&#34; href=&#34;https://ollama.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama&lt;/a&gt; or anything that required Docker images or heavy system dependencies. Since I was building on a Mac, &lt;a class=&#34;link&#34; href=&#34;https://github.com/ml-explore/mlx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;MLX&lt;/strong&gt;&lt;/a&gt; - Apple’s framework for running ML models natively on Apple Silicon - was the obvious choice. It’s fast, efficient, and feels like the right foundation for something that’s meant to stay local.&lt;/p&gt;
+&lt;p&gt;The combination of Parakeet and MLX turned out to be a perfect match: small enough to run locally, smart enough to keep up with natural speech, and private by design.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;setting-up-the-environment&#34;&gt;Setting Up the Environment
+&lt;/h2&gt;&lt;p&gt;I picked Python right away, because that’s just how machine learning ecosystems work. Every model, every framework, every experimental idea eventually comes wrapped in Python. The only issue is that the Python ecosystem itself can be a bit fragile.&lt;/p&gt;
+&lt;p&gt;Getting everything to run together wasn’t smooth. MLX wanted newer dependencies, while Parakeet depended on older ones. Some libraries simply wouldn’t build with the latest interpreters. After a long round of trial and error, I pinned it down to Python &lt;strong&gt;3.12&lt;/strong&gt;. It’s the only version that works reliably. 3.13 is too new, and 3.11 is too old.&lt;/p&gt;
+&lt;p&gt;It’s one of those moments where you realize how brittle Python packaging still is. For a language that dominates data science, it shouldn’t be this hard to have a working environment. Maybe it’s because the interpreter changes too much between versions, or because maintainers can’t keep up with the churn. Either way, it feels like something the community needs to solve.&lt;/p&gt;
+&lt;p&gt;Once I finally had the environment sorted out, the rest of the build started to come together nicely.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;making-it-work-keybindings-logging-ux&#34;&gt;Making It Work: Keybindings, Logging, UX
+&lt;/h2&gt;&lt;p&gt;Once the core dictation loop worked, I turned to the small things that make an app actually pleasant to use.&lt;/p&gt;
+&lt;p&gt;The first problem was getting the hotkey to behave. I used &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/pynput/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;pynput&lt;/strong&gt;&lt;/a&gt; for global key listening, but the original implementation used the &lt;code&gt;GLFW_KEY_GLOOP&lt;/code&gt; constant as a shortcut, which didn’t actually register on macOS. After a lot of testing, I settled on &lt;strong&gt;Ctrl + Alt + A&lt;/strong&gt;. It’s comfortable to press, doesn’t conflict with other system shortcuts, and works reliably.&lt;/p&gt;
+&lt;p&gt;The intended flow is simple: press &lt;strong&gt;Ctrl + Alt + A&lt;/strong&gt;, speak naturally, and the app types your words instantly. Press the same hotkey again to stop dictation. It’s designed to be invisible until you need it, then out of the way when you don’t.&lt;/p&gt;
+&lt;p&gt;Then I added proper logging. I didn’t want it to be noisy, so I set it up to respect an environment variable, meaning it only logs in debug mode. When you’re using the app day to day, it stays silent. When something goes wrong, you can flip the flag and see what’s happening.&lt;/p&gt;
+&lt;p&gt;For the UI, the app started off as a &lt;a class=&#34;link&#34; href=&#34;https://github.com/jaredks/rumps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;RUMPS&lt;/strong&gt;&lt;/a&gt; status bar app, which is a tiny framework for building macOS menu bar tools in Python. It’s minimal and does the job, but it’s also limited. I plan to replace it with a proper GUI later using native macOS components, so it can show a small floating control panel for toggling dictation and displaying status.&lt;/p&gt;
+&lt;p&gt;Each of these small tweaks made the app feel more natural, more like a built-in tool than a Python script running in the background.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;key-code-snippets--diffs&#34;&gt;Key Code Snippets &amp;amp; Diffs
+&lt;/h2&gt;&lt;p&gt;Below are a few focused diffs that show how the app evolved. They’re simplified for clarity, but map to the repo layout.&lt;/p&gt;
+&lt;h3 id=&#34;1-pin-the-python-interpreter-and-tidy-packaging&#34;&gt;1) Pin the Python interpreter and tidy packaging
+&lt;/h3&gt;&lt;p&gt;For this tiny diff, it caused the most pain. Getting the right Python version, and then making sure all dependencies worked together, took a lot of trial and error.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Files: &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/parakeet-dictation/blob/main/pyproject.toml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;pyproject.toml&lt;/code&gt;&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/parakeet-dictation/blob/main/requirements.txt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;requirements.txt&lt;/code&gt;&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/parakeet-dictation/blob/main/constraints.txt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;constraints.txt&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# pyproject.toml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; [project]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; name = &amp;#34;parakeet-dictation&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-version = &amp;#34;0.1.0&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-requires-python = &amp;#34;&amp;gt;=3.10&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+version = &amp;#34;0.1.1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+requires-python = &amp;#34;&amp;gt;=3.12,&amp;lt;3.13&amp;#34;  # 3.12 works reliably; 3.11 too old, 3.13 too new
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt; description = &amp;#34;Local dictation for macOS using Parakeet (MLX)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; readme = &amp;#34;README.md&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; license = {file = &amp;#34;LICENSE&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; authors = [{name = &amp;#34;Osada Lakmal&amp;#34;}]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; dependencies = [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-  &amp;#34;parakeet-mlx&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-  &amp;#34;pyaudio&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-  &amp;#34;pynput&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-  &amp;#34;rumps&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;-  &amp;#34;numpy&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+  &amp;#34;parakeet-mlx&amp;gt;=0.0.8&amp;#34;,   # MLX-backed Parakeet builds
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+  &amp;#34;mlx&amp;gt;=0.18.0&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+  &amp;#34;pyaudio&amp;gt;=0.2.14&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+  &amp;#34;pynput&amp;gt;=1.7.7&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+  &amp;#34;rumps&amp;gt;=0.4.0&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;+  &amp;#34;numpy&amp;gt;=1.26&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; [build-system]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; requires = [&amp;#34;setuptools&amp;gt;=68&amp;#34;, &amp;#34;wheel&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; build-backend = &amp;#34;setuptools.build_meta&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you need a hard pin for transitive packages, use &lt;code&gt;constraints.txt&lt;/code&gt; and install with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt -c constraints.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;References:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://packaging.python.org/en/latest/specifications/declaring-project-metadata/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PEP 621 project metadata&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://packaging.python.org/en/latest/specifications/core-metadata/#requires-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;requires-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;shipping-a-python-app-pypi-vs-homebrew&#34;&gt;Shipping a Python App: PyPI vs. Homebrew
+&lt;/h2&gt;&lt;p&gt;My first instinct was to ship it with &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Homebrew&lt;/a&gt;. It felt like the natural route for macOS, but as soon as you try to bundle a Python virtual environment inside a formula, you hit walls. Brew is great for C or Rust style binaries, but Python apps with tight interpreter and wheel constraints do not have a clean path. The problem lies with the fact that brew applications are global by default and really only setup to work with system python version. After chasing workarounds, I dropped the idea, removed the formula, and went the way most Python tools go - publish to &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyPI&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That meant converting the project to a standards based build with &lt;code&gt;pyproject.toml&lt;/code&gt;, and adding a CLI entry point so people can run it directly. I used &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/build/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pypa/build&lt;/a&gt; to produce wheels, and set up publishing with &lt;a class=&#34;link&#34; href=&#34;https://docs.pypi.org/trusted-publishers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Trusted Publishers&lt;/a&gt; so GitHub Actions can release without storing API tokens.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Build and publish, locally:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m pip install --upgrade build twine
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m build                  &lt;span class=&#34;c1&#34;&gt;# creates dist/*.whl and dist/*.tar.gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;twine check dist/*               &lt;span class=&#34;c1&#34;&gt;# sanity checks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Install to try it out:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clean, isolated install for CLI tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m pip install --user parakeet-dictation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pipx install parakeet-dictation  &lt;span class=&#34;c1&#34;&gt;# https://pypa.github.io/pipx/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GitHub Actions sketch&lt;/strong&gt; - using Trusted Publishers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;publish-to-pypi&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;release&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;published]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;permissions&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;id-token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;write  &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# OIDC for PyPI&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;contents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/setup-python@v5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;python-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;3.12&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;python -m pip install --upgrade build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;python -m build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;pypa/gh-action-pypi-publish@release/v1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is the least surprising path for Python today. Brew is still great for installing system tools, but for Python applications with native ML wheels, PyPI and &lt;code&gt;pipx&lt;/code&gt; give users a smoother experience.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;local-text-rewriting-adding-a-tiny-llm&#34;&gt;Local Text Rewriting: Adding a Tiny LLM
+&lt;/h2&gt;&lt;p&gt;One of my favorite features from the original project was the ability to select some text, speak an instruction, and get a rewritten version. The original used &lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/bedrock/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS Bedrock&lt;/a&gt; to call a hosted model. I wanted the same workflow without any network calls, so I swapped it for a small on device model.&lt;/p&gt;
+&lt;p&gt;I picked a tiny &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qwen&lt;/a&gt; instruct model that runs on &lt;a class=&#34;link&#34; href=&#34;https://github.com/ml-explore/mlx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MLX&lt;/a&gt;. It is fast enough on Apple Silicon, and it can handle simple editing prompts like “make this friendlier,” or “be more concise.”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Minimal editing helper:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;mlx_lm&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mlx_load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mlx_generate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;_qwen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_tok&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mlx_load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Qwen/Qwen2.5-0.5B-Instruct-MLX&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rewrite_selected_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;instruction&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;system&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are an editor. Keep meaning, change tone and clarity only.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;|system|&amp;gt;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;system&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;lt;|user|&amp;gt;Instruction: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;instruction&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;Text:&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mlx_generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_qwen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_tok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Wire this so that if the user has a selection, the app sends that to &lt;code&gt;rewrite_selected_text&lt;/code&gt;, otherwise it performs normal dictation. Simple, predictable, and it never leaves your machine.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;whats-next-beyond-rumps&#34;&gt;What’s next: beyond RUMPS
+&lt;/h2&gt;&lt;p&gt;Right now the app uses &lt;a class=&#34;link&#34; href=&#34;https://github.com/jaredks/rumps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RUMPS&lt;/a&gt; for a minimal menu bar presence. It works, but I want a proper macOS experience, with a small floating panel and clearer feedback.&lt;/p&gt;
+&lt;p&gt;Plans:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace the status bar only approach with a lightweight GUI, likely using &lt;a class=&#34;link&#34; href=&#34;https://pyobjc.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyObjC&lt;/a&gt; to reach native controls.&lt;/li&gt;
+&lt;li&gt;Show a tiny always on top panel with a microphone indicator, a big toggle button, and the current hotkey hint.&lt;/li&gt;
+&lt;li&gt;Add small start and stop sounds, or a &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/documentation/foundation/nsnotification&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NSUserNotification&lt;/a&gt; style nudge so you know when capture starts and stops.&lt;/li&gt;
+&lt;li&gt;Make hotkeys, models, and logging fully configurable from the UI, stored in a simple config file.&lt;/li&gt;
+&lt;li&gt;Make an actual installer. It has been ages since I have built a desktop application. So this will be fun.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That should make it feel like a first class macOS tool, while keeping the model on device, fast, and private by default.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;What started as a small frustration with typing turned into a full project that rethinks how voice can fit into daily workflows. &lt;strong&gt;Parakeet Dictation&lt;/strong&gt; is a tiny experiment in what local-first AI can feel like - instant, private, and under your control. There’s no cloud dependency, no telemetry, no waiting for a response from someone else’s server. It’s just your voice, your machine, and your words.&lt;/p&gt;
+&lt;p&gt;Building it was a reminder that simplicity is harder than it looks. Getting Python dependencies to cooperate, fighting with packaging, and wrestling with macOS quirks all took time. But once it came together, it felt worth it. There’s something deeply satisfying about pressing a hotkey and watching your thoughts appear on screen in real time.&lt;/p&gt;
+&lt;p&gt;The next step is polishing the experience - turning it from a script into a true macOS app with a clean, native interface. But even as it stands, it’s a small proof of concept for a bigger idea: that powerful AI tools don’t have to live in the cloud. They can live right here, on your desk, quietly doing their job.*&lt;br&gt;
+Make an actual installer. It has been ages since I have built a desktop application. So this will be fun.&lt;/p&gt;
+&lt;p&gt;If you want to try it out or contribute, check out &lt;a class=&#34;link&#34; href=&#34;https://github.com/osadalakmal/parakeet-dictation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Parakeet Dictation on GitHub&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

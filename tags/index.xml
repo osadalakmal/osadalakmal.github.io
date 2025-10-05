@@ -6,7 +6,79 @@
         <description>Recent content in Tags on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sun, 17 Aug 2025 21:50:31 +0100</lastBuildDate><atom:link href="https://osada.blog/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Oct 2025 19:52:51 +0100</lastBuildDate><atom:link href="https://osada.blog/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Dictation</title>
+        <link>https://osada.blog/tags/dictation/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/dictation/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Local-First</title>
+        <link>https://osada.blog/tags/local-first/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/local-first/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MacOS Development</title>
+        <link>https://osada.blog/tags/macos-development/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/macos-development/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MLX</title>
+        <link>https://osada.blog/tags/mlx/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/mlx/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Open-Source</title>
+        <link>https://osada.blog/tags/open-source/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/open-source/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Parakeet</title>
+        <link>https://osada.blog/tags/parakeet/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/parakeet/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python Packaging</title>
+        <link>https://osada.blog/tags/python-packaging/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/python-packaging/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Small Models</title>
+        <link>https://osada.blog/tags/small-models/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/small-models/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Voice-to-Text</title>
+        <link>https://osada.blog/tags/voice-to-text/</link>
+        <pubDate>Sun, 05 Oct 2025 19:52:51 +0100</pubDate>
+        
+        <guid>https://osada.blog/tags/voice-to-text/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>BBC</title>
         <link>https://osada.blog/tags/bbc/</link>
         <pubDate>Sun, 17 Aug 2025 21:50:31 +0100</pubDate>

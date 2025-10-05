@@ -2,10 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://osada.blog/categories/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/developer-tools/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/dictation/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/local-first/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/machine-learning/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/macos-development/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/mlx/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/open-source/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/parakeet/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/python-packaging/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/small-models/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/voice-to-text/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/writing-a-dictation-application/</loc>
+    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+  </url><url>
     <loc>https://osada.blog/tags/bbc/</loc>
     <lastmod>2025-08-17T21:50:31+01:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/categories/</loc>
+    <loc>https://osada.blog/categories/communication/</loc>
     <lastmod>2025-08-17T21:50:31+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/communication/</loc>
@@ -23,19 +71,7 @@
     <loc>https://osada.blog/tags/organizational-change/</loc>
     <lastmod>2025-08-17T21:50:31+01:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/</loc>
-    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/posts/</loc>
-    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/categories/programming-languages/</loc>
-    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/tags/shipping-forecast/</loc>
-    <lastmod>2025-08-17T21:50:31+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/</loc>
     <lastmod>2025-08-17T21:50:31+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/technical-writing/</loc>
@@ -57,6 +93,9 @@
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/llm/</loc>
+    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/programming-languages/</loc>
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/programming-languages/</loc>
@@ -214,9 +253,6 @@
   </url><url>
     <loc>https://osada.blog/tags/user-stories/</loc>
     <lastmod>2023-07-10T14:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/categories/communication/</loc>
-    <lastmod>2023-06-23T18:36:00+05:30</lastmod>
   </url><url>
     <loc>https://osada.blog/posts/nemawashi-power-of-consensus/</loc>
     <lastmod>2023-06-23T18:36:00+05:30</lastmod>
