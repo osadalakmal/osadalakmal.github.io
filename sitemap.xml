@@ -2,8 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://osada.blog/tags/ai-assisted-coding/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
     <loc>https://osada.blog/categories/</loc>
-    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/code-generation/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/coding-patterns-in-agentic-world/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/developer-tools/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/llm/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/programming-languages/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/programming-languages/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/</loc>
+    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/categories/developer-tools/</loc>
     <lastmod>2025-10-05T19:52:51+01:00</lastmod>
@@ -26,22 +56,13 @@
     <loc>https://osada.blog/tags/open-source/</loc>
     <lastmod>2025-10-05T19:52:51+01:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/</loc>
-    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/tags/parakeet/</loc>
-    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/posts/</loc>
     <lastmod>2025-10-05T19:52:51+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/python-packaging/</loc>
     <lastmod>2025-10-05T19:52:51+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/small-models/</loc>
-    <lastmod>2025-10-05T19:52:51+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/</loc>
     <lastmod>2025-10-05T19:52:51+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/voice-to-text/</loc>
@@ -80,25 +101,7 @@
     <loc>https://osada.blog/posts/be-more-like-shipping-forecast/</loc>
     <lastmod>2025-08-17T21:50:31+01:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/tags/ai-assisted-coding/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/code-generation/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/developer-tools/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/tags/literate-programming/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/llm/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/categories/programming-languages/</loc>
-    <lastmod>2025-08-14T20:16:03+01:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/programming-languages/</loc>
     <lastmod>2025-08-14T20:16:03+01:00</lastmod>
   </url><url>
     <loc>https://osada.blog/posts/languages-designed-for-llms/</loc>
