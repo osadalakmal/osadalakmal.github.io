@@ -6,7 +6,47 @@
         <description>Recent content in Developer Experience on Osada Blog – Thoughts on Software Engineering, Programming, Systems, and Life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-gb</language>
-        <lastBuildDate>Sat, 09 Aug 2025 14:30:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/developer-experience/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 02 Nov 2026 13:55:00 +0000</lastBuildDate><atom:link href="https://osada.blog/tags/developer-experience/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>What Happens When the Dopamine Hit Goes Away?</title>
+        <link>https://osada.blog/posts/what-happens-when-the-dopamine-hit-goes-away/</link>
+        <pubDate>Mon, 02 Nov 2026 13:55:00 +0000</pubDate>
+        
+        <guid>https://osada.blog/posts/what-happens-when-the-dopamine-hit-goes-away/</guid>
+        <description>&lt;img src="https://osada.blog/posts/what-happens-when-the-dopamine-hit-goes-away/dopamine.webp" alt="Featured image of post What Happens When the Dopamine Hit Goes Away?" /&gt;&lt;p&gt;I have been thinking about the dopamine hits we get from troubleshooting, debugging and getting programmes just right. We don&amp;rsquo;t get paid for this, so it features much less in the conversation about why people do this work.&lt;/p&gt;
+&lt;h2 id=&#34;why-a-lot-of-us-got-here&#34;&gt;Why a lot of us got here
+&lt;/h2&gt;&lt;p&gt;A lot of people, especially millennials who came to tech from working on things on their own, got here because of the sense of achievement that tech gave us. We managed to get things working. That dopamine hit, that sense of accomplishment, of getting things done, of having control over all aspects of it.&lt;/p&gt;
+&lt;p&gt;It was our responsibility, our doing, that determined whether the thing worked or not. There were no external influences. It was solely our skill, knowledge and ability that decided whether we got the thing working. And we derived our happiness from that. We derived our happiness from a job well done.&lt;/p&gt;
+&lt;p&gt;There were extrinsic motivators for sure. It paid well. It&amp;rsquo;s a good job. We got to work with smart people. But ultimately, I think the thing that clinched the deal was that we got a nice little dopamine hit whenever we managed to get the thing done, whatever the thing was: writing a program, troubleshooting a system, fixing a bug.&lt;/p&gt;
+&lt;h2 id=&#34;the-loop-we-lived-in&#34;&gt;The loop we lived in
+&lt;/h2&gt;&lt;p&gt;To understand this, you have to understand the psychology of software development, at least as we practiced it before the advent of LLMs and agentic AI.&lt;/p&gt;
+&lt;p&gt;The loop went like this. You were faced with a problem, and then you went on a bit of a journey to explore and understand what exactly the problem was. You tried to nail it down, work out how to get the thing done, and do some research on prior art. You got your mind ready and got all the information in place. You used whatever note-taking system or knowledge base you had to organise your thoughts. You got your ducks in a row.&lt;/p&gt;
+&lt;p&gt;It was all the prep work. This is akin to any artisan getting the raw materials ready, getting their tools ready and making a plan, before starting the execution.&lt;/p&gt;
+&lt;p&gt;Then you started attacking the problem. You implemented a little bit of the solution and tested it out. You wrote a unit test, you wrote an integration test, you made it pass, and then you did it over and over again until you got to the place where you wanted to be, until you were satisfied with it.&lt;/p&gt;
+&lt;h2 id=&#34;flow-was-the-holy-grail&#34;&gt;Flow was the holy grail
+&lt;/h2&gt;&lt;p&gt;You got into the flow. The flow state was the holy grail, it was what we were chasing. How long you could stay in the flow was the mark of how good you were as a programmer. That was the achievement we were all chasing, and that was the dopamine hit. When you got out of the flow, it didn&amp;rsquo;t matter how much time had passed. If you got there, that day felt productive.&lt;/p&gt;
+&lt;p&gt;Joel Spolsky talks about this in one of his blogs, &lt;a class=&#34;link&#34; href=&#34;https://www.joelonsoftware.com/2000/04/19/where-do-these-people-get-their-unoriginal-ideas/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Where do These People Get Their (Unoriginal) Ideas?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It was not an end goal by itself, but it mattered a lot to who we were. It was tied to our identity. We made knowing jokes about it. We talked about how to get better techniques and tools for achieving the flow state. It was almost a goal in itself. It didn&amp;rsquo;t matter to the business, but for the individual it mattered a lot. For your own satisfaction, it mattered a lot.&lt;/p&gt;
+&lt;h2 id=&#34;what-llms-and-agentic-ai-change&#34;&gt;What LLMs and agentic AI change
+&lt;/h2&gt;&lt;p&gt;With LLMs, that is going away. With agentic AI and whatnot, there&amp;rsquo;s your skill atrophy and all that. That&amp;rsquo;s fine to worry about, and it needs to be a concern we talk about. But the conversation about what losing this intrinsic motivator will do to people seems to get buried under the mountain of other things we&amp;rsquo;re talking about.&lt;/p&gt;
+&lt;p&gt;And that incentive structure going away is a fundamental change to how we operate. What sort of incentive structure is in place for us now? How do you explain to the newcomers, the new software engineers, how this works? And what do we replace it with?&lt;/p&gt;
+&lt;p&gt;What we have instead is short interactions with an agentic AI, followed by long spells of reviewing the system and the code. The problem with the review phase is that you&amp;rsquo;re not producing anything. You&amp;rsquo;re not generating, so there&amp;rsquo;s no sense of accomplishment. It&amp;rsquo;s a chore, a drudge that you have to go through. Even though it&amp;rsquo;s something big, something substantial, there&amp;rsquo;s no accomplishment at the end of it.&lt;/p&gt;
+&lt;h2 id=&#34;the-questions-i-keep-coming-back-to&#34;&gt;The questions I keep coming back to
+&lt;/h2&gt;&lt;p&gt;I wonder how this is going to go for people.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How would people derive satisfaction from doing this work?&lt;/li&gt;
+&lt;li&gt;Would their job satisfaction be lower?&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;ve always felt we had a unique position, where we enjoyed the work we do a lot. Would this become menial, trudging work, like other sorts of admin work?&lt;/li&gt;
+&lt;li&gt;If that is the case, how would this field even attract new people?&lt;/li&gt;
+&lt;li&gt;What is going to be our incentive? Money can only motivate people so much, as research has shown.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I don&amp;rsquo;t know what&amp;rsquo;s going to happen, but it&amp;rsquo;s fascinating to think about.&lt;/p&gt;
+&lt;p&gt;Photo by &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/@kareraisu?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alejandro Hikari&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/photos/a-young-boy-playing-a-video-game-on-a-nintendo-wii-iwx02E7KCe8?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>MCP vs SDK: Two Paths to LLM-Powered Extensibility</title>
         <link>https://osada.blog/posts/llms-and-programmable-software/</link>
         <pubDate>Sat, 09 Aug 2025 14:30:00 +0000</pubDate>

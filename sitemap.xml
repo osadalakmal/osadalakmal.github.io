@@ -2,10 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://osada.blog/tags/ai-assisted-coding/</loc>
-    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
+    <loc>https://osada.blog/tags/agentic-ai/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/categories/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/developer-experience/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/categories/engineering-culture/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/engineering-culture/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/llm/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/software-engineering/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/posts/what-happens-when-the-dopamine-hit-goes-away/</loc>
+    <lastmod>2026-11-02T13:55:00+00:00</lastmod>
+  </url><url>
+    <loc>https://osada.blog/tags/ai-assisted-coding/</loc>
     <lastmod>2026-02-20T12:21:25+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/code-generation/</loc>
@@ -17,22 +47,10 @@
     <loc>https://osada.blog/tags/developer-tools/</loc>
     <lastmod>2026-02-20T12:21:25+00:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/tags/llm/</loc>
-    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/</loc>
-    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/posts/</loc>
-    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/categories/programming-languages/</loc>
     <lastmod>2026-02-20T12:21:25+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/tags/programming-languages/</loc>
-    <lastmod>2026-02-20T12:21:25+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/</loc>
     <lastmod>2026-02-20T12:21:25+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/categories/developer-tools/</loc>
@@ -110,9 +128,6 @@
     <loc>https://osada.blog/tags/ai-integration/</loc>
     <lastmod>2025-08-09T14:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/tags/developer-experience/</loc>
-    <lastmod>2025-08-09T14:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/categories/engineering-principles/</loc>
     <lastmod>2025-08-09T14:30:00+00:00</lastmod>
   </url><url>
@@ -158,16 +173,7 @@
     <loc>https://osada.blog/tags/best-practices/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
-    <loc>https://osada.blog/categories/engineering-culture/</loc>
-    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/engineering-culture/</loc>
-    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
-  </url><url>
     <loc>https://osada.blog/tags/engineering-leadership/</loc>
-    <lastmod>2025-02-23T12:40:47+00:00</lastmod>
-  </url><url>
-    <loc>https://osada.blog/tags/software-engineering/</loc>
     <lastmod>2025-02-23T12:40:47+00:00</lastmod>
   </url><url>
     <loc>https://osada.blog/posts/the-case-for-being-lazy/</loc>
